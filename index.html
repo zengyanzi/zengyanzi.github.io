@@ -263,6 +263,199 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/react-native-login/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello World">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/23/react-native-login/" itemprop="url">
+                  react native login 
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-23T00:33:55+12:00">
+                2017-04-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="react-native-login-view"><a href="#react-native-login-view" class="headerlink" title="react native login view"></a>react native login view</h1><pre><code>import React, { Component } from &apos;react&apos;;
+import { AppRegistry,StyleSheet,Image, TextInput, Text,ScrollView,TouchableOpacity,View} from &apos;react-native&apos;;
+class CoolApp extends React.Component {
+  render() {
+    return (
+      &lt;ScrollView
+        contentContainerStyle={{flex:1}}
+        keyboardDismissMode=&apos;on-drag&apos;
+        keyboardShouldPersistTaps={false}
+        &gt;
+        &lt;View style={styles.container}&gt;
+          &lt;Image
+            source={{uri: 'http://oss-hz.qianmi.com/qianmicom/u/cms/qmwww/201511/03102524l6ur.png'}}
+            style={styles.logo}/&gt;
+          &lt;TextInput 
+            ref={(username) =&gt; this.username = username}
+            onFocus={()=&gt;this.username.focus()}
+            style={styles.input}
+            placeholder=&apos;username&apos;/&gt;
+          &lt;TextInput 
+            ref={(password) =&gt; this.password = password}
+            onFocus={() =&gt; this.password.focus()}
+            style={styles.input}
+            placeholder=&apos;password&apos; 
+            password={true}/&gt;
+
+          &lt;TouchableOpacity style={styles.btn}
+            onPress={() =&gt; console.log(&apos;press me&apos;)}&gt;
+            &lt;Text style={styles.text}&gt;login&lt;/Text&gt;
+          &lt;/TouchableOpacity&gt;
+        &lt;/View&gt;
+      &lt;/ScrollView&gt;
+    );
+  }
+}
+
+var styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingLeft: 10,
+    paddingRight: 10,
+    justifyContent: &apos;center&apos;,
+    alignItems: &apos;center&apos;,
+    backgroundColor: &apos;#F4FCFF&apos;,
+  },
+  logo:{
+    width:160,
+    height:160,
+    marginTop: 100
+  },
+  input: {
+   height: 40,
+   width:200,
+   marginTop: 10, //间隔
+   borderWidth: 1, 
+   borderRadius: 5, //圆角
+   borderColor: &apos;lightblue&apos;
+  },
+  text:{
+    fontWeight: &apos;bold&apos;,
+    fontSize: 14,
+    color: &apos;#FFF&apos;
+  },
+   btn:{
+     alignSelf: &apos;stretch&apos;,
+     alignItems: &apos;center&apos;,
+     justifyContent: &apos;center&apos;,
+     backgroundColor: &apos;#3333FF&apos;,
+     height: 40,
+     borderRadius: 5,
+     marginTop: 10
+   }
+});
+AppRegistry.registerComponent(&apos;AwesomeProject&apos;, () =&gt; CoolApp);
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/massively-import-product-special/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1706,133 +1899,6 @@ import{ View} from &apos;react-native&apos;
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/22/postFullText-IsSupported/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello World">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/22/postFullText-IsSupported/" itemprop="url">
-                  postFullText_IsSupported
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-22T23:50:17+12:00">
-                2017-04-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="FullText-IsSupported"><a href="#FullText-IsSupported" class="headerlink" title="FullText_IsSupported"></a>FullText_IsSupported</h1><p>I moved my website v3.7 from Arvixe to Host4asp.net<br>In the Backend clicking on Configuration/Settings&gt;General and Miscellaneous Settings I get the following error:</p>
-<p>Could not find stored procedure ‘FullText_IsSupported’.</p>
-<p>Description: An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.</p>
-<p>Exception Details: System.Data.SqlClient.SqlException: Could not find stored procedure ‘FullText_IsSupported’.</p>
-<p>Source Error:</p>
-<p>An unhandled exception was generated during the execution of the current web request. Information regarding the origin and location of the exception can be identified using the exception stack trace below.</p>
-<p>solution</p>
-<p>Run the SQL script “App_Data\SqlServer.StoredProcedures.sql” against your new database to make sure that all your stored procedures are there. </p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1882,7 +1948,7 @@ import{ View} from &apos;react-native&apos;
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
