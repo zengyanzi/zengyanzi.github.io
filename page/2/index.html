@@ -263,6 +263,416 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/change-homepage-layout/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello World">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/24/change-homepage-layout/" itemprop="url">
+                  change homepage layout
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T09:32:22+12:00">
+                2017-04-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="how-to-update-nopcommerce-homepage-layout"><a href="#how-to-update-nopcommerce-homepage-layout" class="headerlink" title="how to update nopcommerce homepage layout  "></a>how to update nopcommerce homepage layout  </h1><ol>
+<li>find this file under the themes/themesname/views/home/index.cshtml</li>
+<li><p>change the </p>
+<pre><code>@{
+    Layout = &quot;~/Views/Shared/_ColumnsThree.cshtml&quot;;
+}
+</code></pre></li>
+<li><p>generate</p>
+</li>
+<li>refresh</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/size-of-image-under-recently-review/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello World">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/24/size-of-image-under-recently-review/" itemprop="url">
+                  size of image under recently review
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T09:27:18+12:00">
+                2017-04-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="how-to-change-the-size-of-image-under-recently-review-nopcommerce"><a href="#how-to-change-the-size-of-image-under-recently-review-nopcommerce" class="headerlink" title="how to change the size of image under recently review nopcommerce  "></a>how to change the size of image under recently review nopcommerce  </h1><ol>
+<li>go to nop.web\views\catalog\recentlyviewproductblock.cshtml</li>
+<li>change the following code</li>
+<li><pre><code>{
+    &lt;div class=&quot;product-picture&quot;&gt;
+        &lt;a href=&quot;@Url.RouteUrl(&quot;Product&quot;, new { SeName = product.SeName })&quot; title=&quot;@product.DefaultPictureModel.Title&quot;&gt;
+            &lt;img class=&quot;recentviewimg&quot;alt=&quot;@product.DefaultPictureModel.AlternateText&quot; src=&quot;@product.DefaultPictureModel.ImageUrl&quot; title=&quot;@product.DefaultPictureModel.Title&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+}
+</code></pre><p>to </p>
+<pre><code>{
+    &lt;div class=&quot;product-picture&quot;&gt;
+        &lt;a href=&quot;@Url.RouteUrl(&quot;Product&quot;, new { SeName = product.SeName })&quot; title=&quot;@product.DefaultPictureModel.Title&quot;&gt;
+            &lt;img class=&quot;recentviewimg&quot;alt=&quot;@product.DefaultPictureModel.AlternateText&quot; src=&quot;@product.DefaultPictureModel.FullSizeImageUrl&quot; title=&quot;@product.DefaultPictureModel.Title&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+}
+</code></pre></li>
+</ol>
+<p>the reason is:<br>if we choose imageUrl,it will load image from thumb but if we choose Fullsizeimageurl,then it will load from full size.<br><strong><strong><strong>___</strong></strong></strong>could be found in nop.web\controllers\catalogcontroller.cs like this below:</p>
+<pre><code>var defaultPictureModel = new PictureModel()
+       {
+           ImageUrl = _pictureService.GetPictureUrl(pictures.FirstOrDefault(), defaultPictureSize, !isAssociatedProduct),
+           FullSizeImageUrl = _pictureService.GetPictureUrl(pictures.FirstOrDefault(), 0, !isAssociatedProduct),
+           Title = string.Format(_localizationService.GetResource(&quot;Media.Product.ImageLinkTitleFormat.Details&quot;), model.Name),
+           AlternateText = string.Format(_localizationService.GetResource(&quot;Media.Product.ImageAlternateTextFormat.Details&quot;), model.Name),
+       };
+</code></pre><ol>
+<li><p>add css for the size of image<br>class=”recentviewimg”<br>and add css in theme </p>
+<p> .block-recently-viewed-products li {<br>   background: none;<br>   height: 55px;<br>   clear: both;<br>   margin:0px;<br>   border-bottom: 1px solid #e5e5e5;<br> }</p>
+<p> .block-recently-viewed-products li.last {<br>   border-bottom: none;<br> }</p>
+<p> .block-recently-viewed-products .product-picture {<br>   float: left;<br>   height: 55px;<br>   width: 55px;<br>   margin: 0px;<br>   padding:0px;<br> }<br> .recentviewimg<br> {</p>
+<pre><code>float: left;
+height: 50px;
+width: 50px;
+margin-right: 5px;
+padding:0px;
+</code></pre><p> }</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/time-of-novisilder/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello World">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/24/time-of-novisilder/" itemprop="url">
+                  time of novisilder
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T09:23:22+12:00">
+                2017-04-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="time-of-novisilder"><a href="#time-of-novisilder" class="headerlink" title="time of novisilder"></a>time of novisilder</h1><p>go to the path<br>    plugins/widget.nivoslider/scripts/jquery.nivo.slider.js<br>change the pause time<br>the default pause time is 5000<br>then we could change to 2000,which test it till work fine. </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/asp-net-mvc/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1588,383 +1998,6 @@ module.exports = PT
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/some-problems-of-react-native/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello World">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/23/some-problems-of-react-native/" itemprop="url">
-                  some problems of react native
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-23T00:21:11+12:00">
-                2017-04-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="some-problems-of-react-native"><a href="#some-problems-of-react-native" class="headerlink" title="some problems of react native"></a>some problems of react native</h1><p>at the end of the code</p>
-<pre><code>mode.exports= InstructwelcomView
-</code></pre><p>记得用大写区分<br>react native升级之后</p>
-<pre><code>import React ,{Componet} from &apos;react&apos;;
-import{ View} from &apos;react-native&apos;
-</code></pre><p>需要分开写</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/postnopcommerce-image-hover-scale/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello World">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/23/postnopcommerce-image-hover-scale/" itemprop="url">
-                  postnopcommerce image hover scale
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-23T00:19:35+12:00">
-                2017-04-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="nopcommerce-image-hover-scale"><a href="#nopcommerce-image-hover-scale" class="headerlink" title="nopcommerce image hover scale"></a>nopcommerce image hover scale</h1><pre><code>.product-grid .product-item .picture:hover img {
-  margin-left: auto;
-  margin-right: auto; 
-  transition: all 0.2s;
-  -webkit-transition: all 0.2s;
-  transform: scale(1.2);
-  -webkit-transform: scale(1.2);
- }
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/elicpase-update-java-src/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello World">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/23/elicpase-update-java-src/" itemprop="url">
-                  elicpase update java src
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-23T00:16:49+12:00">
-                2017-04-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="elicpase-update-java-src"><a href="#elicpase-update-java-src" class="headerlink" title="elicpase update java src  "></a>elicpase update java src  </h1><ol>
-<li>stop tomcat</li>
-<li>delete the original one</li>
-<li>remove and add in server </li>
-<li>start the tomcat again</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -2014,7 +2047,7 @@ import{ View} from &apos;react-native&apos;
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">35</span>
+                <span class="site-state-item-count">38</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
