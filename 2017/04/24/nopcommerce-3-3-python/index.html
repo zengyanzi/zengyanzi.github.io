@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="React Native," />
+  <meta name="keywords" content="Python," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="react native use swipe outThe component I use is https://github.com/dancormier/react-native-swipeoutbut there is some codes needs to be updated.for some of them should be updated from ES5 TO ES6and fo">
-<meta name="keywords" content="React Native">
+<meta name="description" content="nopcommerce 3.3 use Python to address product related# ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc #cnxn是数据库连接">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="postreact native use swipe out">
-<meta property="og:url" content="http://yoursite.com/2017/04/22/postreact-native-use-swipe-out/index.html">
+<meta property="og:title" content="nopcommerce 3.3 python">
+<meta property="og:url" content="http://yoursite.com/2017/04/24/nopcommerce-3-3-python/index.html">
 <meta property="og:site_name" content="Hello World">
-<meta property="og:description" content="react native use swipe outThe component I use is https://github.com/dancormier/react-native-swipeoutbut there is some codes needs to be updated.for some of them should be updated from ES5 TO ES6and fo">
-<meta property="og:updated_time" content="2017-04-22T11:16:15.692Z">
+<meta property="og:description" content="nopcommerce 3.3 use Python to address product related# ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc #cnxn是数据库连接">
+<meta property="og:updated_time" content="2017-04-23T23:30:00.553Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="postreact native use swipe out">
-<meta name="twitter:description" content="react native use swipe outThe component I use is https://github.com/dancormier/react-native-swipeoutbut there is some codes needs to be updated.for some of them should be updated from ES5 TO ES6and fo">
+<meta name="twitter:title" content="nopcommerce 3.3 python">
+<meta name="twitter:description" content="nopcommerce 3.3 use Python to address product related# ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc #cnxn是数据库连接">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/22/postreact-native-use-swipe-out/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/24/nopcommerce-3-3-python/"/>
 
 
 
 
 
-  <title> postreact native use swipe out | Hello World </title>
+  <title> nopcommerce 3.3 python | Hello World </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -263,7 +263,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/22/postreact-native-use-swipe-out/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/nopcommerce-3-3-python/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jenny Zeng">
@@ -284,7 +284,7 @@
             
             
               
-                postreact native use swipe out
+                nopcommerce 3.3 python
               
             
           </h1>
@@ -299,8 +299,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-22T23:15:17+12:00">
-                2017-04-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T11:29:13+12:00">
+                2017-04-24
               </time>
             
 
@@ -334,11 +334,53 @@
       
 
       
-        <h1 id="react-native-use-swipe-out"><a href="#react-native-use-swipe-out" class="headerlink" title="react native use swipe out"></a>react native use swipe out</h1><p>The component I use is <a href="https://github.com/dancormier/react-native-swipeout" target="_blank" rel="external">https://github.com/dancormier/react-native-swipeout</a><br>but there is some codes needs to be updated.<br>for some of them should be updated from ES5 TO ES6<br>and for index</p>
-<pre><code>import React from &apos;react&apos;;
-var tweenState = require(&apos;react-tween-state&apos;)
-import {PanResponder, TouchableHighlight, StyleSheet, Text, View} from &apos;react-native&apos;;
-var styles = require(&apos;./styles.js&apos;)
+        <h1 id="nopcommerce-3-3-use-Python-to-address-product-related"><a href="#nopcommerce-3-3-use-Python-to-address-product-related" class="headerlink" title="nopcommerce 3.3 use Python to address product related"></a>nopcommerce 3.3 use Python to address product related</h1><pre><code># ~*~ coding:utf-8 ~*~
+#csv是一个读取csv文件的lib
+import csv
+#itertools生成组合和排列的lib
+import itertools
+#pyodbc是连接ms sql server的lib
+import pyodbc
+#cnxn是数据库连接  更改数据库连接方式，账号密码
+cnxn = pyodbc.connect(DRIVER=&apos;{SQL Server Native Client 10.0}&apos;,SERVER=&apos;localhost&apos;,DATABASE=&apos;MicroAnalytix&apos;,UID=&apos;sa&apos;,PWD=&apos;密码&apos;)
+#cursor是数据库浮标
+cursor = cnxn.cursor()
+
+#主方法
+def process():
+    #读取csv，转换成list 更改文件存储位置
+    reader = list(csv.reader(open(&quot;c:/Users/Jenny/Desktop/related.csv&quot;)))
+    #遍历数据，并处理， tips：跳过第一行
+    for i in reader[1:]:
+        #Cn2产生组合
+        for j in itertools.combinations(i,2):
+            #处理产生的Cn2组合
+            recommend(j)
+def recommend(j):
+    #产生两次相互推荐
+    genRec(j[0],j[1])
+    genRec(j[1],j[0])
+def genRec(a,b):
+    #分别通过sku获得Product的Id
+    aid = getIdFromSku(a)
+    bid = getIdFromSku(b)
+    #生成写RelatedProduct表的sql语句
+    sql = &quot;insert into dbo.RelatedProduct (ProductId1,ProductId2,DisplayOrder) values(%d,%d,%d)&quot; % (aid,bid,0)
+    #执行sql语句
+    cursor.execute(sql)
+    #提交事务
+    cnxn.commit()
+def getIdFromSku(a):
+    sql = &quot;select Id from dbo.Product where Sku=&apos;%s&apos;&quot; % a
+    print sql
+    cursor.execute(sql)
+    row = cursor.fetchone()
+    if row:
+        return row[0]
+
+
+if __name__ == &quot;__main__&quot;:
+    process()
 </code></pre>
       
     </div>
@@ -368,7 +410,7 @@ var styles = require(&apos;./styles.js&apos;)
       
         <div class="post-tags">
           
-            <a href="/tags/React-Native/" rel="tag"># React Native</a>
+            <a href="/tags/Python/" rel="tag"># Python</a>
           
         </div>
       
@@ -381,18 +423,14 @@ var styles = require(&apos;./styles.js&apos;)
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/22/postadd-hover-to-promotion/" rel="next" title="postadd hover to promotion">
-                <i class="fa fa-chevron-left"></i> postadd hover to promotion
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/22/posthow-to-add-hover-for-Aboutus/" rel="prev" title="posthow to add hover for Aboutus">
-                posthow to add hover for Aboutus <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/24/nopcommerce-source-code-version-install-tips/" rel="prev" title="nopcommerce source code version install tips  ">
+                nopcommerce source code version install tips   <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -533,7 +571,7 @@ var styles = require(&apos;./styles.js&apos;)
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#react-native-use-swipe-out"><span class="nav-number">1.</span> <span class="nav-text">react native use swipe out</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#nopcommerce-3-3-use-Python-to-address-product-related"><span class="nav-number">1.</span> <span class="nav-text">nopcommerce 3.3 use Python to address product related</span></a></li></ol></div>
             
 
           </div>
