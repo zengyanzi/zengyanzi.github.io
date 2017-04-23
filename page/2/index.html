@@ -263,6 +263,134 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/navigation-nopcommerce/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello World">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/24/navigation-nopcommerce/" itemprop="url">
+                  navigation nopcommerce
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T09:35:02+12:00">
+                2017-04-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="How-to-change-the-navigation-bar-in-nop"><a href="#How-to-change-the-navigation-bar-in-nop" class="headerlink" title="How to change the navigation bar in nop  "></a>How to change the navigation bar in nop  </h1><p>go to the path</p>
+<blockquote>
+<p>theme\customemicroanalytix\views\catalog\topmenu.cshtml</p>
+</blockquote>
+<pre><code>@if (Model.BlogEnabled)
+{
+    &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;Blog&quot;)&quot;&gt;APPLICATIONS &amp; TECHNOLOGIES&lt;/a&gt;&lt;/li&gt;
+}
+</code></pre><p>here, we will change APPLICATIONS  to APPLICATIONS &amp; TECHNOLOGIES</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/change-homepage-layout/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1745,259 +1873,6 @@ AppRegistry.registerComponent(&apos;PT&apos;, () =&gt; PT);
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/postreact-native-jump-to-target-page/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello World">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/23/postreact-native-jump-to-target-page/" itemprop="url">
-                  postreact native jump to target page
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-23T00:23:20+12:00">
-                2017-04-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="postreact-native-jump-to-target-page"><a href="#postreact-native-jump-to-target-page" class="headerlink" title="postreact native jump to target page"></a>postreact native jump to target page</h1><pre><code>import React, { Component } from &apos;react&apos;;
-import { AppRegistry,ScrollView,View,Text,Image,Navigator,TouchableOpacity,StyleSheet} from &apos;react-native&apos;;
-
-var _navigator;
-var ShopView = require(&apos;./shop.android.js&apos;);
-
-// class PT extends React.Component {
-var PT = React.createClass({
-    getInitialState: function(){
-    return {};
-  },
-
-  configureScenceAndroid: function(){
-    return Navigator.SceneConfigs.FadeAndroid;
-  },
-
- renderSceneAndroid: function(route, navigator){
-_navigator = navigator;
-if(route.id === &apos;main&apos;){
-  return (
-    // &lt;View&gt;
-
-    //   &lt;TouchableOpacity onPress={() =&gt; _navigator.push({title:&apos;instructwelcome&apos;,id:&apos;instructwelcome&apos;})} style={ styles.button }&gt;
-    //     &lt;Text&gt;I am instructor&lt;/Text&gt;
-    //   &lt;/TouchableOpacity&gt;
-
-    // &lt;/View&gt;
-     &lt;ScrollView 
-    contentContainerStyle={{flex:1}}
-    keyboardDismissMode=&apos;on-drag&apos;
-    keyboardShouldPersistTaps={false}
-  &gt;
-
-   &lt;View style={styles.container}&gt;
-      &lt;View style={styles.Top}&gt;
-       &lt;Text style={styles.WelcomeText}&gt;Welcome to Virtual PT&lt;/Text&gt;
-      &lt;/View&gt;
-   &lt;/View&gt;
-   &lt;View style={styles.maincontain}&gt;
-     &lt;Image
-          source={{uri: 'http://oss-hz.qianmi.com/qianmicom/u/cms/qmwww/201511/03102524l6ur.png'}}
-          style={styles.logo}/&gt;
-
-        &lt;View style={styles.choose}&gt;
-          &lt;TouchableOpacity style={styles.btn}
-          onPress={() =&gt; _navigator.push({title:&apos;shop&apos;,id:&apos;shop&apos;})}&gt;
-          &lt;Text style={styles.text}&gt;Register&lt;/Text&gt;
-          &lt;/TouchableOpacity&gt;
-          &lt;TouchableOpacity style={styles.btn}
-          onPress={() =&gt; console.log(&apos;press me&apos;)}&gt;
-          &lt;Text style={styles.text}&gt; Login&lt;/Text&gt;
-          &lt;/TouchableOpacity&gt;
-        &lt;/View&gt;
-    &lt;/View&gt;
-  &lt;/ScrollView&gt;
-   );
-}
-
-if(route.id === &apos;shop&apos;){
-  return (
-    &lt;ShopView navigator={navigator} route={route} /&gt;
-   );
-}
-
-
-
-  },
-
- render: function(){
-    var renderScene = this.renderSceneAndroid;
-    var configureScence = this.configureScenceAndroid;
-    return (
-      &lt;Navigator
-        debugOverlay={false}
-        initialRoute={{ title: 'Main', id:'main'}}
-        configureScence={{ configureScence }}
-        renderScene={renderScene}/&gt;
-   );
-  }
-
-});
-var styles = StyleSheet.create({
-  container:{
-    flex: 1,
-    backgroundColor: &apos;#F4FCFF&apos;,
-  },
-  Top:{
-    height:50,
-    alignItems: &apos;center&apos;,
-    backgroundColor:&apos;#f5f2f0&apos;,
-    justifyContent: &apos;center&apos;,
-  },
-  WelcomeText:{
-    fontWeight: &apos;bold&apos;,
-    fontSize: 18,
-    color: &apos;#d7499a&apos;, 
-    borderWidth: 2,
-    borderBottomColor:&apos;#b8a6b0&apos;,
-  },
-  maincontain:
-  {
-    flex: 10,
-    paddingLeft: 10,
-    paddingRight: 10,
-    backgroundColor: &apos;#F4FCFF&apos;,
-    justifyContent: &apos;center&apos;,
-    alignItems: &apos;center&apos;,
-  },
-   logo:{
-    width:160,
-    height:160,
-  },
-  choose:{
-    flexDirection:&apos;row&apos;
-  },
-  btn:{
-     alignSelf: &apos;stretch&apos;,
-     alignItems: &apos;center&apos;,
-     justifyContent: &apos;center&apos;,
-     backgroundColor: &apos;#80b8e4&apos;,
-     height: 40,
-     borderRadius: 5,
-     width:100,
-     marginTop: 100,
-     marginLeft:20,
-  },
-  text:{
-    fontWeight: &apos;bold&apos;,
-    fontSize: 14,
-    color: &apos;#FFF&apos;
-  },
-});
-
-module.exports = PT
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -2047,7 +1922,7 @@ module.exports = PT
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">38</span>
+                <span class="site-state-item-count">39</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
