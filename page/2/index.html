@@ -263,6 +263,232 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/reactnative-navigation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello World">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/23/reactnative-navigation/" itemprop="url">
+                  reactnative navigation
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-23T00:36:13+12:00">
+                2017-04-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="reactnative-navigation"><a href="#reactnative-navigation" class="headerlink" title="reactnative navigation"></a>reactnative navigation</h1><pre><code>/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ * @flow
+ */
+import React, { Component } from &apos;react&apos;;
+import {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View,
+  TouchableHighlight,
+  Navigator,
+} from &apos;react-native&apos;;
+
+
+class NavButton extends React.Component {
+  render() {
+    return (
+      &lt;TouchableHighlight
+        style={styles.button}
+        underlayColor=&quot;#B5B5B5&quot;
+        onPress={this.props.onPress}&gt;
+        &lt;Text style={styles.buttonText}&gt;{this.props.text}&lt;/Text&gt;
+      &lt;/TouchableHighlight&gt;
+    );
+  }
+}
+class NavMenu extends React.Component {
+  render() {
+    return (
+      &lt;View style={styles.scene}&gt;
+        &lt;Text style={styles.messageText}&gt;{this.props.message}&lt;/Text&gt;
+        &lt;NavButton
+          onPress={() =&gt; {
+            this.props.navigator.push({
+              message: &apos;向右拖拽关闭页面&apos;,
+              sceneConfig: Navigator.SceneConfigs.FloatFromRight,
+            });
+          }}
+          text=&quot;从右边向左切入页面(带有透明度变化)&quot;
+        /&gt;
+        &lt;NavButton
+          onPress={() =&gt; {
+            this.props.navigator.push({
+              message: &apos;向下拖拽关闭页面&apos;,
+              sceneConfig: Navigator.SceneConfigs.FloatFromBottom,
+            });
+          }}
+          text=&quot;从下往上切入页面(带有透明度变化)&quot;
+        /&gt;
+        &lt;NavButton
+          onPress={() =&gt; {
+            this.props.navigator.pop();
+          }}
+          text=&quot;页面弹出(回退一页)&quot;
+        /&gt;
+        &lt;NavButton
+          onPress={() =&gt; {
+            this.props.navigator.popToTop();
+          }}
+          text=&quot;页面弹出(回退到最后一页)&quot;
+        /&gt;
+      &lt;/View&gt;
+    );
+  }
+}
+class NavigatorDemo extends Component {
+  render() {
+    return (
+      &lt;Navigator
+        style={styles.container}
+        initialRoute={{ message: '初始页面', }}
+        renderScene={ (route, navigator) =&gt; &lt;NavMenu
+            message={route.message}
+            navigator={navigator}
+          /&gt;}
+         configureScene={(route) =&gt; {
+          if (route.sceneConfig) {
+            return route.sceneConfig;
+          }
+          return Navigator.SceneConfigs.FloatFromBottom;
+        }}
+      /&gt;
+    );
+  }
+}
+const styles = StyleSheet.create({
+   container: {
+    flex: 1,
+   },
+   messageText: {
+    fontSize: 17,
+    fontWeight: &apos;500&apos;,
+    padding: 15,
+    marginTop: 50,
+    marginLeft: 15,
+  },
+  button: {
+    backgroundColor: &apos;white&apos;,
+    padding: 15,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: &apos;#CDCDCD&apos;,
+  },
+});
+
+AppRegistry.registerComponent(&apos;PT&apos;, () =&gt; NavigatorDemo);
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/react-native-login/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1778,127 +2004,6 @@ import{ View} from &apos;react-native&apos;
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/22/promotion-edit/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello World">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/22/promotion-edit/" itemprop="url">
-                  promotion edit
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-22T23:54:03+12:00">
-                2017-04-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="promotion-edit"><a href="#promotion-edit" class="headerlink" title="promotion edit  "></a>promotion edit  </h1><pre><code>&lt;p&gt;Click &lt;a href=&quot;http://microanalytix.co.nz/producttag/22/christmas&quot;&gt;here &lt;/a&gt;to add all these wonderful items into shopping cart!&lt;/p&gt;
-&lt;p&gt;&lt;iframe style=&quot;width: 600px; height: 800px;&quot; src=&quot;/Content/files/Promo-Christmas-2016-NZ.pdf&quot; width=&quot;600&quot; height=&quot;150&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;&amp;gt;&lt;/p&gt;
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1948,7 +2053,7 @@ import{ View} from &apos;react-native&apos;
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">32</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
