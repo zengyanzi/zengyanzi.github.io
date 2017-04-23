@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="React Native," />
+  <meta name="keywords" content="nopCommerce," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="some problems of react nativeat the end of the code mode.exports= InstructwelcomView 记得用大写区分react native升级之后 import React ,{Componet} from &amp;apos;react&amp;apos;; import{ View} from &amp;apos;react-native&amp;apos">
-<meta name="keywords" content="React Native">
+<meta name="description" content="nopcommerce3.3 newsletter需要添加subscribe按钮到邮件正文中。当前邮件可以允许使用的token如下  %Store.Name%, %Store.URL%, %Store.Email%, %NewsLetterSubscription.Email%, %NewsLetterSubscription.ActivationUrl%, %NewsLetterSubscrip">
+<meta name="keywords" content="nopCommerce">
 <meta property="og:type" content="article">
-<meta property="og:title" content="some problems of react native">
-<meta property="og:url" content="http://yoursite.com/2017/04/23/some-problems-of-react-native/index.html">
+<meta property="og:title" content="nopcommerce3.3 newsletter">
+<meta property="og:url" content="http://yoursite.com/2017/04/24/nopcommerce3-3-newsletter/index.html">
 <meta property="og:site_name" content="Hello World">
-<meta property="og:description" content="some problems of react nativeat the end of the code mode.exports= InstructwelcomView 记得用大写区分react native升级之后 import React ,{Componet} from &amp;apos;react&amp;apos;; import{ View} from &amp;apos;react-native&amp;apos">
-<meta property="og:updated_time" content="2017-04-22T12:22:10.746Z">
+<meta property="og:description" content="nopcommerce3.3 newsletter需要添加subscribe按钮到邮件正文中。当前邮件可以允许使用的token如下  %Store.Name%, %Store.URL%, %Store.Email%, %NewsLetterSubscription.Email%, %NewsLetterSubscription.ActivationUrl%, %NewsLetterSubscrip">
+<meta property="og:updated_time" content="2017-04-23T23:39:01.785Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="some problems of react native">
-<meta name="twitter:description" content="some problems of react nativeat the end of the code mode.exports= InstructwelcomView 记得用大写区分react native升级之后 import React ,{Componet} from &amp;apos;react&amp;apos;; import{ View} from &amp;apos;react-native&amp;apos">
+<meta name="twitter:title" content="nopcommerce3.3 newsletter">
+<meta name="twitter:description" content="nopcommerce3.3 newsletter需要添加subscribe按钮到邮件正文中。当前邮件可以允许使用的token如下  %Store.Name%, %Store.URL%, %Store.Email%, %NewsLetterSubscription.Email%, %NewsLetterSubscription.ActivationUrl%, %NewsLetterSubscrip">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/23/some-problems-of-react-native/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/24/nopcommerce3-3-newsletter/"/>
 
 
 
 
 
-  <title> some problems of react native | Hello World </title>
+  <title> nopcommerce3.3 newsletter | Hello World </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -263,7 +263,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/some-problems-of-react-native/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/nopcommerce3-3-newsletter/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jenny Zeng">
@@ -284,7 +284,7 @@
             
             
               
-                some problems of react native
+                nopcommerce3.3 newsletter
               
             
           </h1>
@@ -299,8 +299,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-23T00:21:11+12:00">
-                2017-04-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T11:37:47+12:00">
+                2017-04-24
               </time>
             
 
@@ -334,12 +334,19 @@
       
 
       
-        <h1 id="some-problems-of-react-native"><a href="#some-problems-of-react-native" class="headerlink" title="some problems of react native"></a>some problems of react native</h1><p>at the end of the code</p>
-<pre><code>mode.exports= InstructwelcomView
-</code></pre><p>记得用大写区分<br>react native升级之后</p>
-<pre><code>import React ,{Componet} from &apos;react&apos;;
-import{ View} from &apos;react-native&apos;
-</code></pre><p>需要分开写</p>
+        <h1 id="nopcommerce3-3-newsletter"><a href="#nopcommerce3-3-newsletter" class="headerlink" title="nopcommerce3.3 newsletter"></a>nopcommerce3.3 newsletter</h1><p>需要添加subscribe按钮到邮件正文中。当前邮件可以允许使用的token如下 </p>
+<pre><code>%Store.Name%, %Store.URL%, %Store.Email%, %NewsLetterSubscription.Email%, %NewsLetterSubscription.ActivationUrl%, %NewsLetterSubscription.DeactivationUrl%
+</code></pre><p>其中，</p>
+<pre><code>%NewsLetterSubscription.ActivationUrl%, 为subscribe
+%NewsLetterSubscription.DeactivationUrl% 为unsubscribe
+</code></pre><p>可以在正文中输入文字click here 再插入link</p>
+<p>但是，由于进行了相对引用和绝对引用的修改，此处的</p>
+<pre><code>%NewsLetterSubscription.DeactivationUrl% 
+</code></pre><p>在发送出去的邮件正文中显示出了</p>
+<pre><code>http://microanalytix.co.nz/http://microanalytix.co.nz/edit%NewsLetterSubscription.DeactivationUrl% 
+</code></pre><p>所以需要对富文本编辑器再进行修改</p>
+<p>路径如同上一篇日志，修改js中“convert_urls”为！1<br>此修改禁止了该富文本编辑器对url的增加或者删除功能。</p>
+<p>在此之后进行insert link需要对source code进行check以保证正常显示</p>
 
       
     </div>
@@ -369,7 +376,7 @@ import{ View} from &apos;react-native&apos;
       
         <div class="post-tags">
           
-            <a href="/tags/React-Native/" rel="tag"># React Native</a>
+            <a href="/tags/nopCommerce/" rel="tag"># nopCommerce</a>
           
         </div>
       
@@ -382,18 +389,14 @@ import{ View} from &apos;react-native&apos;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/23/postreact-native-jump-to-target-page/" rel="next" title="postreact native jump to target page">
-                <i class="fa fa-chevron-left"></i> postreact native jump to target page
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/23/postnopcommerce-image-hover-scale/" rel="prev" title="postnopcommerce image hover scale">
-                postnopcommerce image hover scale <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/24/nopcommerce-3-3-local-database/" rel="prev" title="nopcommerce 3.3 local database">
+                nopcommerce 3.3 local database <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -534,7 +537,7 @@ import{ View} from &apos;react-native&apos;
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#some-problems-of-react-native"><span class="nav-number">1.</span> <span class="nav-text">some problems of react native</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#nopcommerce3-3-newsletter"><span class="nav-number">1.</span> <span class="nav-text">nopcommerce3.3 newsletter</span></a></li></ol></div>
             
 
           </div>
