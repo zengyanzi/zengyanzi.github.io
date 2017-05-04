@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[react native cmd]]></title>
+    <url>%2F2017%2F05%2F04%2Freact-native-cmd%2F</url>
+    <content type="text"><![CDATA[Some cmd of React Nativenpm install npm cache clean these two above are very useful! react-native log-android react-native log-ios these two above are userful for debug adb devices adb kill-server these two above are useful for server and device to be continued]]></content>
+      <tags>
+        <tag>React Native</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[postremove node]]></title>
+    <url>%2F2017%2F05%2F04%2Fpostremove-node%2F</url>
+    <content type="text"><![CDATA[How to remove node module after install it?Here are different options: npm uninstall &lt;name&gt; removes the module from node_modules, but not package.json npm uninstall &lt;name&gt; --save also remove from dependencies in package.json npm uninstall &lt;name&gt; --save-dev also remove from devDependencies in package.json npm -g uninstall &lt;name&gt; --save also remove it globally]]></content>
+      <tags>
+        <tag>node</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[nopcommerce 3.3 image display]]></title>
+    <url>%2F2017%2F04%2F24%2Fnopcommerce-3-3-image-display%2F</url>
+    <content type="text"><![CDATA[nopcommerce 3.3 newsletter image display bugs在Edit Campaign 编辑邮件发送后，发现插入的图片不能在测试邮箱（gmail，qq等显示），原因是插入的图片url被富文本剪辑器缩减成了相对地址，在发送出去之后无法link到图片地址即： http://microanalytixau.edev.co.nz/Content/images/uploaded/logo.gif 被缩减成为 /Content/images/uploaded/logo.gif 同时，插入的link也被缩减。官方显示解决方案为升级为3.4版本，以下为不升级版本的解决方案。解决问题如下 find the under the path:\www\Content\tinymce\tinymce.min.js change the the js” remove_script_host:!1” save]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[nopcommerce3.3 newsletter]]></title>
+    <url>%2F2017%2F04%2F24%2Fnopcommerce3-3-newsletter%2F</url>
+    <content type="text"><![CDATA[nopcommerce3.3 newsletter需要添加subscribe按钮到邮件正文中。当前邮件可以允许使用的token如下 %Store.Name%, %Store.URL%, %Store.Email%, %NewsLetterSubscription.Email%, %NewsLetterSubscription.ActivationUrl%, %NewsLetterSubscription.DeactivationUrl% 其中， %NewsLetterSubscription.ActivationUrl%, 为subscribe %NewsLetterSubscription.DeactivationUrl% 为unsubscribe 可以在正文中输入文字click here 再插入link 但是，由于进行了相对引用和绝对引用的修改，此处的 %NewsLetterSubscription.DeactivationUrl% 在发送出去的邮件正文中显示出了 http://microanalytix.co.nz/http://microanalytix.co.nz/edit%NewsLetterSubscription.DeactivationUrl% 所以需要对富文本编辑器再进行修改 路径如同上一篇日志，修改js中“convert_urls”为！1此修改禁止了该富文本编辑器对url的增加或者删除功能。 在此之后进行insert link需要对source code进行check以保证正常显示]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[nopcommerce 3.3 local database]]></title>
+    <url>%2F2017%2F04%2F24%2Fnopcommerce-3-3-local-database%2F</url>
+    <content type="text"><![CDATA[nopcommerce 3.3 local database connect在local machine 安装了nopcommerce3.3的no source 环境（即将线上文件放在本地IIS 环境www下），同时将线上数据库进行backup，在本地恢复后。恢复步骤 点击任一数据库右键，选择还原数据库新建名称，点击 源设备，添加文件，勾选文件，进行还原。 修改数据库连接：App_Data\setting.txt 在本地数据库执行：SqlServer.StoredProcedures.sql执行方式，在sql serve 2008 连接本地数据库后， 在该数据库MicroAnalytix中新建查询 打开文件，打开SqlServer.StoredProcedures.sql文件，将内容复制粘贴到新建查询中，为了防止可能出现的问题，全选该sql语言，然后进行执行。若不执行2，可能在localhost环境下进行global setting的测试会出现错误。]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[win7 IIS]]></title>
+    <url>%2F2017%2F04%2F24%2Fwin7-IIS%2F</url>
+    <content type="text"><![CDATA[How to install IIS in WIN7=由于nopcommerce需要 IIS 下进行发布，所以在win7环境下设置IIS 环境 1.打开控制面板，打开Windows功能2.选择打钩3再次进入控制面板，选择管理工具，若在控制面板没有找到管理工具，则搜索管理工具，双击如图所示4点击 Internet信息服务（IIS）管理工具，打开运行，如果已经有默认网站，建议删除，然后在点击xxx-PC添加网站然后对目前的网站进行重启现在只是搞定了IIS环境，接下来进行ASP.NET环境搭建5.控制面板–系统和安全–管理工具–Internet信息服务（IIS）管理器，打开IIS管理器。选中左侧的默认网站（也就是“Default Web Site“这个网站），单击右侧的高级设置，将应用程序池设置为Classic.NETAppPool。单击左侧的“应用程序池” 中间会出现如下图所示：将标识改为localSystem或NetworkService。]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[nopcommerce 3.3 python]]></title>
+    <url>%2F2017%2F04%2F24%2Fnopcommerce-3-3-python%2F</url>
+    <content type="text"><![CDATA[nopcommerce 3.3 use Python to address product related# ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc #cnxn是数据库连接 更改数据库连接方式，账号密码 cnxn = pyodbc.connect(DRIVER=&apos;{SQL Server Native Client 10.0}&apos;,SERVER=&apos;localhost&apos;,DATABASE=&apos;MicroAnalytix&apos;,UID=&apos;sa&apos;,PWD=&apos;密码&apos;) #cursor是数据库浮标 cursor = cnxn.cursor() #主方法 def process(): #读取csv，转换成list 更改文件存储位置 reader = list(csv.reader(open(&quot;c:/Users/Jenny/Desktop/related.csv&quot;))) #遍历数据，并处理， tips：跳过第一行 for i in reader[1:]: #Cn2产生组合 for j in itertools.combinations(i,2): #处理产生的Cn2组合 recommend(j) def recommend(j): #产生两次相互推荐 genRec(j[0],j[1]) genRec(j[1],j[0]) def genRec(a,b): #分别通过sku获得Product的Id aid = getIdFromSku(a) bid = getIdFromSku(b) #生成写RelatedProduct表的sql语句 sql = &quot;insert into dbo.RelatedProduct (ProductId1,ProductId2,DisplayOrder) values(%d,%d,%d)&quot; % (aid,bid,0) #执行sql语句 cursor.execute(sql) #提交事务 cnxn.commit() def getIdFromSku(a): sql = &quot;select Id from dbo.Product where Sku=&apos;%s&apos;&quot; % a print sql cursor.execute(sql) row = cursor.fetchone() if row: return row[0] if __name__ == &quot;__main__&quot;: process()]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[nopcommerce source code version install tips]]></title>
+    <url>%2F2017%2F04%2F24%2Fnopcommerce-source-code-version-install-tips%2F</url>
+    <content type="text"><![CDATA[nopcommerce source code version install tips click the file “CodeFirstInstallationService’’ and save .the path is libraries\nop.services\ start withpresentation\nop.web check in the browser nop.web/app-data/ to display all files，then open setting.txt，update the database]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[contact us enquiry form validation]]></title>
+    <url>%2F2017%2F04%2F24%2Fcontact-us-enquiry-form-validation%2F</url>
+    <content type="text"><![CDATA[原版本中若不填写mobile可以提交但会提交报错如下 问题应该是在向数据库提交表格的过程中设定了mobile为其中必须填写的字段但是实际前端页面没有进行验证 此修改方法为 在路径Theme\customerMicro\Views\commom\contactus.cshtml修改mobile model-&gt;phone 可能原因是在进行customerise的过程中调用了 @model ContactUsModel @using Nop.Web.Models.Common; 然而这个两个model中可能没有预留关于mobile的validation 判定，所以使用phone的model进行判定]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[nopcommerce 3.3 source code]]></title>
+    <url>%2F2017%2F04%2F24%2Fnopcommerce-3-3-source-code%2F</url>
+    <content type="text"><![CDATA[nopcommerce 3.3 source code目前公司使用的nopcommerce 3.3 是无source code的版本，导致很多功能无法实现。恢复步骤 download from nopcommerce.com 3.3 source code open NopCommerce.sln 先按照正常步骤setup 在app data里更改数据库设置 把customerise的theme拷贝到路径 \nopCommerce_3.30_Source\Presentation\Nop.Web\Themes在vs2008中刷新，在浏览器中查看，点击更新theme，可以进行更改theme进行还原。 然后怎么发布呢？由于是vs2012，不是2013，如果在vs里选择发布就一直会报错。所以目前的措施是直接从nop.web中把程序copy出来放到c盘iss发布环境，也就是WWW下面，在浏览器输入localhost，就可以在本地看到网站了]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Excel bugs]]></title>
+    <url>%2F2017%2F04%2F24%2FExcel-bugs%2F</url>
+    <content type="text"><![CDATA[Excel tips从系统中导出的excel cell format 的格式调整 日期调整。有的单元格看上去是日期但其实是text，此时采用的方法使用data-数据分列 Excel的一些小坑 巧用数据分列 - zeng-yanzi - zeng-yanzi 的博客 csv文件中的分隔符可能会导致本地修改后再导入数据库出错，采取的措施就是在本地进行修改后统一添加分隔符，方法也是通过数据分列选中这列数字—点击数据—-点击分列—-下一步—-下一步– –在右上角 列数据格式下 选择“文本”—-点击完成]]></content>
+      <tags>
+        <tag>Excel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[nopcommerce monitor duplicated attributes]]></title>
+    <url>%2F2017%2F04%2F24%2Fnopcommerce-monitor-duplicated-attributes%2F</url>
+    <content type="text"><![CDATA[nopcommerce monitor duplicated attributesimport requests import re import csv root = &quot;websites&quot; a = open(&quot;./alertau.txt&quot;,&quot;wb&quot;) columns = {&quot;SKU&quot;:0,&quot;Type&quot;:1,&quot;Colour&quot;:2,&quot;Media&quot;:3,&quot;Pore size&quot;:4,&quot;Length&quot;:5,&quot;i.d.&quot;:6,&quot;Volume&quot;:7,&quot;Diameter&quot;:8,&quot;Pack Size&quot;:9} skus = [] skus.append([&quot;SKU&quot;,&quot;Type&quot;,&quot;Colour&quot;,&quot;Media&quot;,&quot;Pore size&quot;,&quot;Length&quot;,&quot;i.d.&quot;,&quot;Volume&quot;,&quot;Diameter&quot;,&quot;Pack Size&quot;]) def process(): url = &quot;websites&quot; html = requests.get(url).content cs = extract(html) for c in cs: visit(c) write2file() def write2file(): csvfile = file(&apos;./au.csv&apos;, &apos;wb&apos;) writer = csv.writer(csvfile) writer.writerows(skus) def visit(c): url = root + c print url html = requests.get(url).content maxnum = findmax(html) print maxnum for i in range(1,maxnum+1): visitv(c,i) def visitv(c,i): url = root + c + &quot;?pagenumber=%d&quot; % i print url html = requests.get(url).content if iscat(html): links = extractlink(html) print links for link in links: visit(link) else: extractproduct(html) def findmax(html): res = re.findall(&quot;pagenumber=(\d+)\&quot;&gt;Last&lt;/a&gt;&quot;, html, re.I|re.M|re.DOTALL) print res if res: return int(res[0]) res = re.findall(&quot;pagenumber=(\d+)\&quot;&gt;\d+&quot;, html, re.I|re.M|re.DOTALL) if res: return int(res[-1]) return 1 def iscat(html): if html.find(&quot;&lt;span class=\&quot;label\&quot;&gt;SKU: &lt;/span&gt;&quot;) != -1: return False return True def extractproduct(html): sku = extractsku(html) attr = extractattr(html) print sku print attr ats = set([]) r = False for k,v in attr: if k in ats: r = True else: ats.add(k) if r: a.write(&quot;%s\n&quot; % sku) a.flush() export(sku,attr) def export(sku,attr): p = [&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;] p[0] = sku for k,v in attr: p[columns[k]] = v skus.append(p) def extractsku(html): return re.findall(&quot;&lt;span class=\&quot;value\&quot; itemprop=\&quot;sku\&quot; id=\&quot;sku\-\d+\&quot;&gt;(.*?)&lt;/span&gt;&quot;, html, re.I|re.M|re.DOTALL)[0] def extractattr(html): attr = [] res = re.findall(&quot;&lt;td class=\&quot;a-left spec\-name\&quot;&gt;(.*?)&lt;/td&gt;\s+&lt;td class=\&quot;a-left spec-value\&quot;&gt;(.*?)&lt;/td&gt;&quot;,html,re.I|re.M|re.DOTALL) for a in res: attr.append([clean(a[0]),clean(a[1])]) return attr def clean(a): return a.replace(&quot;\r\n&quot;,&quot;&quot;).strip() def extractlink(html): res = [] res1 = re.findall(&quot;&lt;h2 class=\&quot;title\&quot;&gt;\s+&lt;a href=\&quot;(/.*?)\&quot;&quot;, html, re.I|re.M|re.DOTALL) res2 = re.findall(&quot;&lt;h2 class=\&quot;product\-title\&quot;&gt;\s+&lt;a href=\&quot;(/.*?)\&quot;&quot;, html, re.I|re.M|re.DOTALL) for i in res1: res.append(i) for i in res2: res.append(i) return res def extract(html): res = re.findall(&quot;&lt;li class=\&quot;inactive\&quot;&gt;\s+&lt;a href=\&quot;(/.*?)\&quot;&gt;.*?&lt;/a&gt;\s+&lt;/li&gt;&quot;,html,re.I|re.M|re.DOTALL) return [i for i in res] if __name__ == &quot;__main__&quot;: process()]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[sql depulicated]]></title>
+    <url>%2F2017%2F04%2F24%2Fsql-depulicated%2F</url>
+    <content type="text"><![CDATA[SQL Duplicatedesituation :数据库里有很多sku是重复的，在进行处理的时候需要注意，所以特意写了一个查重sql语句来显示哪些是已经deleted下面的语句中， group by 是以sku进行分组的意思，having可以理解成where，但是区别在于，在group by后面的就要使用having SELECT Sku,Deleted FROM [MicroAnalytix].[dbo].[Product] where (Sku in (select Sku from [MicroAnalytix].[dbo].[Product] group by Sku having count(*)&gt;=2)) ; GROUP BY 语句GROUP BY 语句用于结合合计函数，根据一个或多个列对结果集进行分组。在 SQL 中增加 HAVING 子句原因是，WHERE 关键字无法与合计函数一起使用]]></content>
+      <tags>
+        <tag>SQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[sql not in]]></title>
+    <url>%2F2017%2F04%2F24%2Fsql-not-in%2F</url>
+    <content type="text"><![CDATA[SQL not inselect Id from [MicroAnalytix].[dbo].[Product] where Deleted=0 and Id NOT IN ( SELECT ProductId FROM [MicroAnalytix].[dbo].[TierPrice] );]]></content>
+      <tags>
+        <tag>SQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[sql exist]]></title>
+    <url>%2F2017%2F04%2F24%2Fsql-exist%2F</url>
+    <content type="text"><![CDATA[SQL/****** Script for SelectTopNRows command from SSMS ******/ SELECT Email from [MicroAnalytix].[dbo].[Customer] where Id in( select Customer_Id From [MicroAnalytix].[dbo].[Customer_CustomerRole_Mapping] where CustomerRole_Id=6);]]></content>
+      <tags>
+        <tag>SQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[remove application css]]></title>
+    <url>%2F2017%2F04%2F24%2Fremove-application-css%2F</url>
+    <content type="text"><![CDATA[applications&lt;!--&lt;a href=&quot;@Url.RouteUrl(&quot;BlogRSS&quot;, new { languageId = Model.WorkingLanguageId })&quot; class=&quot;link-rss&quot; title=&quot;@T(&quot;Blog.RSS.Hint&quot;)&quot;&gt;@T(&quot;Blog.RSS&quot;)&lt;/a&gt; &lt;h1&gt; @if (String.IsNullOrEmpty(Model.PagingFilteringContext.Tag)) { if (Model.PagingFilteringContext.GetParsedMonth().HasValue) { @String.Format(T(&quot;Blog.FilteredByMonth&quot;).Text, Model.PagingFilteringContext.GetParsedMonth().Value.Year, Model.PagingFilteringContext.GetParsedMonth().Value.ToString(&quot;MMMM&quot;)) } else { @T(&quot;APPLICATIONS&quot;) } } else { @String.Format(T(&quot;Blog.TaggedWith&quot;).Text, Model.PagingFilteringContext.Tag) } &lt;/h1&gt;--&gt; then go to style.css rss block:none]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[bulk add attribute]]></title>
+    <url>%2F2017%2F04%2F24%2Fbulk-add-attribute%2F</url>
+    <content type="text"><![CDATA[bulk add attribute # ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc import MySQLdb #cnxn是数据库连接 更改数据库连接方式，账号密码 #cursor是数据库浮标 cursor = cnxn.cursor() #主方法 def process(): #读取csv，转换成list 更改文件存储位置 reader = list(csv.reader(open(&quot;c:/Users/Jenny/Desktop/ski/attribute/attribute.csv&quot;))) header = reader[0] #遍历数据，并处理， tips：跳过第一行 for i in reader[1:]: sku = i[0] product_id = getIdFromSku(sku) if product_id == 0: print &quot;error sku %s&quot; % sku continue options = i[1] option_id=int(options) if exist(product_id,option_id): pass else: insert(product_id,option_id) def exist(product_id,option_id): sql = &quot;select * from dbo.Product_SpecificationAttribute_Mapping where ProductId = %d and SpecificationAttributeOptionId = %d&quot; % (product_id,option_id) cursor.execute(sql) rows = cursor.fetchall() if len(rows)==0: return False else: print rows return True def insert(product_id,option_id): sql = &quot;insert into dbo.Product_SpecificationAttribute_Mapping (ProductId,SpecificationAttributeOptionId,DisplayOrder,AllowFiltering,ShowOnProductPage) values(%d,%d,%d,%d,%d)&quot; % (product_id,option_id,0,0,1) print sql cursor.execute(sql) cnxn.commit() def getIdFromSku(a): sql = &quot;select Id from dbo.Product where Sku=&apos;%s&apos; and deleted=0&quot; % a cursor.execute(sql) row = cursor.fetchall() if row: return row[0][0] else: return 0 def test(skuset): err = False for sku in skuset: product_id = getIdFromSku(sku) if not product_id: print &quot;can&apos;t find product id where sku=&apos;%s&apos;&quot; % sku err = True if __name__ == &quot;__main__&quot;: process()]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[tireprice]]></title>
+    <url>%2F2017%2F04%2F24%2Ftireprice%2F</url>
+    <content type="text"><![CDATA[tireprice # ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc import MySQLdb #cnxn是数据库连接 更改数据库连接方式，账号密码 #cursor是数据库浮标 cursor = cnxn.cursor() def test(skuset): err = False for sku in skuset: product_id = getIdFromSku(sku) if not product_id: print &quot;can&apos;t find product id where sku=&apos;%s&apos;&quot; % sku err = True #主方法 def process(): #读取csv，转换成list 更改文件存储位置 reader = list(csv.reader(open(&quot;c:/Users/Jenny/Desktop/ski/tierprice for customer/VIP-AU-1.csv&quot;))) header = reader[0] #遍历数据，并处理， tips：跳过第一行 skuset = set([]) for i in reader[1:]: sku = i[0] product_id = getIdFromSku(sku) if product_id == 0: print &quot;error sku %s&quot; % sku continue prices = i[1:] for j in range(len(prices)): price = float(prices[j]) crid = int(header[j+1]) updatetire(product_id) if find(product_id,crid): update(product_id,crid,price) else: insert(product_id,price,crid) def update(product_id,crid,price): sql = &quot;update dbo.TierPrice set Price=%f where ProductId=%d and CustomerRoleId=%d&quot; %(price,product_id,crid) cursor.execute(sql) cnxn.commit() def find(product_id,crid): sql =&quot;select * from dbo.TierPrice where ProductId=%d and CustomerRoleId=%d&quot; % (product_id,crid) cursor.execute(sql) rows = cursor.fetchall() return rows def updatetire(productid): sql = &quot;update dbo.Product set HasTierPrices=1 where Id=%d&quot; % productid print sql cursor.execute(sql) cnxn.commit() def insert(product_id,price,crid): sql = &quot;insert into dbo.TierPrice (ProductId,StoreId,CustomerRoleId,Quantity,Price) values(%d,0,%d,1,%f)&quot; % (product_id,crid,price) print sql cursor.execute(sql) cnxn.commit() def getIdFromSku(a): sql = &quot;select Id from dbo.Product where Sku=&apos;%s&apos; and deleted=0&quot; % a cursor.execute(sql) row = cursor.fetchall() if row: return row[0][0] else: return 0 if __name__ == &quot;__main__&quot;: process()]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[nopcommerce blog]]></title>
+    <url>%2F2017%2F04%2F24%2Fnopcommerce-blog%2F</url>
+    <content type="text"><![CDATA[nopcommerce 去掉blog的正文 将下面这段代码注释掉，路径 theme\customeMicroAnalytix\views\blog\list.cshtml &lt;div class=&quot;post-body&quot;&gt; @Html.Raw(item.Body) &lt;/div&gt;]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[message template]]></title>
+    <url>%2F2017%2F04%2F24%2Fmessage-template%2F</url>
+    <content type="text"><![CDATA[message template的token修改 由于修改了full text 编辑器的URL设定，导致部分token无法正常使用，需要将 &lt;a href=&quot;/Admin/MessageTemplate/Edit/%Store.URL%&quot;&gt;%Store.Name%&lt;/a&gt; 中的/Admin/MessageTemplate/Edit/部分去除]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[excel]]></title>
+    <url>%2F2017%2F04%2F24%2Fexcel%2F</url>
+    <content type="text"><![CDATA[【Excel技巧】空单元格自动填充上一单元格内容 使用“定位”命令来快速查找和选择所有包含特定类型数据（例如公式）的单元格或者只是符合特定条件的单元格. 操作：在“开始”选项卡上的“编辑”组中，单击“查找和选择”，然后单击“定位”（或转到）。键盘快捷方式 也可以按 Ctrl+G，按 F5 也会显示此对话框。 按 Ctrl+Enter 可使用当前条目填充选定的单元格区域，也就是说在非连续的单元格内批量填充相同内容。]]></content>
+      <tags>
+        <tag>excel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[some points in Python]]></title>
+    <url>%2F2017%2F04%2F24%2Fsome-points-in-Python%2F</url>
+    <content type="text"><![CDATA[Python pointsErrno 22] invalid mode (‘r’) or filename:这种错误的出现是在使用built-in函数file()或者open()的时候。或者是因为文件的打开模式不对，或者是文件名有问题。前者的话只需要注意文件是否可读或者可写就可以了。后者则是与文件路径相关的问题，需要在文件名前加r或者R转义，如：file(r”e:\Test.txt”,’r’).或者将反斜杠\变成两个，如file(“e:\Test.txt”,’r’).]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[add special attribute massive]]></title>
+    <url>%2F2017%2F04%2F24%2Fadd-special-attribute-massive%2F</url>
+    <content type="text"><![CDATA[add special attribute massive注意事项，%d 占位符是整数型， %s占位符是字符串 #主方法 def process(): #读取csv，转换成list 更改文件存储位置 reader = list(csv.reader(open(&quot;D:\\ski\\attribute\\attribute-gc.csv&quot;))) header = reader[0] #遍历数据，并处理， tips：跳过第一行 for i in reader[1:]: sku = i[0] product_id = getIdFromSku(sku) if product_id == 0: print &quot;error sku %s&quot; % sku continue optionname = i[1] print optionname #测试看是否存在这样的optionname test(optionname) #如果存在，取optionid optionid = getoptionIdFromoption(optionname) print optionid #插入optionid和productid if exist(product_id,optionid): print &quot;exist&quot; pass else: insert(product_id,optionid) #是否存在productid和optionid，如果存在，就退出 def exist(product_id,optionid): sql = &quot;select * from dbo.Product_SpecificationAttribute_Mapping where ProductId = %d and SpecificationAttributeOptionId = %d&quot; % (product_id,optionid) cursor.execute(sql) rows = cursor.fetchall() if len(rows)==0: return False else: return True #通过optionname找出optionid def getoptionIdFromoption(optionname): sql=&quot;SELECT Id FROM dbo.SpecificationAttributeOption where SpecificationAttributeId=%d and Name=&apos;%s&apos;&quot; % (12,optionname) print sql cursor.execute(sql) row = cursor.fetchall() return row[0][0] 插入optionid和productid def insert(product_id,optionid): sql = &quot;insert into dbo.Product_SpecificationAttribute_Mapping(ProductId,SpecificationAttributeOptionId,DisplayOrder,AllowFiltering,ShowOnProductPage) values(%d,%d,%d,%d,%d)&quot; % (product_id,optionid,0,0,1) print sql cursor.execute(sql) cnxn.commit() #通过sku找出id def getIdFromSku(a): sql = &quot;select Id from dbo.Product where Sku=&apos;%s&apos; and deleted=0&quot; % a cursor.execute(sql) row = cursor.fetchall() if row: return row[0][0] else: return 0 #测试optionname是否存在，若不存在，则插入 def test(optionname): if find(optionname) == 0: sql=&quot;insert into dbo.SpecificationAttributeOption (Name,SpecificationAttributeId,DisplayOrder) values(&apos;%s&apos;,12,0)&quot; % optionname print sql cursor.execute(sql) cnxn.commit() #测试optionname是否存在，若不存在，则插入 def find(optionname): sql=&quot;SELECT Id FROM dbo.SpecificationAttributeOption where SpecificationAttributeId=%d and Name=&apos;%s&apos;&quot; % (12,optionname) cursor.execute(sql) row = cursor.fetchall() if row: return row[0][0] else: return 0 if __name__ == &quot;__main__&quot;: process()]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[INFO Generated: lib/jquery_lazyload/bower.json]]></title>
+    <url>%2F2017%2F04%2F24%2FINFO-Generated-lib-jquery-lazyload-bower-json%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[change the banner for nop]]></title>
+    <url>%2F2017%2F04%2F24%2Fchange-the-banner-for-nop%2F</url>
+    <content type="text"><![CDATA[change the banner for nopthe width and height is decided by the size of photo.now changing from 690467 to 690265if we want to change the speed of the animationgo to plugins\widgets.novoslider\scrpts\jquery.nivo.slider.jschange//Default settings $.fn.nivoSlider.defaults = { effect: &apos;random&apos;, slices: 15, boxCols: 8, boxRows: 4, animSpeed: 500, pauseTime: 3000, startSlide: 0, directionNav: true, controlNav: true, controlNavThumbs: false, pauseOnHover: true, manualAdvance: false, prevText: &apos;Prev&apos;, nextText: &apos;Next&apos;, randomStart: false, beforeChange: function () { }, afterChange: function () { }, slideshowEnd: function () { }, lastSlide: function () { }, afterLoad: function () { } };]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[navigation nopcommerce]]></title>
+    <url>%2F2017%2F04%2F24%2Fnavigation-nopcommerce%2F</url>
+    <content type="text"><![CDATA[How to change the navigation bar in nop go to the path theme\customemicroanalytix\views\catalog\topmenu.cshtml @if (Model.BlogEnabled) { &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;Blog&quot;)&quot;&gt;APPLICATIONS &amp; TECHNOLOGIES&lt;/a&gt;&lt;/li&gt; } here, we will change APPLICATIONS to APPLICATIONS &amp; TECHNOLOGIES]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[change homepage layout]]></title>
+    <url>%2F2017%2F04%2F24%2Fchange-homepage-layout%2F</url>
+    <content type="text"><![CDATA[how to update nopcommerce homepage layout find this file under the themes/themesname/views/home/index.cshtml change the @{ Layout = &quot;~/Views/Shared/_ColumnsThree.cshtml&quot;; } generate refresh]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[size of image under recently review]]></title>
+    <url>%2F2017%2F04%2F24%2Fsize-of-image-under-recently-review%2F</url>
+    <content type="text"><![CDATA[how to change the size of image under recently review nopcommerce go to nop.web\views\catalog\recentlyviewproductblock.cshtml change the following code { &lt;div class=&quot;product-picture&quot;&gt; &lt;a href=&quot;@Url.RouteUrl(&quot;Product&quot;, new { SeName = product.SeName })&quot; title=&quot;@product.DefaultPictureModel.Title&quot;&gt; &lt;img class=&quot;recentviewimg&quot;alt=&quot;@product.DefaultPictureModel.AlternateText&quot; src=&quot;@product.DefaultPictureModel.ImageUrl&quot; title=&quot;@product.DefaultPictureModel.Title&quot; /&gt; &lt;/a&gt; &lt;/div&gt; } to { &lt;div class=&quot;product-picture&quot;&gt; &lt;a href=&quot;@Url.RouteUrl(&quot;Product&quot;, new { SeName = product.SeName })&quot; title=&quot;@product.DefaultPictureModel.Title&quot;&gt; &lt;img class=&quot;recentviewimg&quot;alt=&quot;@product.DefaultPictureModel.AlternateText&quot; src=&quot;@product.DefaultPictureModel.FullSizeImageUrl&quot; title=&quot;@product.DefaultPictureModel.Title&quot; /&gt; &lt;/a&gt; &lt;/div&gt; } the reason is:if we choose imageUrl,it will load image from thumb but if we choose Fullsizeimageurl,then it will load from full size.___could be found in nop.web\controllers\catalogcontroller.cs like this below: var defaultPictureModel = new PictureModel() { ImageUrl = _pictureService.GetPictureUrl(pictures.FirstOrDefault(), defaultPictureSize, !isAssociatedProduct), FullSizeImageUrl = _pictureService.GetPictureUrl(pictures.FirstOrDefault(), 0, !isAssociatedProduct), Title = string.Format(_localizationService.GetResource(&quot;Media.Product.ImageLinkTitleFormat.Details&quot;), model.Name), AlternateText = string.Format(_localizationService.GetResource(&quot;Media.Product.ImageAlternateTextFormat.Details&quot;), model.Name), }; add css for the size of imageclass=”recentviewimg”and add css in theme .block-recently-viewed-products li { background: none; height: 55px; clear: both; margin:0px; border-bottom: 1px solid #e5e5e5; } .block-recently-viewed-products li.last { border-bottom: none; } .block-recently-viewed-products .product-picture { float: left; height: 55px; width: 55px; margin: 0px; padding:0px; } .recentviewimg { float: left; height: 50px; width: 50px; margin-right: 5px; padding:0px; }]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[time of novisilder]]></title>
+    <url>%2F2017%2F04%2F24%2Ftime-of-novisilder%2F</url>
+    <content type="text"><![CDATA[time of novisildergo to the path plugins/widget.nivoslider/scripts/jquery.nivo.slider.jschange the pause timethe default pause time is 5000then we could change to 2000,which test it till work fine.]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[asp.net mvc]]></title>
+    <url>%2F2017%2F04%2F24%2Fasp-net-mvc%2F</url>
+    <content type="text"><![CDATA[asp.net mvc when learning asp.net mvc 4 according tohttp://www.asp.net/mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-a-model but after creating the model, there is a problem which seems to be connected with sql connection.the key to address this problem is download and install the localDB again.]]></content>
+      <tags>
+        <tag>APS.NET MVC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[intall react native]]></title>
+    <url>%2F2017%2F04%2F23%2Fintall-react-native%2F</url>
+    <content type="text"><![CDATA[intall react native basically follow the instruction of https://facebook.github.io/react-native/docs/getting-started.html#content注意事项如下http://reactnative.cn/docs/0.31/getting-started.html#content 中文参考若是Android +windows 管理员权限打开cmd！！！！ 在cmd下安装好nodejs和Python之后cd 到node下 再运行 npm Android studio的目的是打开模拟器，一定要打开模拟器，开机到开机画面react-native init AwesomeProject是在某路径下建立 react native 文件夹，可以自定义路径 注意：Android studio严格按照http://reactnative.cn/docs/0.31/getting-started.html#content 进行配置 在Android studio 中打开 AVD MANAGER，保证模拟器开机到开机画面即可]]></content>
+      <tags>
+        <tag>React Native</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[reactnative navigation]]></title>
+    <url>%2F2017%2F04%2F23%2Freactnative-navigation%2F</url>
+    <content type="text"><![CDATA[reactnative navigation/** * Sample React Native App * https://github.com/facebook/react-native * @flow */ import React, { Component } from &apos;react&apos;; import { AppRegistry, StyleSheet, Text, View, TouchableHighlight, Navigator, } from &apos;react-native&apos;; class NavButton extends React.Component { render() { return ( &lt;TouchableHighlight style={styles.button} underlayColor=&quot;#B5B5B5&quot; onPress={this.props.onPress}&gt; &lt;Text style={styles.buttonText}&gt;{this.props.text}&lt;/Text&gt; &lt;/TouchableHighlight&gt; ); } } class NavMenu extends React.Component { render() { return ( &lt;View style={styles.scene}&gt; &lt;Text style={styles.messageText}&gt;{this.props.message}&lt;/Text&gt; &lt;NavButton onPress={() =&gt; { this.props.navigator.push({ message: &apos;向右拖拽关闭页面&apos;, sceneConfig: Navigator.SceneConfigs.FloatFromRight, }); }} text=&quot;从右边向左切入页面(带有透明度变化)&quot; /&gt; &lt;NavButton onPress={() =&gt; { this.props.navigator.push({ message: &apos;向下拖拽关闭页面&apos;, sceneConfig: Navigator.SceneConfigs.FloatFromBottom, }); }} text=&quot;从下往上切入页面(带有透明度变化)&quot; /&gt; &lt;NavButton onPress={() =&gt; { this.props.navigator.pop(); }} text=&quot;页面弹出(回退一页)&quot; /&gt; &lt;NavButton onPress={() =&gt; { this.props.navigator.popToTop(); }} text=&quot;页面弹出(回退到最后一页)&quot; /&gt; &lt;/View&gt; ); } } class NavigatorDemo extends Component { render() { return ( &lt;Navigator style={styles.container} initialRoute={{ message: '初始页面', }} renderScene={ (route, navigator) =&gt; &lt;NavMenu message={route.message} navigator={navigator} /&gt;} configureScene={(route) =&gt; { if (route.sceneConfig) { return route.sceneConfig; } return Navigator.SceneConfigs.FloatFromBottom; }} /&gt; ); } } const styles = StyleSheet.create({ container: { flex: 1, }, messageText: { fontSize: 17, fontWeight: &apos;500&apos;, padding: 15, marginTop: 50, marginLeft: 15, }, button: { backgroundColor: &apos;white&apos;, padding: 15, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: &apos;#CDCDCD&apos;, }, }); AppRegistry.registerComponent(&apos;PT&apos;, () =&gt; NavigatorDemo);]]></content>
+      <tags>
+        <tag>React Native</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[react native login]]></title>
+    <url>%2F2017%2F04%2F23%2Freact-native-login%2F</url>
+    <content type="text"><![CDATA[react native login viewimport React, { Component } from &apos;react&apos;; import { AppRegistry,StyleSheet,Image, TextInput, Text,ScrollView,TouchableOpacity,View} from &apos;react-native&apos;; class CoolApp extends React.Component { render() { return ( &lt;ScrollView contentContainerStyle={{flex:1}} keyboardDismissMode=&apos;on-drag&apos; keyboardShouldPersistTaps={false} &gt; &lt;View style={styles.container}&gt; &lt;Image source={{uri: 'http://oss-hz.qianmi.com/qianmicom/u/cms/qmwww/201511/03102524l6ur.png'}} style={styles.logo}/&gt; &lt;TextInput ref={(username) =&gt; this.username = username} onFocus={()=&gt;this.username.focus()} style={styles.input} placeholder=&apos;username&apos;/&gt; &lt;TextInput ref={(password) =&gt; this.password = password} onFocus={() =&gt; this.password.focus()} style={styles.input} placeholder=&apos;password&apos; password={true}/&gt; &lt;TouchableOpacity style={styles.btn} onPress={() =&gt; console.log(&apos;press me&apos;)}&gt; &lt;Text style={styles.text}&gt;login&lt;/Text&gt; &lt;/TouchableOpacity&gt; &lt;/View&gt; &lt;/ScrollView&gt; ); } } var styles = StyleSheet.create({ container: { flex: 1, paddingLeft: 10, paddingRight: 10, justifyContent: &apos;center&apos;, alignItems: &apos;center&apos;, backgroundColor: &apos;#F4FCFF&apos;, }, logo:{ width:160, height:160, marginTop: 100 }, input: { height: 40, width:200, marginTop: 10, //间隔 borderWidth: 1, borderRadius: 5, //圆角 borderColor: &apos;lightblue&apos; }, text:{ fontWeight: &apos;bold&apos;, fontSize: 14, color: &apos;#FFF&apos; }, btn:{ alignSelf: &apos;stretch&apos;, alignItems: &apos;center&apos;, justifyContent: &apos;center&apos;, backgroundColor: &apos;#3333FF&apos;, height: 40, borderRadius: 5, marginTop: 10 } }); AppRegistry.registerComponent(&apos;AwesomeProject&apos;, () =&gt; CoolApp);]]></content>
+      <tags>
+        <tag>React Native</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[massively import product special]]></title>
+    <url>%2F2017%2F04%2F23%2Fmassively-import-product-special%2F</url>
+    <content type="text"><![CDATA[massively import product special# ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc import MySQLdb #cnxn是数据库连接 更改数据库连接方式，账号密码 cursor = cnxn.cursor() #主方法 def process(): #读取csv，转换成list 更改文件存储位置 reader = list(csv.reader(open(&quot;D:\\ski\\attribute\\attribute-nz-mn.csv&quot;))) header = reader[0] #遍历数据，并处理， tips：跳过第一行 for i in reader[1:]: sku = i[0] product_id = getIdFromSku(sku) if product_id == 0: print &quot;error sku %s&quot; % sku continue optionname = i[1] test(optionname) optionid = getoptionIdFromoption(optionname) option_id=int(optionid) if exist(product_id,option_id): pass else: insert(product_id,option_id) def exist(product_id,option_id): sql = &quot;select * from dbo.Product_SpecificationAttribute_Mapping where ProductId = %d and SpecificationAttributeOptionId = %d&quot; % (product_id,option_id) cursor.execute(sql) rows = cursor.fetchall() if len(rows)==0: return False else: print rows def getoptionIdFromoption(optionname): sql=&quot;SELECT Id FROM dbo.SpecificationAttributeOption where SpecificationAttributeId= %d and Name=&apos;%s&apos;&quot; % (7,optionname) cursor.execute(sql) row = cursor.fetchall() if row: return row[0][0] else: return 0 print sql def insert(product_id,option_id): sql = &quot;insert into dbo.Product_SpecificationAttribute_Mapping (ProductId,SpecificationAttributeOptionId,DisplayOrder,AllowFiltering,ShowOnProductPage) values(%d,%d,%d,%d,%d)&quot; % (product_id,option_id,0,0,1) print sql cursor.execute(sql) cnxn.commit() def getIdFromSku(a): sql = &quot;select Id from dbo.Product where Sku=&apos;%s&apos; and deleted=0&quot; % a cursor.execute(sql) row = cursor.fetchall() if row: return row[0][0] else: return 0 def test(optionname): if find(optionname)==0: sql=&quot;insert into dbo.SpecificationAttributeOption (Name,SpecificationAttributeId,DisplayOrder) values(&apos;%s&apos;,&apos;7&apos;,0)&quot; % optionname print sql cursor.execute(sql) cnxn.commit() def find(optionname): sql=&quot;select Name FROM dbo.SpecificationAttributeOption where SpecificationAttributeId=&apos;7&apos; and Name=&apos;%s&apos;&quot; % optionname cursor.execute(sql) row = cursor.fetchall() if row: return row[0][0] else: return 0 if __name__ == &quot;__main__&quot;: process()]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[postfirst page choose]]></title>
+    <url>%2F2017%2F04%2F23%2Fpostfirst-page-choose%2F</url>
+    <content type="text"><![CDATA[first page choose import React, { Component } from &apos;react&apos;; import { AppRegistry,ScrollView,View,Text,Image,TouchableOpacity,StyleSheet} from &apos;react-native&apos;; class PT extends React.Component { render() { return ( &lt;ScrollView contentContainerStyle={{flex:1}} keyboardDismissMode=&apos;on-drag&apos; keyboardShouldPersistTaps={false} &gt; &lt;View style={styles.container}&gt; &lt;View style={styles.Top}&gt; &lt;Text style={styles.WelcomeText}&gt;Welcome to Virtual PT&lt;/Text&gt; &lt;/View&gt; &lt;/View&gt; &lt;View style={styles.maincontain}&gt; &lt;Image source={{uri: 'http://oss-hz.qianmi.com/qianmicom/u/cms/qmwww/201511/03102524l6ur.png'}} style={styles.logo}/&gt; &lt;View style={styles.choose}&gt; &lt;TouchableOpacity style={styles.btn} onPress={()=&gt; console.log(&apos;press me&apos;)}&gt; &lt;Text style={styles.text}&gt;Register&lt;/Text&gt; &lt;/TouchableOpacity&gt; &lt;TouchableOpacity style={styles.btn} onPress={() =&gt; console.log(&apos;press me&apos;)}&gt; &lt;Text style={styles.text}&gt; Login&lt;/Text&gt; &lt;/TouchableOpacity&gt; &lt;/View&gt; &lt;/View&gt; &lt;/ScrollView&gt; ); } } var styles = StyleSheet.create({ container:{ flex: 1, backgroundColor: &apos;#F4FCFF&apos;, }, Top:{ height:50, alignItems: &apos;center&apos;, backgroundColor:&apos;#f5f2f0&apos;, justifyContent: &apos;center&apos;, }, WelcomeText:{ fontWeight: &apos;bold&apos;, fontSize: 18, color: &apos;#d7499a&apos;, borderWidth: 2, borderBottomColor:&apos;#b8a6b0&apos;, }, maincontain: { flex: 10, paddingLeft: 10, paddingRight: 10, backgroundColor: &apos;#F4FCFF&apos;, justifyContent: &apos;center&apos;, alignItems: &apos;center&apos;, }, logo:{ width:160, height:160, }, choose:{ flexDirection:&apos;row&apos; }, btn:{ alignSelf: &apos;stretch&apos;, alignItems: &apos;center&apos;, justifyContent: &apos;center&apos;, backgroundColor: &apos;#80b8e4&apos;, height: 40, borderRadius: 5, width:100, marginTop: 100, marginLeft:20, }, text:{ fontWeight: &apos;bold&apos;, fontSize: 14, color: &apos;#FFF&apos; }, }); AppRegistry.registerComponent(&apos;PT&apos;, () =&gt; PT);]]></content>
+      <tags>
+        <tag>React Native</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[postreact native jump to target page]]></title>
+    <url>%2F2017%2F04%2F23%2Fpostreact-native-jump-to-target-page%2F</url>
+    <content type="text"><![CDATA[postreact native jump to target pageimport React, { Component } from &apos;react&apos;; import { AppRegistry,ScrollView,View,Text,Image,Navigator,TouchableOpacity,StyleSheet} from &apos;react-native&apos;; var _navigator; var ShopView = require(&apos;./shop.android.js&apos;); // class PT extends React.Component { var PT = React.createClass({ getInitialState: function(){ return {}; }, configureScenceAndroid: function(){ return Navigator.SceneConfigs.FadeAndroid; }, renderSceneAndroid: function(route, navigator){ _navigator = navigator; if(route.id === &apos;main&apos;){ return ( // &lt;View&gt; // &lt;TouchableOpacity onPress={() =&gt; _navigator.push({title:&apos;instructwelcome&apos;,id:&apos;instructwelcome&apos;})} style={ styles.button }&gt; // &lt;Text&gt;I am instructor&lt;/Text&gt; // &lt;/TouchableOpacity&gt; // &lt;/View&gt; &lt;ScrollView contentContainerStyle={{flex:1}} keyboardDismissMode=&apos;on-drag&apos; keyboardShouldPersistTaps={false} &gt; &lt;View style={styles.container}&gt; &lt;View style={styles.Top}&gt; &lt;Text style={styles.WelcomeText}&gt;Welcome to Virtual PT&lt;/Text&gt; &lt;/View&gt; &lt;/View&gt; &lt;View style={styles.maincontain}&gt; &lt;Image source={{uri: 'http://oss-hz.qianmi.com/qianmicom/u/cms/qmwww/201511/03102524l6ur.png'}} style={styles.logo}/&gt; &lt;View style={styles.choose}&gt; &lt;TouchableOpacity style={styles.btn} onPress={() =&gt; _navigator.push({title:&apos;shop&apos;,id:&apos;shop&apos;})}&gt; &lt;Text style={styles.text}&gt;Register&lt;/Text&gt; &lt;/TouchableOpacity&gt; &lt;TouchableOpacity style={styles.btn} onPress={() =&gt; console.log(&apos;press me&apos;)}&gt; &lt;Text style={styles.text}&gt; Login&lt;/Text&gt; &lt;/TouchableOpacity&gt; &lt;/View&gt; &lt;/View&gt; &lt;/ScrollView&gt; ); } if(route.id === &apos;shop&apos;){ return ( &lt;ShopView navigator={navigator} route={route} /&gt; ); } }, render: function(){ var renderScene = this.renderSceneAndroid; var configureScence = this.configureScenceAndroid; return ( &lt;Navigator debugOverlay={false} initialRoute={{ title: 'Main', id:'main'}} configureScence={{ configureScence }} renderScene={renderScene}/&gt; ); } }); var styles = StyleSheet.create({ container:{ flex: 1, backgroundColor: &apos;#F4FCFF&apos;, }, Top:{ height:50, alignItems: &apos;center&apos;, backgroundColor:&apos;#f5f2f0&apos;, justifyContent: &apos;center&apos;, }, WelcomeText:{ fontWeight: &apos;bold&apos;, fontSize: 18, color: &apos;#d7499a&apos;, borderWidth: 2, borderBottomColor:&apos;#b8a6b0&apos;, }, maincontain: { flex: 10, paddingLeft: 10, paddingRight: 10, backgroundColor: &apos;#F4FCFF&apos;, justifyContent: &apos;center&apos;, alignItems: &apos;center&apos;, }, logo:{ width:160, height:160, }, choose:{ flexDirection:&apos;row&apos; }, btn:{ alignSelf: &apos;stretch&apos;, alignItems: &apos;center&apos;, justifyContent: &apos;center&apos;, backgroundColor: &apos;#80b8e4&apos;, height: 40, borderRadius: 5, width:100, marginTop: 100, marginLeft:20, }, text:{ fontWeight: &apos;bold&apos;, fontSize: 14, color: &apos;#FFF&apos; }, }); module.exports = PT]]></content>
+      <tags>
+        <tag>React Native</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[some problems of react native]]></title>
+    <url>%2F2017%2F04%2F23%2Fsome-problems-of-react-native%2F</url>
+    <content type="text"><![CDATA[some problems of react nativeat the end of the code mode.exports= InstructwelcomView 记得用大写区分react native升级之后 import React ,{Componet} from &apos;react&apos;; import{ View} from &apos;react-native&apos; 需要分开写]]></content>
+      <tags>
+        <tag>React Native</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[postnopcommerce image hover scale]]></title>
+    <url>%2F2017%2F04%2F23%2Fpostnopcommerce-image-hover-scale%2F</url>
+    <content type="text"><![CDATA[nopcommerce image hover scale.product-grid .product-item .picture:hover img { margin-left: auto; margin-right: auto; transition: all 0.2s; -webkit-transition: all 0.2s; transform: scale(1.2); -webkit-transform: scale(1.2); }]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[elicpase update java src]]></title>
+    <url>%2F2017%2F04%2F23%2Felicpase-update-java-src%2F</url>
+    <content type="text"><![CDATA[elicpase update java src stop tomcat delete the original one remove and add in server start the tomcat again]]></content>
+      <tags>
+        <tag>elicpase</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[git commond]]></title>
+    <url>%2F2017%2F04%2F23%2Fgit-commond%2F</url>
+    <content type="text"><![CDATA[git GIT INIT GIT ADD GIT STATUS GIT COMMIIT 看不同 git diff git reset+版本号回退 登陆git，create a new repo Git基本常用命令如下： mkdir： XX (创建一个空目录 XX指目录名) pwd： 显示当前目录的路径。 git init 把当前的目录变成可以管理的git仓库，生成隐藏.git文件。 git add XX 把xx文件添加到暂存区去。 git commit –m “XX” 提交文件 –m 后面的是注释。 git status 查看仓库状态 git diff XX 查看XX文件修改了那些内容 git log 查看历史记录 git reset –hard HEAD^ 或者 git reset –hard HEAD~ 回退到上一个版本 (如果想回退到100个版本，使用git reset –hard HEAD~100 ) cat XX 查看XX文件内容 git reflog 查看历史记录的版本号id git checkout – XX 把XX文件在工作区的修改全部撤销。 git rm XX 删除XX文件 git remote add origin https://github.com/tugenhua0707/testgit 关联一个远程库 git push –u(第一次要用-u 以后不需要) origin master 把当前master分支推送到远程库 git clone https://github.com/tugenhua0707/testgit 从远程库中克隆 git checkout –b dev 创建dev分支 并切换到dev分支上 git branch 查看当前所有的分支 git checkout master 切换回master分支 git merge dev 在当前的分支上合并dev分支 git branch –d dev 删除dev分支 git branch name 创建分支 git stash 把当前的工作隐藏起来 等以后恢复现场后继续工作 git stash list 查看所有被隐藏的文件列表 git stash apply 恢复被隐藏的文件，但是内容不删除 git stash drop 删除文件 git stash pop 恢复文件的同时 也删除文件 git remote 查看远程库的信息 git remote –v 查看远程库的详细信息 git push origin master Git会把master分支推送到远程库对应的远程分支上]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[visit a wordpress from anthoer pc]]></title>
+    <url>%2F2017%2F04%2F23%2Fvisit-a-wordpress-from-anthoer-pc%2F</url>
+    <content type="text"><![CDATA[visit a wordpress from anthoer pc set the wamp on:put online go to the wordpress:setting:change the url address ip/wp instead of localhost/wp connect another pc within LAN type ip/wp then you will find it]]></content>
+      <tags>
+        <tag>WordPress</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[promotion edit]]></title>
+    <url>%2F2017%2F04%2F22%2Fpromotion-edit%2F</url>
+    <content type="text"><![CDATA[promotion edit &lt;p&gt;Click &lt;a href=&quot;http://microanalytix.co.nz/producttag/22/christmas&quot;&gt;here &lt;/a&gt;to add all these wonderful items into shopping cart!&lt;/p&gt; &lt;p&gt;&lt;iframe style=&quot;width: 600px; height: 800px;&quot; src=&quot;/Content/files/Promo-Christmas-2016-NZ.pdf&quot; width=&quot;600&quot; height=&quot;150&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;&amp;gt;&lt;/p&gt;]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[postFullText_IsSupported]]></title>
+    <url>%2F2017%2F04%2F22%2FpostFullText-IsSupported%2F</url>
+    <content type="text"><![CDATA[FullText_IsSupportedI moved my website v3.7 from Arvixe to Host4asp.netIn the Backend clicking on Configuration/Settings&gt;General and Miscellaneous Settings I get the following error: Could not find stored procedure ‘FullText_IsSupported’. Description: An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code. Exception Details: System.Data.SqlClient.SqlException: Could not find stored procedure ‘FullText_IsSupported’. Source Error: An unhandled exception was generated during the execution of the current web request. Information regarding the origin and location of the exception can be identified using the exception stack trace below. solution Run the SQL script “App_Data\SqlServer.StoredProcedures.sql” against your new database to make sure that all your stored procedures are there.]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[postsolve the problem of Responsive Layout]]></title>
+    <url>%2F2017%2F04%2F22%2Fpostsolve-the-problem-of-Responsive-Layout%2F</url>
+    <content type="text"><![CDATA[solve the problem of Responsive Layout add in styles.css .master-wrappermain{ display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; justify-content: center; align-items: center; } remove the width off .master-wrapper-main / width:75%; margin:0 auto; max-width:1170px; background:#fff;/ add div in root :views/shared/_root.cshtml &lt;div class=&quot;master-wrapper-main clearfix&quot;&gt; @RenderBody() &lt;/div&gt; &lt;/div&gt; upload to FTP and testconsidering the IE browserchange with another way add text-align in master-wrapper-main add .master-wrapper-main .side-2 li{text-align: left; } add in master-wrappermain master-wrappermain{ text-align: center; } .master-wrapper-main { font-family: arial,helvetica,sans-serif; color: #5C5B5B; display: inline-block; /width:75%; margin:0 auto; max-width:1170px;/ background:#fff; } / one column master page / .master-wrapper-main .center-1 { float: left; width: 910px; min-height: 400px; padding: 10px; background: #FFF; display: inline; border-radius: 5px; } / two column master page / .master-wrapper-main .side-2 { float: left; width: 190px; margin: 10px 0 10px 5px; display: inline; } .master-wrapper-main .side-2 li{ text-align: left; } update 24012017 due to the modify of master-wrappermain{ text-align: center; }it effected other layout including:one column;two column and three columnwe need to add text-align into them.]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[postadd hover to promotion]]></title>
+    <url>%2F2017%2F04%2F22%2Fpostadd-hover-to-promotion%2F</url>
+    <content type="text"><![CDATA[add hover to promotion add class=”has-mega-menu” to li add div class=”mega-menu” add class=”row” div add class=”col-xs-4 col-md-4” //here is the bootstrap desigining ,could be changed according to the different layout add class=”img-holder” add a add img add ul and li here is the code &lt;li class=&quot;has-mega-menu&quot;&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;Topic&quot;, new {SeName = Html.GetTopicSeName(&quot;promotions&quot;) })&quot;&gt;PROMOTIONS&lt;/a&gt; &lt;div class=&quot;top-menu-triangle&quot;&gt;&lt;/div&gt; &lt;div class=&quot;mega-menu&quot;&gt; &lt;div class=&quot;row&quot;&gt; &lt;div class=&quot;col-xs-4 col-md-4 &quot; &gt; &lt;div class=&quot;img-holder&quot;&gt; &lt;a href=&quot;products-on-promotion&quot;&gt; &lt;img style=&quot;width:50%;height:50%;float:left&quot; src=&quot;../../Content/images/step1.png&quot; &gt; &lt;ul style=&quot;float:left;margin-top:5px;text-align:left&quot;&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Enjoy our website&lt;/li&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Enjoy our promotion&lt;/li&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Enjoy your account&lt;/li&gt; &lt;/ul&gt; &lt;/a&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;col-xs-4 col-md-4&quot;&gt; &lt;div class=&quot;img-holder&quot;&gt; &lt;a href=&quot;products-on-promotion&quot;&gt; &lt;img style=&quot;width:50%;height:50%;float:left&quot; src=&quot;../../Content/images/step2.png&quot; &gt; &lt;ul style=&quot;float:left;margin-top:5px;text-align:left &quot;&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Find your items&lt;/li&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Add to shopping cart&lt;/li&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Just check out&lt;/li&gt; &lt;/ul&gt; &lt;/a&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;col-xs-4 col-md-4&quot; &gt; &lt;div class=&quot;img-holder&quot;&gt; &lt;a href=&quot;products-on-promotion&quot;&gt; &lt;img style=&quot;width:50%;height:50%;float:left&quot; src=&quot;../../Content/images/step3.png&quot; &gt; &lt;ul style=&quot;float:left;margin-top:5px;text-align:left&quot;&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Convenient&lt;/li&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Fast&lt;/li&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Easy&lt;/li&gt; &lt;/ul&gt; &lt;/a&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[postreact native use swipe out]]></title>
+    <url>%2F2017%2F04%2F22%2Fpostreact-native-use-swipe-out%2F</url>
+    <content type="text"><![CDATA[react native use swipe outThe component I use is https://github.com/dancormier/react-native-swipeoutbut there is some codes needs to be updated.for some of them should be updated from ES5 TO ES6and for index import React from &apos;react&apos;; var tweenState = require(&apos;react-tween-state&apos;) import {PanResponder, TouchableHighlight, StyleSheet, Text, View} from &apos;react-native&apos;; var styles = require(&apos;./styles.js&apos;)]]></content>
+      <tags>
+        <tag>React Native</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[posthow to add hover for Aboutus]]></title>
+    <url>%2F2017%2F04%2F22%2Fposthow-to-add-hover-for-Aboutus%2F</url>
+    <content type="text"><![CDATA[how to add hover for Aboutus &lt;li class=&quot;has-mega-menu&quot;&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;Topic&quot;, new {SeName = Html.GetTopicSeName(&quot;aboutus&quot;) })&quot;&gt;ABOUTUS&lt;/a&gt; &lt;div class=&quot;top-menu-triangle&quot;&gt;&lt;/div&gt; &lt;div class=&quot;mega-menu&quot;&gt; &lt;div class=&quot;row&quot;&gt; &lt;div class=&quot;col-xs-4 col-md-4 &quot; &gt; &lt;div class=&quot;img-holder&quot;&gt; &lt;img style=&quot;width:50%;height:50%;float:left&quot; src=&quot;../../Content/images/who.png&quot; &gt; &lt;ul style=&quot;float:left;margin-top:5px;text-align:left&quot;&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;MicroAnalytix is an Australian owned laboratory supply company which was established in 1988. Since then, the organisation has grown to providing laboratory products ...&lt;a href=&quot;about-us&quot; style=&quot;text-decoration:underline&quot;&gt;Learn more&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/a&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;col-xs-4 col-md-4&quot;&gt; &lt;div class=&quot;img-holder&quot;&gt; &lt;img style=&quot;width:50%;height:50%;float:left&quot; src=&quot;../../Content/images/what.png&quot; &gt; &lt;ul style=&quot;float:left;margin-top:5px;text-align:left &quot;&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;We have purpose built offices in Melbourne, Queensland with our head office and warehouse located in Sydney. Auckland, in New Zealand&apos;s North Island is our NZ head office ...&lt;a href=&quot;about-us&quot; style=&quot;text-decoration:underline&quot;&gt;Learn more&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/a&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;col-xs-4 col-md-4&quot; &gt; &lt;div class=&quot;img-holder&quot;&gt; &lt;img style=&quot;width:50%;height:50%;float:left&quot; src=&quot;../../Content/images/about.png&quot; &gt; &lt;ul style=&quot;float:left;margin-top:5px;text-align:left&quot;&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;More recently, Microanalytix has been focusing on the introduction of new product lines and have become sort after technical advisors on numerous applications and products...&lt;a href=&quot;about-us&quot; style=&quot;text-decoration:underline&quot;&gt;Learn more&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/a&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[postadd keywords in searchbox]]></title>
+    <url>%2F2017%2F04%2F22%2Fpostadd-keywords-in-searchbox%2F</url>
+    <content type="text"><![CDATA[add keywords in searchboxpath：theme/customMicroanalytix/views/shared/headers.cshtml add in &lt;div class=&quot;search-box&quot;&gt; the following codes as below &lt;div&gt;You may like:&amp;nbsp;&amp;nbsp; &lt;ul&gt; &lt;li style=&quot;width:100px;&quot;&gt;&lt;a href=&quot;search?q=Filter+paper&quot; target=&quot;_blank&quot;&gt;Filter Paper&lt;/a&gt;&lt;/li&gt; &lt;li style=&quot;width:100px;&quot;&gt;&lt;a href=&quot;search?q=Filter+paper&quot; target=&quot;_blank&quot;&gt;Membrane filter&lt;/a&gt;&lt;/li&gt; &lt;li style=&quot;width:100px;&quot;&gt;&lt;a href=&quot;search?q=Filter+paper&quot; target=&quot;_blank&quot;&gt;Syringe filter&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt;]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[postreact native AsyncStorage]]></title>
+    <url>%2F2017%2F04%2F22%2Fpostreact-native-AsyncStorage%2F</url>
+    <content type="text"><![CDATA[react native AsyncStoragecomponentDidMount() { let _that=this; AsyncStorage.getItem(&apos;userid&apos;,(err, result) =&gt; { console.log(result); var userid=result; var startday=this.state.startday;//set date var endday=this.state.endday;//set date console.log(userid); console.log(startday); //check date console.log(endday); var url = &apos;http://47.90.60.206:8080/pt_server/sportchart.action&apos;; // create url // var url = &apos;http://192.168.20.12:8080/pt_server/traineelogin.action&apos;; url += &apos;?userid=&apos;+userid+&apos;&amp;start=&apos;+startday+&apos;&amp;end=&apos;+endday; console.log(url); //check url fetch(url).then(function(response) { return response.json(); }).then(function(res) { console.log(res);//check json,then render the view again if (res[&quot;data&quot;]!=null) { _that.setState( { } ); }else{ Alert.alert(&apos;error&apos;); //alert warning and error } }); }); }]]></content>
+      <tags>
+        <tag>React Native</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[postreact native ios to setup network]]></title>
+    <url>%2F2017%2F04%2F22%2Fpostreact-native-ios-to-setup-network%2F</url>
+    <content type="text"><![CDATA[react native ios to setup network above ios 9 cannot visit http go to path: ios/projectname/info.plist find run react-native run-ios again]]></content>
+      <tags>
+        <tag>React Native</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[react native ios view bug]]></title>
+    <url>%2F2017%2F04%2F22%2Freact-native-ios-view-bug%2F</url>
+    <content type="text"><![CDATA[React Native ios problems here is the bugs View was rendered with explicitly set width/height but with a 0 flexBasis. (This might be fixed by changing flex: to flexGrow:) View: &lt;RCTShadowView: 0x6080001bc620; viewName: RCTImageView; reactTag: 315; frame: {{0, 37}, {325, 150}}&gt; the way to solve it is remove &apos;flex: x&apos; or replace with &apos;flexGrow: x&apos;, x may be 0, 1, or 2 whatever, and it will resolve most problems.]]></content>
+      <tags>
+        <tag>React Native</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[css to realise the slider]]></title>
+    <url>%2F2017%2F04%2F22%2Fcss-to-realise-the-slider%2F</url>
+    <content type="text"><![CDATA[CSS to modify the sliderde &gt;/*css reset start*/ *{ margin:0; padding:0; } ul,li{ list-style: none; } /*css reset end*/ /*css public start*/ .floatfix { *zoom: 1; } .floatfix:after { content: &quot;&quot;; display: table; clear: both; } /*css public end*/ /*slider start*/ .slider-contaner{ width:100%; position:relative; } .slider-item + .slider-item{ opacity:0; } .slider-item{ width:100%; position:absolute; animation-timing-function: linear; animation-name:fade; animation-iteration-count: infinite; background-size:100%; } .focus-container{ position:absolute; z-index:7; margin:0 auto; left:0; right:0; } .focus-container li{ width:10px; height:10px; border-radius:50%; float:left; margin-right:10px; background:#fff; } .focus-item{ width:100%; height:100%; border-radius:inherit; animation-timing-function: linear; animation-name:fade; animation-iteration-count: infinite; } .focus-item2,.focus-item3,.focus-item4,.focus-item5{ opacity:0; } .focus-container ul{ margin-left:46%; } /*set the position of focus*/ .focus-container{ bottom:2%; } /*set the color of image*/ .focus-item{ background:#51B1D9; } /*set the animation time*/ .slider-item,.focus-item{ animation-duration: 20s; } .slider-item1,.focus-item1{ animation-delay: -1s; } .slider-item2,.focus-item2{ animation-delay: 3s; } .slider-item3,.focus-item3{ animation-delay: 7s; } .slider-item4,.focus-item4{ animation-delay: 11s; } .slider-item5,.focus-item5{ animation-delay: 15s; } @keyframes fade{ 0%{ opacity:0; z-index:2; } 5%{ opacity:1; z-index: 1; } 20%{ opacity:1; z-index:1; } 25%{ opacity:0; z-index:0; } 100%{ opacity:0; z-index:0; } } /*set the path */ .slider-item1{ background-image:url(imgs/1.jpg); } .slider-item2{ background-image:url(imgs/2.jpg); } .slider-item3{ background-image:url(imgs/3.jpg); } .slider-item4{ background-image:url(imgs/4.jpg); } .slider-item5{ background-image:url(imgs/5.jpg); } /*set the height of image*/ .slider,.slider-item{ padding-bottom:40%; }de&gt; &lt;div class=&quot;layapptop&quot;&gt; &lt;div class=&quot;app&quot;&gt; &lt;a href=&quot;products-on-promotion&quot;&gt; &lt;section class=&quot;slider-contaner&quot;&gt; &lt;ul class=&quot;slider&quot;&gt; &lt;li class=&quot;slider-item slider-item1&quot;&gt;&lt;/li&gt; &lt;li class=&quot;slider-item slider-item2&quot;&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/section&gt; &lt;/a&gt; &lt;!--&lt;div class=&quot;app_box&quot;&gt; &lt;i class=&quot;icon_a&quot;&gt;&lt;/i&gt; &lt;div class=&quot;app_tab_con&quot;&gt; &lt;img style=&quot;width:98px;height:98px&quot; src=&quot;../../Content/images/tree.jpg&quot; &gt; &lt;/div&gt; &lt;h2&gt;Click to open gift&lt;/h2&gt; &lt;/div&gt;--&gt; &lt;/div&gt; &lt;div class=&quot;server_box&quot;&gt; &lt;a class=&quot;server&quot; href=&quot;contactus&quot;&gt; &lt;img style=&quot;width:98px;height:58px&quot; src=&quot;../../Content/images/ContactUs.png&quot; &gt; &lt;/a&gt; &lt;div class=&quot;server_con&quot;&gt; &lt;i class=&quot;icon_a&quot;&gt;&lt;/i&gt; &lt;h2&gt;0800 1 289 266&lt;/h2&gt; &lt;p&gt;worktime 9:00-17:00&lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[React Native Google Map]]></title>
+    <url>%2F2017%2F04%2F20%2FReact-Native-Google-Map%2F</url>
+    <content type="text"><![CDATA[How to install airbnb/react-native-map https://github.com/airbnb/react-native-maps installFirst, download the library from npm:npm install react-native-maps –savethen ,most important isrnpm:currently, it seems something wrong with rnpm,so we have to install and make sure they are linkedreact-native rnpmthen:react-native link react-native-maps currently ,it seems the v0.14.0 doesn’t work on Android,so we have to back to the previous version Package.json &quot;dependencies&quot;: { &quot;react&quot;: &quot;15.3.2&quot;, &quot;react-native&quot;: &quot;0.35.0&quot;, &quot;react-native-check-box&quot;: &quot;^1.0.4&quot;, &quot;react-native-checkbox&quot;: &quot;^1.1.0&quot;, &quot;react-native-maps&quot;: &quot;^0.13.1&quot;, then npm install Specify your Google Maps API Key:then the way to check SHA-1 is as following: keytool -list -v -keystore yourname.keystore -alias yourname-aliasthen input the passwordthen you will find information obout the APP,and the SHA-1Just copy and past into SHA-1 certificate fingerprint the informaiton below is a demo,not real SHA-1 Ensure that you have Google Play Services installed:open android studio , open sdk manager and install all these as belowjust make sure Extras / Google Play services Extras / Google Repository Android 6.0 (API 23) / Google APIs Intel x86 Atom System Image Rev. 19 Android SDK Build-tools 23.0.3when error occurs, npm cache cleanreact-native run-android Another choice is not run link ,but manually add them into files according to installation doc.Much betterMore than 10 hours on this function, but worth Another important point DO NOT TEST GPS on Emulator! I know it is silly!But do not try it again]]></content>
+      <tags>
+        <tag>React Native</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2017%2F04%2F20%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
