@@ -353,7 +353,12 @@
 &quot;react-native-maps&quot;: &quot;^0.13.1&quot;,
 </code></pre><p>then<br> npm install<br></p>
 <ol>
-<li>Specify your Google Maps API Key:<br>then the way to check SHA-1 on android studio is here ,double click on signingReport ,then you will find them in Gradle console below<br><img src="http://img0.ph.126.net/Vfhhu32QkEbRNQrh9v441g==/6631863812120392824.png" alt=""><br><img src="http://img0.ph.126.net/OJSUxxZwa0OmhNAl-uIJQg==/6632397075257193336.png" alt=""></li>
+<li><p>Specify your Google Maps API Key:<br>then the way to check SHA-1 is as following:</p>
+<p> keytool -list -v -keystore yourname.keystore -alias yourname-alias<br>then input the password<br>then you will find information obout the APP,and the SHA-1<br>Just copy and past into SHA-1 certificate fingerprint</p>
+</li>
+</ol>
+<p>the informaiton below is a demo,not real SHA-1<br><img src="http://img0.ph.126.net/OJSUxxZwa0OmhNAl-uIJQg==/6632397075257193336.png" alt=""></p>
+<ol>
 <li>Ensure that you have Google Play Services installed:<br>open android studio , open sdk manager and install all these as below<br><img src="http://img1.ph.126.net/GzF0vqSavN3w9ioGJEqN5w==/6632033136911061937.png" alt=""><br><img src="http://img1.ph.126.net/AzkftCsK6Lkx7o34jEinlA==/6631982559376198105.png" alt=""><br><img src="http://img0.ph.126.net/liBNmkMvPEYto7dGnugZmA==/6632227750466517606.png" alt=""><br>just make sure <br></li>
 </ol>
 <ul>
