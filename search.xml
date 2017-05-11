@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[postsome email sentence]]></title>
+    <url>%2F2017%2F05%2F11%2Fsome-email-sentence%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[post react native map ios]]></title>
-    <url>%2F2017%2F05%2F07%2Fpost-react-native-map-ios%2F</url>
+    <url>%2F2017%2F05%2F07%2Freact-native-map-ios%2F</url>
     <content type="text"><![CDATA[React Native map iosInstallationFirst, download the library from npm: npm install react-native-maps --save package.json &quot;dependencies&quot;: { &quot;react&quot;: &quot;15.4.2&quot;, &quot;react-native&quot;: &quot;0.41.2&quot;, &quot;react-native-chart&quot;: &quot;^1.0.8-beta&quot;, &quot;react-native-check-box&quot;: &quot;^1.0.4&quot;, &quot;react-native-checkbox&quot;: &quot;^1.1.0&quot;, &quot;react-native-dropdown&quot;: &quot;0.0.6&quot;, &quot;react-native-elements&quot;: &quot;^0.9.7&quot;, &quot;react-native-maps&quot;: &quot;^0.14.0&quot;, &quot;react-native-menu&quot;: &quot;^0.20.2&quot;, &quot;react-native-pathjs-charts&quot;: &quot;0.0.25&quot;, &quot;react-native-scrollable-tab-view&quot;: &quot;^0.7.2&quot;, &quot;react-native-slider&quot;: &quot;^0.9.1&quot;, &quot;react-native-swipeable&quot;: &quot;^0.3.2&quot;, &quot;react-native-swipeout&quot;: &quot;^2.0.12&quot;, &quot;react-native-swiper&quot;: &quot;^1.5.4&quot;, &quot;react-native-tab-navigator&quot;: &quot;^0.3.3&quot;, &quot;react-native-vector-icons&quot;: &quot;^4.0.0&quot;, &quot;rnpm&quot;: &quot;^1.9.0&quot; }, possible error might be TransformError: xxx/.js Unknown plugin &quot;module-resolver&quot; specified in &quot;xxxxx/react-native-maps/.babelrc&quot; at 0, attempted to resolve relative to &quot;xxxxxx/react-native-maps&quot; to solve this error above: npm install --save-dev babel-plugin-module-resolver npm cache clean close the package windows or the cmd windows,then start it again react-native run-ios this problem might be removed then follow the manual option as below: Option 3: Manually This was already done for you if you ran “react-native link” Open your project in Xcode, right click on Libraries and click Add Files to “Your Project Name” Look under node_modules/react-native-maps/lib/ios and add AIRMaps.xcodeproj. Add libAIRMaps.a to `Build Phases -Link Binary With Libraries. Click on AIRMaps.xcodeproj in Libraries and go the Build Settings tab. Double click the text to the right of Header Search Paths and verify that it has $(SRCROOT)/../../react-native/React as well as $(SRCROOT)/../../react-native/Libraries/Image - if they aren’t, then add them. This is so Xcode is able to find the headers that the AIRMaps source files are referring to by pointing to the header files installed within the react-native node_modules directory. Whenever you want to use it within React code now you can: var MapView = require(‘react-native-maps’); then you might notice this error iOS build failed RCTConver+Mapkit.o RCTConvert+Mapkit.m to solve this problem, just delete the RCTConver+AirMap.h RCTConvert+AirMap.mthis problem might be caused by the rename of files in Xcode open libraries -right click AirMaps.xcodeproj -add file to AirMaps -go to find react-native-maps into node_module -lib -ios -AirMaps -select RCTConvert+MapKit.h/m -add (to fix ‘File RCTConvert+MapKit.m not found’).then make suer this step libAirMaps.a to the Link Binary With Libraries then clean and build the productthen npm install rnpm react-native link then xcode-&gt;product-&gt;clean-&gt;build All this above is the way to install map based on iOS map not Google Map.As a result, the api of google map is not mentioned above!]]></content>
       <tags>
         <tag>React Natve</tag>
@@ -18,7 +23,7 @@
   </entry>
   <entry>
     <title><![CDATA[postremove node]]></title>
-    <url>%2F2017%2F05%2F04%2Fpostremove-node%2F</url>
+    <url>%2F2017%2F05%2F04%2Fremove-node%2F</url>
     <content type="text"><![CDATA[How to remove node module after install it?Here are different options: npm uninstall &lt;name&gt; removes the module from node_modules, but not package.json npm uninstall &lt;name&gt; --save also remove from dependencies in package.json npm uninstall &lt;name&gt; --save-dev also remove from devDependencies in package.json npm -g uninstall &lt;name&gt; --save also remove it globally]]></content>
       <tags>
         <tag>node</tag>
@@ -279,7 +284,7 @@
   </entry>
   <entry>
     <title><![CDATA[postfirst page choose]]></title>
-    <url>%2F2017%2F04%2F23%2Fpostfirst-page-choose%2F</url>
+    <url>%2F2017%2F04%2F23%2Ffirst-page-choose%2F</url>
     <content type="text"><![CDATA[first page choose import React, { Component } from &apos;react&apos;; import { AppRegistry,ScrollView,View,Text,Image,TouchableOpacity,StyleSheet} from &apos;react-native&apos;; class PT extends React.Component { render() { return ( &lt;ScrollView contentContainerStyle={{flex:1}} keyboardDismissMode=&apos;on-drag&apos; keyboardShouldPersistTaps={false} &gt; &lt;View style={styles.container}&gt; &lt;View style={styles.Top}&gt; &lt;Text style={styles.WelcomeText}&gt;Welcome to Virtual PT&lt;/Text&gt; &lt;/View&gt; &lt;/View&gt; &lt;View style={styles.maincontain}&gt; &lt;Image source={{uri: 'http://oss-hz.qianmi.com/qianmicom/u/cms/qmwww/201511/03102524l6ur.png'}} style={styles.logo}/&gt; &lt;View style={styles.choose}&gt; &lt;TouchableOpacity style={styles.btn} onPress={()=&gt; console.log(&apos;press me&apos;)}&gt; &lt;Text style={styles.text}&gt;Register&lt;/Text&gt; &lt;/TouchableOpacity&gt; &lt;TouchableOpacity style={styles.btn} onPress={() =&gt; console.log(&apos;press me&apos;)}&gt; &lt;Text style={styles.text}&gt; Login&lt;/Text&gt; &lt;/TouchableOpacity&gt; &lt;/View&gt; &lt;/View&gt; &lt;/ScrollView&gt; ); } } var styles = StyleSheet.create({ container:{ flex: 1, backgroundColor: &apos;#F4FCFF&apos;, }, Top:{ height:50, alignItems: &apos;center&apos;, backgroundColor:&apos;#f5f2f0&apos;, justifyContent: &apos;center&apos;, }, WelcomeText:{ fontWeight: &apos;bold&apos;, fontSize: 18, color: &apos;#d7499a&apos;, borderWidth: 2, borderBottomColor:&apos;#b8a6b0&apos;, }, maincontain: { flex: 10, paddingLeft: 10, paddingRight: 10, backgroundColor: &apos;#F4FCFF&apos;, justifyContent: &apos;center&apos;, alignItems: &apos;center&apos;, }, logo:{ width:160, height:160, }, choose:{ flexDirection:&apos;row&apos; }, btn:{ alignSelf: &apos;stretch&apos;, alignItems: &apos;center&apos;, justifyContent: &apos;center&apos;, backgroundColor: &apos;#80b8e4&apos;, height: 40, borderRadius: 5, width:100, marginTop: 100, marginLeft:20, }, text:{ fontWeight: &apos;bold&apos;, fontSize: 14, color: &apos;#FFF&apos; }, }); AppRegistry.registerComponent(&apos;PT&apos;, () =&gt; PT);]]></content>
       <tags>
         <tag>React Native</tag>
@@ -287,7 +292,7 @@
   </entry>
   <entry>
     <title><![CDATA[postreact native jump to target page]]></title>
-    <url>%2F2017%2F04%2F23%2Fpostreact-native-jump-to-target-page%2F</url>
+    <url>%2F2017%2F04%2F23%2Freact-native-jump-to-target-page%2F</url>
     <content type="text"><![CDATA[postreact native jump to target pageimport React, { Component } from &apos;react&apos;; import { AppRegistry,ScrollView,View,Text,Image,Navigator,TouchableOpacity,StyleSheet} from &apos;react-native&apos;; var _navigator; var ShopView = require(&apos;./shop.android.js&apos;); // class PT extends React.Component { var PT = React.createClass({ getInitialState: function(){ return {}; }, configureScenceAndroid: function(){ return Navigator.SceneConfigs.FadeAndroid; }, renderSceneAndroid: function(route, navigator){ _navigator = navigator; if(route.id === &apos;main&apos;){ return ( // &lt;View&gt; // &lt;TouchableOpacity onPress={() =&gt; _navigator.push({title:&apos;instructwelcome&apos;,id:&apos;instructwelcome&apos;})} style={ styles.button }&gt; // &lt;Text&gt;I am instructor&lt;/Text&gt; // &lt;/TouchableOpacity&gt; // &lt;/View&gt; &lt;ScrollView contentContainerStyle={{flex:1}} keyboardDismissMode=&apos;on-drag&apos; keyboardShouldPersistTaps={false} &gt; &lt;View style={styles.container}&gt; &lt;View style={styles.Top}&gt; &lt;Text style={styles.WelcomeText}&gt;Welcome to Virtual PT&lt;/Text&gt; &lt;/View&gt; &lt;/View&gt; &lt;View style={styles.maincontain}&gt; &lt;Image source={{uri: 'http://oss-hz.qianmi.com/qianmicom/u/cms/qmwww/201511/03102524l6ur.png'}} style={styles.logo}/&gt; &lt;View style={styles.choose}&gt; &lt;TouchableOpacity style={styles.btn} onPress={() =&gt; _navigator.push({title:&apos;shop&apos;,id:&apos;shop&apos;})}&gt; &lt;Text style={styles.text}&gt;Register&lt;/Text&gt; &lt;/TouchableOpacity&gt; &lt;TouchableOpacity style={styles.btn} onPress={() =&gt; console.log(&apos;press me&apos;)}&gt; &lt;Text style={styles.text}&gt; Login&lt;/Text&gt; &lt;/TouchableOpacity&gt; &lt;/View&gt; &lt;/View&gt; &lt;/ScrollView&gt; ); } if(route.id === &apos;shop&apos;){ return ( &lt;ShopView navigator={navigator} route={route} /&gt; ); } }, render: function(){ var renderScene = this.renderSceneAndroid; var configureScence = this.configureScenceAndroid; return ( &lt;Navigator debugOverlay={false} initialRoute={{ title: 'Main', id:'main'}} configureScence={{ configureScence }} renderScene={renderScene}/&gt; ); } }); var styles = StyleSheet.create({ container:{ flex: 1, backgroundColor: &apos;#F4FCFF&apos;, }, Top:{ height:50, alignItems: &apos;center&apos;, backgroundColor:&apos;#f5f2f0&apos;, justifyContent: &apos;center&apos;, }, WelcomeText:{ fontWeight: &apos;bold&apos;, fontSize: 18, color: &apos;#d7499a&apos;, borderWidth: 2, borderBottomColor:&apos;#b8a6b0&apos;, }, maincontain: { flex: 10, paddingLeft: 10, paddingRight: 10, backgroundColor: &apos;#F4FCFF&apos;, justifyContent: &apos;center&apos;, alignItems: &apos;center&apos;, }, logo:{ width:160, height:160, }, choose:{ flexDirection:&apos;row&apos; }, btn:{ alignSelf: &apos;stretch&apos;, alignItems: &apos;center&apos;, justifyContent: &apos;center&apos;, backgroundColor: &apos;#80b8e4&apos;, height: 40, borderRadius: 5, width:100, marginTop: 100, marginLeft:20, }, text:{ fontWeight: &apos;bold&apos;, fontSize: 14, color: &apos;#FFF&apos; }, }); module.exports = PT]]></content>
       <tags>
         <tag>React Native</tag>
@@ -303,7 +308,7 @@
   </entry>
   <entry>
     <title><![CDATA[postnopcommerce image hover scale]]></title>
-    <url>%2F2017%2F04%2F23%2Fpostnopcommerce-image-hover-scale%2F</url>
+    <url>%2F2017%2F04%2F23%2Fnopcommerce-image-hover-scale%2F</url>
     <content type="text"><![CDATA[nopcommerce image hover scale.product-grid .product-item .picture:hover img { margin-left: auto; margin-right: auto; transition: all 0.2s; -webkit-transition: all 0.2s; transform: scale(1.2); -webkit-transform: scale(1.2); }]]></content>
       <tags>
         <tag>nopCommerce</tag>
@@ -343,7 +348,7 @@
   </entry>
   <entry>
     <title><![CDATA[postFullText_IsSupported]]></title>
-    <url>%2F2017%2F04%2F22%2FpostFullText-IsSupported%2F</url>
+    <url>%2F2017%2F04%2F22%2FFullText-IsSupported%2F</url>
     <content type="text"><![CDATA[FullText_IsSupportedI moved my website v3.7 from Arvixe to Host4asp.netIn the Backend clicking on Configuration/Settings&gt;General and Miscellaneous Settings I get the following error: Could not find stored procedure ‘FullText_IsSupported’. Description: An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code. Exception Details: System.Data.SqlClient.SqlException: Could not find stored procedure ‘FullText_IsSupported’. Source Error: An unhandled exception was generated during the execution of the current web request. Information regarding the origin and location of the exception can be identified using the exception stack trace below. solution Run the SQL script “App_Data\SqlServer.StoredProcedures.sql” against your new database to make sure that all your stored procedures are there.]]></content>
       <tags>
         <tag>nopCommerce</tag>
@@ -351,7 +356,7 @@
   </entry>
   <entry>
     <title><![CDATA[postsolve the problem of Responsive Layout]]></title>
-    <url>%2F2017%2F04%2F22%2Fpostsolve-the-problem-of-Responsive-Layout%2F</url>
+    <url>%2F2017%2F04%2F22%2Fsolve-the-problem-of-Responsive-Layout%2F</url>
     <content type="text"><![CDATA[solve the problem of Responsive Layout add in styles.css .master-wrappermain{ display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; justify-content: center; align-items: center; } remove the width off .master-wrapper-main / width:75%; margin:0 auto; max-width:1170px; background:#fff;/ add div in root :views/shared/_root.cshtml &lt;div class=&quot;master-wrapper-main clearfix&quot;&gt; @RenderBody() &lt;/div&gt; &lt;/div&gt; upload to FTP and testconsidering the IE browserchange with another way add text-align in master-wrapper-main add .master-wrapper-main .side-2 li{text-align: left; } add in master-wrappermain master-wrappermain{ text-align: center; } .master-wrapper-main { font-family: arial,helvetica,sans-serif; color: #5C5B5B; display: inline-block; /width:75%; margin:0 auto; max-width:1170px;/ background:#fff; } / one column master page / .master-wrapper-main .center-1 { float: left; width: 910px; min-height: 400px; padding: 10px; background: #FFF; display: inline; border-radius: 5px; } / two column master page / .master-wrapper-main .side-2 { float: left; width: 190px; margin: 10px 0 10px 5px; display: inline; } .master-wrapper-main .side-2 li{ text-align: left; } update 24012017 due to the modify of master-wrappermain{ text-align: center; }it effected other layout including:one column;two column and three columnwe need to add text-align into them.]]></content>
       <tags>
         <tag>nopCommerce</tag>
@@ -359,7 +364,7 @@
   </entry>
   <entry>
     <title><![CDATA[postadd hover to promotion]]></title>
-    <url>%2F2017%2F04%2F22%2Fpostadd-hover-to-promotion%2F</url>
+    <url>%2F2017%2F04%2F22%2Fadd-hover-to-promotion%2F</url>
     <content type="text"><![CDATA[add hover to promotion add class=”has-mega-menu” to li add div class=”mega-menu” add class=”row” div add class=”col-xs-4 col-md-4” //here is the bootstrap desigining ,could be changed according to the different layout add class=”img-holder” add a add img add ul and li here is the code &lt;li class=&quot;has-mega-menu&quot;&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;Topic&quot;, new {SeName = Html.GetTopicSeName(&quot;promotions&quot;) })&quot;&gt;PROMOTIONS&lt;/a&gt; &lt;div class=&quot;top-menu-triangle&quot;&gt;&lt;/div&gt; &lt;div class=&quot;mega-menu&quot;&gt; &lt;div class=&quot;row&quot;&gt; &lt;div class=&quot;col-xs-4 col-md-4 &quot; &gt; &lt;div class=&quot;img-holder&quot;&gt; &lt;a href=&quot;products-on-promotion&quot;&gt; &lt;img style=&quot;width:50%;height:50%;float:left&quot; src=&quot;../../Content/images/step1.png&quot; &gt; &lt;ul style=&quot;float:left;margin-top:5px;text-align:left&quot;&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Enjoy our website&lt;/li&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Enjoy our promotion&lt;/li&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Enjoy your account&lt;/li&gt; &lt;/ul&gt; &lt;/a&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;col-xs-4 col-md-4&quot;&gt; &lt;div class=&quot;img-holder&quot;&gt; &lt;a href=&quot;products-on-promotion&quot;&gt; &lt;img style=&quot;width:50%;height:50%;float:left&quot; src=&quot;../../Content/images/step2.png&quot; &gt; &lt;ul style=&quot;float:left;margin-top:5px;text-align:left &quot;&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Find your items&lt;/li&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Add to shopping cart&lt;/li&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Just check out&lt;/li&gt; &lt;/ul&gt; &lt;/a&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;col-xs-4 col-md-4&quot; &gt; &lt;div class=&quot;img-holder&quot;&gt; &lt;a href=&quot;products-on-promotion&quot;&gt; &lt;img style=&quot;width:50%;height:50%;float:left&quot; src=&quot;../../Content/images/step3.png&quot; &gt; &lt;ul style=&quot;float:left;margin-top:5px;text-align:left&quot;&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Convenient&lt;/li&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Fast&lt;/li&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Easy&lt;/li&gt; &lt;/ul&gt; &lt;/a&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;]]></content>
       <tags>
         <tag>nopCommerce</tag>
@@ -367,7 +372,7 @@
   </entry>
   <entry>
     <title><![CDATA[postreact native use swipe out]]></title>
-    <url>%2F2017%2F04%2F22%2Fpostreact-native-use-swipe-out%2F</url>
+    <url>%2F2017%2F04%2F22%2Freact-native-use-swipe-out%2F</url>
     <content type="text"><![CDATA[react native use swipe outThe component I use is https://github.com/dancormier/react-native-swipeoutbut there is some codes needs to be updated.for some of them should be updated from ES5 TO ES6and for index import React from &apos;react&apos;; var tweenState = require(&apos;react-tween-state&apos;) import {PanResponder, TouchableHighlight, StyleSheet, Text, View} from &apos;react-native&apos;; var styles = require(&apos;./styles.js&apos;)]]></content>
       <tags>
         <tag>React Native</tag>
@@ -375,7 +380,7 @@
   </entry>
   <entry>
     <title><![CDATA[posthow to add hover for Aboutus]]></title>
-    <url>%2F2017%2F04%2F22%2Fposthow-to-add-hover-for-Aboutus%2F</url>
+    <url>%2F2017%2F04%2F22%2Fhow-to-add-hover-for-Aboutus%2F</url>
     <content type="text"><![CDATA[how to add hover for Aboutus &lt;li class=&quot;has-mega-menu&quot;&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;Topic&quot;, new {SeName = Html.GetTopicSeName(&quot;aboutus&quot;) })&quot;&gt;ABOUTUS&lt;/a&gt; &lt;div class=&quot;top-menu-triangle&quot;&gt;&lt;/div&gt; &lt;div class=&quot;mega-menu&quot;&gt; &lt;div class=&quot;row&quot;&gt; &lt;div class=&quot;col-xs-4 col-md-4 &quot; &gt; &lt;div class=&quot;img-holder&quot;&gt; &lt;img style=&quot;width:50%;height:50%;float:left&quot; src=&quot;../../Content/images/who.png&quot; &gt; &lt;ul style=&quot;float:left;margin-top:5px;text-align:left&quot;&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;MicroAnalytix is an Australian owned laboratory supply company which was established in 1988. Since then, the organisation has grown to providing laboratory products ...&lt;a href=&quot;about-us&quot; style=&quot;text-decoration:underline&quot;&gt;Learn more&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/a&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;col-xs-4 col-md-4&quot;&gt; &lt;div class=&quot;img-holder&quot;&gt; &lt;img style=&quot;width:50%;height:50%;float:left&quot; src=&quot;../../Content/images/what.png&quot; &gt; &lt;ul style=&quot;float:left;margin-top:5px;text-align:left &quot;&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;We have purpose built offices in Melbourne, Queensland with our head office and warehouse located in Sydney. Auckland, in New Zealand&apos;s North Island is our NZ head office ...&lt;a href=&quot;about-us&quot; style=&quot;text-decoration:underline&quot;&gt;Learn more&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/a&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;col-xs-4 col-md-4&quot; &gt; &lt;div class=&quot;img-holder&quot;&gt; &lt;img style=&quot;width:50%;height:50%;float:left&quot; src=&quot;../../Content/images/about.png&quot; &gt; &lt;ul style=&quot;float:left;margin-top:5px;text-align:left&quot;&gt; &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;More recently, Microanalytix has been focusing on the introduction of new product lines and have become sort after technical advisors on numerous applications and products...&lt;a href=&quot;about-us&quot; style=&quot;text-decoration:underline&quot;&gt;Learn more&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/a&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;]]></content>
       <tags>
         <tag>nopCommerce</tag>
@@ -383,7 +388,7 @@
   </entry>
   <entry>
     <title><![CDATA[postadd keywords in searchbox]]></title>
-    <url>%2F2017%2F04%2F22%2Fpostadd-keywords-in-searchbox%2F</url>
+    <url>%2F2017%2F04%2F22%2Fadd-keywords-in-searchbox%2F</url>
     <content type="text"><![CDATA[add keywords in searchboxpath：theme/customMicroanalytix/views/shared/headers.cshtml add in &lt;div class=&quot;search-box&quot;&gt; the following codes as below &lt;div&gt;You may like:&amp;nbsp;&amp;nbsp; &lt;ul&gt; &lt;li style=&quot;width:100px;&quot;&gt;&lt;a href=&quot;search?q=Filter+paper&quot; target=&quot;_blank&quot;&gt;Filter Paper&lt;/a&gt;&lt;/li&gt; &lt;li style=&quot;width:100px;&quot;&gt;&lt;a href=&quot;search?q=Filter+paper&quot; target=&quot;_blank&quot;&gt;Membrane filter&lt;/a&gt;&lt;/li&gt; &lt;li style=&quot;width:100px;&quot;&gt;&lt;a href=&quot;search?q=Filter+paper&quot; target=&quot;_blank&quot;&gt;Syringe filter&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt;]]></content>
       <tags>
         <tag>nopCommerce</tag>
@@ -391,7 +396,7 @@
   </entry>
   <entry>
     <title><![CDATA[postreact native AsyncStorage]]></title>
-    <url>%2F2017%2F04%2F22%2Fpostreact-native-AsyncStorage%2F</url>
+    <url>%2F2017%2F04%2F22%2Freact-native-AsyncStorage%2F</url>
     <content type="text"><![CDATA[react native AsyncStoragecomponentDidMount() { let _that=this; AsyncStorage.getItem(&apos;userid&apos;,(err, result) =&gt; { console.log(result); var userid=result; var startday=this.state.startday;//set date var endday=this.state.endday;//set date console.log(userid); console.log(startday); //check date console.log(endday); var url = &apos;http://47.90.60.206:8080/pt_server/sportchart.action&apos;; // create url // var url = &apos;http://192.168.20.12:8080/pt_server/traineelogin.action&apos;; url += &apos;?userid=&apos;+userid+&apos;&amp;start=&apos;+startday+&apos;&amp;end=&apos;+endday; console.log(url); //check url fetch(url).then(function(response) { return response.json(); }).then(function(res) { console.log(res);//check json,then render the view again if (res[&quot;data&quot;]!=null) { _that.setState( { } ); }else{ Alert.alert(&apos;error&apos;); //alert warning and error } }); }); }]]></content>
       <tags>
         <tag>React Native</tag>
@@ -399,7 +404,7 @@
   </entry>
   <entry>
     <title><![CDATA[postreact native ios to setup network]]></title>
-    <url>%2F2017%2F04%2F22%2Fpostreact-native-ios-to-setup-network%2F</url>
+    <url>%2F2017%2F04%2F22%2Freact-native-ios-to-setup-network%2F</url>
     <content type="text"><![CDATA[react native ios to setup network above ios 9 cannot visit http go to path: ios/projectname/info.plist find run react-native run-ios again]]></content>
       <tags>
         <tag>React Native</tag>
