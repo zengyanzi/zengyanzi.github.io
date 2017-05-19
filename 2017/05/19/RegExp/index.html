@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python," />
+  <meta name="keywords" content="RegExp," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="nopcommerce 3.3 use Python to address product related# ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc #cnxn是数据库连接">
-<meta name="keywords" content="Python">
+<meta name="description" content="Regular Expression Matching a username /^[a-z0-9_-]{3,16}$/  ^:the begining of the line  |: delimiters  lowercase letter(a-z)number(0-9),and underscore,or a hyphen next, {3,16} makes sure that are at">
+<meta name="keywords" content="RegExp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="nopcommerce 3.3 python">
-<meta property="og:url" content="http://yoursite.com/2017/04/24/nopcommerce-3-3-python/index.html">
+<meta property="og:title" content="RegExp">
+<meta property="og:url" content="http://yoursite.com/2017/05/19/RegExp/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="nopcommerce 3.3 use Python to address product related# ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc #cnxn是数据库连接">
-<meta property="og:updated_time" content="2017-04-23T23:30:00.553Z">
+<meta property="og:description" content="Regular Expression Matching a username /^[a-z0-9_-]{3,16}$/  ^:the begining of the line  |: delimiters  lowercase letter(a-z)number(0-9),and underscore,or a hyphen next, {3,16} makes sure that are at">
+<meta property="og:updated_time" content="2017-05-18T23:23:12.841Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="nopcommerce 3.3 python">
-<meta name="twitter:description" content="nopcommerce 3.3 use Python to address product related# ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc #cnxn是数据库连接">
+<meta name="twitter:title" content="RegExp">
+<meta name="twitter:description" content="Regular Expression Matching a username /^[a-z0-9_-]{3,16}$/  ^:the begining of the line  |: delimiters  lowercase letter(a-z)number(0-9),and underscore,or a hyphen next, {3,16} makes sure that are at">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/24/nopcommerce-3-3-python/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/19/RegExp/"/>
 
 
 
 
 
-  <title> nopcommerce 3.3 python | Bunny's  Code Burrow </title>
+  <title> RegExp | Bunny's  Code Burrow </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/nopcommerce-3-3-python/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/19/RegExp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jenny Zeng">
@@ -318,7 +318,7 @@
             
             
               
-                nopcommerce 3.3 python
+                RegExp
               
             
           </h1>
@@ -333,8 +333,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T11:29:13+12:00">
-                2017-04-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-19T10:16:19+12:00">
+                2017-05-19
               </time>
             
 
@@ -368,54 +368,38 @@
       
 
       
-        <h1 id="nopcommerce-3-3-use-Python-to-address-product-related"><a href="#nopcommerce-3-3-use-Python-to-address-product-related" class="headerlink" title="nopcommerce 3.3 use Python to address product related"></a>nopcommerce 3.3 use Python to address product related</h1><pre><code># ~*~ coding:utf-8 ~*~
-#csv是一个读取csv文件的lib
-import csv
-#itertools生成组合和排列的lib
-import itertools
-#pyodbc是连接ms sql server的lib
-import pyodbc
-#cnxn是数据库连接  更改数据库连接方式，账号密码
-cnxn = pyodbc.connect(DRIVER=&apos;{SQL Server Native Client 10.0}&apos;,SERVER=&apos;localhost&apos;,DATABASE=&apos;MicroAnalytix&apos;,UID=&apos;sa&apos;,PWD=&apos;密码&apos;)
-#cursor是数据库浮标
-cursor = cnxn.cursor()
+        <h1 id="Regular-Expression"><a href="#Regular-Expression" class="headerlink" title=" Regular Expression"></a> Regular Expression</h1><ol>
+<li><p>Matching a username</p>
+<pre><code>/^[a-z0-9_-]{3,16}$/
 
-#主方法
-def process():
-    #读取csv，转换成list 更改文件存储位置
-    reader = list(csv.reader(open(&quot;c:/Users/Jenny/Desktop/related.csv&quot;)))
-    #遍历数据，并处理， tips：跳过第一行
-    for i in reader[1:]:
-        #Cn2产生组合
-        for j in itertools.combinations(i,2):
-            #处理产生的Cn2组合
-            recommend(j)
-def recommend(j):
-    #产生两次相互推荐
-    genRec(j[0],j[1])
-    genRec(j[1],j[0])
-def genRec(a,b):
-    #分别通过sku获得Product的Id
-    aid = getIdFromSku(a)
-    bid = getIdFromSku(b)
-    #生成写RelatedProduct表的sql语句
-    sql = &quot;insert into dbo.RelatedProduct (ProductId1,ProductId2,DisplayOrder) values(%d,%d,%d)&quot; % (aid,bid,0)
-    #执行sql语句
-    cursor.execute(sql)
-    #提交事务
-    cnxn.commit()
-def getIdFromSku(a):
-    sql = &quot;select Id from dbo.Product where Sku=&apos;%s&apos;&quot; % a
-    print sql
-    cursor.execute(sql)
-    row = cursor.fetchone()
-    if row:
-        return row[0]
+^:the begining of the line
 
+|: delimiters
 
-if __name__ == &quot;__main__&quot;:
-    process()
-</code></pre>
+lowercase letter(a-z)number(0-9),and underscore,or a hyphen
+next, {3,16} makes sure that are at least 3 of those characters, but no more than 16.
+$: end of this line
+</code></pre></li>
+<li><p>Matching a password</p>
+<pre><code>/^[a-z0-9_-]{6,18}$/
+</code></pre></li>
+<li><p>Matching a hex value</p>
+<pre><code>/^#?([a-f0-9]{6}|[a-f0-9]{3})$/
+</code></pre><p>The question mark tells the parser that the preceding character in this case a number sign- is option<br>next, inside the first group,we can have tow different situations.The first one is any lowercase letter between a and f or number six tiems. the vertical bar tells us that we also can have three lowercase letters between a and f or numbeers instead for three times</p>
+</li>
+<li><p>Matching a slug</p>
+<p>  /^[a-z0-9-]+$/<br>beginning with the string, followed by one or more letters,numbers,or hyphens<br>for example: my-title-here</p>
+</li>
+<li><p>Matching an email</p>
+<p>/^([a-z0-9-.-]+)@([a-z0-9_.-]+).([a-z.]{2,6})$/</p>
+</li>
+</ol>
+<p>inside the first group, we match one or more lowcase letters, numbers,underscope,dots or hyphens. I have escaped the dot because a non-escaped dot means any character. after than,there must be @. then next is the domain name which must be:one or more lowercase letters, numbers, underscores, dots,or hyphens. then another escaped dot, then with the extension being two to six letters or dots.</p>
+<ol>
+<li>Matching a url<pre><code>/^(https?&quot;\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$/
+</code></pre></li>
+</ol>
+
       
     </div>
 
@@ -444,7 +428,7 @@ if __name__ == &quot;__main__&quot;:
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/RegExp/" rel="tag"># RegExp</a>
           
         </div>
       
@@ -457,18 +441,14 @@ if __name__ == &quot;__main__&quot;:
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/24/win7-IIS/" rel="next" title="win7 IIS">
-                <i class="fa fa-chevron-left"></i> win7 IIS
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/24/nopcommerce-source-code-version-install-tips/" rel="prev" title="nopcommerce source code version install tips  ">
-                nopcommerce source code version install tips   <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/11/some-email-sentence/" rel="prev" title="postsome email sentence">
+                postsome email sentence <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -609,7 +589,7 @@ if __name__ == &quot;__main__&quot;:
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#nopcommerce-3-3-use-Python-to-address-product-related"><span class="nav-number">1.</span> <span class="nav-text">nopcommerce 3.3 use Python to address product related</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Regular-Expression"><span class="nav-number">1.</span> <span class="nav-text"> Regular Expression</span></a></li></ol></div>
             
 
           </div>
