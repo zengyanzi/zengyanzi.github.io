@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[wordpress change domain]]></title>
+    <url>%2F2017%2F05%2F22%2Fwordpress-change-domain%2F</url>
+    <content type="text"><![CDATA[After updating the Domain for WordPress go to wp-config.php update:the URL with the latest one /** MySQL hostname */ define(&apos;DB_HOST&apos;, &apos;microscience.com.au&apos;); go the the backend of WordPress:/wp-admin/options-general.php update the WordPress Address (URL) And Site Address (URL) sometimes we need access to database, modify the table :wp_options]]></content>
+      <tags>
+        <tag>WordPress</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[RegExp]]></title>
     <url>%2F2017%2F05%2F19%2FRegExp%2F</url>
     <content type="text"><![CDATA[Regular Expression Matching a username /^[a-z0-9_-]{3,16}$/ ^:the begining of the line |: delimiters lowercase letter(a-z)number(0-9),and underscore,or a hyphen next, {3,16} makes sure that are at least 3 of those characters, but no more than 16. $: end of this line Matching a password /^[a-z0-9_-]{6,18}$/ Matching a hex value /^#?([a-f0-9]{6}|[a-f0-9]{3})$/ The question mark tells the parser that the preceding character in this case a number sign- is optionnext, inside the first group,we can have tow different situations.The first one is any lowercase letter between a and f or number six tiems. the vertical bar tells us that we also can have three lowercase letters between a and f or numbeers instead for three times Matching a slug /^[a-z0-9-]+$/beginning with the string, followed by one or more letters,numbers,or hyphensfor example: my-title-here Matching an email /^([a-z0-9-.-]+)@([a-z0-9_.-]+).([a-z.]{2,6})$/ inside the first group, we match one or more lowcase letters, numbers,underscope,dots or hyphens. I have escaped the dot because a non-escaped dot means any character. after than,there must be @. then next is the domain name which must be:one or more lowercase letters, numbers, underscores, dots,or hyphens. then another escaped dot, then with the extension being two to six letters or dots. Matching a url/^(https?&quot;\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$/]]></content>
