@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="How to deploy AWS with SecureCRT rz -be cd tomcat bin/shutdown.sh bin/startup.sh">
+<meta name="description" content="How to deploy AWS with SecureCRT rz -be cd tomcat ../bin/shutdown.sh rm -rf ./* mv ~/pt_server.war . ../bin/startup.sh ../bin/shutdown.sh vim ./pt_server/WEB-INF/jdbc.properties modify jdbc.driverClas">
 <meta name="keywords" content="AWS,SecureCRT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AWS with SecureCRT">
 <meta property="og:url" content="http://yoursite.com/2017/05/23/AWS-with-SecureCRT/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="How to deploy AWS with SecureCRT rz -be cd tomcat bin/shutdown.sh bin/startup.sh">
-<meta property="og:updated_time" content="2017-05-22T21:58:20.543Z">
+<meta property="og:description" content="How to deploy AWS with SecureCRT rz -be cd tomcat ../bin/shutdown.sh rm -rf ./* mv ~/pt_server.war . ../bin/startup.sh ../bin/shutdown.sh vim ./pt_server/WEB-INF/jdbc.properties modify jdbc.driverClas">
+<meta property="og:updated_time" content="2017-05-28T22:38:03.002Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AWS with SecureCRT">
-<meta name="twitter:description" content="How to deploy AWS with SecureCRT rz -be cd tomcat bin/shutdown.sh bin/startup.sh">
+<meta name="twitter:description" content="How to deploy AWS with SecureCRT rz -be cd tomcat ../bin/shutdown.sh rm -rf ./* mv ~/pt_server.war . ../bin/startup.sh ../bin/shutdown.sh vim ./pt_server/WEB-INF/jdbc.properties modify jdbc.driverClas">
 
 
 
@@ -371,8 +371,16 @@
         <h1 id="How-to-deploy-AWS-with-SecureCRT"><a href="#How-to-deploy-AWS-with-SecureCRT" class="headerlink" title="How to deploy AWS with SecureCRT"></a>How to deploy AWS with SecureCRT</h1><ol>
 <li>rz -be</li>
 <li>cd tomcat</li>
-<li>bin/shutdown.sh</li>
-<li>bin/startup.sh</li>
+<li>../bin/shutdown.sh</li>
+<li>rm -rf ./*</li>
+<li>mv ~/pt_server.war .</li>
+<li>../bin/startup.sh</li>
+<li>../bin/shutdown.sh</li>
+<li>vim ./pt_server/WEB-INF/jdbc.properties</li>
+<li>modify<br> jdbc.driverClassName=com.mysql.jdbc.Driver<br> jdbc.url=jdbc:mysql://localhost:3306/pt?characterEncoding=utf-8<br> jdbc.username=xxxx<br> jdbc.password=xxxxx</li>
+<li>: wq</li>
+<li>../bin/startup.sh</li>
+<li>if there were something went wrong ,check here: cat pt_server/WEB-INF/jdbc.properties</li>
 </ol>
 
       

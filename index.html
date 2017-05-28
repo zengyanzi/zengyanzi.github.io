@@ -376,8 +376,16 @@
             <h1 id="How-to-deploy-AWS-with-SecureCRT"><a href="#How-to-deploy-AWS-with-SecureCRT" class="headerlink" title="How to deploy AWS with SecureCRT"></a>How to deploy AWS with SecureCRT</h1><ol>
 <li>rz -be</li>
 <li>cd tomcat</li>
-<li>bin/shutdown.sh</li>
-<li>bin/startup.sh</li>
+<li>../bin/shutdown.sh</li>
+<li>rm -rf ./*</li>
+<li>mv ~/pt_server.war .</li>
+<li>../bin/startup.sh</li>
+<li>../bin/shutdown.sh</li>
+<li>vim ./pt_server/WEB-INF/jdbc.properties</li>
+<li>modify<br> jdbc.driverClassName=com.mysql.jdbc.Driver<br> jdbc.url=jdbc:mysql://localhost:3306/pt?characterEncoding=utf-8<br> jdbc.username=xxxx<br> jdbc.password=xxxxx</li>
+<li>: wq</li>
+<li>../bin/startup.sh</li>
+<li>if there were something went wrong ,check here: cat pt_server/WEB-INF/jdbc.properties</li>
 </ol>
 
           
