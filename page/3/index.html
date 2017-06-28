@@ -297,6 +297,130 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/sql-depulicated/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/24/sql-depulicated/" itemprop="url">
+                  sql depulicated
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T10:47:14+12:00">
+                2017-04-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="SQL-Duplicatede"><a href="#SQL-Duplicatede" class="headerlink" title="SQL Duplicatede"></a>SQL Duplicatede</h1><p>situation :<br>数据库里有很多sku是重复的，在进行处理的时候需要注意，所以特意写了一个查重sql语句来显示哪些是已经deleted<br>下面的语句中， group by 是以sku进行分组的意思，having可以理解成where，但是区别在于，在group by后面的就要使用having</p>
+<pre><code>SELECT  Sku,Deleted
+  FROM [MicroAnalytix].[dbo].[Product] where 
+      (Sku in (select Sku from [MicroAnalytix].[dbo].[Product] group by  Sku having count(*)&gt;=2)) ;
+</code></pre><p>GROUP BY 语句<br>GROUP BY 语句用于结合合计函数，根据一个或多个列对结果集进行分组。<br>在 SQL 中增加 HAVING 子句原因是，WHERE 关键字无法与合计函数一起使用</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/sql-not-in/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1550,204 +1674,6 @@ process()
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/add-special-attribute-massive/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/24/add-special-attribute-massive/" itemprop="url">
-                  add special attribute massive
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T09:40:49+12:00">
-                2017-04-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="add-special-attribute-massive"><a href="#add-special-attribute-massive" class="headerlink" title="add special attribute massive"></a>add special attribute massive</h1><p>注意事项，%d 占位符是整数型， %s占位符是字符串</p>
-<pre><code>#主方法
-def process():
-    #读取csv，转换成list 更改文件存储位置
-    reader = list(csv.reader(open(&quot;D:\\ski\\attribute\\attribute-gc.csv&quot;)))
-    header = reader[0]
-    #遍历数据，并处理， tips：跳过第一行
-    for i in reader[1:]:
-        sku = i[0]
-        product_id = getIdFromSku(sku)
-        if product_id == 0:
-            print &quot;error sku %s&quot; % sku
-            continue
-        optionname = i[1]
-        print optionname
- #测试看是否存在这样的optionname
-        test(optionname)
- #如果存在，取optionid
-        optionid = getoptionIdFromoption(optionname)
-        print optionid
- #插入optionid和productid
-        if exist(product_id,optionid):
-            print &quot;exist&quot;
-            pass
-        else:
-            insert(product_id,optionid)
-
-
- #是否存在productid和optionid，如果存在，就退出
-def exist(product_id,optionid):
-    sql = &quot;select * from dbo.Product_SpecificationAttribute_Mapping where ProductId = %d and SpecificationAttributeOptionId = %d&quot; % (product_id,optionid)
-    cursor.execute(sql)
-    rows = cursor.fetchall()
-    if len(rows)==0:
-        return False
-    else:
-        return True
-
- #通过optionname找出optionid
-def getoptionIdFromoption(optionname):
-    sql=&quot;SELECT Id FROM dbo.SpecificationAttributeOption where SpecificationAttributeId=%d and Name=&apos;%s&apos;&quot; % (12,optionname)
-    print sql
-    cursor.execute(sql)
-    row = cursor.fetchall()
-    return row[0][0]
- 插入optionid和productid   
-def insert(product_id,optionid):
-    sql = &quot;insert into dbo.Product_SpecificationAttribute_Mapping(ProductId,SpecificationAttributeOptionId,DisplayOrder,AllowFiltering,ShowOnProductPage) values(%d,%d,%d,%d,%d)&quot; % (product_id,optionid,0,0,1)
-    print sql
-    cursor.execute(sql)
-    cnxn.commit()
- #通过sku找出id              
-def getIdFromSku(a):
-    sql = &quot;select Id from dbo.Product where Sku=&apos;%s&apos; and deleted=0&quot; % a
-    cursor.execute(sql)
-    row = cursor.fetchall()
-    if row:
-        return row[0][0]
-    else:
-        return 0
-#测试optionname是否存在，若不存在，则插入
-def test(optionname): 
-    if find(optionname) == 0:
-        sql=&quot;insert into dbo.SpecificationAttributeOption (Name,SpecificationAttributeId,DisplayOrder) values(&apos;%s&apos;,12,0)&quot; % optionname
-        print sql
-        cursor.execute(sql)
-        cnxn.commit()
-#测试optionname是否存在，若不存在，则插入                
-def find(optionname): 
-    sql=&quot;SELECT Id FROM dbo.SpecificationAttributeOption where SpecificationAttributeId=%d and Name=&apos;%s&apos;&quot; % (12,optionname)
-    cursor.execute(sql) 
-    row = cursor.fetchall()
-    if row:
-        return row[0][0]
-    else:
-        return 0  
-
-if __name__ == &quot;__main__&quot;:
-    process()
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1797,7 +1723,7 @@ if __name__ == &quot;__main__&quot;:
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">61</span>
+                <span class="site-state-item-count">62</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -1810,7 +1736,7 @@ if __name__ == &quot;__main__&quot;:
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
