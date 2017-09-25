@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Android studio icon on device]]></title>
+    <url>%2F2017%2F09%2F25%2FAndroid-studio-icon-on-device%2F</url>
+    <content type="text"><![CDATA[How to change or set the Icon for your Android APP? Go to the path “..android\app\src\main\res” Update the images in those folders \mipmap-xxhdpi \mipmap-xhdpi \mipmap-mdpi \mipmap-hdpi You could use some online tool to generate your icon https://makeappicon.com/ which resizes all iOS icons and Android icons.]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[update apk version to google play]]></title>
     <url>%2F2017%2F09%2F25%2Fupdate-apk-version-to-google-play%2F</url>
     <content type="text"><![CDATA[How to update APK to Google playFor people who use Android Studio the problem may be solved by editing versionCode and versionName in build.gradle instead of AndroidManifest.xml.e.g. defaultConfig { applicationId &quot;com.my.packageId&quot; minSdkVersion 15 targetSdkVersion 22 versionCode 2 &lt;-- change this versionName &quot;2.0&quot; &lt;-- change this }]]></content>
