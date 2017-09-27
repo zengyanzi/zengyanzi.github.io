@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[how to update android app device name]]></title>
-    <url>%2F2017%2F09%2F25%2Fhow-to-update-android-app-device-name%2F</url>
-    <content type="text"></content>
+    <title><![CDATA[less]]></title>
+    <url>%2F2017%2F09%2F27%2Fless%2F</url>
+    <content type="text"><![CDATA[Less example @base:#f938ab; .box-shadow(@style, @c) when(iscolor(@c)){ -webkit-box-shadow:@style @c; box-shadow:@style @c; } .box-shadow(@sytle,@alpha:50%) when(isnumber(@alpha)){ .box-shadow(@style,rgba(0,0,0,@alpha)); } .box{ color:saturate(@base,5%); border-color:lighten(@base,30%); div{.box-shaow(0 0 5px 30%)} } Language features 2.1 Variables @nice-blue:#979699; @light-blue:@nice-blue+111; #header{ color:@light-blue; } 2.2 Mixins .borderd{ border-top:dotted 1px black; border-bottom:solid 2px black; } #menu a{ color:#111; .bordered; } .post a{ color:red; .bordered; } 2.3 Nested Rules #header{ color:black; .navigation{ font-size:12px; } .logo{ width:300px; } } .clearfix{ display:block; zoom:1; &amp;:after{ content:&quot;&quot;; display:block; font-size:0; height:0; clear:both; visibility:hidden; } }]]></content>
+      <tags>
+        <tag>less</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Android studio icon on device]]></title>
     <url>%2F2017%2F09%2F25%2FAndroid-studio-icon-on-device%2F</url>
     <content type="text"><![CDATA[How to change or set the Icon for your Android APP? Go to the path “..android\app\src\main\res” Update the images in those folders \mipmap-xxhdpi \mipmap-xhdpi \mipmap-mdpi \mipmap-hdpi You could use some online tool to generate your icon https://makeappicon.com/ which resizes all iOS icons and Android icons.]]></content>
       <tags>
-        <tag>React Native</tag>
         <tag>Android</tag>
+        <tag>React Native</tag>
       </tags>
   </entry>
   <entry>

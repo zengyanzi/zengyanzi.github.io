@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/25/how-to-update-android-app-device-name/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/27/less/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jenny Zeng">
@@ -319,8 +319,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/09/25/how-to-update-android-app-device-name/" itemprop="url">
-                  how to update android app device name
+                <a class="post-title-link" href="/2017/09/27/less/" itemprop="url">
+                  less
                 </a>
               
             
@@ -336,8 +336,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-25T14:52:51+13:00">
-                2017-09-25
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-27T15:54:11+13:00">
+                2017-09-27
               </time>
             
 
@@ -373,7 +373,69 @@
       
         
           
-            
+            <h1 id="Less"><a href="#Less" class="headerlink" title="Less"></a>Less</h1><ol>
+<li><p>example</p>
+<pre><code>@base:#f938ab;
+.box-shadow(@style, @c) when(iscolor(@c)){
+    -webkit-box-shadow:@style @c;
+    box-shadow:@style @c;
+}
+.box-shadow(@sytle,@alpha:50%) when(isnumber(@alpha)){
+    .box-shadow(@style,rgba(0,0,0,@alpha));
+}
+.box{
+    color:saturate(@base,5%);
+    border-color:lighten(@base,30%);
+    div{.box-shaow(0 0 5px 30%)}
+}
+</code></pre></li>
+<li>Language features</li>
+</ol>
+<p>2.1 Variables</p>
+<pre><code>@nice-blue:#979699;
+@light-blue:@nice-blue+111;
+
+#header{
+    color:@light-blue;
+}
+</code></pre><p>2.2 Mixins</p>
+<pre><code>.borderd{
+    border-top:dotted 1px black;
+    border-bottom:solid 2px black;
+}
+
+#menu a{
+color:#111;
+.bordered;
+}
+.post a{
+    color:red;
+    .bordered;
+}
+</code></pre><p>2.3 Nested Rules</p>
+<pre><code>#header{
+    color:black;
+    .navigation{
+        font-size:12px;
+    }
+    .logo{
+        width:300px;
+    }
+}
+
+.clearfix{
+    display:block;
+    zoom:1;
+    &amp;:after{
+        content:&quot;&quot;;
+        display:block;
+        font-size:0;
+        height:0;
+        clear:both;
+        visibility:hidden;
+    }
+}
+</code></pre>
           
         
       
@@ -2126,7 +2188,7 @@ $: end of this line
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
