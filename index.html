@@ -297,6 +297,154 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/27/search-function/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/11/27/search-function/" itemprop="url">
+                  search function
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-27T09:45:33+13:00">
+                2017-11-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="How-do-modify-the-full-search-function-in-nopCommerce"><a href="#How-do-modify-the-full-search-function-in-nopCommerce" class="headerlink" title="How do modify the full search function in nopCommerce"></a>How do modify the full search function in nopCommerce</h1><p>1.Go to the Nop.Web/Controllers/CatalogController. find the search action and set the searchinDescriptions to be true</p>
+<pre><code>IPagedList&lt;Product&gt; products = new PagedList&lt;Product&gt;(new List&lt;Product&gt;(), 0, 1);
+           // only search if query string search keyword is set (used to avoid searching or displaying search term min length error message on /search page load)
+           if (Request.Params[&quot;Q&quot;] != null)
+           {
+               if (model.Q.Length &lt; _catalogSettings.ProductSearchTermMinimumLength)
+               {
+                   model.Warning = string.Format(_localizationService.GetResource(&quot;Search.SearchTermMinimumLengthIsNCharacters&quot;), _catalogSettings.ProductSearchTermMinimumLength);
+               }
+               else
+               {
+                   var categoryIds = new List&lt;int&gt;();
+                   int manufacturerId = 0;
+                   decimal? minPriceConverted = null;
+                   decimal? maxPriceConverted = null;
+                   bool searchInDescriptions = true;
+                   if (model.As)
+                   {
+                       //advanced search
+                       var categoryId = model.Cid;
+                       if (categoryId &gt; 0)
+                       {
+                           categoryIds.Add(categoryId);
+                           if (model.Isc)
+                           {
+                               //include subcategories
+                               categoryIds.AddRange(GetChildCategoryIds(categoryId));
+                           }
+                       }
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/27/less/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1976,156 +2124,6 @@ define(&apos;DB_HOST&apos;, &apos;microscience.com.au&apos;);
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/19/RegExp/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/19/RegExp/" itemprop="url">
-                  RegExp
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-19T10:16:19+12:00">
-                2017-05-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Regular-Expression"><a href="#Regular-Expression" class="headerlink" title=" Regular Expression"></a> Regular Expression</h1><ol>
-<li><p>Matching a username</p>
-<pre><code>/^[a-z0-9_-]{3,16}$/
-
-^:the begining of the line
-
-|: delimiters
-
-lowercase letter(a-z)number(0-9),and underscore,or a hyphen
-next, {3,16} makes sure that are at least 3 of those characters, but no more than 16.
-$: end of this line
-</code></pre></li>
-<li><p>Matching a password</p>
-<pre><code>/^[a-z0-9_-]{6,18}$/
-</code></pre></li>
-<li><p>Matching a hex value</p>
-<pre><code>/^#?([a-f0-9]{6}|[a-f0-9]{3})$/
-</code></pre><p>The question mark tells the parser that the preceding character in this case a number sign- is option<br>next, inside the first group,we can have tow different situations.The first one is any lowercase letter between a and f or number six tiems. the vertical bar tells us that we also can have three lowercase letters between a and f or numbeers instead for three times</p>
-</li>
-<li><p>Matching a slug</p>
-<p>  /^[a-z0-9-]+$/<br>beginning with the string, followed by one or more letters,numbers,or hyphens<br>for example: my-title-here</p>
-</li>
-<li><p>Matching an email</p>
-<p>/^([a-z0-9-.-]+)@([a-z0-9_.-]+).([a-z.]{2,6})$/</p>
-</li>
-</ol>
-<p>inside the first group, we match one or more lowcase letters, numbers,underscope,dots or hyphens. I have escaped the dot because a non-escaped dot means any character. after than,there must be @. then next is the domain name which must be:one or more lowercase letters, numbers, underscores, dots,or hyphens. then another escaped dot, then with the extension being two to six letters or dots.</p>
-<ol>
-<li>Matching a url<pre><code>/^(https?&quot;\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$/
-</code></pre></li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -2175,7 +2173,7 @@ $: end of this line
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">66</span>
+                <span class="site-state-item-count">67</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

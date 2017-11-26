@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[search function]]></title>
+    <url>%2F2017%2F11%2F27%2Fsearch-function%2F</url>
+    <content type="text"><![CDATA[How do modify the full search function in nopCommerce1.Go to the Nop.Web/Controllers/CatalogController. find the search action and set the searchinDescriptions to be true IPagedList&lt;Product&gt; products = new PagedList&lt;Product&gt;(new List&lt;Product&gt;(), 0, 1); // only search if query string search keyword is set (used to avoid searching or displaying search term min length error message on /search page load) if (Request.Params[&quot;Q&quot;] != null) { if (model.Q.Length &lt; _catalogSettings.ProductSearchTermMinimumLength) { model.Warning = string.Format(_localizationService.GetResource(&quot;Search.SearchTermMinimumLengthIsNCharacters&quot;), _catalogSettings.ProductSearchTermMinimumLength); } else { var categoryIds = new List&lt;int&gt;(); int manufacturerId = 0; decimal? minPriceConverted = null; decimal? maxPriceConverted = null; bool searchInDescriptions = true; if (model.As) { //advanced search var categoryId = model.Cid; if (categoryId &gt; 0) { categoryIds.Add(categoryId); if (model.Isc) { //include subcategories categoryIds.AddRange(GetChildCategoryIds(categoryId)); } }]]></content>
+      <tags>
+        <tag>nopcommerce</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[less]]></title>
     <url>%2F2017%2F09%2F27%2Fless%2F</url>
     <content type="text"><![CDATA[Less example @base:#f938ab; .box-shadow(@style, @c) when(iscolor(@c)){ -webkit-box-shadow:@style @c; box-shadow:@style @c; } .box-shadow(@sytle,@alpha:50%) when(isnumber(@alpha)){ .box-shadow(@style,rgba(0,0,0,@alpha)); } .box{ color:saturate(@base,5%); border-color:lighten(@base,30%); div{.box-shaow(0 0 5px 30%)} } Language features 2.1 Variables @nice-blue:#979699; @light-blue:@nice-blue+111; #header{ color:@light-blue; } 2.2 Mixins .borderd{ border-top:dotted 1px black; border-bottom:solid 2px black; } #menu a{ color:#111; .bordered; } .post a{ color:red; .bordered; } 2.3 Nested Rules #header{ color:black; .navigation{ font-size:12px; } .logo{ width:300px; } } .clearfix{ display:block; zoom:1; &amp;:after{ content:&quot;&quot;; display:block; font-size:0; height:0; clear:both; visibility:hidden; } }]]></content>
