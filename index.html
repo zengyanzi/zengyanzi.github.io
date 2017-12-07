@@ -297,6 +297,180 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/07/how-to-install-linux/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/12/07/how-to-install-linux/" itemprop="url">
+                  how to install linux
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-07T12:36:58+13:00">
+                2017-12-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="How-to-install-Linux-in-VMware"><a href="#How-to-install-Linux-in-VMware" class="headerlink" title="How to install Linux in VMware"></a>How to install Linux in VMware</h1><p>This is a small step to install, but it is a big step towards Linux<br>CTRL+ALT can release you mouse cursor<br>-<br>1.Install VMware first.<br>I have saved the software in my Baiduyun,including the VMware_Workstation_wmb and CentOS-6.3-i386-bin-DVD1</p>
+<p>The way to install VMware is simple like other software,just next and confirm<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603392/image_yp9wub.png" alt=""></p>
+<p>2.After installing the software, open it and create a New Virtual machine as below:<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603374/image_1_nzjii9.png" alt=""><br>3.choose typical way to create:<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603374/image_2_cxiwns.png" alt=""></p>
+<ol>
+<li><p>For operation system, please choose Linux<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603374/image_3_zeawut.png" alt=""><br>5.Please choose it as below<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603374/image_4_sdkllb.png" alt=""><br>6.Then finish<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603371/image_6_v7eus6.png" alt=""></p>
+</li>
+<li><p>however，I had a problem on the way as below</p>
+</li>
+</ol>
+<pre><code>Running anaconda 13.21.176, the CentOS system installer - please wait
+11:37:49 Starting graphical installation.
+anaconda: Fatal IO error 104 (Connection reset by peer) on X server :1.0.
+install exited abnormally [1/1]
+The system will be rebooted when you press Ctrl -C or Ctrl-Alt-Delete.
+</code></pre><p>For this situation, you’d better create a virtual machine from the beginning step and choose custom instead of typical. Then choose the Hardware compatibility  into 6.5-7.x<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603377/image_7_rcx7fd.png" alt=""></p>
+<p>8.Choose basic storage device<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603376/image_8_xxh6ak.png" alt=""></p>
+<ol>
+<li><p>Please chooose ye<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603380/image_9_wenbbq.png" alt=""></p>
+</li>
+<li><p>Just keep the default hostname</p>
+</li>
+</ol>
+<p><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603381/image_10_thmgtp.png" alt=""></p>
+<ol>
+<li><p>update the time zone<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603381/image_11_f5x1bi.png" alt=""></p>
+</li>
+<li><p>in order to learn well, we choose the Create customize layout<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603382/image_12_jlismy.png" alt=""></p>
+</li>
+<li><p>In this step, choose create<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603384/image_13_w4mhnx.png" alt=""></p>
+</li>
+<li><p>First, choose home and set the size as 2000,by chosing from Mount point</p>
+</li>
+</ol>
+<p><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603382/image_14_ok2hk6.png" alt=""></p>
+<p><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603387/image_15_vf5gur.png" alt=""></p>
+<ol>
+<li>for root, set the size 200<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603388/image_16_uuumyp.png" alt=""></li>
+</ol>
+<p>17.for swap, just go the file system type dropdown menu and choose swap<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603385/image_17_qatynl.png" alt=""></p>
+<ol>
+<li>Here is the result then next</li>
+</ol>
+<p><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603387/image_18_hudljs.png" alt=""></p>
+<p>19.Choose next<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603387/image_20_hczdu4.png" alt=""></p>
+<ol>
+<li>For experienced engineer, they might choose minimal, while for beginner, the better choice is basic server,then next<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603388/image_21_aqxdt4.png" alt=""></li>
+</ol>
+<p><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603389/image_22_ytaaqk.png" alt=""></p>
+<ol>
+<li><p>Just enjoy the long time waiting,if you had any issues during the procedure, just power off the virtual machine and remove it ,then remove the file in the fold, and create a new one, you’d better install it in a disk with at least 5G available<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603392/image_23_wcsguv.png" alt=""></p>
+</li>
+<li><p>Then choose reboot. </p>
+</li>
+<li>some command might be useful in this step: ls ifconfig<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1512603390/image_24_p409by.png" alt=""></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/27/search-function/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1993,137 +2167,6 @@ $sudo dnf update
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/22/wordpress-change-domain/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/22/wordpress-change-domain/" itemprop="url">
-                  wordpress change domain
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-22T21:29:41+12:00">
-                2017-05-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="After-updating-the-Domain-for-WordPress"><a href="#After-updating-the-Domain-for-WordPress" class="headerlink" title="After updating the Domain for WordPress"></a>After updating the Domain for WordPress</h1><ol>
-<li>go to wp-config.php</li>
-</ol>
-<pre><code>update:the URL with the latest one
-/** MySQL hostname */
-define(&apos;DB_HOST&apos;, &apos;microscience.com.au&apos;);
-</code></pre><ol>
-<li><p>go the the backend of WordPress:/wp-admin/options-general.php</p>
-<p> update the WordPress Address (URL) And Site Address (URL)</p>
-</li>
-<li>sometimes we need access to database, modify the table :wp_options</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -2173,7 +2216,7 @@ define(&apos;DB_HOST&apos;, &apos;microscience.com.au&apos;);
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">67</span>
+                <span class="site-state-item-count">68</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -2186,7 +2229,7 @@ define(&apos;DB_HOST&apos;, &apos;microscience.com.au&apos;);
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
