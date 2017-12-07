@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[how to install xshell and ip for linux]]></title>
+    <url>%2F2017%2F12%2F08%2Fhow-to-install-xshell-and-ip-for-linux%2F</url>
+    <content type="text"><![CDATA[How to install xshell and IP config fro Linux1.The way to install xshell is similar with other software, however, I changed to securecrt later 2.choose network bridged 3.Go to Edit and choose the edit-&gt;Virtual Network edit 4.then update as below: 5.make sure the method could work by checking the network of real PCDouble check the setting of IP,make sure the IP is obtained automatically6.make sure the service is running 7.check the ip in CMD,the highligt parts are important,which will be employed later for eth0 8.start linux and input “setup”, then choose “Network configuraton“ then choose Run Tool 9.then choose “Device configuration” then keyboard “enter” 10.for this step, enter 11.according to ip result, manually input the ip as below 12.Then choose save and quitThen input service network restart However, I had a problem with eth0, So I need to work on eth0 first by input ifup eth0 ifconfig if it does not work, then try the following vi /etc/sysconfig/network-scripts/ifcfg-eth0 to modify the eth0 as below, be careful there is a space between vi and / You will see the picture below, input i to edit, change the “ONBOOT=YES”, then ESC, input :x to save. Then try below, finally it works well. service network restart]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[how to solve the ipv6 issue for Apple Store]]></title>
     <url>%2F2017%2F12%2F07%2Fhow-to-solve-the-ipv6-issue-for-Apple-Store%2F</url>
     <content type="text"><![CDATA[How to set up the ipv6 to pass Apple store reviewAfter submitting the ios apk to Apple store, I got the message from Apple mentioned Apple Store Guideline 2.1—running iOS 10.3.3 on Wi-Fi connected to an IPv6 network. The solution is replacing all the api with domain name and test it under ipv6 in local network. The first step is registering a domain name for our App. Then I will explan how did we set up an ipv6 network with iPhone Connect your iPhone with your Mac Eable the hotpot in your iPhone and choose and choose through Only USB Connect to your iPhone wifi in Mac Go to option open NAT64 use another iphone to test the ipv6]]></content>
