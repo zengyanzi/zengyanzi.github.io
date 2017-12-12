@@ -11,7 +11,7 @@
   <entry>
     <title><![CDATA[how to solve the ipv6 issue for Apple Store]]></title>
     <url>%2F2017%2F12%2F07%2Fhow-to-solve-the-ipv6-issue-for-Apple-Store%2F</url>
-    <content type="text"><![CDATA[How to set up the ipv6 to pass Apple store reviewAfter submitting the ios apk to Apple store, I got the message from Apple mentioned Apple Store Guideline 2.1—running iOS 10.3.3 on Wi-Fi connected to an IPv6 network. The solution is replacing all the api with domain name and test it under ipv6 in local network. The first step is registering a domain name for our App. Then I will explan how did we set up an ipv6 network with iPhone Connect your iPhone with your Mac Eable the hotpot in your iPhone and choose and choose through Only USB Connect to your iPhone wifi in Mac Go to option open NAT64 use another iphone to test the ipv6]]></content>
+    <content type="text"><![CDATA[How to set up the ipv6 to pass Apple store reviewAfter submitting the ios apk to Apple store, I got the message from Apple mentioned Apple Store Guideline 2.1—running iOS 10.3.3 on Wi-Fi connected to an IPv6 network. The solution is replacing all the api with domain name and test it under ipv6 in local network. The first step is registering a domain name for our App. Then I will explan how did we set up an ipv6 network with iPhone Connect your iPhone with your Mac Eable the hotpot in your iPhone and choose and choose through Only USB Connect to your iPhone wifi in Mac Go to reference, and click the “option” and open “sharing” at the same time open NAT64 use another iphone to test the ipv6]]></content>
       <tags>
         <tag>ios</tag>
       </tags>
