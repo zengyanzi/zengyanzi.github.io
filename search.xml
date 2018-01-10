@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[update the tinymce for nopcommerce]]></title>
+    <url>%2F2018%2F01%2F11%2Fupdate-the-tinymce-for-nopcommerce%2F</url>
+    <content type="text"><![CDATA[Update the tinyMce for nopCommerceTo fix the bug of table css in product full description, I add a plugin in tinyMCE as below: To add the Fullpage Plugin to the tinyMCE editor just edit: /Administration/Views/Shared/EditorTemplates/RichEditor.cshtml And add “fullpage” to plugins: [..] and also to toolbar: “..” inymce.init({ selector: &quot;#@ViewData.TemplateInfo.GetFullHtmlFieldId(string.Empty)&quot;, height: 350, width: 790, valid_children : &quot;+body[style],-body[div],p[strong|a|#text]&quot;, plugins: [ &quot;advlist autolink lists link image charmap print preview anchor&quot;, &quot;searchreplace visualblocks code fullscreen fullpage&quot;, &quot;insertdatetime media table contextmenu paste@(canUploadPictures ? &quot; jbimages&quot; : null)&quot; ], toolbar: &quot;insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image@(canUploadPictures ? &quot; jbimages&quot; : null) | fullpage&quot;, //&quot;relative_urls&quot; required by jbimages plugin to be set to &quot;false&quot; //but in this case it&apos;ll break existing links (e.g. message template tokens) relative_urls: true]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[How to find the Additional CSS in wordpress]]></title>
     <url>%2F2017%2F12%2F21%2FHow-to-find-the-Additional-CSS-in-wordpress%2F</url>
     <content type="text"><![CDATA[How to find the Addtitoanl CSS in WordPress?SELECT * from wp_posts WHERE post_type =&apos;custom_css&apos;; Then you will find it /* You can add your own CSS here. Click the help icon above to learn more. */ .by-author, .comments,.date{ display: none; } #search-8{ float:right; } #prisna-google-website-translator-8{ float:left; margin-right:50px; } .footer-socket-area{ display:none } #buffercode_banner_upload_info-3{ float:left; margin-right:10px; } #buffercode_banner_upload_info-5{ float:left; margin-right:10px; } #text-9&gt;.textwidget&gt;a:hover { color:green }]]></content>
