@@ -90,17 +90,28 @@
 
 
 
-<meta name="description" content="How to update APK to Google playFor people who use Android Studio the problem may be solved by editing  versionCode and versionName in build.gradle instead of AndroidManifest.xml.e.g. defaultConfig {">
+<meta name="description" content="How to update APK to Google playFor people who use Android Studio the problem may be solved by editing  versionCode and versionName in  android/app/build.gradle  instead of AndroidManifest.xml.e.g. de">
 <meta name="keywords" content="React Native,Google play,Android studio">
 <meta property="og:type" content="article">
 <meta property="og:title" content="update apk version to google play">
 <meta property="og:url" content="http://yoursite.com/2017/09/25/update-apk-version-to-google-play/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="How to update APK to Google playFor people who use Android Studio the problem may be solved by editing  versionCode and versionName in build.gradle instead of AndroidManifest.xml.e.g. defaultConfig {">
-<meta property="og:updated_time" content="2017-09-25T02:02:13.656Z">
+<meta property="og:description" content="How to update APK to Google playFor people who use Android Studio the problem may be solved by editing  versionCode and versionName in  android/app/build.gradle  instead of AndroidManifest.xml.e.g. de">
+<meta property="og:image" content="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058284/error1_rut8jd.png">
+<meta property="og:image" content="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk0_goi6wi.png">
+<meta property="og:image" content="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk_pkdjdf.png">
+<meta property="og:image" content="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk2_kq3tcr.png">
+<meta property="og:image" content="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk3_wzai4j.png">
+<meta property="og:image" content="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk4_edc57u.png">
+<meta property="og:image" content="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk5_fuw5e2.png">
+<meta property="og:image" content="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058284/add_apk6_codtae.png">
+<meta property="og:image" content="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058729/review_all_the_apk_sclfsr.png">
+<meta property="og:image" content="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058779/final_zgjer9.png">
+<meta property="og:updated_time" content="2018-01-15T23:26:47.674Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="update apk version to google play">
-<meta name="twitter:description" content="How to update APK to Google playFor people who use Android Studio the problem may be solved by editing  versionCode and versionName in build.gradle instead of AndroidManifest.xml.e.g. defaultConfig {">
+<meta name="twitter:description" content="How to update APK to Google playFor people who use Android Studio the problem may be solved by editing  versionCode and versionName in  android/app/build.gradle  instead of AndroidManifest.xml.e.g. de">
+<meta name="twitter:image" content="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058284/error1_rut8jd.png">
 
 
 
@@ -368,7 +379,9 @@
       
 
       
-        <h1 id="How-to-update-APK-to-Google-play"><a href="#How-to-update-APK-to-Google-play" class="headerlink" title="How to update APK to Google play"></a>How to update APK to Google play</h1><p>For people who use Android Studio the problem may be solved by editing  versionCode and versionName in build.gradle instead of AndroidManifest.xml.e.g.</p>
+        <h1 id="How-to-update-APK-to-Google-play"><a href="#How-to-update-APK-to-Google-play" class="headerlink" title="How to update APK to Google play"></a>How to update APK to Google play</h1><p>For people who use Android Studio the problem may be solved by editing  versionCode and versionName in </p>
+<pre><code>android/app/build.gradle
+</code></pre><p> instead of AndroidManifest.xml.e.g.</p>
 <pre><code>defaultConfig {
     applicationId &quot;com.my.packageId&quot;
     minSdkVersion 15
@@ -376,7 +389,11 @@
     versionCode 2      &lt;-- change this
     versionName &quot;2.0&quot;  &lt;-- change this
 }
-</code></pre>
+</code></pre><p>If not, there will be error<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058284/error1_rut8jd.png" alt=""></p>
+<p>The way to update the apk is like following:<br>1.Eddit Release</p>
+<p><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk0_goi6wi.png" alt=""></p>
+<p>2.Add the new released apk(remember to check the version code!!!)<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk_pkdjdf.png" alt=""><br>3.Remember to save the change<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk2_kq3tcr.png" alt=""><br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk3_wzai4j.png" alt=""><br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk4_edc57u.png" alt=""><br>Start to roll-out to Beta<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk5_fuw5e2.png" alt=""><br>Then you will see the result<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058284/add_apk6_codtae.png" alt=""><br>4.Here is the place to view all the apk<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058729/review_all_the_apk_sclfsr.png" alt=""><br>5.Remember to check the status of apk<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058779/final_zgjer9.png" alt=""></p>
+
       
     </div>
 
