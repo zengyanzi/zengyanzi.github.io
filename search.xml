@@ -102,7 +102,7 @@
   <entry>
     <title><![CDATA[AWS with SecureCRT]]></title>
     <url>%2F2017%2F05%2F23%2FAWS-with-SecureCRT%2F</url>
-    <content type="text"><![CDATA[How to deploy AWS with SecureCRT rz -be cd tomcat/webapps ../bin/shutdown.sh rm -rf ./* mv ~/pt_server.war . ../bin/startup.sh ../bin/shutdown.sh vim ./pt_server/WEB-INF/jdbc.properties modify Ijdbc.driverClassName=com.mysql.jdbc.Driverjdbc.url=jdbc:mysql://localhost:3306/pt?characterEncoding=utf-8jdbc.username=xxxxjdbc.password=xxxxxESC : wq ../bin/startup.sh if there were something went wrong ,check here: cat pt_server/WEB-INF/jdbc.properties]]></content>
+    <content type="text"><![CDATA[How to deploy AWS with SecureCRT rz -be cd tomcat/webapps ../bin/shutdown.sh rm -rf ./* mv ~/pt_server.war . ../bin/startup.sh ../bin/shutdown.sh vim ./pt_server/WEB-INF/jdbc.properties modify Ijdbc.driverClassName=com.mysql.jdbc.Driverjdbc.url=jdbc:mysql://localhost:3306/pt?characterEncoding=utf-8jdbc.username=xxxxjdbc.password=xxxxxESC : wq ../bin/startup.sh if there were something went wrong ,check here: cat pt_server/WEB-INF/jdbc.properties How to download from AWS cd tomcat/webapps sz pt_server.war Then find it in option session options — X/Y/Zmodem]]></content>
       <tags>
         <tag>AWS,SecureCRT</tag>
       </tags>
