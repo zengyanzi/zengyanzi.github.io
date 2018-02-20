@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/02/20/add-a-pop-ups-to-nopcommerce/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
 <meta property="og:description" content="How to add a pop-ups to nopcommcerceHere is the solution to add one without create new model and view.Go to theme/xxx/view/home/Index.cshtml The key points to achieve it is Click picture-&amp;gt;popup dia">
-<meta property="og:updated_time" content="2018-02-20T04:02:07.193Z">
+<meta property="og:updated_time" content="2018-02-20T20:57:26.140Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="add a pop-ups to nopcommerce">
 <meta name="twitter:description" content="How to add a pop-ups to nopcommcerceHere is the solution to add one without create new model and view.Go to theme/xxx/view/home/Index.cshtml The key points to achieve it is Click picture-&amp;gt;popup dia">
@@ -645,6 +645,25 @@ Html.AppendCssFileParts(&quot;~/Scripts/drag/css/drag.css&quot;);
     })
 
 &lt;/script&gt;
+</code></pre><p>Here is the part of css we updated for the feature</p>
+<pre><code>#footy{
+  display: none;
+
+  text-align: center;
+
+}
+
+.footysend{
+  display: none;
+}
+.footapp{
+  width: 220px;
+  height: 140px;
+  position: fixed;
+  z-index: 99;
+  right: 20px;
+  bottom: 300px;
+}
 </code></pre>
       
     </div>
