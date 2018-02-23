@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[update hexo with shh]]></title>
+    <url>%2F2018%2F02%2F23%2Fupdate-hexo-with-shh%2F</url>
+    <content type="text"><![CDATA[fatal: could not read Username for ‘https://github.com‘: Invalid argumentHexo g -d but get the error like below fatal: could not read Username for &apos;https://github.com&apos;: Invalid argument FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html Error: bash: /dev/tty: No such device or address error: failed to execute prompt script (exit code 1) fatal: could not read Username for &apos;https://github.com&apos;: Invalid argument The way to solve it is by two steps1.go to the blog/_config.yml update the url like deploy: type: git repo: git@github.com:zengyanzi/zengyanzi.github.io.git branch: master Instead of https://github.com/zengyanzi/zengyanzi.github.io Generate ssh as below : A- Create a ssh key using Git Bash using following command ssh-keygen -t rsa -b 4096 -C &quot;zengzhen.ucf@email.com&quot; After running this command just install the by default options and enter the password balnk when it prompts.(Three times of pressing space) B- Then run the following commands to locate the public/private key generated from step1 cd .ssh cd ~/.ssh 3- Then run the following command to view your public: cat id_rsa.pub 4- Copy your public key and go to your GitHub account -&gt; settings -&gt; create a SSH and GPG keys then click new ssh key and past your public key in the in key text field. 5- Verify your public key using Git Bash by running the following command: ssh -vT git@github.com You will get output like this debug1: channel 0: free: client-session, nchannels 1 Transferred: sent 3848, received 2040 bytes, in 0.2 seconds Bytes per second: sent 16032.4, received 8499.5 debug1: Exit status 1 Then you no longer got “could not read Username for ‘https://github.com‘: Invalid argument”]]></content>
+      <tags>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[yarn install problem with xcode]]></title>
     <url>%2F2018%2F02%2F23%2Fyarn-install-problem-with-xcode%2F</url>
     <content type="text"><![CDATA[ios: Unable to verify Xcode and Simulator installationTurned out there weren’t any “Command Line Tools” selected in the Xcode settings. After selecting some it worked for me. Here is how it should look like:]]></content>
@@ -93,8 +101,8 @@
     <url>%2F2017%2F09%2F25%2FAndroid-studio-icon-on-device%2F</url>
     <content type="text"><![CDATA[How to change or set the Icon for your Android APP? Go to the path “..android\app\src\main\res” Update the images in those folders \mipmap-xxhdpi \mipmap-xhdpi \mipmap-mdpi \mipmap-hdpi You could use some online tool to generate your icon https://makeappicon.com/ which resizes all iOS icons and Android icons.]]></content>
       <tags>
-        <tag>Android</tag>
         <tag>React Native</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
