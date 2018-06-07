@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="Update the tinyMce for nopCommerceTo fix the bug of table css in product full description, I add a plugin in tinyMCE as below: To add the Fullpage Plugin to the tinyMCE editor just edit: /Administrati">
+<meta name="description" content="How to open new page in new windows for nopCommerceThe file is _Root.Head.cshtml, the path is Nop.Web/View/Shared/ _Root.Head.cshtml, add  before  as below: @using Nop.Core @using Nop.Core.Domain.Comm">
 <meta name="keywords" content="nopCommerce">
 <meta property="og:type" content="article">
-<meta property="og:title" content="update the tinymce for nopcommerce">
-<meta property="og:url" content="http://yoursite.com/2018/01/11/update-the-tinymce-for-nopcommerce/index.html">
+<meta property="og:title" content="nopcommerce new window">
+<meta property="og:url" content="http://yoursite.com/2018/06/07/nopcommerce-new-window/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="Update the tinyMce for nopCommerceTo fix the bug of table css in product full description, I add a plugin in tinyMCE as below: To add the Fullpage Plugin to the tinyMCE editor just edit: /Administrati">
-<meta property="og:updated_time" content="2018-01-10T22:34:58.645Z">
+<meta property="og:description" content="How to open new page in new windows for nopCommerceThe file is _Root.Head.cshtml, the path is Nop.Web/View/Shared/ _Root.Head.cshtml, add  before  as below: @using Nop.Core @using Nop.Core.Domain.Comm">
+<meta property="og:updated_time" content="2018-06-07T04:17:44.326Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="update the tinymce for nopcommerce">
-<meta name="twitter:description" content="Update the tinyMce for nopCommerceTo fix the bug of table css in product full description, I add a plugin in tinyMCE as below: To add the Fullpage Plugin to the tinyMCE editor just edit: /Administrati">
+<meta name="twitter:title" content="nopcommerce new window">
+<meta name="twitter:description" content="How to open new page in new windows for nopCommerceThe file is _Root.Head.cshtml, the path is Nop.Web/View/Shared/ _Root.Head.cshtml, add  before  as below: @using Nop.Core @using Nop.Core.Domain.Comm">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/11/update-the-tinymce-for-nopcommerce/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/07/nopcommerce-new-window/"/>
 
 
 
 
 
-  <title> update the tinymce for nopcommerce | Bunny's  Code Burrow </title>
+  <title> nopcommerce new window | Bunny's  Code Burrow </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/11/update-the-tinymce-for-nopcommerce/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/07/nopcommerce-new-window/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jenny Zeng">
@@ -318,7 +318,7 @@
             
             
               
-                update the tinymce for nopcommerce
+                nopcommerce new window
               
             
           </h1>
@@ -333,8 +333,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-11T11:06:09+13:00">
-                2018-01-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-07T13:11:42+12:00">
+                2018-06-07
               </time>
             
 
@@ -368,24 +368,79 @@
       
 
       
-        <h1 id="Update-the-tinyMce-for-nopCommerce"><a href="#Update-the-tinyMce-for-nopCommerce" class="headerlink" title="Update the tinyMce for nopCommerce"></a>Update the tinyMce for nopCommerce</h1><p>To fix the bug of table css in product full description, I add a plugin in tinyMCE as below:</p>
-<p>To add the Fullpage Plugin to the tinyMCE editor just edit:</p>
-<pre><code>/Administration/Views/Shared/EditorTemplates/RichEditor.cshtml
-</code></pre><p>And add “fullpage” to plugins: [..] and also to toolbar: “..”</p>
-<pre><code>inymce.init({
-        selector: &quot;#@ViewData.TemplateInfo.GetFullHtmlFieldId(string.Empty)&quot;,
-        height: 350,
-        width: 790,
-        valid_children : &quot;+body[style],-body[div],p[strong|a|#text]&quot;,
-        plugins: [
-            &quot;advlist autolink lists link image charmap print preview anchor&quot;,
-            &quot;searchreplace visualblocks code fullscreen fullpage&quot;,
-            &quot;insertdatetime media table contextmenu paste@(canUploadPictures ? &quot; jbimages&quot; : null)&quot;
-        ],
-        toolbar: &quot;insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image@(canUploadPictures ? &quot; jbimages&quot; : null) | fullpage&quot;,
-        //&quot;relative_urls&quot; required by jbimages plugin to be set to &quot;false&quot;
-        //but in this case it&apos;ll break existing links (e.g. message template tokens)
-        relative_urls: true
+        <h1 id="How-to-open-new-page-in-new-windows-for-nopCommerce"><a href="#How-to-open-new-page-in-new-windows-for-nopCommerce" class="headerlink" title="How to open new page in new windows for nopCommerce"></a>How to open new page in new windows for nopCommerce</h1><p>The file is _Root.Head.cshtml, the path is Nop.Web/View/Shared/ _Root.Head.cshtml, add <base target="_blank"> before  as below:</p>
+<pre><code>@using Nop.Core
+@using Nop.Core.Domain.Common;
+@using Nop.Core.Infrastructure;
+@{
+var displayMiniProfiler = CommonHelper.GetTrustLevel() &gt;= AspNetHostingPermissionLevel.High &amp;&amp;
+    EngineContext.Current.Resolve&lt;Nop.Core.Domain.StoreInformationSettings&gt;().DisplayMiniProfilerInPublicStore;
+
+//resources
+Html.AppendCssFileParts(&quot;~/Content/jquery-ui-themes/smoothness/jquery-ui-1.10.3.custom.min.css&quot;);
+
+Html.AppendScriptParts(&quot;~/Scripts/public.ajaxcart.js&quot;);
+Html.AppendScriptParts(&quot;~/Scripts/public.common.js&quot;);
+Html.AppendScriptParts(&quot;~/Scripts/jquery-migrate-1.2.1.min.js&quot;);
+Html.AppendScriptParts(&quot;~/Scripts/jquery-ui-1.10.3.custom.min.js&quot;);
+Html.AppendScriptParts(&quot;~/Scripts/jquery.validate.unobtrusive.min.js&quot;);
+Html.AppendScriptParts(&quot;~/Scripts/jquery.validate.min.js&quot;);
+Html.AppendScriptParts(&quot;~/Scripts/jquery-1.10.2.min.js&quot;);
+//add pupop
+Html.AppendScriptParts(&quot;~/Scripts/pupopTip.js&quot;);
+
+//X-UA-Compatible tag
+var commonSettings = EngineContext.Current.Resolve&lt;CommonSettings&gt;();
+if (commonSettings.RenderXuaCompatible)
+{
+    Html.AppendHeadCustomParts(string.Format(&quot;&lt;meta http-equiv=\&quot;X-UA-Compatible\&quot; content=\&quot;{0}\&quot;/&gt;&quot;, commonSettings.XuaCompatibleValue));
+}
+}
+&lt;!DOCTYPE html&gt;
+&lt;html @Html.Partial(&quot;LanguageAttributes&quot;)&gt;
+&lt;head&gt;
+    &lt;!-- Google Tag Manager --&gt;
+    &lt;script&gt;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({&apos;gtm.start&apos;:
+    new Date().getTime(),event:&apos;gtm.js&apos;});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!=&apos;dataLayer&apos;?&apos;&amp;l=&apos;+l:&apos;&apos;;j.async=true;j.src=
+    &apos;https://www.googletagmanager.com/gtm.js?id=&apos;+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,&apos;script&apos;,&apos;dataLayer&apos;,&apos;GTM-MT3JMK&apos;);&lt;/script&gt;
+    &lt;!-- End Google Tag Manager --&gt;
+&lt;title&gt;@Html.NopTitle(true)&lt;/title&gt;
+&lt;meta http-equiv=&quot;Content-type&quot; content=&quot;text/html;charset=UTF-8&quot; /&gt;
+&lt;meta name=&quot;description&quot; content=&quot;@(Html.NopMetaDescription())&quot; /&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;@(Html.NopMetaKeywords())&quot; /&gt;
+&lt;meta name=&quot;generator&quot; content=&quot;nopCommerce&quot; /&gt;
+&lt;meta name=&quot;google-site-verification&quot; content=&quot;YcdHXMIdUFkSueRbht63U4qY-BRV4JiU_p3otFwEd50&quot; /&gt;
+@Html.NopHeadCustom()
+@*This is used so that themes can inject content into the header*@
+@Html.Partial(&quot;Head&quot;)
+@Html.Widget(&quot;head_html_tag&quot;)
+@Html.NopCssFiles(this.Url, ResourceLocation.Head)
+@Html.NopScripts(this.Url, ResourceLocation.Head)
+@Html.NopCanonicalUrls()
+@Html.Action(&quot;RssHeaderLink&quot;, &quot;News&quot;)
+@Html.Action(&quot;RssHeaderLink&quot;, &quot;Blog&quot;)
+@*Favicon - upload favicon.ico file to the root directory*@
+@Html.Action(&quot;Favicon&quot;, &quot;Common&quot;)
+@if (displayMiniProfiler)
+{
+    @StackExchange.Profiling.MiniProfiler.RenderIncludes()
+}
+&lt;!--Powered by nopCommerce - http://www.nopCommerce.com--&gt;
+&lt;!--Copyright (c) 2008-2013--&gt;
+&lt;base target=&quot;_blank&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- Google Tag Manager (noscript) --&gt;
+&lt;noscript&gt;&lt;iframe src=&quot;https://www.googletagmanager.com/ns.html?id=GTM-MT3JMK&quot;
+height=&quot;0&quot; width=&quot;0&quot; style=&quot;display:none;visibility:hidden&quot;&gt;&lt;/iframe&gt;&lt;/noscript&gt;
+&lt;!-- End Google Tag Manager (noscript) --&gt;
+@RenderBody()
+@Html.NopCssFiles(this.Url, ResourceLocation.Foot)
+@Html.NopScripts(this.Url, ResourceLocation.Foot)
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
       
     </div>
@@ -428,18 +483,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/08/update-the-hover-banner/" rel="next" title="update the hover banner">
-                <i class="fa fa-chevron-left"></i> update the hover banner
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/21/How-to-find-the-Additional-CSS-in-wordpress/" rel="prev" title="How to find the Additional CSS in wordpress">
-                How to find the Additional CSS in wordpress <i class="fa fa-chevron-right"></i>
+              <a href="/2018/02/23/update-hexo-with-shh/" rel="prev" title="update hexo with shh">
+                update hexo with shh <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -580,7 +631,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Update-the-tinyMce-for-nopCommerce"><span class="nav-number">1.</span> <span class="nav-text">Update the tinyMce for nopCommerce</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#How-to-open-new-page-in-new-windows-for-nopCommerce"><span class="nav-number">1.</span> <span class="nav-text">How to open new page in new windows for nopCommerce</span></a></li></ol></div>
             
 
           </div>

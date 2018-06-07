@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="nopCommerce," />
+  <meta name="keywords" content="React Native, nopCommerce" />
 
 
 
@@ -90,17 +90,15 @@
 
 
 
-<meta name="description" content="Update the tinyMce for nopCommerceTo fix the bug of table css in product full description, I add a plugin in tinyMCE as below: To add the Fullpage Plugin to the tinyMCE editor just edit: /Administrati">
-<meta name="keywords" content="nopCommerce">
-<meta property="og:type" content="article">
-<meta property="og:title" content="update the tinymce for nopcommerce">
-<meta property="og:url" content="http://yoursite.com/2018/01/11/update-the-tinymce-for-nopcommerce/index.html">
+<meta name="description" content="Loving code ,especially javascript, React Native">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bunny's  Code Burrow">
+<meta property="og:url" content="http://yoursite.com/archives/2018/06/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="Update the tinyMce for nopCommerceTo fix the bug of table css in product full description, I add a plugin in tinyMCE as below: To add the Fullpage Plugin to the tinyMCE editor just edit: /Administrati">
-<meta property="og:updated_time" content="2018-01-10T22:34:58.645Z">
+<meta property="og:description" content="Loving code ,especially javascript, React Native">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="update the tinymce for nopcommerce">
-<meta name="twitter:description" content="Update the tinyMce for nopCommerceTo fix the bug of table css in product full description, I add a plugin in tinyMCE as below: To add the Fullpage Plugin to the tinyMCE editor just edit: /Administrati">
+<meta name="twitter:title" content="Bunny's  Code Burrow">
+<meta name="twitter:description" content="Loving code ,especially javascript, React Native">
 
 
 
@@ -128,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/11/update-the-tinymce-for-nopcommerce/"/>
+  <link rel="canonical" href="http://yoursite.com/archives/2018/06/"/>
 
 
 
 
 
-  <title> update the tinymce for nopcommerce | Bunny's  Code Burrow </title>
+  <title> Archive | Bunny's  Code Burrow </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -159,7 +157,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left  page-archive  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -287,176 +285,65 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  <section id="posts" class="posts-collapse">
+    <span class="archive-move-on"></span>
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/11/update-the-tinymce-for-nopcommerce/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
+    <span class="archive-page-counter">
+      
+      
+       
+        
+      Nice! 78 posts in total. Keep on posting.
     </span>
 
     
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                update the tinymce for nopcommerce
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-11T11:06:09+13:00">
-                2018-01-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
 
       
       
-
       
-        <h1 id="Update-the-tinyMce-for-nopCommerce"><a href="#Update-the-tinyMce-for-nopCommerce" class="headerlink" title="Update the tinyMce for nopCommerce"></a>Update the tinyMce for nopCommerce</h1><p>To fix the bug of table css in product full description, I add a plugin in tinyMCE as below:</p>
-<p>To add the Fullpage Plugin to the tinyMCE editor just edit:</p>
-<pre><code>/Administration/Views/Shared/EditorTemplates/RichEditor.cshtml
-</code></pre><p>And add “fullpage” to plugins: [..] and also to toolbar: “..”</p>
-<pre><code>inymce.init({
-        selector: &quot;#@ViewData.TemplateInfo.GetFullHtmlFieldId(string.Empty)&quot;,
-        height: 350,
-        width: 790,
-        valid_children : &quot;+body[style],-body[div],p[strong|a|#text]&quot;,
-        plugins: [
-            &quot;advlist autolink lists link image charmap print preview anchor&quot;,
-            &quot;searchreplace visualblocks code fullscreen fullpage&quot;,
-            &quot;insertdatetime media table contextmenu paste@(canUploadPictures ? &quot; jbimages&quot; : null)&quot;
-        ],
-        toolbar: &quot;insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image@(canUploadPictures ? &quot; jbimages&quot; : null) | fullpage&quot;,
-        //&quot;relative_urls&quot; required by jbimages plugin to be set to &quot;false&quot;
-        //but in this case it&apos;ll break existing links (e.g. message template tokens)
-        relative_urls: true
-</code></pre>
-      
-    </div>
 
-    <div>
       
         
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/nopCommerce/" rel="tag"># nopCommerce</a>
-          
+        <div class="collection-title">
+          <h2 class="archive-year motion-element" id="archive-year-2018">2018</h2>
         </div>
       
+      
 
       
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-      
+            <a class="post-title-link" href="/2018/06/07/nopcommerce-new-window/" itemprop="url">
+              
+                <span itemprop="name">nopcommerce new window</span>
+              
+            </a>
+        
+      </h1>
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/02/08/update-the-hover-banner/" rel="next" title="update the hover banner">
-                <i class="fa fa-chevron-left"></i> update the hover banner
-              </a>
-            
-          </div>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-06-07T13:11:42+12:00"
+              content="2018-06-07" >
+          06-07
+        </time>
+      </div>
 
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/12/21/How-to-find-the-Additional-CSS-in-wordpress/" rel="prev" title="How to find the Additional CSS in wordpress">
-                How to find the Additional CSS in wordpress <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+    
+
+  </section>
+
+  
+
 
 
           </div>
@@ -464,10 +351,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -487,17 +370,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460"
@@ -570,22 +444,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Update-the-tinyMce-for-nopCommerce"><span class="nav-number">1.</span> <span class="nav-text">Update the tinyMce for nopCommerce</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -715,9 +573,11 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
+  
+    <script type="text/javascript" id="motion.page.archive">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  
 
 
   
