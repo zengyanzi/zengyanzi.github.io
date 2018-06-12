@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[how to modify novi slider for nopcommerce in source code]]></title>
+    <url>%2F2018%2F06%2F12%2Fhow-to-modify-novi-slider-for-nopcommerce-in-source-code%2F</url>
+    <content type="text"><![CDATA[How to modify novi slider for nopCommerce in source code You have to edit the source code - \Plugins\Nop.Plugin.Widgets.NivoSlider\Views\WidgetsNivoSlider\PublicInfo.cshtml file Open the solution in Visual Studio Modify required files Re-build the solution Back up the previous code Upload modified libraries/files. In your case copy \Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll to your \Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll Restart the application]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[how to resize the nivoslider for nopCommerce]]></title>
     <url>%2F2018%2F06%2F12%2Fhow-to-resize-the-nivoslider-for-nopCommerce%2F</url>
     <content type="text"><![CDATA[How to resize the nivoslider for nopCommerceThe best way to handle this is to edit the width and height of the actual slider. Edit the nivo-slider.css located in Plugins/Widgets.NivoSlider/Content/nivoslider/. Just edit the width &amp; height in the first section: .nivoSlider { position:relative; width:100%; height:auto; overflow: hidden; }]]></content>
