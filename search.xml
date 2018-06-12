@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[how to resize the nivoslider for nopCommerce]]></title>
+    <url>%2F2018%2F06%2F12%2Fhow-to-resize-the-nivoslider-for-nopCommerce%2F</url>
+    <content type="text"><![CDATA[How to resize the nivoslider for nopCommerceThe best way to handle this is to edit the width and height of the actual slider. Edit the nivo-slider.css located in Plugins/Widgets.NivoSlider/Content/nivoslider/. Just edit the width &amp; height in the first section: .nivoSlider { position:relative; width:100%; height:auto; overflow: hidden; }]]></content>
+      <tags>
+        <tag>nopCommerce</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[update search box placeholder]]></title>
     <url>%2F2018%2F06%2F12%2Fupdate-search-box-placeholder%2F</url>
     <content type="text"><![CDATA[How to update placeholder for searchboxTo change the placeholder text in the search bar, go to Admin panel==&gt;Configuration==&gt;Language==&gt; choose the language you’re using and change its string resource. The resource name for search is ‘search.searchbox.tooltip’. Similarly, you can change any label throughout the site without changing source code. Try to make full use of Language, you will enjoy more from nopCommerce.]]></content>
