@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[how to define problem with wordpress]]></title>
+    <url>%2F2018%2F07%2F31%2Fhow-to-define-problem-with-wordpress%2F</url>
+    <content type="text"><![CDATA[How to define the problem with WordPressIt seems something wrong with the website that I could not visit it,but I could visit the backend of the website.Here is my solution as below: Access to FTP Go to logs logs/php_errors The error shows something wrong with my child theme. I tested to install another theme which works fine. Then I noticed somehow the Parent theme of my child theme is missing, so I installed the parent one. All good now.]]></content>
+      <tags>
+        <tag>WordPress</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[how to modify novi slider for nopcommerce in source code]]></title>
     <url>%2F2018%2F06%2F12%2Fhow-to-modify-novi-slider-for-nopcommerce-in-source-code%2F</url>
     <content type="text"><![CDATA[How to modify novi slider for nopCommerce in source code You have to edit the source code - \Plugins\Nop.Plugin.Widgets.NivoSlider\Views\WidgetsNivoSlider\PublicInfo.cshtml file Open the solution in Visual Studio Modify required files Re-build the solution Back up the previous code Upload modified libraries/files. In your case copy \Presentation\Nop.Web\Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll to your \Plugins\Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.dll Restart the application]]></content>
@@ -133,8 +141,8 @@
     <url>%2F2017%2F09%2F25%2FAndroid-studio-icon-on-device%2F</url>
     <content type="text"><![CDATA[How to change or set the Icon for your Android APP? Go to the path “..android\app\src\main\res” Update the images in those folders \mipmap-xxhdpi \mipmap-xhdpi \mipmap-mdpi \mipmap-hdpi You could use some online tool to generate your icon https://makeappicon.com/ which resizes all iOS icons and Android icons.]]></content>
       <tags>
-        <tag>Android</tag>
         <tag>React Native</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>

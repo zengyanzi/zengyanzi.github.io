@@ -297,6 +297,204 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/add-special-attribute-massive/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/24/add-special-attribute-massive/" itemprop="url">
+                  add special attribute massive
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T09:40:49+12:00">
+                2017-04-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="add-special-attribute-massive"><a href="#add-special-attribute-massive" class="headerlink" title="add special attribute massive"></a>add special attribute massive</h1><p>注意事项，%d 占位符是整数型， %s占位符是字符串</p>
+<pre><code>#主方法
+def process():
+    #读取csv，转换成list 更改文件存储位置
+    reader = list(csv.reader(open(&quot;D:\\ski\\attribute\\attribute-gc.csv&quot;)))
+    header = reader[0]
+    #遍历数据，并处理， tips：跳过第一行
+    for i in reader[1:]:
+        sku = i[0]
+        product_id = getIdFromSku(sku)
+        if product_id == 0:
+            print &quot;error sku %s&quot; % sku
+            continue
+        optionname = i[1]
+        print optionname
+ #测试看是否存在这样的optionname
+        test(optionname)
+ #如果存在，取optionid
+        optionid = getoptionIdFromoption(optionname)
+        print optionid
+ #插入optionid和productid
+        if exist(product_id,optionid):
+            print &quot;exist&quot;
+            pass
+        else:
+            insert(product_id,optionid)
+
+
+ #是否存在productid和optionid，如果存在，就退出
+def exist(product_id,optionid):
+    sql = &quot;select * from dbo.Product_SpecificationAttribute_Mapping where ProductId = %d and SpecificationAttributeOptionId = %d&quot; % (product_id,optionid)
+    cursor.execute(sql)
+    rows = cursor.fetchall()
+    if len(rows)==0:
+        return False
+    else:
+        return True
+
+ #通过optionname找出optionid
+def getoptionIdFromoption(optionname):
+    sql=&quot;SELECT Id FROM dbo.SpecificationAttributeOption where SpecificationAttributeId=%d and Name=&apos;%s&apos;&quot; % (12,optionname)
+    print sql
+    cursor.execute(sql)
+    row = cursor.fetchall()
+    return row[0][0]
+ 插入optionid和productid   
+def insert(product_id,optionid):
+    sql = &quot;insert into dbo.Product_SpecificationAttribute_Mapping(ProductId,SpecificationAttributeOptionId,DisplayOrder,AllowFiltering,ShowOnProductPage) values(%d,%d,%d,%d,%d)&quot; % (product_id,optionid,0,0,1)
+    print sql
+    cursor.execute(sql)
+    cnxn.commit()
+ #通过sku找出id              
+def getIdFromSku(a):
+    sql = &quot;select Id from dbo.Product where Sku=&apos;%s&apos; and deleted=0&quot; % a
+    cursor.execute(sql)
+    row = cursor.fetchall()
+    if row:
+        return row[0][0]
+    else:
+        return 0
+#测试optionname是否存在，若不存在，则插入
+def test(optionname): 
+    if find(optionname) == 0:
+        sql=&quot;insert into dbo.SpecificationAttributeOption (Name,SpecificationAttributeId,DisplayOrder) values(&apos;%s&apos;,12,0)&quot; % optionname
+        print sql
+        cursor.execute(sql)
+        cnxn.commit()
+#测试optionname是否存在，若不存在，则插入                
+def find(optionname): 
+    sql=&quot;SELECT Id FROM dbo.SpecificationAttributeOption where SpecificationAttributeId=%d and Name=&apos;%s&apos;&quot; % (12,optionname)
+    cursor.execute(sql) 
+    row = cursor.fetchall()
+    if row:
+        return row[0][0]
+    else:
+        return 0  
+
+if __name__ == &quot;__main__&quot;:
+    process()
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/INFO-Generated-lib-jquery-lazyload-bower-json/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1562,199 +1760,6 @@ AppRegistry.registerComponent(&apos;PT&apos;, () =&gt; NavigatorDemo);
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/react-native-login/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/23/react-native-login/" itemprop="url">
-                  react native login 
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-23T00:33:55+12:00">
-                2017-04-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="react-native-login-view"><a href="#react-native-login-view" class="headerlink" title="react native login view"></a>react native login view</h1><pre><code>import React, { Component } from &apos;react&apos;;
-import { AppRegistry,StyleSheet,Image, TextInput, Text,ScrollView,TouchableOpacity,View} from &apos;react-native&apos;;
-class CoolApp extends React.Component {
-  render() {
-    return (
-      &lt;ScrollView
-        contentContainerStyle={{flex:1}}
-        keyboardDismissMode=&apos;on-drag&apos;
-        keyboardShouldPersistTaps={false}
-        &gt;
-        &lt;View style={styles.container}&gt;
-          &lt;Image
-            source={{uri: 'http://oss-hz.qianmi.com/qianmicom/u/cms/qmwww/201511/03102524l6ur.png'}}
-            style={styles.logo}/&gt;
-          &lt;TextInput 
-            ref={(username) =&gt; this.username = username}
-            onFocus={()=&gt;this.username.focus()}
-            style={styles.input}
-            placeholder=&apos;username&apos;/&gt;
-          &lt;TextInput 
-            ref={(password) =&gt; this.password = password}
-            onFocus={() =&gt; this.password.focus()}
-            style={styles.input}
-            placeholder=&apos;password&apos; 
-            password={true}/&gt;
-
-          &lt;TouchableOpacity style={styles.btn}
-            onPress={() =&gt; console.log(&apos;press me&apos;)}&gt;
-            &lt;Text style={styles.text}&gt;login&lt;/Text&gt;
-          &lt;/TouchableOpacity&gt;
-        &lt;/View&gt;
-      &lt;/ScrollView&gt;
-    );
-  }
-}
-
-var styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingLeft: 10,
-    paddingRight: 10,
-    justifyContent: &apos;center&apos;,
-    alignItems: &apos;center&apos;,
-    backgroundColor: &apos;#F4FCFF&apos;,
-  },
-  logo:{
-    width:160,
-    height:160,
-    marginTop: 100
-  },
-  input: {
-   height: 40,
-   width:200,
-   marginTop: 10, //间隔
-   borderWidth: 1, 
-   borderRadius: 5, //圆角
-   borderColor: &apos;lightblue&apos;
-  },
-  text:{
-    fontWeight: &apos;bold&apos;,
-    fontSize: 14,
-    color: &apos;#FFF&apos;
-  },
-   btn:{
-     alignSelf: &apos;stretch&apos;,
-     alignItems: &apos;center&apos;,
-     justifyContent: &apos;center&apos;,
-     backgroundColor: &apos;#3333FF&apos;,
-     height: 40,
-     borderRadius: 5,
-     marginTop: 10
-   }
-});
-AppRegistry.registerComponent(&apos;AwesomeProject&apos;, () =&gt; CoolApp);
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1804,7 +1809,7 @@ AppRegistry.registerComponent(&apos;AwesomeProject&apos;, () =&gt; CoolApp);
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">81</span>
+                <span class="site-state-item-count">82</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
