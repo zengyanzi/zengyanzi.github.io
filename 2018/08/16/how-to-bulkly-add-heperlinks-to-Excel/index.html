@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python," />
+  <meta name="keywords" content="Excel," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="tireprice  # ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc import MySQLdb #cnxn是数据库连接  更改数据库连接方式，账号密码  #cursor是数据库">
-<meta name="keywords" content="Python">
+<meta name="description" content="How to bulky add hyperlinks to ExcelHere is an example of how to work effectively with Excel.The situation is after merge two columns in Excel, the final column become a link whick like: http://www.mi">
+<meta name="keywords" content="Excel">
 <meta property="og:type" content="article">
-<meta property="og:title" content="tireprice  ">
-<meta property="og:url" content="http://yoursite.com/2017/04/24/tireprice/index.html">
+<meta property="og:title" content="how to bulkly add hyperlinks to Excel">
+<meta property="og:url" content="http://yoursite.com/2018/08/16/how-to-bulkly-add-heperlinks-to-Excel/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="tireprice  # ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc import MySQLdb #cnxn是数据库连接  更改数据库连接方式，账号密码  #cursor是数据库">
-<meta property="og:updated_time" content="2017-04-23T22:20:03.884Z">
+<meta property="og:description" content="How to bulky add hyperlinks to ExcelHere is an example of how to work effectively with Excel.The situation is after merge two columns in Excel, the final column become a link whick like: http://www.mi">
+<meta property="og:updated_time" content="2018-08-16T01:56:34.478Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tireprice  ">
-<meta name="twitter:description" content="tireprice  # ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc import MySQLdb #cnxn是数据库连接  更改数据库连接方式，账号密码  #cursor是数据库">
+<meta name="twitter:title" content="how to bulkly add hyperlinks to Excel">
+<meta name="twitter:description" content="How to bulky add hyperlinks to ExcelHere is an example of how to work effectively with Excel.The situation is after merge two columns in Excel, the final column become a link whick like: http://www.mi">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/24/tireprice/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/16/how-to-bulkly-add-heperlinks-to-Excel/"/>
 
 
 
 
 
-  <title> tireprice   | Bunny's  Code Burrow </title>
+  <title> how to bulkly add hyperlinks to Excel | Bunny's  Code Burrow </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/tireprice/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/16/how-to-bulkly-add-heperlinks-to-Excel/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jenny Zeng">
@@ -318,7 +318,7 @@
             
             
               
-                tireprice  
+                how to bulkly add hyperlinks to Excel
               
             
           </h1>
@@ -333,8 +333,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T10:19:18+12:00">
-                2017-04-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-16T13:54:34+12:00">
+                2018-08-16
               </time>
             
 
@@ -368,84 +368,27 @@
       
 
       
-        <h1 id="tireprice"><a href="#tireprice" class="headerlink" title="tireprice  "></a>tireprice  </h1><pre><code># ~*~ coding:utf-8 ~*~
-#csv是一个读取csv文件的lib
-import csv
-#itertools生成组合和排列的lib
-import itertools
-#pyodbc是连接ms sql server的lib
-import pyodbc
-import MySQLdb
-#cnxn是数据库连接  更改数据库连接方式，账号密码
+        <h1 id="How-to-bulky-add-hyperlinks-to-Excel"><a href="#How-to-bulky-add-hyperlinks-to-Excel" class="headerlink" title="How to bulky add hyperlinks to Excel"></a>How to bulky add hyperlinks to Excel</h1><p>Here is an example of how to work effectively with Excel.<br>The situation is after merge two columns in Excel, the final column become a link whick like: <a href="http://www.microanalytix.co.nz/3ml-luer-lock-sterile-syringe" target="_blank" rel="external">http://www.microanalytix.co.nz/3ml-luer-lock-sterile-syringe</a>.</p>
+<p>However, these links are not hyperlink. Then the following step will let you know how to convert them into hyperlinks</p>
+<ol>
+<li>Alt+F11 </li>
+<li>click view and code</li>
+<li><p>Copy the folllowing code into the new open window as below:</p>
+<pre><code>Sub ActiveHyperlinks()
 
-#cursor是数据库浮标
-cursor = cnxn.cursor()
+For Each C In [A2]
 
+ActiveSheet.Hyperlinks.Add C, C.Value
 
-def test(skuset):
-    err = False
-    for sku in skuset:
-        product_id = getIdFromSku(sku)
-        if not product_id:
-            print &quot;can&apos;t find product id where sku=&apos;%s&apos;&quot; % sku
-            err = True
-#主方法
-def process():
-    #读取csv，转换成list 更改文件存储位置
-    reader = list(csv.reader(open(&quot;c:/Users/Jenny/Desktop/ski/tierprice for customer/VIP-AU-1.csv&quot;)))
-    header = reader[0]
-    #遍历数据，并处理， tips：跳过第一行
-    skuset = set([])
-    for i in reader[1:]:
-        sku = i[0]
-        product_id = getIdFromSku(sku)
-        if product_id == 0:
-            print &quot;error sku %s&quot; % sku
-            continue
-        prices = i[1:]
-        for j in range(len(prices)):
-            price = float(prices[j])
-            crid = int(header[j+1]) 
-            updatetire(product_id)
-            if find(product_id,crid):
-                update(product_id,crid,price)
-            else:
-                insert(product_id,price,crid)
-def update(product_id,crid,price):
-    sql = &quot;update dbo.TierPrice set Price=%f where ProductId=%d and CustomerRoleId=%d&quot; %(price,product_id,crid)
-    cursor.execute(sql)
-    cnxn.commit()
+Next
 
-def find(product_id,crid):
-    sql =&quot;select * from dbo.TierPrice where ProductId=%d and CustomerRoleId=%d&quot; % (product_id,crid)
-    cursor.execute(sql)
-    rows = cursor.fetchall()
-    return rows
+End Sub 
+</code></pre><p> You could change A2 according to your requirements, for example, if you want to change A2 to A20, just modify it as [A2:A20].</p>
+</li>
+<li>The last step is simple and easy, click run-&gt;Run Sub/UserForm.</li>
+<li>Then you would find the result in your original Excel.</li>
+</ol>
 
-def updatetire(productid):
-    sql = &quot;update dbo.Product set HasTierPrices=1 where Id=%d&quot; % productid
-    print sql
-    cursor.execute(sql)
-    cnxn.commit()
-def insert(product_id,price,crid):
-    sql = &quot;insert into dbo.TierPrice (ProductId,StoreId,CustomerRoleId,Quantity,Price) values(%d,0,%d,1,%f)&quot; % (product_id,crid,price)
-    print sql
-    cursor.execute(sql)
-    cnxn.commit()
-
-def getIdFromSku(a):
-    sql = &quot;select Id from dbo.Product where Sku=&apos;%s&apos; and deleted=0&quot; % a
-    cursor.execute(sql)
-    row = cursor.fetchall()
-    if row:
-        return row[0][0]
-    else:
-        return 0
-
-
-if __name__ == &quot;__main__&quot;:
-process()
-</code></pre>
       
     </div>
 
@@ -474,7 +417,7 @@ process()
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/Excel/" rel="tag"># Excel</a>
           
         </div>
       
@@ -487,18 +430,14 @@ process()
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/24/bulk-add-attribute/" rel="next" title="bulk add attribute">
-                <i class="fa fa-chevron-left"></i> bulk add attribute
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/24/nopcommerce-blog/" rel="prev" title=" nopcommerce blog">
-                 nopcommerce blog <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/31/how-to-define-problem-with-wordpress/" rel="prev" title="how to define problem with wordpress">
+                how to define problem with wordpress <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -639,7 +578,7 @@ process()
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#tireprice"><span class="nav-number">1.</span> <span class="nav-text">tireprice  </span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#How-to-bulky-add-hyperlinks-to-Excel"><span class="nav-number">1.</span> <span class="nav-text">How to bulky add hyperlinks to Excel</span></a></li></ol></div>
             
 
           </div>
