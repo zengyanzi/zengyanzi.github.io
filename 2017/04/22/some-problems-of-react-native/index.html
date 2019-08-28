@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="reactnative navigation/**  * Sample React Native App  * https://github.com/facebook/react-native  * @flow  */ import React, { Component } from &amp;apos;react&amp;apos;; import {   AppRegistry,   StyleSheet,">
+<meta name="description" content="some problems of react nativeat the end of the code mode.exports= InstructwelcomView 记得用大写区分react native升级之后 import React ,{Componet} from &amp;apos;react&amp;apos;; import{ View} from &amp;apos;react-native&amp;apos">
 <meta name="keywords" content="React Native">
 <meta property="og:type" content="article">
-<meta property="og:title" content="reactnative navigation">
-<meta property="og:url" content="http://yoursite.com/2017/04/23/reactnative-navigation/index.html">
+<meta property="og:title" content="some problems of react native">
+<meta property="og:url" content="http://yoursite.com/2017/04/22/some-problems-of-react-native/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="reactnative navigation/**  * Sample React Native App  * https://github.com/facebook/react-native  * @flow  */ import React, { Component } from &amp;apos;react&amp;apos;; import {   AppRegistry,   StyleSheet,">
-<meta property="og:updated_time" content="2017-04-22T12:36:57.202Z">
+<meta property="og:description" content="some problems of react nativeat the end of the code mode.exports= InstructwelcomView 记得用大写区分react native升级之后 import React ,{Componet} from &amp;apos;react&amp;apos;; import{ View} from &amp;apos;react-native&amp;apos">
+<meta property="og:updated_time" content="2017-04-22T12:22:10.746Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="reactnative navigation">
-<meta name="twitter:description" content="reactnative navigation/**  * Sample React Native App  * https://github.com/facebook/react-native  * @flow  */ import React, { Component } from &amp;apos;react&amp;apos;; import {   AppRegistry,   StyleSheet,">
+<meta name="twitter:title" content="some problems of react native">
+<meta name="twitter:description" content="some problems of react nativeat the end of the code mode.exports= InstructwelcomView 记得用大写区分react native升级之后 import React ,{Componet} from &amp;apos;react&amp;apos;; import{ View} from &amp;apos;react-native&amp;apos">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/23/reactnative-navigation/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/22/some-problems-of-react-native/"/>
 
 
 
 
 
-  <title> reactnative navigation | Bunny's  Code Burrow </title>
+  <title> some problems of react native | Bunny's  Code Burrow </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/reactnative-navigation/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/22/some-problems-of-react-native/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jenny Zeng">
@@ -318,7 +318,7 @@
             
             
               
-                reactnative navigation
+                some problems of react native
               
             
           </h1>
@@ -333,8 +333,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-23T00:36:13+12:00">
-                2017-04-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-22T20:21:11+08:00">
+                2017-04-22
               </time>
             
 
@@ -368,114 +368,13 @@
       
 
       
-        <h1 id="reactnative-navigation"><a href="#reactnative-navigation" class="headerlink" title="reactnative navigation"></a>reactnative navigation</h1><pre><code>/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-import React, { Component } from &apos;react&apos;;
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-  TouchableHighlight,
-  Navigator,
-} from &apos;react-native&apos;;
+        <h1 id="some-problems-of-react-native"><a href="#some-problems-of-react-native" class="headerlink" title="some problems of react native"></a>some problems of react native</h1><p>at the end of the code</p>
+<pre><code>mode.exports= InstructwelcomView
+</code></pre><p>记得用大写区分<br>react native升级之后</p>
+<pre><code>import React ,{Componet} from &apos;react&apos;;
+import{ View} from &apos;react-native&apos;
+</code></pre><p>需要分开写</p>
 
-
-class NavButton extends React.Component {
-  render() {
-    return (
-      &lt;TouchableHighlight
-        style={styles.button}
-        underlayColor=&quot;#B5B5B5&quot;
-        onPress={this.props.onPress}&gt;
-        &lt;Text style={styles.buttonText}&gt;{this.props.text}&lt;/Text&gt;
-      &lt;/TouchableHighlight&gt;
-    );
-  }
-}
-class NavMenu extends React.Component {
-  render() {
-    return (
-      &lt;View style={styles.scene}&gt;
-        &lt;Text style={styles.messageText}&gt;{this.props.message}&lt;/Text&gt;
-        &lt;NavButton
-          onPress={() =&gt; {
-            this.props.navigator.push({
-              message: &apos;向右拖拽关闭页面&apos;,
-              sceneConfig: Navigator.SceneConfigs.FloatFromRight,
-            });
-          }}
-          text=&quot;从右边向左切入页面(带有透明度变化)&quot;
-        /&gt;
-        &lt;NavButton
-          onPress={() =&gt; {
-            this.props.navigator.push({
-              message: &apos;向下拖拽关闭页面&apos;,
-              sceneConfig: Navigator.SceneConfigs.FloatFromBottom,
-            });
-          }}
-          text=&quot;从下往上切入页面(带有透明度变化)&quot;
-        /&gt;
-        &lt;NavButton
-          onPress={() =&gt; {
-            this.props.navigator.pop();
-          }}
-          text=&quot;页面弹出(回退一页)&quot;
-        /&gt;
-        &lt;NavButton
-          onPress={() =&gt; {
-            this.props.navigator.popToTop();
-          }}
-          text=&quot;页面弹出(回退到最后一页)&quot;
-        /&gt;
-      &lt;/View&gt;
-    );
-  }
-}
-class NavigatorDemo extends Component {
-  render() {
-    return (
-      &lt;Navigator
-        style={styles.container}
-        initialRoute={{ message: '初始页面', }}
-        renderScene={ (route, navigator) =&gt; &lt;NavMenu
-            message={route.message}
-            navigator={navigator}
-          /&gt;}
-         configureScene={(route) =&gt; {
-          if (route.sceneConfig) {
-            return route.sceneConfig;
-          }
-          return Navigator.SceneConfigs.FloatFromBottom;
-        }}
-      /&gt;
-    );
-  }
-}
-const styles = StyleSheet.create({
-   container: {
-    flex: 1,
-   },
-   messageText: {
-    fontSize: 17,
-    fontWeight: &apos;500&apos;,
-    padding: 15,
-    marginTop: 50,
-    marginLeft: 15,
-  },
-  button: {
-    backgroundColor: &apos;white&apos;,
-    padding: 15,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: &apos;#CDCDCD&apos;,
-  },
-});
-
-AppRegistry.registerComponent(&apos;PT&apos;, () =&gt; NavigatorDemo);
-</code></pre>
       
     </div>
 
@@ -517,8 +416,8 @@ AppRegistry.registerComponent(&apos;PT&apos;, () =&gt; NavigatorDemo);
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/23/intall-react-native/" rel="next" title="intall react native">
-                <i class="fa fa-chevron-left"></i> intall react native
+              <a href="/2017/04/22/react-native-jump-to-target-page/" rel="next" title="postreact native jump to target page">
+                <i class="fa fa-chevron-left"></i> postreact native jump to target page
               </a>
             
           </div>
@@ -527,8 +426,8 @@ AppRegistry.registerComponent(&apos;PT&apos;, () =&gt; NavigatorDemo);
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/23/react-native-login/" rel="prev" title="react native login ">
-                react native login  <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/22/nopcommerce-image-hover-scale/" rel="prev" title="postnopcommerce image hover scale">
+                postnopcommerce image hover scale <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -669,7 +568,7 @@ AppRegistry.registerComponent(&apos;PT&apos;, () =&gt; NavigatorDemo);
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#reactnative-navigation"><span class="nav-number">1.</span> <span class="nav-text">reactnative navigation</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#some-problems-of-react-native"><span class="nav-number">1.</span> <span class="nav-text">some problems of react native</span></a></li></ol></div>
             
 
           </div>
@@ -692,7 +591,7 @@ AppRegistry.registerComponent(&apos;PT&apos;, () =&gt; NavigatorDemo);
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

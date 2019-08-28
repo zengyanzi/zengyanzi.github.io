@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="first page choose  import React, { Component } from &amp;apos;react&amp;apos;; import { AppRegistry,ScrollView,View,Text,Image,TouchableOpacity,StyleSheet} from &amp;apos;react-native&amp;apos;; class PT extends Reac">
+<meta name="description" content="reactnative navigation/**  * Sample React Native App  * https://github.com/facebook/react-native  * @flow  */ import React, { Component } from &amp;apos;react&amp;apos;; import {   AppRegistry,   StyleSheet,">
 <meta name="keywords" content="React Native">
 <meta property="og:type" content="article">
-<meta property="og:title" content="postfirst page choose">
-<meta property="og:url" content="http://yoursite.com/2017/04/23/first-page-choose/index.html">
+<meta property="og:title" content="reactnative navigation">
+<meta property="og:url" content="http://yoursite.com/2017/04/22/reactnative-navigation/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="first page choose  import React, { Component } from &amp;apos;react&amp;apos;; import { AppRegistry,ScrollView,View,Text,Image,TouchableOpacity,StyleSheet} from &amp;apos;react-native&amp;apos;; class PT extends Reac">
-<meta property="og:updated_time" content="2017-04-22T12:26:43.311Z">
+<meta property="og:description" content="reactnative navigation/**  * Sample React Native App  * https://github.com/facebook/react-native  * @flow  */ import React, { Component } from &amp;apos;react&amp;apos;; import {   AppRegistry,   StyleSheet,">
+<meta property="og:updated_time" content="2017-04-22T12:36:57.202Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="postfirst page choose">
-<meta name="twitter:description" content="first page choose  import React, { Component } from &amp;apos;react&amp;apos;; import { AppRegistry,ScrollView,View,Text,Image,TouchableOpacity,StyleSheet} from &amp;apos;react-native&amp;apos;; class PT extends Reac">
+<meta name="twitter:title" content="reactnative navigation">
+<meta name="twitter:description" content="reactnative navigation/**  * Sample React Native App  * https://github.com/facebook/react-native  * @flow  */ import React, { Component } from &amp;apos;react&amp;apos;; import {   AppRegistry,   StyleSheet,">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/23/first-page-choose/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/22/reactnative-navigation/"/>
 
 
 
 
 
-  <title> postfirst page choose | Bunny's  Code Burrow </title>
+  <title> reactnative navigation | Bunny's  Code Burrow </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/first-page-choose/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/22/reactnative-navigation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jenny Zeng">
@@ -318,7 +318,7 @@
             
             
               
-                postfirst page choose
+                reactnative navigation
               
             
           </h1>
@@ -333,8 +333,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-23T00:26:07+12:00">
-                2017-04-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-22T20:36:13+08:00">
+                2017-04-22
               </time>
             
 
@@ -368,93 +368,113 @@
       
 
       
-        <h1 id="first-page-choose"><a href="#first-page-choose" class="headerlink" title="first page choose  "></a>first page choose  </h1><pre><code>import React, { Component } from &apos;react&apos;;
-import { AppRegistry,ScrollView,View,Text,Image,TouchableOpacity,StyleSheet} from &apos;react-native&apos;;
-class PT extends React.Component {
+        <h1 id="reactnative-navigation"><a href="#reactnative-navigation" class="headerlink" title="reactnative navigation"></a>reactnative navigation</h1><pre><code>/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ * @flow
+ */
+import React, { Component } from &apos;react&apos;;
+import {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View,
+  TouchableHighlight,
+  Navigator,
+} from &apos;react-native&apos;;
+
+
+class NavButton extends React.Component {
   render() {
     return (
-      &lt;ScrollView
-        contentContainerStyle={{flex:1}}
-        keyboardDismissMode=&apos;on-drag&apos;
-        keyboardShouldPersistTaps={false}
-      &gt;
-       &lt;View style={styles.container}&gt;
-          &lt;View style={styles.Top}&gt;
-           &lt;Text style={styles.WelcomeText}&gt;Welcome to Virtual PT&lt;/Text&gt;
-          &lt;/View&gt;
-       &lt;/View&gt;
-       &lt;View style={styles.maincontain}&gt;
-         &lt;Image
-              source={{uri: 'http://oss-hz.qianmi.com/qianmicom/u/cms/qmwww/201511/03102524l6ur.png'}}
-              style={styles.logo}/&gt;
-
-            &lt;View style={styles.choose}&gt;
-              &lt;TouchableOpacity style={styles.btn}
-              onPress={()=&gt; console.log(&apos;press me&apos;)}&gt;
-              &lt;Text style={styles.text}&gt;Register&lt;/Text&gt;
-              &lt;/TouchableOpacity&gt;
-              &lt;TouchableOpacity style={styles.btn}
-              onPress={() =&gt; console.log(&apos;press me&apos;)}&gt;
-              &lt;Text style={styles.text}&gt; Login&lt;/Text&gt;
-              &lt;/TouchableOpacity&gt;
-            &lt;/View&gt;
-        &lt;/View&gt;
-      &lt;/ScrollView&gt;
-   );
+      &lt;TouchableHighlight
+        style={styles.button}
+        underlayColor=&quot;#B5B5B5&quot;
+        onPress={this.props.onPress}&gt;
+        &lt;Text style={styles.buttonText}&gt;{this.props.text}&lt;/Text&gt;
+      &lt;/TouchableHighlight&gt;
+    );
   }
 }
-var styles = StyleSheet.create({
-  container:{
+class NavMenu extends React.Component {
+  render() {
+    return (
+      &lt;View style={styles.scene}&gt;
+        &lt;Text style={styles.messageText}&gt;{this.props.message}&lt;/Text&gt;
+        &lt;NavButton
+          onPress={() =&gt; {
+            this.props.navigator.push({
+              message: &apos;向右拖拽关闭页面&apos;,
+              sceneConfig: Navigator.SceneConfigs.FloatFromRight,
+            });
+          }}
+          text=&quot;从右边向左切入页面(带有透明度变化)&quot;
+        /&gt;
+        &lt;NavButton
+          onPress={() =&gt; {
+            this.props.navigator.push({
+              message: &apos;向下拖拽关闭页面&apos;,
+              sceneConfig: Navigator.SceneConfigs.FloatFromBottom,
+            });
+          }}
+          text=&quot;从下往上切入页面(带有透明度变化)&quot;
+        /&gt;
+        &lt;NavButton
+          onPress={() =&gt; {
+            this.props.navigator.pop();
+          }}
+          text=&quot;页面弹出(回退一页)&quot;
+        /&gt;
+        &lt;NavButton
+          onPress={() =&gt; {
+            this.props.navigator.popToTop();
+          }}
+          text=&quot;页面弹出(回退到最后一页)&quot;
+        /&gt;
+      &lt;/View&gt;
+    );
+  }
+}
+class NavigatorDemo extends Component {
+  render() {
+    return (
+      &lt;Navigator
+        style={styles.container}
+        initialRoute={{ message: '初始页面', }}
+        renderScene={ (route, navigator) =&gt; &lt;NavMenu
+            message={route.message}
+            navigator={navigator}
+          /&gt;}
+         configureScene={(route) =&gt; {
+          if (route.sceneConfig) {
+            return route.sceneConfig;
+          }
+          return Navigator.SceneConfigs.FloatFromBottom;
+        }}
+      /&gt;
+    );
+  }
+}
+const styles = StyleSheet.create({
+   container: {
     flex: 1,
-    backgroundColor: &apos;#F4FCFF&apos;,
+   },
+   messageText: {
+    fontSize: 17,
+    fontWeight: &apos;500&apos;,
+    padding: 15,
+    marginTop: 50,
+    marginLeft: 15,
   },
-  Top:{
-    height:50,
-    alignItems: &apos;center&apos;,
-    backgroundColor:&apos;#f5f2f0&apos;,
-    justifyContent: &apos;center&apos;,
-  },
-  WelcomeText:{
-    fontWeight: &apos;bold&apos;,
-    fontSize: 18,
-    color: &apos;#d7499a&apos;, 
-    borderWidth: 2,
-    borderBottomColor:&apos;#b8a6b0&apos;,
-  },
-  maincontain:
-  {
-    flex: 10,
-    paddingLeft: 10,
-    paddingRight: 10,
-    backgroundColor: &apos;#F4FCFF&apos;,
-    justifyContent: &apos;center&apos;,
-    alignItems: &apos;center&apos;,
-  },
-   logo:{
-    width:160,
-    height:160,
-  },
-  choose:{
-    flexDirection:&apos;row&apos;
-  },
-  btn:{
-     alignSelf: &apos;stretch&apos;,
-     alignItems: &apos;center&apos;,
-     justifyContent: &apos;center&apos;,
-     backgroundColor: &apos;#80b8e4&apos;,
-     height: 40,
-     borderRadius: 5,
-     width:100,
-     marginTop: 100,
-     marginLeft:20,
-  },
-  text:{
-    fontWeight: &apos;bold&apos;,
-    fontSize: 14,
-    color: &apos;#FFF&apos;
+  button: {
+    backgroundColor: &apos;white&apos;,
+    padding: 15,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: &apos;#CDCDCD&apos;,
   },
 });
-AppRegistry.registerComponent(&apos;PT&apos;, () =&gt; PT);
+
+AppRegistry.registerComponent(&apos;PT&apos;, () =&gt; NavigatorDemo);
 </code></pre>
       
     </div>
@@ -497,8 +517,8 @@ AppRegistry.registerComponent(&apos;PT&apos;, () =&gt; PT);
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/23/massively-import-product-special/" rel="next" title="massively import product special">
-                <i class="fa fa-chevron-left"></i> massively import product special
+              <a href="/2017/04/22/intall-react-native/" rel="next" title="intall react native">
+                <i class="fa fa-chevron-left"></i> intall react native
               </a>
             
           </div>
@@ -507,8 +527,8 @@ AppRegistry.registerComponent(&apos;PT&apos;, () =&gt; PT);
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/23/react-native-jump-to-target-page/" rel="prev" title="postreact native jump to target page">
-                postreact native jump to target page <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/22/react-native-login/" rel="prev" title="react native login ">
+                react native login  <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -649,7 +669,7 @@ AppRegistry.registerComponent(&apos;PT&apos;, () =&gt; PT);
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#first-page-choose"><span class="nav-number">1.</span> <span class="nav-text">first page choose  </span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#reactnative-navigation"><span class="nav-number">1.</span> <span class="nav-text">reactnative navigation</span></a></li></ol></div>
             
 
           </div>
@@ -672,7 +692,7 @@ AppRegistry.registerComponent(&apos;PT&apos;, () =&gt; PT);
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

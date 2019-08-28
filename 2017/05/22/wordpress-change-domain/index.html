@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="After updating the Domain for WordPress go to wp-config.php  update:the URL with the latest one /** MySQL hostname */ define(&amp;apos;DB_HOST&amp;apos;, &amp;apos;microscience.com.au&amp;apos;);  go the the backend">
+<meta name="description" content="After updating the Domain for WordPress go to wp-config.php  update:the URL with the latest one /** MySQL hostname */ define(&amp;apos;DB_HOST&amp;apos;, &amp;apos;microscience.com.au&amp;apos;); Same for another web">
 <meta name="keywords" content="WordPress">
 <meta property="og:type" content="article">
 <meta property="og:title" content="wordpress change domain">
 <meta property="og:url" content="http://yoursite.com/2017/05/22/wordpress-change-domain/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="After updating the Domain for WordPress go to wp-config.php  update:the URL with the latest one /** MySQL hostname */ define(&amp;apos;DB_HOST&amp;apos;, &amp;apos;microscience.com.au&amp;apos;);  go the the backend">
-<meta property="og:updated_time" content="2017-05-22T09:36:38.985Z">
+<meta property="og:description" content="After updating the Domain for WordPress go to wp-config.php  update:the URL with the latest one /** MySQL hostname */ define(&amp;apos;DB_HOST&amp;apos;, &amp;apos;microscience.com.au&amp;apos;); Same for another web">
+<meta property="og:updated_time" content="2019-08-28T05:23:52.167Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="wordpress change domain">
-<meta name="twitter:description" content="After updating the Domain for WordPress go to wp-config.php  update:the URL with the latest one /** MySQL hostname */ define(&amp;apos;DB_HOST&amp;apos;, &amp;apos;microscience.com.au&amp;apos;);  go the the backend">
+<meta name="twitter:description" content="After updating the Domain for WordPress go to wp-config.php  update:the URL with the latest one /** MySQL hostname */ define(&amp;apos;DB_HOST&amp;apos;, &amp;apos;microscience.com.au&amp;apos;); Same for another web">
 
 
 
@@ -333,7 +333,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-22T21:29:41+12:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-22T21:29:41+08:00">
                 2017-05-22
               </time>
             
@@ -374,11 +374,16 @@
 <pre><code>update:the URL with the latest one
 /** MySQL hostname */
 define(&apos;DB_HOST&apos;, &apos;microscience.com.au&apos;);
+</code></pre><p>Same for another website</p>
+<pre><code>/** Sets up WordPress local environmental test only for local test */
+define( &apos;WP_SITEURL&apos;, &apos;http://localhost/didi&apos; );
+define( &apos;WP_HOME&apos;,    &apos;http://localhost/didi&apos; );
 </code></pre><ol>
 <li><p>go the the backend of WordPress:/wp-admin/options-general.php</p>
-<p> update the WordPress Address (URL) And Site Address (URL)</p>
+<p> update the WordPress Address (URL) And Site Address (URL)<br><strong>This part might not be necessary</strong></p>
 </li>
-<li>sometimes we need access to database, modify the table :wp_options</li>
+<li>sometimes we need access to database, modify the table :wp_options. In the tale of wp_options, find the two fields:home and siteurl, change the option_value to the same with wp-config.php. For example, for the website of didi, we use <a href="http://localhost/didi" target="_blank" rel="external">http://localhost/didi</a> for both fields.</li>
+<li></li>
 </ol>
 
       
@@ -422,8 +427,8 @@ define(&apos;DB_HOST&apos;, &apos;microscience.com.au&apos;);
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/22/ios-Apple-account-application/" rel="next" title="ios Apple account application">
-                <i class="fa fa-chevron-left"></i> ios Apple account application
+              <a href="/2017/05/23/AWS-with-SecureCRT/" rel="next" title="AWS with SecureCRT">
+                <i class="fa fa-chevron-left"></i> AWS with SecureCRT
               </a>
             
           </div>
@@ -432,8 +437,8 @@ define(&apos;DB_HOST&apos;, &apos;microscience.com.au&apos;);
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/19/RegExp/" rel="prev" title="RegExp">
-                RegExp <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/22/ios-Apple-account-application/" rel="prev" title="ios Apple account application">
+                ios Apple account application <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -597,7 +602,7 @@ define(&apos;DB_HOST&apos;, &apos;microscience.com.au&apos;);
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
