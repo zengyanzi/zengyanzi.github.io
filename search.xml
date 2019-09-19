@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[connect Ubuntu from SecureCRT]]></title>
+    <url>%2F2019%2F09%2F19%2Fconnect-Ubuntu-from-SecureCRT%2F</url>
+    <content type="text"><![CDATA[How to connect to Ubuntu from SecureCRT Login to Ubuntu from under root apt-get install openssh-server service ssh restart ifconfig If “ifconfig” is not wokring , apt-get install net-tools inet addr stands for IP Go back to windows cmd, ping this IP Go to SecureCRT,delete the previous one if won’t use it anymore, new a session under ssh2, input the username ,password,and IP of ubuntu. Enjoy]]></content>
+      <tags>
+        <tag>SecureCRT</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Set up SSL]]></title>
     <url>%2F2019%2F09%2F19%2FSet-up-SSL%2F</url>
     <content type="text"><![CDATA[SET UP SSL FOR NOPCOMMERCE AND WORDPRESSIn order to update for all these websites, first ,we need to ask the host to update the SSL from the server side. Then, for WordPress, it would be much easier. However, for Nopcommerce, the setting is different as below:Go to the Administration-&gt;Configuration-&gt;Stores-&gt;Edit Update the Store URL with HTTPS Then enable the SSL Finally, go to General And Miscellaneous Settings,under the tab of Security settings, click the Force SSL for all site pages]]></content>
