@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Set up SSL]]></title>
+    <url>%2F2019%2F09%2F19%2FSet-up-SSL%2F</url>
+    <content type="text"><![CDATA[SET UP SSL FOR NOPCOMMERCE AND WORDPRESSIn order to update for all these websites, first ,we need to ask the host to update the SSL from the server side. Then, for WordPress, it would be much easier. However, for Nopcommerce, the setting is different as below:Go to the Administration-&gt;Configuration-&gt;Stores-&gt;Edit Update the Store URL with HTTPS Then enable the SSL Finally, go to General And Miscellaneous Settings,under the tab of Security settings, click the Force SSL for all site pages]]></content>
+      <tags>
+        <tag>SSL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F02%2F13%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[how to bulkly add hyperlinks to Excel]]></title>
     <url>%2F2018%2F08%2F16%2Fhow-to-bulkly-add-heperlinks-to-Excel%2F</url>
     <content type="text"><![CDATA[How to bulky add hyperlinks to ExcelHere is an example of how to work effectively with Excel.The situation is after merge two columns in Excel, the final column become a link whick like: http://www.microanalytix.co.nz/3ml-luer-lock-sterile-syringe. However, these links are not hyperlink. Then the following step will let you know how to convert them into hyperlinks Alt+F11 click view and code Copy the folllowing code into the new open window as below: Sub ActiveHyperlinks() For Each C In [A2] ActiveSheet.Hyperlinks.Add C, C.Value Next End Sub You could change A2 according to your requirements, for example, if you want to change A2 to A20, just modify it as [A2:A20]. The last step is simple and easy, click run-&gt;Run Sub/UserForm. Then you would find the result in your original Excel.]]></content>
@@ -196,19 +209,19 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[wordpress change domain]]></title>
-    <url>%2F2017%2F05%2F22%2Fwordpress-change-domain%2F</url>
-    <content type="text"><![CDATA[After updating the Domain for WordPress go to wp-config.php update:the URL with the latest one /** MySQL hostname */ define(&apos;DB_HOST&apos;, &apos;microscience.com.au&apos;); Same for another website /** Sets up WordPress local environmental test only for local test */ define( &apos;WP_SITEURL&apos;, &apos;http://localhost/didi&apos; ); define( &apos;WP_HOME&apos;, &apos;http://localhost/didi&apos; ); go the the backend of WordPress:/wp-admin/options-general.php update the WordPress Address (URL) And Site Address (URL)This part might not be necessary sometimes we need access to database, modify the table :wp_options. In the tale of wp_options, find the two fields:home and siteurl, change the option_value to the same with wp-config.php. For example, for the website of didi, we use http://localhost/didi for both fields.]]></content>
-      <tags>
-        <tag>WordPress</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[ios Apple account application]]></title>
     <url>%2F2017%2F05%2F22%2Fios-Apple-account-application%2F</url>
     <content type="text"><![CDATA[How apply the ios development account as company Apply DUNS number https://developer.apple.com/program/enroll/dunsLookupForm.action this part should be easy, but if you encountered any issues, please feel free to contact the DUNS support, manually process this application https://developer.apple.com/programs/enroll/ create an apple id, especially for this company or project HERE,PLEASE PAY ATTENTION TO CHOSE TYPEFor most cases, the issue will trouble you is the DUNS, feel free to contact DUNS support or Apple supportfor example, I struggled here for almost one month, due to the so called waiting time 14 working days, actually they work faster than I expected.Then I contact the DUNS company by calling them and filled a form online with problem, here is the reply from Apple support ,from then on, my applicaiton went on a normal way. Hello Jenny, Thank you for contacting Apple Developer Program Support. My name is Charlie and I’ll be happy to assist you with your company’s enrollment. I understand that the system is not accepting your company’s DUNS information and is not allowing you to continue. I would be concerned as well if the D-U-N-S Number that has been assigned to my organization is not being accepted. I will do what I can to help you get your enrollment processed. I&apos;ve reviewed your enrollment information and found that your DUNS Number doesn’t include full information of your company. However, I may be able to process your enrollment by verifying your company information manually. I’ve gone ahead and altered your enrollment to proceed to the next step. Please use the same Apple ID and submit your enrollment once more. https://developer.apple.com/programs Please let me know once you’ve submitted the enrollment so that I can request business document to verify your information manually. Here is the following of the staff suppot Dear Jenny Zeng, We’ve received your enrollment request. Once we verify that you have the authority to bind your organization to Apple Developer Program legal agreements, we’ll email you with instructions on how to complete your enrollment. Then I receice an Email required as below: Dear Jenny Zeng, To continue your enrollment in the Apple Developer Program (Enrollment ID: sssss???), please upload the following documents. The information in these documents should match the information you provided for enrollment: Company Number Upload Documents Here the document means the qualification of you company.Then you will go through the next two steps till your boss receiving a call from Apple to confirm you are working there towards iOS development.Then making the payment!Congrats!]]></content>
       <tags>
         <tag>ios</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[wordpress change domain]]></title>
+    <url>%2F2017%2F05%2F22%2Fwordpress-change-domain%2F</url>
+    <content type="text"><![CDATA[After updating the Domain for WordPress go to wp-config.php update:the URL with the latest one /** MySQL hostname */ define(&apos;DB_HOST&apos;, &apos;microscience.com.au&apos;); Same for another website /** Sets up WordPress local environmental test only for local test */ define( &apos;WP_SITEURL&apos;, &apos;http://localhost/didi&apos; ); define( &apos;WP_HOME&apos;, &apos;http://localhost/didi&apos; ); go the the backend of WordPress:/wp-admin/options-general.php update the WordPress Address (URL) And Site Address (URL)This part might not be necessary sometimes we need access to database, modify the table :wp_options. In the tale of wp_options, find the two fields:home and siteurl, change the option_value to the same with wp-config.php. For example, for the website of didi, we use http://localhost/didi for both fields.]]></content>
+      <tags>
+        <tag>WordPress</tag>
       </tags>
   </entry>
   <entry>
@@ -474,7 +487,7 @@
   </entry>
   <entry>
     <title><![CDATA[intall react native]]></title>
-    <url>%2F2017%2F04%2F22%2Fintall-react-native%2F</url>
+    <url>%2F2017%2F04%2F23%2Fintall-react-native%2F</url>
     <content type="text"><![CDATA[intall react native basically follow the instruction of https://facebook.github.io/react-native/docs/getting-started.html#content注意事项如下http://reactnative.cn/docs/0.31/getting-started.html#content 中文参考若是Android +windows 管理员权限打开cmd！！！！ 在cmd下安装好nodejs和Python之后cd 到node下 再运行 npm Android studio的目的是打开模拟器，一定要打开模拟器，开机到开机画面react-native init AwesomeProject是在某路径下建立 react native 文件夹，可以自定义路径 注意：Android studio严格按照http://reactnative.cn/docs/0.31/getting-started.html#content 进行配置 在Android studio 中打开 AVD MANAGER，保证模拟器开机到开机画面即可]]></content>
       <tags>
         <tag>React Native</tag>
@@ -482,7 +495,7 @@
   </entry>
   <entry>
     <title><![CDATA[reactnative navigation]]></title>
-    <url>%2F2017%2F04%2F22%2Freactnative-navigation%2F</url>
+    <url>%2F2017%2F04%2F23%2Freactnative-navigation%2F</url>
     <content type="text"><![CDATA[reactnative navigation/** * Sample React Native App * https://github.com/facebook/react-native * @flow */ import React, { Component } from &apos;react&apos;; import { AppRegistry, StyleSheet, Text, View, TouchableHighlight, Navigator, } from &apos;react-native&apos;; class NavButton extends React.Component { render() { return ( &lt;TouchableHighlight style={styles.button} underlayColor=&quot;#B5B5B5&quot; onPress={this.props.onPress}&gt; &lt;Text style={styles.buttonText}&gt;{this.props.text}&lt;/Text&gt; &lt;/TouchableHighlight&gt; ); } } class NavMenu extends React.Component { render() { return ( &lt;View style={styles.scene}&gt; &lt;Text style={styles.messageText}&gt;{this.props.message}&lt;/Text&gt; &lt;NavButton onPress={() =&gt; { this.props.navigator.push({ message: &apos;向右拖拽关闭页面&apos;, sceneConfig: Navigator.SceneConfigs.FloatFromRight, }); }} text=&quot;从右边向左切入页面(带有透明度变化)&quot; /&gt; &lt;NavButton onPress={() =&gt; { this.props.navigator.push({ message: &apos;向下拖拽关闭页面&apos;, sceneConfig: Navigator.SceneConfigs.FloatFromBottom, }); }} text=&quot;从下往上切入页面(带有透明度变化)&quot; /&gt; &lt;NavButton onPress={() =&gt; { this.props.navigator.pop(); }} text=&quot;页面弹出(回退一页)&quot; /&gt; &lt;NavButton onPress={() =&gt; { this.props.navigator.popToTop(); }} text=&quot;页面弹出(回退到最后一页)&quot; /&gt; &lt;/View&gt; ); } } class NavigatorDemo extends Component { render() { return ( &lt;Navigator style={styles.container} initialRoute={{ message: '初始页面', }} renderScene={ (route, navigator) =&gt; &lt;NavMenu message={route.message} navigator={navigator} /&gt;} configureScene={(route) =&gt; { if (route.sceneConfig) { return route.sceneConfig; } return Navigator.SceneConfigs.FloatFromBottom; }} /&gt; ); } } const styles = StyleSheet.create({ container: { flex: 1, }, messageText: { fontSize: 17, fontWeight: &apos;500&apos;, padding: 15, marginTop: 50, marginLeft: 15, }, button: { backgroundColor: &apos;white&apos;, padding: 15, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: &apos;#CDCDCD&apos;, }, }); AppRegistry.registerComponent(&apos;PT&apos;, () =&gt; NavigatorDemo);]]></content>
       <tags>
         <tag>React Native</tag>
@@ -490,7 +503,7 @@
   </entry>
   <entry>
     <title><![CDATA[react native login]]></title>
-    <url>%2F2017%2F04%2F22%2Freact-native-login%2F</url>
+    <url>%2F2017%2F04%2F23%2Freact-native-login%2F</url>
     <content type="text"><![CDATA[react native login viewimport React, { Component } from &apos;react&apos;; import { AppRegistry,StyleSheet,Image, TextInput, Text,ScrollView,TouchableOpacity,View} from &apos;react-native&apos;; class CoolApp extends React.Component { render() { return ( &lt;ScrollView contentContainerStyle={{flex:1}} keyboardDismissMode=&apos;on-drag&apos; keyboardShouldPersistTaps={false} &gt; &lt;View style={styles.container}&gt; &lt;Image source={{uri: 'http://oss-hz.qianmi.com/qianmicom/u/cms/qmwww/201511/03102524l6ur.png'}} style={styles.logo}/&gt; &lt;TextInput ref={(username) =&gt; this.username = username} onFocus={()=&gt;this.username.focus()} style={styles.input} placeholder=&apos;username&apos;/&gt; &lt;TextInput ref={(password) =&gt; this.password = password} onFocus={() =&gt; this.password.focus()} style={styles.input} placeholder=&apos;password&apos; password={true}/&gt; &lt;TouchableOpacity style={styles.btn} onPress={() =&gt; console.log(&apos;press me&apos;)}&gt; &lt;Text style={styles.text}&gt;login&lt;/Text&gt; &lt;/TouchableOpacity&gt; &lt;/View&gt; &lt;/ScrollView&gt; ); } } var styles = StyleSheet.create({ container: { flex: 1, paddingLeft: 10, paddingRight: 10, justifyContent: &apos;center&apos;, alignItems: &apos;center&apos;, backgroundColor: &apos;#F4FCFF&apos;, }, logo:{ width:160, height:160, marginTop: 100 }, input: { height: 40, width:200, marginTop: 10, //间隔 borderWidth: 1, borderRadius: 5, //圆角 borderColor: &apos;lightblue&apos; }, text:{ fontWeight: &apos;bold&apos;, fontSize: 14, color: &apos;#FFF&apos; }, btn:{ alignSelf: &apos;stretch&apos;, alignItems: &apos;center&apos;, justifyContent: &apos;center&apos;, backgroundColor: &apos;#3333FF&apos;, height: 40, borderRadius: 5, marginTop: 10 } }); AppRegistry.registerComponent(&apos;AwesomeProject&apos;, () =&gt; CoolApp);]]></content>
       <tags>
         <tag>React Native</tag>
@@ -498,7 +511,7 @@
   </entry>
   <entry>
     <title><![CDATA[massively import product special]]></title>
-    <url>%2F2017%2F04%2F22%2Fmassively-import-product-special%2F</url>
+    <url>%2F2017%2F04%2F23%2Fmassively-import-product-special%2F</url>
     <content type="text"><![CDATA[massively import product special# ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc import MySQLdb #cnxn是数据库连接 更改数据库连接方式，账号密码 cursor = cnxn.cursor() #主方法 def process(): #读取csv，转换成list 更改文件存储位置 reader = list(csv.reader(open(&quot;D:\\ski\\attribute\\attribute-nz-mn.csv&quot;))) header = reader[0] #遍历数据，并处理， tips：跳过第一行 for i in reader[1:]: sku = i[0] product_id = getIdFromSku(sku) if product_id == 0: print &quot;error sku %s&quot; % sku continue optionname = i[1] test(optionname) optionid = getoptionIdFromoption(optionname) option_id=int(optionid) if exist(product_id,option_id): pass else: insert(product_id,option_id) def exist(product_id,option_id): sql = &quot;select * from dbo.Product_SpecificationAttribute_Mapping where ProductId = %d and SpecificationAttributeOptionId = %d&quot; % (product_id,option_id) cursor.execute(sql) rows = cursor.fetchall() if len(rows)==0: return False else: print rows def getoptionIdFromoption(optionname): sql=&quot;SELECT Id FROM dbo.SpecificationAttributeOption where SpecificationAttributeId= %d and Name=&apos;%s&apos;&quot; % (7,optionname) cursor.execute(sql) row = cursor.fetchall() if row: return row[0][0] else: return 0 print sql def insert(product_id,option_id): sql = &quot;insert into dbo.Product_SpecificationAttribute_Mapping (ProductId,SpecificationAttributeOptionId,DisplayOrder,AllowFiltering,ShowOnProductPage) values(%d,%d,%d,%d,%d)&quot; % (product_id,option_id,0,0,1) print sql cursor.execute(sql) cnxn.commit() def getIdFromSku(a): sql = &quot;select Id from dbo.Product where Sku=&apos;%s&apos; and deleted=0&quot; % a cursor.execute(sql) row = cursor.fetchall() if row: return row[0][0] else: return 0 def test(optionname): if find(optionname)==0: sql=&quot;insert into dbo.SpecificationAttributeOption (Name,SpecificationAttributeId,DisplayOrder) values(&apos;%s&apos;,&apos;7&apos;,0)&quot; % optionname print sql cursor.execute(sql) cnxn.commit() def find(optionname): sql=&quot;select Name FROM dbo.SpecificationAttributeOption where SpecificationAttributeId=&apos;7&apos; and Name=&apos;%s&apos;&quot; % optionname cursor.execute(sql) row = cursor.fetchall() if row: return row[0][0] else: return 0 if __name__ == &quot;__main__&quot;: process()]]></content>
       <tags>
         <tag>Python</tag>
@@ -506,7 +519,7 @@
   </entry>
   <entry>
     <title><![CDATA[postfirst page choose]]></title>
-    <url>%2F2017%2F04%2F22%2Ffirst-page-choose%2F</url>
+    <url>%2F2017%2F04%2F23%2Ffirst-page-choose%2F</url>
     <content type="text"><![CDATA[first page choose import React, { Component } from &apos;react&apos;; import { AppRegistry,ScrollView,View,Text,Image,TouchableOpacity,StyleSheet} from &apos;react-native&apos;; class PT extends React.Component { render() { return ( &lt;ScrollView contentContainerStyle={{flex:1}} keyboardDismissMode=&apos;on-drag&apos; keyboardShouldPersistTaps={false} &gt; &lt;View style={styles.container}&gt; &lt;View style={styles.Top}&gt; &lt;Text style={styles.WelcomeText}&gt;Welcome to Virtual PT&lt;/Text&gt; &lt;/View&gt; &lt;/View&gt; &lt;View style={styles.maincontain}&gt; &lt;Image source={{uri: 'http://oss-hz.qianmi.com/qianmicom/u/cms/qmwww/201511/03102524l6ur.png'}} style={styles.logo}/&gt; &lt;View style={styles.choose}&gt; &lt;TouchableOpacity style={styles.btn} onPress={()=&gt; console.log(&apos;press me&apos;)}&gt; &lt;Text style={styles.text}&gt;Register&lt;/Text&gt; &lt;/TouchableOpacity&gt; &lt;TouchableOpacity style={styles.btn} onPress={() =&gt; console.log(&apos;press me&apos;)}&gt; &lt;Text style={styles.text}&gt; Login&lt;/Text&gt; &lt;/TouchableOpacity&gt; &lt;/View&gt; &lt;/View&gt; &lt;/ScrollView&gt; ); } } var styles = StyleSheet.create({ container:{ flex: 1, backgroundColor: &apos;#F4FCFF&apos;, }, Top:{ height:50, alignItems: &apos;center&apos;, backgroundColor:&apos;#f5f2f0&apos;, justifyContent: &apos;center&apos;, }, WelcomeText:{ fontWeight: &apos;bold&apos;, fontSize: 18, color: &apos;#d7499a&apos;, borderWidth: 2, borderBottomColor:&apos;#b8a6b0&apos;, }, maincontain: { flex: 10, paddingLeft: 10, paddingRight: 10, backgroundColor: &apos;#F4FCFF&apos;, justifyContent: &apos;center&apos;, alignItems: &apos;center&apos;, }, logo:{ width:160, height:160, }, choose:{ flexDirection:&apos;row&apos; }, btn:{ alignSelf: &apos;stretch&apos;, alignItems: &apos;center&apos;, justifyContent: &apos;center&apos;, backgroundColor: &apos;#80b8e4&apos;, height: 40, borderRadius: 5, width:100, marginTop: 100, marginLeft:20, }, text:{ fontWeight: &apos;bold&apos;, fontSize: 14, color: &apos;#FFF&apos; }, }); AppRegistry.registerComponent(&apos;PT&apos;, () =&gt; PT);]]></content>
       <tags>
         <tag>React Native</tag>
@@ -514,7 +527,7 @@
   </entry>
   <entry>
     <title><![CDATA[postreact native jump to target page]]></title>
-    <url>%2F2017%2F04%2F22%2Freact-native-jump-to-target-page%2F</url>
+    <url>%2F2017%2F04%2F23%2Freact-native-jump-to-target-page%2F</url>
     <content type="text"><![CDATA[postreact native jump to target pageimport React, { Component } from &apos;react&apos;; import { AppRegistry,ScrollView,View,Text,Image,Navigator,TouchableOpacity,StyleSheet} from &apos;react-native&apos;; var _navigator; var ShopView = require(&apos;./shop.android.js&apos;); // class PT extends React.Component { var PT = React.createClass({ getInitialState: function(){ return {}; }, configureScenceAndroid: function(){ return Navigator.SceneConfigs.FadeAndroid; }, renderSceneAndroid: function(route, navigator){ _navigator = navigator; if(route.id === &apos;main&apos;){ return ( // &lt;View&gt; // &lt;TouchableOpacity onPress={() =&gt; _navigator.push({title:&apos;instructwelcome&apos;,id:&apos;instructwelcome&apos;})} style={ styles.button }&gt; // &lt;Text&gt;I am instructor&lt;/Text&gt; // &lt;/TouchableOpacity&gt; // &lt;/View&gt; &lt;ScrollView contentContainerStyle={{flex:1}} keyboardDismissMode=&apos;on-drag&apos; keyboardShouldPersistTaps={false} &gt; &lt;View style={styles.container}&gt; &lt;View style={styles.Top}&gt; &lt;Text style={styles.WelcomeText}&gt;Welcome to Virtual PT&lt;/Text&gt; &lt;/View&gt; &lt;/View&gt; &lt;View style={styles.maincontain}&gt; &lt;Image source={{uri: 'http://oss-hz.qianmi.com/qianmicom/u/cms/qmwww/201511/03102524l6ur.png'}} style={styles.logo}/&gt; &lt;View style={styles.choose}&gt; &lt;TouchableOpacity style={styles.btn} onPress={() =&gt; _navigator.push({title:&apos;shop&apos;,id:&apos;shop&apos;})}&gt; &lt;Text style={styles.text}&gt;Register&lt;/Text&gt; &lt;/TouchableOpacity&gt; &lt;TouchableOpacity style={styles.btn} onPress={() =&gt; console.log(&apos;press me&apos;)}&gt; &lt;Text style={styles.text}&gt; Login&lt;/Text&gt; &lt;/TouchableOpacity&gt; &lt;/View&gt; &lt;/View&gt; &lt;/ScrollView&gt; ); } if(route.id === &apos;shop&apos;){ return ( &lt;ShopView navigator={navigator} route={route} /&gt; ); } }, render: function(){ var renderScene = this.renderSceneAndroid; var configureScence = this.configureScenceAndroid; return ( &lt;Navigator debugOverlay={false} initialRoute={{ title: 'Main', id:'main'}} configureScence={{ configureScence }} renderScene={renderScene}/&gt; ); } }); var styles = StyleSheet.create({ container:{ flex: 1, backgroundColor: &apos;#F4FCFF&apos;, }, Top:{ height:50, alignItems: &apos;center&apos;, backgroundColor:&apos;#f5f2f0&apos;, justifyContent: &apos;center&apos;, }, WelcomeText:{ fontWeight: &apos;bold&apos;, fontSize: 18, color: &apos;#d7499a&apos;, borderWidth: 2, borderBottomColor:&apos;#b8a6b0&apos;, }, maincontain: { flex: 10, paddingLeft: 10, paddingRight: 10, backgroundColor: &apos;#F4FCFF&apos;, justifyContent: &apos;center&apos;, alignItems: &apos;center&apos;, }, logo:{ width:160, height:160, }, choose:{ flexDirection:&apos;row&apos; }, btn:{ alignSelf: &apos;stretch&apos;, alignItems: &apos;center&apos;, justifyContent: &apos;center&apos;, backgroundColor: &apos;#80b8e4&apos;, height: 40, borderRadius: 5, width:100, marginTop: 100, marginLeft:20, }, text:{ fontWeight: &apos;bold&apos;, fontSize: 14, color: &apos;#FFF&apos; }, }); module.exports = PT]]></content>
       <tags>
         <tag>React Native</tag>
@@ -522,7 +535,7 @@
   </entry>
   <entry>
     <title><![CDATA[some problems of react native]]></title>
-    <url>%2F2017%2F04%2F22%2Fsome-problems-of-react-native%2F</url>
+    <url>%2F2017%2F04%2F23%2Fsome-problems-of-react-native%2F</url>
     <content type="text"><![CDATA[some problems of react nativeat the end of the code mode.exports= InstructwelcomView 记得用大写区分react native升级之后 import React ,{Componet} from &apos;react&apos;; import{ View} from &apos;react-native&apos; 需要分开写]]></content>
       <tags>
         <tag>React Native</tag>
@@ -530,7 +543,7 @@
   </entry>
   <entry>
     <title><![CDATA[postnopcommerce image hover scale]]></title>
-    <url>%2F2017%2F04%2F22%2Fnopcommerce-image-hover-scale%2F</url>
+    <url>%2F2017%2F04%2F23%2Fnopcommerce-image-hover-scale%2F</url>
     <content type="text"><![CDATA[nopcommerce image hover scale.product-grid .product-item .picture:hover img { margin-left: auto; margin-right: auto; transition: all 0.2s; -webkit-transition: all 0.2s; transform: scale(1.2); -webkit-transform: scale(1.2); }]]></content>
       <tags>
         <tag>nopCommerce</tag>
@@ -538,7 +551,7 @@
   </entry>
   <entry>
     <title><![CDATA[elicpase update java src]]></title>
-    <url>%2F2017%2F04%2F22%2Felicpase-update-java-src%2F</url>
+    <url>%2F2017%2F04%2F23%2Felicpase-update-java-src%2F</url>
     <content type="text"><![CDATA[elicpase update java src stop tomcat delete the original one remove and add in server start the tomcat again]]></content>
       <tags>
         <tag>elicpase</tag>
@@ -546,7 +559,7 @@
   </entry>
   <entry>
     <title><![CDATA[git commond]]></title>
-    <url>%2F2017%2F04%2F22%2Fgit-commond%2F</url>
+    <url>%2F2017%2F04%2F23%2Fgit-commond%2F</url>
     <content type="text"><![CDATA[git GIT INIT GIT ADD GIT STATUS GIT COMMIIT 看不同 git diff git reset+版本号回退 登陆git，create a new repo Git基本常用命令如下： mkdir： XX (创建一个空目录 XX指目录名) pwd： 显示当前目录的路径。 git init 把当前的目录变成可以管理的git仓库，生成隐藏.git文件。 git add XX 把xx文件添加到暂存区去。 git commit –m “XX” 提交文件 –m 后面的是注释。 git status 查看仓库状态 git diff XX 查看XX文件修改了那些内容 git log 查看历史记录 git reset –hard HEAD^ 或者 git reset –hard HEAD~ 回退到上一个版本 (如果想回退到100个版本，使用git reset –hard HEAD~100 ) cat XX 查看XX文件内容 git reflog 查看历史记录的版本号id git checkout – XX 把XX文件在工作区的修改全部撤销。 git rm XX 删除XX文件 git remote add origin https://github.com/tugenhua0707/testgit 关联一个远程库 git push –u(第一次要用-u 以后不需要) origin master 把当前master分支推送到远程库 git clone https://github.com/tugenhua0707/testgit 从远程库中克隆 git checkout –b dev 创建dev分支 并切换到dev分支上 git branch 查看当前所有的分支 git checkout master 切换回master分支 git merge dev 在当前的分支上合并dev分支 git branch –d dev 删除dev分支 git branch name 创建分支 git stash 把当前的工作隐藏起来 等以后恢复现场后继续工作 git stash list 查看所有被隐藏的文件列表 git stash apply 恢复被隐藏的文件，但是内容不删除 git stash drop 删除文件 git stash pop 恢复文件的同时 也删除文件 git remote 查看远程库的信息 git remote –v 查看远程库的详细信息 git push origin master Git会把master分支推送到远程库对应的远程分支上]]></content>
       <tags>
         <tag>git</tag>
@@ -554,7 +567,7 @@
   </entry>
   <entry>
     <title><![CDATA[visit a wordpress from anthoer pc]]></title>
-    <url>%2F2017%2F04%2F22%2Fvisit-a-wordpress-from-anthoer-pc%2F</url>
+    <url>%2F2017%2F04%2F23%2Fvisit-a-wordpress-from-anthoer-pc%2F</url>
     <content type="text"><![CDATA[visit a wordpress from anthoer pc set the wamp on:put online go to the wordpress:setting:change the url address ip/wp instead of localhost/wp connect another pc within LAN type ip/wp then you will find it]]></content>
       <tags>
         <tag>WordPress</tag>
@@ -655,10 +668,5 @@
       <tags>
         <tag>React Native</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2017%2F04%2F20%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>

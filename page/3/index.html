@@ -297,6 +297,265 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/25/Android-studio-icon-on-device/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/09/25/Android-studio-icon-on-device/" itemprop="url">
+                  Android studio icon on device
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-25T14:42:55+08:00">
+                2017-09-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="How-to-change-or-set-the-Icon-for-your-Android-APP"><a href="#How-to-change-or-set-the-Icon-for-your-Android-APP" class="headerlink" title="How to change or set the Icon for your Android APP?"></a>How to change or set the Icon for your Android APP?</h1><ol>
+<li>Go to the path “..android\app\src\main\res”</li>
+<li><p>Update the images in those folders </p>
+<p> \mipmap-xxhdpi<br> \mipmap-xhdpi<br> \mipmap-mdpi<br> \mipmap-hdpi</p>
+</li>
+<li>You could use some online tool to generate your icon <a href="https://makeappicon.com/" target="_blank" rel="external">https://makeappicon.com/</a> which  resizes all iOS icons and Android icons.</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/25/update-apk-version-to-google-play/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/09/25/update-apk-version-to-google-play/" itemprop="url">
+                  update apk version to google play
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-25T14:37:58+08:00">
+                2017-09-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="How-to-update-APK-to-Google-play"><a href="#How-to-update-APK-to-Google-play" class="headerlink" title="How to update APK to Google play"></a>How to update APK to Google play</h1><p>For people who use Android Studio the problem may be solved by editing  versionCode and versionName in </p>
+<pre><code>android/app/build.gradle
+</code></pre><p> instead of AndroidManifest.xml.e.g.</p>
+<pre><code>defaultConfig {
+    applicationId &quot;com.my.packageId&quot;
+    minSdkVersion 15
+    targetSdkVersion 22
+    versionCode 2      &lt;-- change this
+    versionName &quot;2.0&quot;  &lt;-- change this
+}
+</code></pre><p>If not, there will be error<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058284/error1_rut8jd.png" alt=""></p>
+<p>The way to update the apk is like following:<br>1.Eddit Release</p>
+<p><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk0_goi6wi.png" alt=""></p>
+<p>2.Add the new released apk(remember to check the version code!!!)<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk_pkdjdf.png" alt=""><br>3.Remember to save the change<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk2_kq3tcr.png" alt=""><br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk3_wzai4j.png" alt=""><br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk4_edc57u.png" alt=""><br>Start to roll-out to Beta<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk5_fuw5e2.png" alt=""><br>Then you will see the result<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058284/add_apk6_codtae.png" alt=""><br>4.Here is the place to view all the apk<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058729/review_all_the_apk_sclfsr.png" alt=""><br>5.Remember to check the status of apk<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058779/final_zgjer9.png" alt=""></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/31/how-to-upload-app-to-ios-app-store/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -336,7 +595,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-31T10:33:21+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-31T14:33:21+08:00">
                 2017-08-31
               </time>
             
@@ -550,7 +809,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-28T08:06:17+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-28T12:06:17+08:00">
                 2017-06-28
               </time>
             
@@ -992,7 +1251,7 @@ public bool DisplayCaptcha { get; set; }
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-06T08:47:35+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-06T12:47:35+08:00">
                 2017-06-06
               </time>
             
@@ -1144,7 +1403,7 @@ $sudo dnf update
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-23T05:54:05+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-23T09:54:05+08:00">
                 2017-05-23
               </time>
             
@@ -1200,6 +1459,187 @@ $sudo dnf update
 <li>sz pt_server.war</li>
 <li>Then find it in option session options — X/Y/Zmodem</li>
 </ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/22/ios-Apple-account-application/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/22/ios-Apple-account-application/" itemprop="url">
+                  ios Apple account application
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-22T21:38:37+08:00">
+                2017-05-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="How-apply-the-ios-development-account-as-company"><a href="#How-apply-the-ios-development-account-as-company" class="headerlink" title="How apply the ios development account as company"></a>How apply the ios development account as company</h1><ol>
+<li>Apply DUNS number <a href="https://developer.apple.com/program/enroll/dunsLookupForm.action" target="_blank" rel="external">https://developer.apple.com/program/enroll/dunsLookupForm.action</a> this part should be easy, but if you encountered any issues, please feel free to contact the DUNS support, manually process this application</li>
+<li><a href="https://developer.apple.com/programs/enroll/" target="_blank" rel="external">https://developer.apple.com/programs/enroll/ </a> create an apple id, especially for this company or project</li>
+<li><img src="http://img1.ph.126.net/Blu_HqPEdqR3w2FWViXKGg==/6632140889051007124.png" alt=""><br>HERE,PLEASE PAY ATTENTION TO CHOSE TYPE<br><img src="http://img0.ph.126.net/jWV89T-hbaGZ7v5YLXYHVQ==/6632305815792498111.png" alt=""><br><img src="http://img0.ph.126.net/hmojbu832fVjpZIC-BsfyQ==/6631924285260339843.png" alt=""><br>For most cases, the issue will trouble you is the DUNS, feel free to contact DUNS support or Apple support<br>for example, I struggled here for almost one month, due to the so called waiting time 14 working days, actually they work faster than I expected.<br>Then I contact the DUNS company by calling them and filled a form online with problem, here is the reply from Apple support ,from then on, my applicaiton went on a normal way.<blockquote>
+</blockquote>
+</li>
+</ol>
+<pre><code>Hello
+    Jenny, 
+
+
+
+    Thank you for contacting Apple Developer Program Support. My name
+    is Charlie and I’ll be happy to assist you with your company’s
+    enrollment. 
+
+
+
+    I understand that the system is not accepting your company’s DUNS
+    information and is not allowing you to continue.
+
+
+
+    I would be concerned as well if the D-U-N-S Number that has been
+    assigned to my organization is not being accepted. I will do what I
+    can to help you get your enrollment processed.
+
+
+
+    I&apos;ve reviewed your enrollment information and found that your DUNS
+    Number doesn’t include full information of your company. However, I
+    may be able to process your enrollment by verifying your company
+    information manually.
+
+
+
+    I’ve gone ahead and altered your enrollment to proceed to the next
+    step. Please use the same Apple ID and submit your enrollment once
+    more. 
+
+
+
+    https://developer.apple.com/programs
+
+
+
+    Please let me know once you’ve submitted the enrollment so that I
+    can request business document to verify your information manually.
+</code></pre><p>Here is the following of the staff suppot </p>
+<blockquote>
+<p>Dear Jenny Zeng,</p>
+<p>We’ve received your enrollment request. Once we verify that you have the authority to bind your organization to Apple Developer Program legal agreements, we’ll email you with instructions on how to complete your enrollment. </p>
+</blockquote>
+<p> Then I receice an Email required as below:</p>
+<blockquote>
+<p>Dear Jenny Zeng, </p>
+<p>To continue your enrollment in the Apple Developer Program (Enrollment ID: sssss???), please upload the following documents. The information in these documents should match the information you provided for enrollment: </p>
+<p>Company Number </p>
+<p><a href="https://developer.apple.com/contact/file-upload/" target="_blank" rel="external">Upload Documents </a></p>
+</blockquote>
+<p>Here the document means the qualification of you company.<br>Then you will go through the next two steps till your boss receiving a call from Apple to confirm you are working there towards iOS development.<br>Then making the payment!<br>Congrats!</p>
+<p><img src="http://img2.ph.126.net/JXD8i30BqGpvW0oH7DzWRA==/6632399274280855436.png" alt=""><br><img src="http://img1.ph.126.net/MTmmQx61o_BLuZSPh64RwQ==/6632499329838983545.png" alt=""></p>
 
           
         
@@ -1379,187 +1819,6 @@ define( &apos;WP_HOME&apos;,    &apos;http://localhost/didi&apos; );
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/22/ios-Apple-account-application/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/22/ios-Apple-account-application/" itemprop="url">
-                  ios Apple account application
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-22T17:38:37+08:00">
-                2017-05-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="How-apply-the-ios-development-account-as-company"><a href="#How-apply-the-ios-development-account-as-company" class="headerlink" title="How apply the ios development account as company"></a>How apply the ios development account as company</h1><ol>
-<li>Apply DUNS number <a href="https://developer.apple.com/program/enroll/dunsLookupForm.action" target="_blank" rel="external">https://developer.apple.com/program/enroll/dunsLookupForm.action</a> this part should be easy, but if you encountered any issues, please feel free to contact the DUNS support, manually process this application</li>
-<li><a href="https://developer.apple.com/programs/enroll/" target="_blank" rel="external">https://developer.apple.com/programs/enroll/ </a> create an apple id, especially for this company or project</li>
-<li><img src="http://img1.ph.126.net/Blu_HqPEdqR3w2FWViXKGg==/6632140889051007124.png" alt=""><br>HERE,PLEASE PAY ATTENTION TO CHOSE TYPE<br><img src="http://img0.ph.126.net/jWV89T-hbaGZ7v5YLXYHVQ==/6632305815792498111.png" alt=""><br><img src="http://img0.ph.126.net/hmojbu832fVjpZIC-BsfyQ==/6631924285260339843.png" alt=""><br>For most cases, the issue will trouble you is the DUNS, feel free to contact DUNS support or Apple support<br>for example, I struggled here for almost one month, due to the so called waiting time 14 working days, actually they work faster than I expected.<br>Then I contact the DUNS company by calling them and filled a form online with problem, here is the reply from Apple support ,from then on, my applicaiton went on a normal way.<blockquote>
-</blockquote>
-</li>
-</ol>
-<pre><code>Hello
-    Jenny, 
-
-
-
-    Thank you for contacting Apple Developer Program Support. My name
-    is Charlie and I’ll be happy to assist you with your company’s
-    enrollment. 
-
-
-
-    I understand that the system is not accepting your company’s DUNS
-    information and is not allowing you to continue.
-
-
-
-    I would be concerned as well if the D-U-N-S Number that has been
-    assigned to my organization is not being accepted. I will do what I
-    can to help you get your enrollment processed.
-
-
-
-    I&apos;ve reviewed your enrollment information and found that your DUNS
-    Number doesn’t include full information of your company. However, I
-    may be able to process your enrollment by verifying your company
-    information manually.
-
-
-
-    I’ve gone ahead and altered your enrollment to proceed to the next
-    step. Please use the same Apple ID and submit your enrollment once
-    more. 
-
-
-
-    https://developer.apple.com/programs
-
-
-
-    Please let me know once you’ve submitted the enrollment so that I
-    can request business document to verify your information manually.
-</code></pre><p>Here is the following of the staff suppot </p>
-<blockquote>
-<p>Dear Jenny Zeng,</p>
-<p>We’ve received your enrollment request. Once we verify that you have the authority to bind your organization to Apple Developer Program legal agreements, we’ll email you with instructions on how to complete your enrollment. </p>
-</blockquote>
-<p> Then I receice an Email required as below:</p>
-<blockquote>
-<p>Dear Jenny Zeng, </p>
-<p>To continue your enrollment in the Apple Developer Program (Enrollment ID: sssss???), please upload the following documents. The information in these documents should match the information you provided for enrollment: </p>
-<p>Company Number </p>
-<p><a href="https://developer.apple.com/contact/file-upload/" target="_blank" rel="external">Upload Documents </a></p>
-</blockquote>
-<p>Here the document means the qualification of you company.<br>Then you will go through the next two steps till your boss receiving a call from Apple to confirm you are working there towards iOS development.<br>Then making the payment!<br>Congrats!</p>
-<p><img src="http://img2.ph.126.net/JXD8i30BqGpvW0oH7DzWRA==/6632399274280855436.png" alt=""><br><img src="http://img1.ph.126.net/MTmmQx61o_BLuZSPh64RwQ==/6632499329838983545.png" alt=""></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/19/RegExp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1599,7 +1858,7 @@ define( &apos;WP_HOME&apos;,    &apos;http://localhost/didi&apos; );
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-19T06:16:19+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-19T10:16:19+08:00">
                 2017-05-19
               </time>
             
@@ -1749,7 +2008,7 @@ $: end of this line
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-11T16:59:57+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-11T20:59:57+08:00">
                 2017-05-11
               </time>
             
@@ -1889,309 +2148,6 @@ $: end of this line
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/07/react-native-map-ios/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/07/react-native-map-ios/" itemprop="url">
-                  post react native map ios
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-07T16:04:49+08:00">
-                2017-05-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="React-Native-map-ios"><a href="#React-Native-map-ios" class="headerlink" title="React Native map ios"></a>React Native map ios</h1><p>Installation<br>First, download the library from npm:</p>
-<pre><code>npm install react-native-maps --save
-</code></pre><p>package.json</p>
-<pre><code>&quot;dependencies&quot;: {
-&quot;react&quot;: &quot;15.4.2&quot;,
-&quot;react-native&quot;: &quot;0.41.2&quot;,
-&quot;react-native-chart&quot;: &quot;^1.0.8-beta&quot;,
-&quot;react-native-check-box&quot;: &quot;^1.0.4&quot;,
-&quot;react-native-checkbox&quot;: &quot;^1.1.0&quot;,
-&quot;react-native-dropdown&quot;: &quot;0.0.6&quot;,
-&quot;react-native-elements&quot;: &quot;^0.9.7&quot;,
-&quot;react-native-maps&quot;: &quot;^0.14.0&quot;,
-&quot;react-native-menu&quot;: &quot;^0.20.2&quot;,
-&quot;react-native-pathjs-charts&quot;: &quot;0.0.25&quot;,
-&quot;react-native-scrollable-tab-view&quot;: &quot;^0.7.2&quot;,
-&quot;react-native-slider&quot;: &quot;^0.9.1&quot;,
-&quot;react-native-swipeable&quot;: &quot;^0.3.2&quot;,
-&quot;react-native-swipeout&quot;: &quot;^2.0.12&quot;,
-&quot;react-native-swiper&quot;: &quot;^1.5.4&quot;,
-&quot;react-native-tab-navigator&quot;: &quot;^0.3.3&quot;,
-&quot;react-native-vector-icons&quot;: &quot;^4.0.0&quot;,
-&quot;rnpm&quot;: &quot;^1.9.0&quot;
-  },
-</code></pre><p>possible error might be </p>
-<pre><code>TransformError: xxx/.js Unknown plugin &quot;module-resolver&quot; specified in &quot;xxxxx/react-native-maps/.babelrc&quot; at 0, attempted to resolve relative to &quot;xxxxxx/react-native-maps&quot;
-</code></pre><p>to solve this error above:</p>
-<pre><code>npm install --save-dev babel-plugin-module-resolver
-npm cache clean
-</code></pre><p>close the package windows or the cmd windows,then start it again</p>
-<pre><code>react-native run-ios
-</code></pre><p>this problem might be removed</p>
-<p>then follow the manual option as below:</p>
-<blockquote>
-<p>Option 3: Manually</p>
-<ol>
-<li>This was already done for you if you ran “react-native link”</li>
-<li>Open your project in Xcode, right click on Libraries and click Add Files to “Your Project Name” Look under node_modules/react-native-maps/lib/ios and add AIRMaps.xcodeproj.</li>
-<li>Add libAIRMaps.a to `Build Phases -Link Binary With Libraries.</li>
-<li>Click on AIRMaps.xcodeproj in Libraries and go the Build Settings tab. Double click the text to the right of Header Search Paths and verify that it has $(SRCROOT)/../../react-native/React as well as $(SRCROOT)/../../react-native/Libraries/Image - if they aren’t, then add them. This is so Xcode is able to find the headers that the AIRMaps source files are referring to by pointing to the header files installed within the react-native node_modules directory.</li>
-<li>Whenever you want to use it within React code now you can: var MapView = require(‘react-native-maps’);</li>
-</ol>
-</blockquote>
-<p>then you might notice this error</p>
-<pre><code>iOS build failed RCTConver+Mapkit.o RCTConvert+Mapkit.m
-</code></pre><p>to solve this problem, just delete the RCTConver+AirMap.h RCTConvert+AirMap.m<br>this problem might be caused by the rename of files </p>
-<blockquote>
-<p>in Xcode open libraries -right click AirMaps.xcodeproj -add file to AirMaps -go to find react-native-maps into node_module -lib -ios -AirMaps -select RCTConvert+MapKit.h/m -add (to fix ‘File RCTConvert+MapKit.m not found’).<br>then make suer this step</p>
-</blockquote>
-<pre><code>libAirMaps.a to the Link Binary With Libraries
-</code></pre><p>then clean and build the product<br>then </p>
-<pre><code>npm install rnpm
-react-native link
-</code></pre><p>then</p>
-<pre><code>xcode-&gt;product-&gt;clean-&gt;build
-</code></pre><p><strong>All this above is the way to install map based on iOS map not Google Map.<br>As a result, the api of google map is not mentioned above!</strong></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/04/react-native-cmd/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/04/react-native-cmd/" itemprop="url">
-                  react native cmd
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-04T10:30:08+08:00">
-                2017-05-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Some-cmd-of-React-Native"><a href="#Some-cmd-of-React-Native" class="headerlink" title="Some cmd of React Native"></a>Some cmd of React Native</h1><pre><code>npm install
-npm cache clean
-</code></pre><p>these two above are very useful!</p>
-<pre><code>react-native log-android
-react-native log-ios
-</code></pre><p>these two above are userful for debug</p>
-<pre><code>adb devices
-adb kill-server
-</code></pre><p>these two above are useful for server and device</p>
-<p>to be continued</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -2241,7 +2197,7 @@ adb kill-server
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">83</span>
+                <span class="site-state-item-count">84</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -2254,7 +2210,7 @@ adb kill-server
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
