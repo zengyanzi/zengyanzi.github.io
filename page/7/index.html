@@ -1458,7 +1458,7 @@ import csv
 import itertools
 #pyodbc是连接ms sql server的lib
 import pyodbc
-import MySQLdb
+import pymysql
 #cnxn是数据库连接  更改数据库连接方式，账号密码
 cursor = cnxn.cursor()
 
@@ -1474,7 +1474,7 @@ def process():
         sku = i[0]
         product_id = getIdFromSku(sku)
         if product_id == 0:
-            print &quot;error sku %s&quot; % sku
+            print (&quot;error sku %s&quot; % sku)
             continue
         optionname = i[1]
         test(optionname)
@@ -1494,7 +1494,7 @@ def exist(product_id,option_id):
     if len(rows)==0:
         return False
     else:
-        print rows
+        print (rows)
 
 
 def getoptionIdFromoption(optionname):
@@ -1505,11 +1505,11 @@ def getoptionIdFromoption(optionname):
         return row[0][0]
     else:
         return 0
-    print sql
+    print (sql)
 
 def insert(product_id,option_id):
     sql = &quot;insert into dbo.Product_SpecificationAttribute_Mapping (ProductId,SpecificationAttributeOptionId,DisplayOrder,AllowFiltering,ShowOnProductPage) values(%d,%d,%d,%d,%d)&quot; % (product_id,option_id,0,0,1)
-    print sql
+    print (sql)
     cursor.execute(sql)
     cnxn.commit()
 
@@ -1524,7 +1524,7 @@ def getIdFromSku(a):
 def test(optionname):
     if find(optionname)==0:
         sql=&quot;insert into dbo.SpecificationAttributeOption (Name,SpecificationAttributeId,DisplayOrder) values(&apos;%s&apos;,&apos;7&apos;,0)&quot; % optionname
-        print sql
+        print (sql)
         cursor.execute(sql)
         cnxn.commit()
 

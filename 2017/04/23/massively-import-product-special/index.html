@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="massively import product special# ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc import MySQLdb #cnxn是数据库连接  更改数据库连">
+<meta name="description" content="massively import product special# ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc import pymysql #cnxn是数据库连接  更改数据库连">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="massively import product special">
 <meta property="og:url" content="http://yoursite.com/2017/04/23/massively-import-product-special/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="massively import product special# ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc import MySQLdb #cnxn是数据库连接  更改数据库连">
-<meta property="og:updated_time" content="2017-04-22T12:29:41.622Z">
+<meta property="og:description" content="massively import product special# ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc import pymysql #cnxn是数据库连接  更改数据库连">
+<meta property="og:updated_time" content="2019-11-15T00:34:02.009Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="massively import product special">
-<meta name="twitter:description" content="massively import product special# ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc import MySQLdb #cnxn是数据库连接  更改数据库连">
+<meta name="twitter:description" content="massively import product special# ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc import pymysql #cnxn是数据库连接  更改数据库连">
 
 
 
@@ -375,7 +375,7 @@ import csv
 import itertools
 #pyodbc是连接ms sql server的lib
 import pyodbc
-import MySQLdb
+import pymysql
 #cnxn是数据库连接  更改数据库连接方式，账号密码
 cursor = cnxn.cursor()
 
@@ -391,7 +391,7 @@ def process():
         sku = i[0]
         product_id = getIdFromSku(sku)
         if product_id == 0:
-            print &quot;error sku %s&quot; % sku
+            print (&quot;error sku %s&quot; % sku)
             continue
         optionname = i[1]
         test(optionname)
@@ -411,7 +411,7 @@ def exist(product_id,option_id):
     if len(rows)==0:
         return False
     else:
-        print rows
+        print (rows)
 
 
 def getoptionIdFromoption(optionname):
@@ -422,11 +422,11 @@ def getoptionIdFromoption(optionname):
         return row[0][0]
     else:
         return 0
-    print sql
+    print (sql)
 
 def insert(product_id,option_id):
     sql = &quot;insert into dbo.Product_SpecificationAttribute_Mapping (ProductId,SpecificationAttributeOptionId,DisplayOrder,AllowFiltering,ShowOnProductPage) values(%d,%d,%d,%d,%d)&quot; % (product_id,option_id,0,0,1)
-    print sql
+    print (sql)
     cursor.execute(sql)
     cnxn.commit()
 
@@ -441,7 +441,7 @@ def getIdFromSku(a):
 def test(optionname):
     if find(optionname)==0:
         sql=&quot;insert into dbo.SpecificationAttributeOption (Name,SpecificationAttributeId,DisplayOrder) values(&apos;%s&apos;,&apos;7&apos;,0)&quot; % optionname
-        print sql
+        print (sql)
         cursor.execute(sql)
         cnxn.commit()
 
