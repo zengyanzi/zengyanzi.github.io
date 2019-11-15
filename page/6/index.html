@@ -570,7 +570,7 @@ import csv
 import itertools
 #pyodbc是连接ms sql server的lib
 import pyodbc
-import MySQLdb
+import pymysql
 #cnxn是数据库连接  更改数据库连接方式，账号密码
 
 #cursor是数据库浮标
@@ -582,7 +582,7 @@ def test(skuset):
     for sku in skuset:
         product_id = getIdFromSku(sku)
         if not product_id:
-            print &quot;can&apos;t find product id where sku=&apos;%s&apos;&quot; % sku
+            print (&quot;can&apos;t find product id where sku=&apos;%s&apos;&quot; % sku)
             err = True
 #主方法
 def process():
@@ -595,7 +595,7 @@ def process():
         sku = i[0]
         product_id = getIdFromSku(sku)
         if product_id == 0:
-            print &quot;error sku %s&quot; % sku
+            print (&quot;error sku %s&quot; % sku)
             continue
         prices = i[1:]
         for j in range(len(prices)):
@@ -619,12 +619,12 @@ def find(product_id,crid):
 
 def updatetire(productid):
     sql = &quot;update dbo.Product set HasTierPrices=1 where Id=%d&quot; % productid
-    print sql
+    print (sql)
     cursor.execute(sql)
     cnxn.commit()
 def insert(product_id,price,crid):
     sql = &quot;insert into dbo.TierPrice (ProductId,StoreId,CustomerRoleId,Quantity,Price) values(%d,0,%d,1,%f)&quot; % (product_id,crid,price)
-    print sql
+    print (sql)
     cursor.execute(sql)
     cnxn.commit()
 
