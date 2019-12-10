@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[how to restore wordpress]]></title>
+    <url>%2F2019%2F12%2F11%2Fhow-to-restore-wordpress%2F</url>
+    <content type="text"><![CDATA[How to restore wordpress after hackingFirst thing to do after you set up a wordpress website is to backup!!! Install the plugin of backup,such as UpdraftPlus Install the plugin of any high rating security plugin from wordpress, if possible, purchase the pro one, sometimes the price is valuble. If the website is badly hacked, then the best and fast way is to set a clean and new wordpress and imported the data. Export data from original phpMyAdmin,the fast and simple way to generate SQL.Remember the database name and Charset,which later would be used to import to the new one. Download the same version of wordpress,copy the files under “wordpress” and paste into wamp\www\wp Go to localhost\wp\wp-admin, then install the brand new one. Remember to set up the database name and Prefix the same as the previous one. Finish the installation of the new wordpress website. Import the SQL of previous database. Refresh the page of website, it would show that you have already install the wordpress so just login. Then go the post and pages, check if there is any strange code,then delete them The best way to view them is in class edit instead of Elementor. Scan the new website by some high rating security plugins and backup. Learn how to use Elementor to same the template of your website design: Go the the arrow close to “update”, save the page as template. Then install the auto update plugin and attempt login plugin.]]></content>
+      <tags>
+        <tag>wordpress</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[JS interview]]></title>
+    <url>%2F2019%2F12%2F09%2FJS-interview%2F</url>
+    <content type="text"><![CDATA[JS interveiwBasic: String Number Boolean undefined null symbol HTTP 1xx infor 2xx success 3xx redirect 4xx client error 5xx server error Ajax状态码 0- 未初始化，还没用调用send() 1- (载入)已经调用send()，正在发送请求 2-(载入完成)send()方法执行完成 3-（交互）正在解析响应内容 4- （完成）响应内容解析完成 ajax asynchronous JavaScript and xml 无需刷新页面请求数据， 可以把一起服务端的任务转嫁到客户端处理，减轻服务器负担，节省带宽 浏览器支持好，无需插件 不支持浏览器回退按钮 暴露了http交互细节 对seo支持比较弱]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[how to install Python3]]></title>
     <url>%2F2019%2F11%2F15%2Fhow-to-install-Python3%2F</url>
     <content type="text"><![CDATA[How to install Python3 1.Download the latest version of Python and install it2.In order to connect python with database, some libs need to be installed pip install pyodbc ip install PyMySQL For Python3 on windows you might have issue like “error Microsoft Visual C++ 14.0 is required”Install using any ONE of these choices:Microsoft Build Tools for Visual Studio.Select: Workloads → C++ build tools. Other errors might like “PYODBC–Data source name not found and no default driver specified” try to “cnxn = pyodbc.connect(‘DRIVER={ODBC Driver 13 for SQL Server}” instead of ‘DRIVER={SQL Server}’]]></content>
