@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="github," />
+  <meta name="keywords" content="WordPress," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="fatal: could not read Username for ‘https://github.com‘: Invalid argumentHexo g -d but get the error like below fatal: could not read Username for &amp;apos;https://github.com&amp;apos;: Invalid argument FATA">
-<meta name="keywords" content="github">
+<meta name="description" content="How to increase the memory limit of wordpressFirst thing first!!Backup the file before changing it!!!! Edit your .htaccess fileIf you don’t have access to PHP.ini try adding this to an  end of .htacce">
+<meta name="keywords" content="WordPress">
 <meta property="og:type" content="article">
-<meta property="og:title" content="update hexo with shh">
-<meta property="og:url" content="http://yoursite.com/2018/02/23/update-hexo-with-shh/index.html">
+<meta property="og:title" content="how to increase the memory limit of wordpress">
+<meta property="og:url" content="http://yoursite.com/2019/12/20/how-to-increase-the-memory-limit-of-wordpress/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="fatal: could not read Username for ‘https://github.com‘: Invalid argumentHexo g -d but get the error like below fatal: could not read Username for &amp;apos;https://github.com&amp;apos;: Invalid argument FATA">
-<meta property="og:updated_time" content="2018-02-23T02:16:03.558Z">
+<meta property="og:description" content="How to increase the memory limit of wordpressFirst thing first!!Backup the file before changing it!!!! Edit your .htaccess fileIf you don’t have access to PHP.ini try adding this to an  end of .htacce">
+<meta property="og:updated_time" content="2019-12-19T22:18:57.135Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="update hexo with shh">
-<meta name="twitter:description" content="fatal: could not read Username for ‘https://github.com‘: Invalid argumentHexo g -d but get the error like below fatal: could not read Username for &amp;apos;https://github.com&amp;apos;: Invalid argument FATA">
+<meta name="twitter:title" content="how to increase the memory limit of wordpress">
+<meta name="twitter:description" content="How to increase the memory limit of wordpressFirst thing first!!Backup the file before changing it!!!! Edit your .htaccess fileIf you don’t have access to PHP.ini try adding this to an  end of .htacce">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/23/update-hexo-with-shh/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/12/20/how-to-increase-the-memory-limit-of-wordpress/"/>
 
 
 
 
 
-  <title> update hexo with shh | Bunny's  Code Burrow </title>
+  <title> how to increase the memory limit of wordpress | Bunny's  Code Burrow </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/23/update-hexo-with-shh/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/20/how-to-increase-the-memory-limit-of-wordpress/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jenny Zeng">
@@ -318,7 +318,7 @@
             
             
               
-                update hexo with shh
+                how to increase the memory limit of wordpress
               
             
           </h1>
@@ -333,8 +333,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-23T15:11:06+08:00">
-                2018-02-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-20T06:15:45+08:00">
+                2019-12-20
               </time>
             
 
@@ -368,41 +368,10 @@
       
 
       
-        <h1 id="fatal-could-not-read-Username-for-‘https-github-com‘-Invalid-argument"><a href="#fatal-could-not-read-Username-for-‘https-github-com‘-Invalid-argument" class="headerlink" title="fatal: could not read Username for ‘https://github.com‘: Invalid argument"></a>fatal: could not read Username for ‘<a href="https://github.com" target="_blank" rel="external">https://github.com</a>‘: Invalid argument</h1><p>Hexo g -d</p>
-<p>but get the error like below</p>
-<pre><code>fatal: could not read Username for &apos;https://github.com&apos;: Invalid argument
-FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
-Error: bash: /dev/tty: No such device or address
-error: failed to execute prompt script (exit code 1)
-fatal: could not read Username for &apos;https://github.com&apos;: Invalid argument
-</code></pre><p>The way to solve it is by two steps<br>1.go to the blog/_config.yml update the url like </p>
-<pre><code>deploy:
-type: git
-repo: git@github.com:zengyanzi/zengyanzi.github.io.git
-branch: master
-</code></pre><p>Instead of <a href="https://github.com/zengyanzi/zengyanzi.github.io" target="_blank" rel="external">https://github.com/zengyanzi/zengyanzi.github.io</a></p>
-<ol>
-<li>Generate ssh as below :</li>
-</ol>
-<p>A- Create a ssh key using Git Bash using following command</p>
-<pre><code>ssh-keygen -t rsa -b 4096 -C &quot;zengzhen.ucf@email.com&quot;
-</code></pre><p>After running this command just install the by default options and enter the password balnk when it prompts.(<strong>Three times of pressing space</strong>)</p>
-<p>B- Then run the following commands to locate the public/private key generated from step1</p>
-<pre><code>cd .ssh
-
-cd ~/.ssh
-</code></pre><p>3- Then run the following command to view your public:</p>
-<pre><code>cat id_rsa.pub
-</code></pre><p>4- Copy your public key and go to your <strong>GitHub account -&gt; settings -&gt; create a SSH and GPG keys</strong> then click new ssh key and past your public key in the in key text field.</p>
-<p>5- Verify your public key using Git Bash by running the following command:</p>
-<pre><code>ssh -vT git@github.com
-</code></pre><p>You will get output like this</p>
-<pre><code>debug1: channel 0: free: client-session, nchannels 1
-Transferred: sent 3848, received 2040 bytes, in 0.2 seconds
-Bytes per second: sent 16032.4, received 8499.5
-debug1: Exit status 1
-</code></pre><p>Then you no longer got “could not read Username for ‘<a href="https://github.com" target="_blank" rel="external">https://github.com</a>‘: Invalid argument”</p>
-
+        <h1 id="How-to-increase-the-memory-limit-of-wordpress"><a href="#How-to-increase-the-memory-limit-of-wordpress" class="headerlink" title="How to increase the memory limit of wordpress"></a>How to increase the memory limit of wordpress</h1><p>First thing first!!Backup the file before changing it!!!!</p>
+<p>Edit your .htaccess file<br>If you don’t have access to PHP.ini try adding this to an  end of .htaccess file:</p>
+<pre><code>php_value memory_limit 256M
+</code></pre>
       
     </div>
 
@@ -431,7 +400,7 @@ debug1: Exit status 1
       
         <div class="post-tags">
           
-            <a href="/tags/github/" rel="tag"># github</a>
+            <a href="/tags/WordPress/" rel="tag"># WordPress</a>
           
         </div>
       
@@ -444,18 +413,14 @@ debug1: Exit status 1
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/07/nopcommerce-new-window/" rel="next" title="nopcommerce new window">
-                <i class="fa fa-chevron-left"></i> nopcommerce new window
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/02/23/yarn-install-problem-with-xcode/" rel="prev" title="yarn install problem with xcode">
-                yarn install problem with xcode <i class="fa fa-chevron-right"></i>
+              <a href="/2019/12/11/how-to-restore-wordpress/" rel="prev" title="how to restore wordpress">
+                how to restore wordpress <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -596,7 +561,7 @@ debug1: Exit status 1
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#fatal-could-not-read-Username-for-‘https-github-com‘-Invalid-argument"><span class="nav-number">1.</span> <span class="nav-text">fatal: could not read Username for ‘https://github.com‘: Invalid argument</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#How-to-increase-the-memory-limit-of-wordpress"><span class="nav-number">1.</span> <span class="nav-text">How to increase the memory limit of wordpress</span></a></li></ol></div>
             
 
           </div>

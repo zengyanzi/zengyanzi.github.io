@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[how to increase the memory limit of wordpress]]></title>
+    <url>%2F2019%2F12%2F20%2Fhow-to-increase-the-memory-limit-of-wordpress%2F</url>
+    <content type="text"><![CDATA[How to increase the memory limit of wordpressFirst thing first!!Backup the file before changing it!!!! Edit your .htaccess fileIf you don’t have access to PHP.ini try adding this to an end of .htaccess file: php_value memory_limit 256M]]></content>
+      <tags>
+        <tag>WordPress</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[how to restore wordpress]]></title>
     <url>%2F2019%2F12%2F11%2Fhow-to-restore-wordpress%2F</url>
     <content type="text"><![CDATA[How to restore wordpress after hackingFirst thing to do after you set up a wordpress website is to backup!!! Install the plugin of backup,such as UpdraftPlus Install the plugin of any high rating security plugin from wordpress, if possible, purchase the pro one, sometimes the price is valuble. If the website is badly hacked, then the best and fast way is to set a clean and new wordpress and imported the data. Export data from original phpMyAdmin,the fast and simple way to generate SQL.Remember the database name and Charset,which later would be used to import to the new one. Download the same version of wordpress,copy the files under “wordpress” and paste into wamp\www\wp Go to localhost\wp\wp-admin, then install the brand new one. Remember to set up the database name and Prefix the same as the previous one. Finish the installation of the new wordpress website. Import the SQL of previous database.If error, do not click the second option,rembember to new the database first and the database name and charset should be the same as the previous one. Refresh the page of website, it would show that you have already install the wordpress so just login. Then go the post and pages, check if there is any strange code,then delete them The best way to view them is in class edit instead of Elementor. Scan the new website by some high rating security plugins and backup. Learn how to use Elementor to same the template of your website design: Go the the arrow close to “update”, save the page as template. Go to your elementor Tools choose Regenerate CSS Sync Library Then install the auto update plugin and attempt login plugin.]]></content>
@@ -202,8 +210,8 @@
     <url>%2F2017%2F09%2F25%2FAndroid-studio-icon-on-device%2F</url>
     <content type="text"><![CDATA[How to change or set the Icon for your Android APP? Go to the path “..android\app\src\main\res” Update the images in those folders \mipmap-xxhdpi \mipmap-xhdpi \mipmap-mdpi \mipmap-hdpi You could use some online tool to generate your icon https://makeappicon.com/ which resizes all iOS icons and Android icons.]]></content>
       <tags>
-        <tag>React Native</tag>
         <tag>Android</tag>
+        <tag>React Native</tag>
       </tags>
   </entry>
   <entry>
