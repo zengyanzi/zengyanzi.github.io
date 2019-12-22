@@ -297,6 +297,145 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/16/how-to-bulkly-add-heperlinks-to-Excel/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/08/16/how-to-bulkly-add-heperlinks-to-Excel/" itemprop="url">
+                  how to bulkly add hyperlinks to Excel
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-16T13:54:34+08:00">
+                2018-08-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="How-to-bulky-add-hyperlinks-to-Excel"><a href="#How-to-bulky-add-hyperlinks-to-Excel" class="headerlink" title="How to bulky add hyperlinks to Excel"></a>How to bulky add hyperlinks to Excel</h1><p>Here is an example of how to work effectively with Excel.<br>The situation is after merge two columns in Excel, the final column become a link whick like: <a href="http://www.microanalytix.co.nz/3ml-luer-lock-sterile-syringe" target="_blank" rel="external">http://www.microanalytix.co.nz/3ml-luer-lock-sterile-syringe</a>.</p>
+<p>However, these links are not hyperlink. Then the following step will let you know how to convert them into hyperlinks</p>
+<ol>
+<li>Alt+F11 </li>
+<li>click view and code</li>
+<li><p>Copy the folllowing code into the new open window as below:</p>
+<pre><code>Sub ActiveHyperlinks()
+
+For Each C In [A2]
+
+ActiveSheet.Hyperlinks.Add C, C.Value
+
+Next
+
+End Sub 
+</code></pre><p> You could change A2 according to your requirements, for example, if you want to change A2 to A20, just modify it as [A2:A20].</p>
+</li>
+<li>The last step is simple and easy, click run-&gt;Run Sub/UserForm.</li>
+<li>Then you would find the result in your original Excel.</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/31/how-to-define-problem-with-wordpress/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1811,209 +1950,6 @@ Html.AppendScriptParts(@Url.Content(&quot;~/Scripts/jquery-1.7.1.min.js&quot;));
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/08/update-the-hover-banner/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/02/08/update-the-hover-banner/" itemprop="url">
-                  update the hover banner
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-08T13:02:44+08:00">
-                2018-02-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="How-to-update-the-hover-banner-to-fix-the-bug-of-responsive"><a href="#How-to-update-the-hover-banner-to-fix-the-bug-of-responsive" class="headerlink" title="How to update the hover banner to fix the bug of responsive"></a>How to update the hover banner to fix the bug of responsive</h1><p>Here is the problem, after changing the content of categories, the height of hover categories changed as well,  which would effect the layout of banner</p>
-<p><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1518049032/WeChat_Screenshot_20180207154407_wqauh3.png" alt=""></p>
-<ol>
-<li><p>go to   </p>
-<pre><code>Nop.Web/Themes/CustomMicroAnalytix/View/TopMenu.cshtml
- Nop.Web/Themes/CustomMicroAnalytix/Content/styles.css
-</code></pre></li>
-<li><p>Update the code as below, just add class “holdercategory” and update the min-height of this part</p>
-</li>
-<li><p>In Nop.Web/Themes/CustomMicroAnalytix/View/TopMenu.cshtml</p>
-<pre><code>&lt;ul class=&quot;top-menu container&quot;&gt;
-
-  @Html.Widget(&quot;header_menu_before&quot;)
-
-  &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;HomePage&quot;)&quot;&gt;&lt;i class=&quot;glyphicon glyphicon-home&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-
-  @if (Model.Categories.Count &gt; 0)
-  {
-  &lt;li class=&quot;has-mega-menu&quot;&gt;
-  &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;
-  SHOP BY CATEGORY
-  &lt;/a&gt;
-  &lt;div class=&quot;top-menu-triangle&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;mega-menu&quot;&gt;
-  &lt;div class=&quot;row&quot;&gt;
-  @foreach (var category in Model.Categories)
-  {
-  var cat = categories.Where(c =&gt; c.Name == category.Name).SingleOrDefault();
-  var pictureId = cat.PictureId;
-  var picURL = pictureService.GetPictureUrl(pictureId, pictureSize);
-
-  &lt;div class=&quot;col-xs-12 col-md-3 categoryholder&quot;&gt;
-  &lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-xs-12&quot;&gt;
-  &lt;div class=&quot;group-heading&quot;&gt;&lt;strong&gt;@category.Name&lt;/strong&gt;&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-xs-12 col-md-5 visible-md&quot;&gt;
-  &lt;div class=&quot;img-holder&quot;&gt;
-  &lt;a href=&quot;@Url.RouteUrl(&quot;Category&quot;, new { SeName = category.SeName })&quot;&gt;&lt;img style=&quot;border: none; &quot; src=&quot;@picURL&quot; alt=&quot;&quot;&gt;&lt;/a&gt;
-  &lt;/div&gt;
-  &lt;/div&gt;
-  @if (category.SubCategories.Count &gt; 0)
-  {
-  &lt;div class=&quot;col-xs-12 col-md-7&quot;&gt;
-  &lt;ul&gt;
-
-  @{
-  var subCategoryCounter = 1;
-  }
-  @foreach (var subCategory in category.SubCategories)
-  {
-  if (subCategoryCounter &lt;= 3)
-  {
-  &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;Category&quot;, new { SeName = subCategory.SeName })&quot;&gt;@subCategory.Name&lt;/a&gt;&lt;/li&gt;
-  }
-  else
-  {
-  &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;Category&quot;, new { SeName = category.SeName })&quot;&gt;&lt;strong&gt;View All&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  break;
-
-  }
-
-  subCategoryCounter++;
-  }
-  &lt;/ul&gt;
-  &lt;/div&gt;
-  }
-  &lt;/div&gt;
-  &lt;/div&gt;
-  }
-  &lt;/div&gt;
-  &lt;/div&gt;&lt;!-- /.mega-menu --&gt;
-  &lt;/li&gt;
-  }
-</code></pre></li>
-<li><p>Update style.css</p>
-<pre><code>.categoryholder{
-  margin:15px 0 0 0;
-  min-height:210px !important;
-}
-</code></pre></li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -2063,7 +1999,7 @@ Html.AppendScriptParts(@Url.Content(&quot;~/Scripts/jquery-1.7.1.min.js&quot;));
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">91</span>
+                <span class="site-state-item-count">92</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -2076,7 +2012,7 @@ Html.AppendScriptParts(@Url.Content(&quot;~/Scripts/jquery-1.7.1.min.js&quot;));
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">31</span>
+                <span class="site-state-item-count">32</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

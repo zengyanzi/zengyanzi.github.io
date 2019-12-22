@@ -297,6 +297,130 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/23/how-to-update-RevSlider-plugin-after-updating-to-PHP7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2019/12/23/how-to-update-RevSlider-plugin-after-updating-to-PHP7/" itemprop="url">
+                  how to update RevSlider plugin after updating to PHP7
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-23T05:32:13+08:00">
+                2019-12-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="How-to-update-RevSlider-Plugin-after-updating-to-PHP7"><a href="#How-to-update-RevSlider-Plugin-after-updating-to-PHP7" class="headerlink" title="How to update RevSlider Plugin after updating to PHP7"></a>How to update RevSlider Plugin after updating to PHP7</h1><p>After updating to PHP7, login to the admin of wordpress, there would be an error as follows:</p>
+<pre><code>revslider\inc_php\framework\base_admin.class.php on line 73
+</code></pre><p>The solution is to go to the file and update in the line 22 as follows:</p>
+<pre><code>    private static $menuRole = self::ROLE_ADMIN;
+//private static $arrMetaBoxes = &quot;&quot;;    
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/23/how-to-reset-password-in-local-wordpress/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1494,145 +1618,6 @@ sub   rsa4096 2017-02-22 [S]
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/16/how-to-bulkly-add-heperlinks-to-Excel/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/08/16/how-to-bulkly-add-heperlinks-to-Excel/" itemprop="url">
-                  how to bulkly add hyperlinks to Excel
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-16T13:54:34+08:00">
-                2018-08-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="How-to-bulky-add-hyperlinks-to-Excel"><a href="#How-to-bulky-add-hyperlinks-to-Excel" class="headerlink" title="How to bulky add hyperlinks to Excel"></a>How to bulky add hyperlinks to Excel</h1><p>Here is an example of how to work effectively with Excel.<br>The situation is after merge two columns in Excel, the final column become a link whick like: <a href="http://www.microanalytix.co.nz/3ml-luer-lock-sterile-syringe" target="_blank" rel="external">http://www.microanalytix.co.nz/3ml-luer-lock-sterile-syringe</a>.</p>
-<p>However, these links are not hyperlink. Then the following step will let you know how to convert them into hyperlinks</p>
-<ol>
-<li>Alt+F11 </li>
-<li>click view and code</li>
-<li><p>Copy the folllowing code into the new open window as below:</p>
-<pre><code>Sub ActiveHyperlinks()
-
-For Each C In [A2]
-
-ActiveSheet.Hyperlinks.Add C, C.Value
-
-Next
-
-End Sub 
-</code></pre><p> You could change A2 according to your requirements, for example, if you want to change A2 to A20, just modify it as [A2:A20].</p>
-</li>
-<li>The last step is simple and easy, click run-&gt;Run Sub/UserForm.</li>
-<li>Then you would find the result in your original Excel.</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1682,7 +1667,7 @@ End Sub
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">91</span>
+                <span class="site-state-item-count">92</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -1695,7 +1680,7 @@ End Sub
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">31</span>
+                <span class="site-state-item-count">32</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

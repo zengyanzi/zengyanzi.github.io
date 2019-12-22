@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[how to update RevSlider plugin after updating to PHP7]]></title>
+    <url>%2F2019%2F12%2F23%2Fhow-to-update-RevSlider-plugin-after-updating-to-PHP7%2F</url>
+    <content type="text"><![CDATA[How to update RevSlider Plugin after updating to PHP7After updating to PHP7, login to the admin of wordpress, there would be an error as follows: revslider\inc_php\framework\base_admin.class.php on line 73 The solution is to go to the file and update in the line 22 as follows: private static $menuRole = self::ROLE_ADMIN; //private static $arrMetaBoxes = &quot;&quot;;]]></content>
+      <tags>
+        <tag>Wordpress</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[how to reset password in local wordpress]]></title>
     <url>%2F2019%2F12%2F23%2Fhow-to-reset-password-in-local-wordpress%2F</url>
     <content type="text"><![CDATA[How to rest password in local wordpressIn this situation, the local machine does not have the access to send email to reset the password.Luckily we hava the access to the database. Update the password of your “user_pass” =”5d41402abc4b2a76b9719d911017c592”,which is MD5=”hello”. Then go to the wp-admin and login under the user which just updated the password.After login, reset your password again.]]></content>
