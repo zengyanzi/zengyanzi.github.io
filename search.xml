@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[wordpress migrate]]></title>
+    <url>%2F2020%2F01%2F17%2Fwordpress-migrate%2F</url>
+    <content type="text"><![CDATA[Wordpress MigrationAfter server migration only the homepage works. Every single link gave a Not Found. Solution1.Settings &gt; Permalinks, Change to plain .htaccess file # BEGIN WordPress &lt;IfModule mod_rewrite.c&gt; RewriteEngine On RewriteBase / RewriteRule ^index\.php$ - [L] RewriteCond %{REQUEST_FILENAME} !-f RewriteCond %{REQUEST_FILENAME} !-d RewriteRule . /index.php [L] &lt;/IfModule&gt; # END WordPress http.conf edit the AllowOveride so that it is changed from None to All. &lt;Directory &quot;/var/www/html&quot;&gt; Options Indexes FollowSymLinks AllowOverride All Order allow,deny Allow from all &lt;/Directory&gt;]]></content>
+      <tags>
+        <tag>Wordpress</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[how to update RevSlider plugin after updating to PHP7]]></title>
     <url>%2F2019%2F12%2F23%2Fhow-to-update-RevSlider-plugin-after-updating-to-PHP7%2F</url>
     <content type="text"><![CDATA[How to update RevSlider Plugin after updating to PHP7After updating to PHP7, login to the admin of wordpress, there would be an error as follows: revslider\inc_php\framework\base_admin.class.php on line 73 The solution is to go to the file and update in the line 22 as follows: private static $menuRole = self::ROLE_ADMIN; //private static $arrMetaBoxes = &quot;&quot;;]]></content>
