@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[chrome web worker]]></title>
+    <url>%2F2020%2F01%2F31%2Fchrome-web-worker%2F</url>
+    <content type="text"><![CDATA[Chrome with WebworkerIf I try to use web workers through a JavaScript file, Chrome throws an error - Uncaught SecurityError: Failed to create a worker: script at &apos;(path)/worker.js&apos; cannot be accessed from origin &apos;null&apos;. The solution is to set up a python server in this path. python -m http.server 8888 Then it works fine.]]></content>
+      <tags>
+        <tag>webworker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[wordpress migrate]]></title>
     <url>%2F2020%2F01%2F17%2Fwordpress-migrate%2F</url>
     <content type="text"><![CDATA[Wordpress MigrationAfter server migration only the homepage works. Every single link gave a Not Found. Solution1.Settings &gt; Permalinks, Change to plain .htaccess file # BEGIN WordPress &lt;IfModule mod_rewrite.c&gt; RewriteEngine On RewriteBase / RewriteRule ^index\.php$ - [L] RewriteCond %{REQUEST_FILENAME} !-f RewriteCond %{REQUEST_FILENAME} !-d RewriteRule . /index.php [L] &lt;/IfModule&gt; # END WordPress http.conf edit the AllowOveride so that it is changed from None to All. &lt;Directory &quot;/var/www/html&quot;&gt; Options Indexes FollowSymLinks AllowOverride All Order allow,deny Allow from all &lt;/Directory&gt;]]></content>
