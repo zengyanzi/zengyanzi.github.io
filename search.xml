@@ -67,7 +67,7 @@
   <entry>
     <title><![CDATA[JS interview]]></title>
     <url>%2F2019%2F12%2F09%2FJS-interview%2F</url>
-    <content type="text"><![CDATA[JS interveiwBasic: String Number Boolean undefined null symbol complex Object Array Function RegExp Date Error global Math HTTP 1xx infor 2xx success 3xx redirect 4xx client error 5xx server error Ajax状态码 0- 未初始化，还没用调用send() 1- (载入)已经调用send()，正在发送请求 2-(载入完成)send()方法执行完成 3-（交互）正在解析响应内容 4- （完成）响应内容解析完成 ajax asynchronous JavaScript and xml 无需刷新页面请求数据， 可以把一起服务端的任务转嫁到客户端处理，减轻服务器负担，节省带宽 浏览器支持好，无需插件 不支持浏览器回退按钮 暴露了http交互细节 对seo支持比较弱 JavaScript的闭包 function a(x){ var tem=3; function b(y){ console.log(x+y+(++tem)); } } a函数中的b函数就是一个闭包，b函数可以使用a函数的局部变量，参数，最典型的闭包应该是这样的，将定义在函数中的函数作为返回值 function a(x){ var tem =3 ; function b(y){ console.log(x+y+(++tem)); } return b; }]]></content>
+    <content type="text"><![CDATA[JS interveiwBasic: String Number Boolean undefined null symbol complex Object Array Function RegExp Date Error global Math HTTP 1xx infor 2xx success 3xx redirect 4xx client error 5xx server error Ajax状态码 0- 未初始化，还没用调用send() 1- (载入)已经调用send()，正在发送请求 2-(载入完成)send()方法执行完成 3-（交互）正在解析响应内容 4- （完成）响应内容解析完成 ajax asynchronous JavaScript and xml 无需刷新页面请求数据， 可以把一起服务端的任务转嫁到客户端处理，减轻服务器负担，节省带宽 浏览器支持好，无需插件 不支持浏览器回退按钮 暴露了http交互细节 对seo支持比较弱 JavaScript的闭包 function a(x){ var tem=3; function b(y){ console.log(x+y+(++tem)); } } a函数中的b函数就是一个闭包，b函数可以使用a函数的局部变量，参数，最典型的闭包应该是这样的，将定义在函数中的函数作为返回值 function a(x){ var tem =3 ; function b(y){ console.log(x+y+(++tem)); } return b; } 闭包的缺点是，因为内部闭包函数可以访问外部函数的变量，所以外部函数的变量不能被释放，如果闭包嵌套太多，会导致内存占用大，要合理使用闭包]]></content>
       <tags>
         <tag>Interview</tag>
       </tags>
