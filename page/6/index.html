@@ -297,6 +297,130 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/nopcommerce-source-code-version-install-tips/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/24/nopcommerce-source-code-version-install-tips/" itemprop="url">
+                  nopcommerce source code version install tips  
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T11:23:57+08:00">
+                2017-04-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="nopcommerce-source-code-version-install-tips"><a href="#nopcommerce-source-code-version-install-tips" class="headerlink" title="nopcommerce source code version install tips  "></a>nopcommerce source code version install tips  </h1><ol>
+<li>click the file “CodeFirstInstallationService’’ and save .<br>the path is libraries\nop.services\</li>
+<li>start with<br>presentation\nop.web check in the browser</li>
+<li>nop.web/app-data/ to display all files，then open setting.txt，update the database </li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/contact-us-enquiry-form-validation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1591,202 +1715,6 @@ if __name__ == &quot;__main__&quot;:
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/tireprice/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/24/tireprice/" itemprop="url">
-                  tireprice  
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T10:19:18+08:00">
-                2017-04-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="tireprice"><a href="#tireprice" class="headerlink" title="tireprice  "></a>tireprice  </h1><pre><code># ~*~ coding:utf-8 ~*~
-#csv是一个读取csv文件的lib
-import csv
-#itertools生成组合和排列的lib
-import itertools
-#pyodbc是连接ms sql server的lib
-import pyodbc
-import pymysql
-#cnxn是数据库连接  更改数据库连接方式，账号密码
-
-#cursor是数据库浮标
-cursor = cnxn.cursor()
-
-
-def test(skuset):
-    err = False
-    for sku in skuset:
-        product_id = getIdFromSku(sku)
-        if not product_id:
-            print (&quot;can&apos;t find product id where sku=&apos;%s&apos;&quot; % sku)
-            err = True
-#主方法
-def process():
-    #读取csv，转换成list 更改文件存储位置
-    reader = list(csv.reader(open(&quot;c:/Users/Jenny/Desktop/ski/tierprice for customer/VIP-AU-1.csv&quot;)))
-    header = reader[0]
-    #遍历数据，并处理， tips：跳过第一行
-    skuset = set([])
-    for i in reader[1:]:
-        sku = i[0]
-        product_id = getIdFromSku(sku)
-        if product_id == 0:
-            print (&quot;error sku %s&quot; % sku)
-            continue
-        prices = i[1:]
-        for j in range(len(prices)):
-            price = float(prices[j])
-            crid = int(header[j+1]) 
-            updatetire(product_id)
-            if find(product_id,crid):
-                update(product_id,crid,price)
-            else:
-                insert(product_id,price,crid)
-def update(product_id,crid,price):
-    sql = &quot;update dbo.TierPrice set Price=%f where ProductId=%d and CustomerRoleId=%d&quot; %(price,product_id,crid)
-    cursor.execute(sql)
-    cnxn.commit()
-
-def find(product_id,crid):
-    sql =&quot;select * from dbo.TierPrice where ProductId=%d and CustomerRoleId=%d&quot; % (product_id,crid)
-    cursor.execute(sql)
-    rows = cursor.fetchall()
-    return rows
-
-def updatetire(productid):
-    sql = &quot;update dbo.Product set HasTierPrices=1 where Id=%d&quot; % productid
-    print (sql)
-    cursor.execute(sql)
-    cnxn.commit()
-def insert(product_id,price,crid):
-    sql = &quot;insert into dbo.TierPrice (ProductId,StoreId,CustomerRoleId,Quantity,Price) values(%d,0,%d,1,%f)&quot; % (product_id,crid,price)
-    print (sql)
-    cursor.execute(sql)
-    cnxn.commit()
-
-def getIdFromSku(a):
-    sql = &quot;select Id from dbo.Product where Sku=&apos;%s&apos; and deleted=0&quot; % a
-    cursor.execute(sql)
-    row = cursor.fetchall()
-    if row:
-        return row[0][0]
-    else:
-        return 0
-
-
-if __name__ == &quot;__main__&quot;:
-process()
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1836,7 +1764,7 @@ process()
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">95</span>
+                <span class="site-state-item-count">96</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="JS interveiwBasic:  String Number Boolean undefined null symbol  HTTP  1xx infor 2xx success 3xx redirect 4xx client error 5xx server error  Ajax状态码  0- 未初始化，还没用调用send() 1- (载入)已经调用send()，正在发送请求 2-(载入">
+<meta name="description" content="JS interveiwBasic:  String Number Boolean undefined null symbol  complex   Object Array Function RegExp Date Error  global  Math HTTP  1xx infor 2xx success 3xx redirect 4xx client error 5xx server er">
 <meta name="keywords" content="Interview">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS interview">
 <meta property="og:url" content="http://yoursite.com/2019/12/09/JS-interview/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="JS interveiwBasic:  String Number Boolean undefined null symbol  HTTP  1xx infor 2xx success 3xx redirect 4xx client error 5xx server error  Ajax状态码  0- 未初始化，还没用调用send() 1- (载入)已经调用send()，正在发送请求 2-(载入">
-<meta property="og:updated_time" content="2019-12-09T02:46:06.215Z">
+<meta property="og:description" content="JS interveiwBasic:  String Number Boolean undefined null symbol  complex   Object Array Function RegExp Date Error  global  Math HTTP  1xx infor 2xx success 3xx redirect 4xx client error 5xx server er">
+<meta property="og:updated_time" content="2020-02-17T00:48:24.644Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS interview">
-<meta name="twitter:description" content="JS interveiwBasic:  String Number Boolean undefined null symbol  HTTP  1xx infor 2xx success 3xx redirect 4xx client error 5xx server error  Ajax状态码  0- 未初始化，还没用调用send() 1- (载入)已经调用send()，正在发送请求 2-(载入">
+<meta name="twitter:description" content="JS interveiwBasic:  String Number Boolean undefined null symbol  complex   Object Array Function RegExp Date Error  global  Math HTTP  1xx infor 2xx success 3xx redirect 4xx client error 5xx server er">
 
 
 
@@ -377,6 +377,17 @@
 <li>null</li>
 <li>symbol</li>
 </ol>
+<p>complex </p>
+<ol>
+<li>Object</li>
+<li>Array</li>
+<li>Function</li>
+<li>RegExp</li>
+<li>Date</li>
+<li>Error</li>
+</ol>
+<p>global </p>
+<p>Math</p>
 <p>HTTP</p>
 <ol>
 <li>1xx infor</li>
@@ -402,7 +413,22 @@
 <li>暴露了http交互细节</li>
 <li>对seo支持比较弱</li>
 </ol>
-
+<p>JavaScript的闭包</p>
+<pre><code>function a(x){
+    var tem=3;
+    function b(y){
+        console.log(x+y+(++tem));
+    }
+}
+</code></pre><p>a函数中的b函数就是一个闭包，b函数可以使用a函数的局部变量，参数，最典型的闭包应该是这样的，将定义在函数中的函数作为返回值</p>
+<pre><code>function a(x){
+    var tem =3 ;
+    function b(y){
+        console.log(x+y+(++tem));
+    }
+return b;
+}
+</code></pre>
       
     </div>
 
@@ -528,7 +554,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">95</span>
+                <span class="site-state-item-count">96</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
