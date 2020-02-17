@@ -297,6 +297,126 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/23/yarn-install-problem-with-xcode/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/02/23/yarn-install-problem-with-xcode/" itemprop="url">
+                  yarn install problem with xcode
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-23T11:43:08+08:00">
+                2018-02-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="ios-Unable-to-verify-Xcode-and-Simulator-installation"><a href="#ios-Unable-to-verify-Xcode-and-Simulator-installation" class="headerlink" title="ios: Unable to verify Xcode and Simulator installation"></a>ios: Unable to verify Xcode and Simulator installation</h1><p>Turned out there weren’t any “Command Line Tools” selected in the Xcode settings. After selecting some it worked for me. Here is how it should look like:<br><img src="https://cloud.githubusercontent.com/assets/1567498/23970903/efe0a670-09cb-11e7-9bdd-f9132cc57541.png" alt=""></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/20/add-a-pop-ups-to-nopcommerce/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2024,187 +2144,6 @@ ifconfig
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/27/less/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/09/27/less/" itemprop="url">
-                  less
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-27T15:54:11+08:00">
-                2017-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Less"><a href="#Less" class="headerlink" title="Less"></a>Less</h1><ol>
-<li><p>example</p>
-<pre><code>@base:#f938ab;
-.box-shadow(@style, @c) when(iscolor(@c)){
-    -webkit-box-shadow:@style @c;
-    box-shadow:@style @c;
-}
-.box-shadow(@sytle,@alpha:50%) when(isnumber(@alpha)){
-    .box-shadow(@style,rgba(0,0,0,@alpha));
-}
-.box{
-    color:saturate(@base,5%);
-    border-color:lighten(@base,30%);
-    div{.box-shaow(0 0 5px 30%)}
-}
-</code></pre></li>
-<li>Language features</li>
-</ol>
-<p>2.1 Variables</p>
-<pre><code>@nice-blue:#979699;
-@light-blue:@nice-blue+111;
-
-#header{
-    color:@light-blue;
-}
-</code></pre><p>2.2 Mixins</p>
-<pre><code>.borderd{
-    border-top:dotted 1px black;
-    border-bottom:solid 2px black;
-}
-
-#menu a{
-color:#111;
-.bordered;
-}
-.post a{
-    color:red;
-    .bordered;
-}
-</code></pre><p>2.3 Nested Rules</p>
-<pre><code>#header{
-    color:black;
-    .navigation{
-        font-size:12px;
-    }
-    .logo{
-        width:300px;
-    }
-}
-
-.clearfix{
-    display:block;
-    zoom:1;
-    &amp;:after{
-        content:&quot;&quot;;
-        display:block;
-        font-size:0;
-        height:0;
-        clear:both;
-        visibility:hidden;
-    }
-}
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -2254,7 +2193,7 @@ color:#111;
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">94</span>
+                <span class="site-state-item-count">95</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -2267,7 +2206,7 @@ color:#111;
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
