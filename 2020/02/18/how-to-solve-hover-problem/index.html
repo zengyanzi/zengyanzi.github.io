@@ -98,7 +98,7 @@
 <meta property="og:site_name" content="Bunny's  Code Burrow">
 <meta property="og:description" content="How to solve hover problem The hover banner used to be as above.The reason was due to the height of those elements.To solve it, just go to /Themes/CustomMicroAnalytix/View/Catalog, modify the TopMenu.">
 <meta property="og:image" content="https://s2.ax1x.com/2020/02/18/3iTRKA.png">
-<meta property="og:updated_time" content="2020-02-17T21:55:02.211Z">
+<meta property="og:updated_time" content="2020-02-18T00:38:28.011Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="how to solve hover problem">
 <meta name="twitter:description" content="How to solve hover problem The hover banner used to be as above.The reason was due to the height of those elements.To solve it, just go to /Themes/CustomMicroAnalytix/View/Catalog, modify the TopMenu.">
@@ -437,6 +437,15 @@
             &lt;/div&gt;
         &lt;/div&gt;&lt;!-- /.mega-menu --&gt;
     &lt;/li&gt;
+}
+</code></pre><p>Other update:<br>To fix the images size issue with screen less than 992px due to the responsive design, add the following codes</p>
+<pre><code>@media (max-width: 992px) {
+     .img-holder img{
+      max-width:25% !important;
+       -webkit-border-radius:3px;
+      border-radius:3px;
+      vertical-align:middle;
+    }
 }
 </code></pre>
       

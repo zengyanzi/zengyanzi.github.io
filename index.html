@@ -441,6 +441,15 @@
         &lt;/div&gt;&lt;!-- /.mega-menu --&gt;
     &lt;/li&gt;
 }
+</code></pre><p>Other update:<br>To fix the images size issue with screen less than 992px due to the responsive design, add the following codes</p>
+<pre><code>@media (max-width: 992px) {
+     .img-holder img{
+      max-width:25% !important;
+       -webkit-border-radius:3px;
+      border-radius:3px;
+      vertical-align:middle;
+    }
+}
 </code></pre>
           
         
