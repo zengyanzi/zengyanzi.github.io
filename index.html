@@ -297,6 +297,186 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/20/lucky-roll/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2020/02/20/lucky-roll/" itemprop="url">
+                  lucky roll
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-20T05:01:57+08:00">
+                2020-02-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Lucky-roll"><a href="#Lucky-roll" class="headerlink" title="Lucky roll"></a>Lucky roll</h1><p>请写一个抽奖程序 ，已有参与抽奖的员工工号组成的数组 staffIds。<br>规则1：同一员工不可重复中奖<br>规则2：每轮执行抽奖程序，入参是本轮要抽取的中奖人数n，将中奖人工号打印出来</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Lucky roll&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button onclick=&quot;onClear()&quot;&gt; Clear&lt;/button&gt;
+&lt;br/&gt;
+&lt;textarea name=&quot;staffids&quot; id=&quot;staffids&quot; cols=&quot;30&quot; rows=&quot;10&quot; placeholder=&quot;please input employeeid&quot;&gt;&lt;/textarea&gt;
+&lt;br/&gt;
+&lt;textarea name=&quot;numroll&quot; id=&quot;numroll&quot; cols=&quot;30&quot; rows=&quot;10&quot; placeholder=&quot;please input number to win,be less than the NO of employees&quot;&gt;&lt;/textarea&gt;
+&lt;br/&gt;
+&lt;button onclick=&quot;onRoll()&quot;&gt;Roll&lt;/button&gt;
+&lt;br/&gt;
+&lt;input type=&quot;text&quot; id=&quot;rollresult&quot; placeholder=&quot;winnerlist&quot;/&gt;
+
+&lt;script&gt;
+    var pool =[];
+    var exWinners = new Set([]);
+    function onClear() {
+        document.getElementById(&quot;employeeid&quot;).value=&apos;&apos;;
+        document.getElementById(&quot;rollresult&quot;).value=&apos;&apos;;
+        document.getElementById(&quot;numroll&quot;).value = &apos;&apos;;
+        exWinners.clear();
+        alert(&quot;All the staffids have been cleared&quot;);
+    }
+    function onRoll() {
+        staffids=document.getElementById(&quot;staffids&quot;).value.split(&quot;,&quot;);
+        console.log(staffids);
+        const count= parseInt(document.getElementById(&quot;numroll&quot;).value);
+        console.log(count);
+        pool =different(staffids,exWinners)
+        console.log(&quot;pool&quot;+pool);
+        if (pool.length ==0){
+            alert(&quot;all the employees have been selected&quot;)
+        }
+        shuffle(pool);
+        var winner = pool.slice(0,count);
+        for (var i=0;i&lt;winner.length;i++){
+            exWinners.add(winner[i]);
+        }
+        document.getElementById(&quot;rollresult&quot;).value= winner.join(&quot;,&quot;);
+
+    }
+    function different(staffids,exWinners) {
+        var res=[];
+        res = staffids.filter(x=&gt;!exWinners.has(x));
+        return res;
+    }
+    function shuffle(arr){
+        arr.sort(()=&gt;{
+            return  Math.random() &gt; 0.5 ? -1 : 1;
+            //返回值大于0，表示需要交换；小于等于0表示不需要交换
+        })
+    }
+
+    &lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/19/set/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1660,186 +1840,6 @@ Allow from all
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/09/JS-interview/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2019/12/09/JS-interview/" itemprop="url">
-                  JS interview
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-09T08:38:27+08:00">
-                2019-12-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="JS-interveiw"><a href="#JS-interveiw" class="headerlink" title="JS interveiw"></a>JS interveiw</h1><p>Basic:</p>
-<ol>
-<li>String</li>
-<li>Number</li>
-<li>Boolean</li>
-<li>undefined</li>
-<li>null</li>
-<li>symbol</li>
-</ol>
-<p>complex </p>
-<ol>
-<li>Object</li>
-<li>Array</li>
-<li>Function</li>
-<li>RegExp</li>
-<li>Date</li>
-<li>Error</li>
-</ol>
-<p>global </p>
-<p>Math</p>
-<p>HTTP</p>
-<ol>
-<li>1xx infor</li>
-<li>2xx success</li>
-<li>3xx redirect</li>
-<li>4xx client error</li>
-<li>5xx server error</li>
-</ol>
-<p>Ajax状态码</p>
-<ol>
-<li>0- 未初始化，还没用调用send()</li>
-<li>1- (载入)已经调用send()，正在发送请求</li>
-<li>2-(载入完成)send()方法执行完成</li>
-<li>3-（交互）正在解析响应内容</li>
-<li>4- （完成）响应内容解析完成</li>
-</ol>
-<p>ajax asynchronous JavaScript and xml </p>
-<ol>
-<li>无需刷新页面请求数据，</li>
-<li>可以把一起服务端的任务转嫁到客户端处理，减轻服务器负担，节省带宽</li>
-<li>浏览器支持好，无需插件</li>
-<li>不支持浏览器回退按钮</li>
-<li>暴露了http交互细节</li>
-<li>对seo支持比较弱</li>
-</ol>
-<p>JavaScript的闭包</p>
-<pre><code>function a(x){
-    var tem=3;
-    function b(y){
-        console.log(x+y+(++tem));
-    }
-}
-</code></pre><p>a函数中的b函数就是一个闭包，b函数可以使用a函数的局部变量，参数，最典型的闭包应该是这样的，将定义在函数中的函数作为返回值</p>
-<pre><code>function a(x){
-    var tem =3 ;
-    function b(y){
-        console.log(x+y+(++tem));
-    }
-return b;
-}
-</code></pre><p>闭包的缺点是，因为内部闭包函数可以访问外部函数的变量，所以外部函数的变量不能被释放，如果闭包嵌套太多，会导致内存占用大，要合理使用闭包</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1889,7 +1889,7 @@ return b;
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">97</span>
+                <span class="site-state-item-count">98</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

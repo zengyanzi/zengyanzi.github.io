@@ -297,6 +297,186 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/09/JS-interview/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2019/12/09/JS-interview/" itemprop="url">
+                  JS interview
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-09T08:38:27+08:00">
+                2019-12-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="JS-interveiw"><a href="#JS-interveiw" class="headerlink" title="JS interveiw"></a>JS interveiw</h1><p>Basic:</p>
+<ol>
+<li>String</li>
+<li>Number</li>
+<li>Boolean</li>
+<li>undefined</li>
+<li>null</li>
+<li>symbol</li>
+</ol>
+<p>complex </p>
+<ol>
+<li>Object</li>
+<li>Array</li>
+<li>Function</li>
+<li>RegExp</li>
+<li>Date</li>
+<li>Error</li>
+</ol>
+<p>global </p>
+<p>Math</p>
+<p>HTTP</p>
+<ol>
+<li>1xx infor</li>
+<li>2xx success</li>
+<li>3xx redirect</li>
+<li>4xx client error</li>
+<li>5xx server error</li>
+</ol>
+<p>Ajax状态码</p>
+<ol>
+<li>0- 未初始化，还没用调用send()</li>
+<li>1- (载入)已经调用send()，正在发送请求</li>
+<li>2-(载入完成)send()方法执行完成</li>
+<li>3-（交互）正在解析响应内容</li>
+<li>4- （完成）响应内容解析完成</li>
+</ol>
+<p>ajax asynchronous JavaScript and xml </p>
+<ol>
+<li>无需刷新页面请求数据，</li>
+<li>可以把一起服务端的任务转嫁到客户端处理，减轻服务器负担，节省带宽</li>
+<li>浏览器支持好，无需插件</li>
+<li>不支持浏览器回退按钮</li>
+<li>暴露了http交互细节</li>
+<li>对seo支持比较弱</li>
+</ol>
+<p>JavaScript的闭包</p>
+<pre><code>function a(x){
+    var tem=3;
+    function b(y){
+        console.log(x+y+(++tem));
+    }
+}
+</code></pre><p>a函数中的b函数就是一个闭包，b函数可以使用a函数的局部变量，参数，最典型的闭包应该是这样的，将定义在函数中的函数作为返回值</p>
+<pre><code>function a(x){
+    var tem =3 ;
+    function b(y){
+        console.log(x+y+(++tem));
+    }
+return b;
+}
+</code></pre><p>闭包的缺点是，因为内部闭包函数可以访问外部函数的变量，所以外部函数的变量不能被释放，如果闭包嵌套太多，会导致内存占用大，要合理使用闭包</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/15/how-to-install-Python3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1490,128 +1670,6 @@ End Sub
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/12/update-search-box-placeholder/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/06/12/update-search-box-placeholder/" itemprop="url">
-                  update search box placeholder
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-12T11:48:44+08:00">
-                2018-06-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="How-to-update-placeholder-for-searchbox"><a href="#How-to-update-placeholder-for-searchbox" class="headerlink" title="How to update placeholder for searchbox"></a>How to update placeholder for searchbox</h1><p>To change the placeholder text in the search bar, go to Admin panel==&gt;Configuration==&gt;Language==&gt; choose the language you’re using and change its string resource.</p>
-<p> The resource name for search is ‘search.searchbox.tooltip’. Similarly, you can change any label throughout the site without changing source code.</p>
-<p>Try to make full use of Language, you will enjoy more from nopCommerce.</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1661,7 +1719,7 @@ End Sub
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">97</span>
+                <span class="site-state-item-count">98</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
