@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2019/12/09/JS-interview/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
 <meta property="og:description" content="JS interveiwBasic:  String Number Boolean undefined null symbol  complex   Object Array Function RegExp Date Error  global  Math HTTP  1xx infor 2xx success 3xx redirect 4xx client error 5xx server er">
-<meta property="og:updated_time" content="2020-02-17T21:56:26.237Z">
+<meta property="og:updated_time" content="2020-02-19T21:45:51.386Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS interview">
 <meta name="twitter:description" content="JS interveiwBasic:  String Number Boolean undefined null symbol  complex   Object Array Function RegExp Date Error  global  Math HTTP  1xx infor 2xx success 3xx redirect 4xx client error 5xx server er">
@@ -429,7 +429,37 @@
 return b;
 }
 </code></pre><p>闭包的缺点是，因为内部闭包函数可以访问外部函数的变量，所以外部函数的变量不能被释放，如果闭包嵌套太多，会导致内存占用大，要合理使用闭包</p>
+<p>Splice()方法从 数组中添加/删除项目，然后返回被删除的项目<br>//会改变原来数组<br>arrayObject.splice(整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置,要删除的项目数量-如果设置为 0-则不会删除项目,向数组添加的新项目)</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+    var arr = new Array(6)
+    arr[0]=&quot;George&quot;
+    arr[1]=&quot;John&quot;
+    arr[2]=&quot;Thomas&quot;
+    arr[3]=&quot;James&quot;
+    arr[4]=&quot;Andrew&quot;
+    arr[5]=&quot;Martin&quot;
+document.write(arr+&quot;&lt;br/&gt;&quot;)
+arr.splice(2,0,&quot;william&quot;)
+document.write(arr+&quot;&lt;br/&gt;&quot;)
+&lt;script&gt;
 
+//George,John,Thomas,James,Andrew,Martin
+//George,John,william,Thomas,James,Andrew,Martin
+</code></pre><p>JavaScript slice() 方法<br>Slice()方法从已有数组中返回选定元素<br>arrayObject.slice(规定从何处开始选取-如果是负数-那么它规定从数组尾部开始算起的位置,规定从何处结束选取)</p>
+<pre><code>&lt;script type=&quot;&quot;text/javascript&quot;/&gt;
+var arr = new Array(3)
+arr[0] = &quot;George&quot;
+arr[1] = &quot;John&quot;
+arr[2] = &quot;Thomas&quot;
+document.write(arr+&quot;&lt;br/&gt;&quot;)
+document.write(arr.slice(1)+&quot;&lt;br/&gt;&quot;)
+document.write(arr)
+&lt;/script&gt;
+
+//George,John,Thomas
+//John,Thomas
+//George,John,Thomas
+</code></pre>
       
     </div>
 
