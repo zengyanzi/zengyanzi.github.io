@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="SQL," />
+  <meta name="keywords" content="Interview," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="SQL/****** Script for SelectTopNRows command from SSMS  ******/ SELECT Email from [MicroAnalytix].[dbo].[Customer] where Id     in( select Customer_Id From [MicroAnalytix].[dbo].[Customer_CustomerRole">
-<meta name="keywords" content="SQL">
+<meta name="description" content="Data formatJS的数据格式化 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt;     &amp;lt;head&amp;gt;         &amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; charset=&amp;quot;utf-8&amp;quot;?&amp;gt;         &amp;lt;title&amp;gt;Dataformat&amp;lt;/title&amp;gt">
+<meta name="keywords" content="Interview">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sql exist">
-<meta property="og:url" content="http://yoursite.com/2017/04/24/sql-exist/index.html">
+<meta property="og:title" content="data format">
+<meta property="og:url" content="http://yoursite.com/2020/02/21/data-format/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="SQL/****** Script for SelectTopNRows command from SSMS  ******/ SELECT Email from [MicroAnalytix].[dbo].[Customer] where Id     in( select Customer_Id From [MicroAnalytix].[dbo].[Customer_CustomerRole">
-<meta property="og:updated_time" content="2017-04-23T22:35:45.394Z">
+<meta property="og:description" content="Data formatJS的数据格式化 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt;     &amp;lt;head&amp;gt;         &amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; charset=&amp;quot;utf-8&amp;quot;?&amp;gt;         &amp;lt;title&amp;gt;Dataformat&amp;lt;/title&amp;gt">
+<meta property="og:updated_time" content="2020-02-21T00:33:32.367Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sql exist">
-<meta name="twitter:description" content="SQL/****** Script for SelectTopNRows command from SSMS  ******/ SELECT Email from [MicroAnalytix].[dbo].[Customer] where Id     in( select Customer_Id From [MicroAnalytix].[dbo].[Customer_CustomerRole">
+<meta name="twitter:title" content="data format">
+<meta name="twitter:description" content="Data formatJS的数据格式化 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt;     &amp;lt;head&amp;gt;         &amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; charset=&amp;quot;utf-8&amp;quot;?&amp;gt;         &amp;lt;title&amp;gt;Dataformat&amp;lt;/title&amp;gt">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/24/sql-exist/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/02/21/data-format/"/>
 
 
 
 
 
-  <title> sql exist | Bunny's  Code Burrow </title>
+  <title> data format | Bunny's  Code Burrow </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/sql-exist/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/21/data-format/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jenny Zeng">
@@ -318,7 +318,7 @@
             
             
               
-                sql exist
+                data format
               
             
           </h1>
@@ -333,8 +333,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T10:35:02+08:00">
-                2017-04-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-21T08:32:26+08:00">
+                2020-02-21
               </time>
             
 
@@ -368,9 +368,68 @@
       
 
       
-        <h1 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h1><pre><code>/****** Script for SelectTopNRows command from SSMS  ******/
-SELECT Email from [MicroAnalytix].[dbo].[Customer] where Id  
-  in( select Customer_Id From [MicroAnalytix].[dbo].[Customer_CustomerRole_Mapping] where CustomerRole_Id=6);
+        <h1 id="Data-format"><a href="#Data-format" class="headerlink" title="Data format"></a>Data format</h1><p>JS的数据格式化</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv=&quot;Content-Type&quot; charset=&quot;utf-8&quot;?&gt;
+        &lt;title&gt;Dataformat&lt;/title&gt;
+        &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js&quot;&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;input type=&quot;text&quot; id=&quot;origin&quot;  placeholder=&quot;please input the number&quot;  /&gt;
+        &lt;br/&gt;
+        &lt;!-- &lt;input type=&quot;text&quot; id=&quot;count&quot; pleaceholder=&quot;please input the number of decimals&quot; /&gt; --&gt;
+        &lt;br/&gt;
+        &lt;button type=&quot;button&quot; onClick=&quot;myChange()&quot;&gt;Click&lt;/button&gt;
+        &lt;br/&gt;
+        &lt;input type=&quot;text&quot; id=&quot;output&quot;/&gt;
+        &lt;script&gt;
+            function myChange(){
+                const origindata= parseInt(document.getElementById(&quot;origin&quot;).value);
+                console.log(&quot;origindata&quot;+origindata);
+                //const count =parseInt(document.getElementById(&quot;count&quot;).value);
+                //console.log(&quot;count&quot;+count);
+                const outputdata = numeral(origindata).format(&apos;0,0.00&apos;)
+                document.getElementById(&quot;output&quot;).value=outputdata;
+            }
+            function num_format(number, decimals, dec_point, thousands_sep, roundtag){
+            /**
+ * 格式化数字
+ * @param  {[string | number]} number  [要格式化的数字]
+ * @param  {[number]} decimals         [保留几位小数]
+ * @param  {[string]} dec_point        [小数点符号]
+ * @param  {[string]} thousands_sep    [千分位符号]
+ * @param  {[string]} roundtag         [舍入参数，默认 &quot;ceil&quot; 向上取,&quot;floor&quot;向下取,&quot;round&quot; 四舍五入]
+ * @return {[string]} 格式化后的结果
+ */    
+                number =(number +&apos;&apos;).replace(/[^0-9+-Ee.]/g,&apos;&apos;);
+                roundtag =roundtag || &apos;ceil&apos;;//&quot;ceil&quot;,&quot;floor&quot;,&quot;round&quot;
+                var n =!isFinite(+number)?0 :number,
+                    prec =!isFinite(+decimal)?0:Math.abs(decimal),
+                    sep= (typeof thousands_sep ===&apos;undefined&apos;)?&apos;,&apos;:thousands_sep,
+                    dec =(typeof dec_point === &apos;undefined&apos;)?&apos;,&apos;:dec_point,
+                    s= &apos;&apos;,
+                    toFixedFix = function(n,prec){
+                         var k =Math.pow(10,prec);
+                         console.log();
+                         return &apos;&apos;+parseFloat(Math[roundtag](parseFloat(n *k ).toFixed((prec*2))).toFixed(prec*2))/k;
+
+                    };
+                    s=(prec? toFixedFix(n,prec):&apos;&apos;+Math.round(n)).split(&apos;.&apos;);
+                    var re =/(-?\d+)(\d{3})/;
+                    while(re.test(s[0])){
+                    s[0]=s[0].replace(re,&quot;$1&quot;+sep+&quot;$2&quot;);
+                    }
+                    if((s[1]||&apos;&apos;).length&lt;prec){
+                     s[1]=s[1]||&apos;&apos;;
+                     s[1]+= new Array(prec -s[1].length+1).join(&apos;0&apos;);
+                    }
+                    return s.join(dec);
+                }
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
       
     </div>
@@ -400,7 +459,7 @@ SELECT Email from [MicroAnalytix].[dbo].[Customer] where Id
       
         <div class="post-tags">
           
-            <a href="/tags/SQL/" rel="tag"># SQL</a>
+            <a href="/tags/Interview/" rel="tag"># Interview</a>
           
         </div>
       
@@ -413,18 +472,14 @@ SELECT Email from [MicroAnalytix].[dbo].[Customer] where Id
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/24/sql-not-in/" rel="next" title="sql not in">
-                <i class="fa fa-chevron-left"></i> sql not in
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/24/remove-application-css/" rel="prev" title="remove application css">
-                remove application css <i class="fa fa-chevron-right"></i>
+              <a href="/2020/02/20/postcsssprite/" rel="prev" title="csssprite">
+                csssprite <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -565,7 +620,7 @@ SELECT Email from [MicroAnalytix].[dbo].[Customer] where Id
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL"><span class="nav-number">1.</span> <span class="nav-text">SQL</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Data-format"><span class="nav-number">1.</span> <span class="nav-text">Data format</span></a></li></ol></div>
             
 
           </div>
