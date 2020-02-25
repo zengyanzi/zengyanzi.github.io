@@ -297,6 +297,223 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/25/typeof/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2020/02/25/typeof/" itemprop="url">
+                  typeof
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-25T05:48:38+08:00">
+                2020-02-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Typeof"><a href="#Typeof" class="headerlink" title="Typeof "></a>Typeof </h1><p>变量类型和计算<br>-<br>题目：</p>
+<p>-typeof 能判断哪些类型</p>
+<p>-何时使用=== 和==</p>
+<p>-值类型和引用类型的区别</p>
+<p>-手写深拷贝</p>
+<p>知识点：</p>
+<ul>
+<li>值类型和引用类型</li>
+</ul>
+<pre><code>let a = 100
+let b = a
+a = 200
+console.log(b)
+</code></pre><p>  //引用类型</p>
+<pre><code>let a = {age:20}
+let b = a 
+b.age =21
+console.log(a.age)
+</code></pre><p>对于对象，是a指向了内存地址1， 内存地址1是{age：20}，接下来也是给b指向了内存地址1，所以当b.age更改为21的时候，a.age也会更改<br><img src="https://s2.ax1x.com/2020/02/25/3JYtiV.png" alt=""></p>
+<p>常见值类型</p>
+<pre><code>let a // undefined; 
+const s = &apos;abc&apos; 
+const n = 100
+const b = true
+const s = Symbol(&apos;s&apos;)
+</code></pre><p>常见引用类型</p>
+<pre><code>const obj ={x :100}
+const arr =[&apos;a&apos;,&apos;b&apos;,&apos;c&apos;]
+const n = null //特殊引用类型，指针指向为空地址
+// 特殊引用类型，但是不用于存储数据，所以没有‘拷贝复制函数’这一说
+</code></pre><p>Typeof 运算符</p>
+<p>识别所有值类型</p>
+<p>识别函数</p>
+<p>判断是否是引用类型(不可以再细分)</p>
+<pre><code>//判断所有值类型
+ let a;   typeof a   //&apos;undefined&apos;
+ const str = &apos;abc&apos;  typeof str  //&apos;string&apos;
+ const n = 100; typeof n  // &apos;number&apos;
+ const b = true  typeof b  //&apos;boolean&apos;
+ const s =Symbol(&apos;s&apos;);  typeof s //&apos;Symbol&apos;
+
+//判断函数
+typeof console.log //&apos;function&apos;
+typeof function (){} // &apos;function&apos;
+
+   //能识别引用类型(不能再继续识别)
+typeof null //&apos;object&apos;
+typeof [&apos;a&apos;,&apos;b&apos;] //&apos;object&apos;
+typeof {x : 100}  //&apos;object&apos;
+</code></pre><p>深拷贝，考点：递归</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta  http-equiv=&quot;Contect-Type&quot; charset=&quot;utf-8&quot;&gt;
+            &lt;title&gt;deepclone&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;/body&gt;
+        &lt;p&gt;deepclone&lt;/p&gt;
+        &lt;script&gt;
+            const obj1={
+                age:20,
+                name:&apos;James&apos;,
+                address:{
+                   city:&apos;Chengdu&apos;,
+                   street:&apos;Zhonghe&apos;
+                },
+                arr :[&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;]
+            }
+            const obj2 =deepClone(obj1)
+
+            obj2.address.city =&apos;shanghai&apos;;
+            console.log(obj1.address.city);
+            console.log(&apos;deepClone&apos;);
+            function deepClone(obj={}){
+                if(typeof obj !== &apos;object&apos;|| obj == null){
+                // obj  is  null, just return 
+                   return obj
+                }
+                    //初始化返回结果
+                    let result
+                    if(obj instanceof Array){
+                        result =[]
+                    }else {
+                        result ={}
+                    }
+                    for(let key in obj){
+                        if(obj.hasOwnProperty(key)){
+                            //保证Key不是原型的属性,递归
+                            result[key] =deepClone(obj[key])
+                        }
+                    }
+
+                return result
+            }
+
+            &lt;/script&gt;
+        &lt;/html&gt;
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/21/data-format/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1866,131 +2083,11 @@ Allow from all
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/23/how-to-reset-password-in-local-wordpress/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2019/12/23/how-to-reset-password-in-local-wordpress/" itemprop="url">
-                  how to reset password in local wordpress
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-23T05:26:24+08:00">
-                2019-12-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="How-to-rest-password-in-local-wordpress"><a href="#How-to-rest-password-in-local-wordpress" class="headerlink" title="How to rest password in local wordpress"></a>How to rest password in local wordpress</h1><p>In this situation, the local machine does not have the access to send email to reset the password.Luckily we hava the access to the database. Update the password of your “user_pass” =”5d41402abc4b2a76b9719d911017c592”,which is MD5=”hello”. Then go to the wp-admin and login under the user which just updated the password.<br>After login, reset your password again.</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2035,7 +2132,7 @@ Allow from all
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">100</span>
+                <span class="site-state-item-count">101</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
