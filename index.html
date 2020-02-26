@@ -418,6 +418,20 @@ if (valid){
 <li>cookies</li>
 </ul>
 <p>XSS分类：可分为 存储性，反射性和DOM型三种</p>
+<p>存储性常用于用户保持数据的网站功能：论坛发帖，商品评论，用户私信等。</p>
+<p>反射性常见于URL传递参数的，比如网站搜索和跳转， POST 内容也可以触发反射性XSS。</p>
+<p>DOM型XSS攻击中，取出和执行恶意代码由浏览器端完成，属于前端JavaScript漏洞，而反射性和存储性属于服务器端的安全漏洞。</p>
+<p>XSS攻击的预防<br>XSS攻击的两大要素：来自攻击者提交恶意代码和浏览器提交恶意代码<br>所以：防止HMTL中出现注入， 防止JavaScript执行时，执行恶意代码</p>
+<p>方法<br>-</p>
+<ul>
+<li>纯前端渲染：</li>
+<li>1.浏览器先加载一个静态HTML，此HTML中不包含任何与业务相关的数据</li>
+<li>2.浏览器执行HTML中的JavaScript</li>
+<li>3.JavaScript通过Ajax加载业务数据，调用DOM API更新到页面上</li>
+<li>转义HTML</li>
+<li>如果拼接HTML是必要的，就需要采用合适的转义库，对HTML末班各处插入点进行充分的转义。常用的模板引擎 doT.js、ejs、FreeMarker</li>
+<li>DOM 中的内联事件监听器，location,onclick,onerror,onload,onmouseover等，set</li>
+</ul>
 
           
         
