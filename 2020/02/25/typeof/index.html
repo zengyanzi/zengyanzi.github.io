@@ -98,7 +98,7 @@
 <meta property="og:site_name" content="Bunny's  Code Burrow">
 <meta property="og:description" content="Typeof 变量类型和计算-题目： -typeof 能判断哪些类型 -何时使用=== 和== -值类型和引用类型的区别 -手写深拷贝 知识点：  值类型和引用类型  let a = 100 let b = a a = 200 console.log(b)   //引用类型 let a = {age:20} let b = a  b.age =21 console.log(a.age) 对于对象，">
 <meta property="og:image" content="https://s2.ax1x.com/2020/02/25/3JYtiV.png">
-<meta property="og:updated_time" content="2020-02-25T01:25:13.316Z">
+<meta property="og:updated_time" content="2020-02-27T21:07:10.447Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="typeof">
 <meta name="twitter:description" content="Typeof 变量类型和计算-题目： -typeof 能判断哪些类型 -何时使用=== 和== -值类型和引用类型的区别 -手写深拷贝 知识点：  值类型和引用类型  let a = 100 let b = a a = 200 console.log(b)   //引用类型 let a = {age:20} let b = a  b.age =21 console.log(a.age) 对于对象，">
@@ -469,7 +469,64 @@ typeof {x : 100}  //&apos;object&apos;
             &lt;/script&gt;
         &lt;/html&gt;
 </code></pre><p>所谓深拷贝就是拷贝的对象的具体内容，其内容地址是自助分配的， 拷贝结束之后，内存中的值是相同的，但是内存地址是不一样的，所以两个对象之间相互不影响，也不干涉</p>
+<ul>
+<li>字符串拼接</li>
+<li>‘==’</li>
+<li>if语句和逻辑运算</li>
+</ul>
+<p>字符串拼接 +</p>
+<pre><code>const a =100 +10  //110
+const b =100+&apos;10&apos; //&apos;10010&apos;
+const c =true +&apos;10&apos; // &apos;true10&apos;
+</code></pre><p>==运算符 通过发生转换去相等</p>
+<pre><code>100 == &apos;100&apos; //true
+0 ==&apos; &apos;   //true
+0 == false //true
+false ==&apos; &apos; //true
+null == undefined // true
+</code></pre><p>//除了 == null 之外，其他都用===</p>
+<pre><code>const obj ={x : 100}
+if (obj.a == null){}
+//if（obj.a===null|| obj.a===undefined）
+</code></pre><p>if语句和逻辑运算符</p>
+<p>truly变量  !!a === true 的变量<br>falsely变量 !!a === false 的变量</p>
+<pre><code>//以下是falsely变量，初次之外都是truly变量
+!!0 === false
+!!NaN === false
+!!&apos;&apos; === false
+!!null === false
+!!undefined === false
+!!false === false
 
+if语句里
+//truly 变量
+const a = true
+if(a){
+    //...
+}
+const b = 100
+if(b){
+    //...
+}
+
+//falsely变量
+const c = &apos;&apos;
+if(c){
+    //
+}
+const d = null
+if(d){
+//
+}
+let e
+if(e){
+    //
+}
+</code></pre><p>逻辑判断</p>
+<pre><code>console.log(10 &amp;&amp; 0) //0
+console.log(&apos;&apos;||&apos;abc&apos;) //&apos;abc&apos;
+console.log(!windows.abc) //true
+</code></pre>
       
     </div>
 
