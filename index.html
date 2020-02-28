@@ -297,6 +297,215 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/28/prototype/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2020/02/28/prototype/" itemprop="url">
+                  prototype
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-28T05:08:54+08:00">
+                2020-02-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Prototype"><a href="#Prototype" class="headerlink" title="Prototype"></a>Prototype</h1><p>class<br>-constructor  属性和方法<br>class名称以大写字母开头</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta  http-equiv=&quot;Contect-Type&quot; charset=&quot;utf-8&quot;&gt;
+            &lt;title&gt;classdemo&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;/body&gt;
+        &lt;p&gt;classdemo&lt;/p&gt;
+        &lt;script&gt;
+            class Student{
+                constructor(name,number){
+                    this.name =name
+                    this.number =number
+                }
+                sayHi(){
+                    console.log(
+                    `name ${this.name},number ${this.number}`
+                    )
+
+                }
+
+            }
+            //通过类声明对象实例
+            const james = new Student(&apos;james&apos;,100);
+            console.log(james.name);
+            console.log(james.number);
+            james.sayHi();
+
+            const tom = new Student(&apos;tom&apos;,101);
+
+            console.log(tom.name);
+            console.log(tom.number);
+            tom.sayHi();
+
+        &lt;/script&gt;
+    &lt;/html&gt;
+</code></pre><p>继承<br>-extends<br>-super<br>扩展或重写方法</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta  http-equiv=&quot;Contect-Type&quot; charset=&quot;utf-8&quot;&gt;
+            &lt;title&gt;extendsdemo&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;/body&gt;
+        &lt;p&gt;extendsdemo&lt;/p&gt;
+        &lt;script&gt;
+            class People{
+                constructor(name){
+                    this.name=name+&apos;sir&apos;
+                }
+                eat(){
+                    console.log(`${this.name} eat some food`)
+                }
+            }
+            //子类
+            class Teacher extends People{
+                    constructor(name,major){
+                    super(name)
+                    this.major=major
+                }
+                teach(){
+                    console.log(`${this.name},teach ${this.major}`)
+                }
+            }
+            class Student extends People{
+                constructor(name,number){
+                    super(name)
+                    this.number=number
+                }
+                sayHi(){
+                    console.log(`name ${this.name},number ${this.number}`)
+                }
+            }
+            const james = new Student(&apos;james&apos;,100);
+            console.log(james.name);
+            console.log(james.number);
+            james.sayHi();
+            james.eat();
+            const wang = new Teacher(&apos;wang&apos;,&apos;math&apos;);
+            console.log(wang.name);
+            console.log(wang.major);
+            wang.teach();
+            wang.eat();
+
+
+        &lt;/script&gt;
+    &lt;/html&gt;
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/26/xss-attack/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2052,149 +2261,6 @@ FALLBACK
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/wordpress-migrate/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2020/01/17/wordpress-migrate/" itemprop="url">
-                  wordpress migrate
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T04:53:37+08:00">
-                2020-01-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Wordpress-Migration"><a href="#Wordpress-Migration" class="headerlink" title="Wordpress Migration"></a>Wordpress Migration</h1><p>After server migration only the homepage works. Every single link gave a Not Found. </p>
-<p>Solution<br>1.Settings &gt; Permalinks, Change to plain</p>
-<ol>
-<li><p>.htaccess file</p>
-<pre><code># BEGIN WordPress
- &lt;IfModule mod_rewrite.c&gt;
- RewriteEngine On
- RewriteBase /
- RewriteRule ^index\.php$ - [L]
- RewriteCond %{REQUEST_FILENAME} !-f
- RewriteCond %{REQUEST_FILENAME} !-d
- RewriteRule . /index.php [L]
- &lt;/IfModule&gt;
- # END WordPress 
-</code></pre></li>
-<li><p>http.conf  edit the AllowOveride so that it is changed from None to All.</p>
-<pre><code> &lt;Directory &quot;/var/www/html&quot;&gt;
-Options Indexes FollowSymLinks
-AllowOverride All
-Order allow,deny
-Allow from all
-&lt;/Directory&gt;
-</code></pre></li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -2244,7 +2310,7 @@ Allow from all
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">102</span>
+                <span class="site-state-item-count">103</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

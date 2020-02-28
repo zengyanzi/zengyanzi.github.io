@@ -297,6 +297,137 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/20/How-to-add-css-and-jquery-to-nopcommerce/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/02/20/How-to-add-css-and-jquery-to-nopcommerce/" itemprop="url">
+                  How to add css and jquery to nopcommerce
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-20T15:52:32+08:00">
+                2018-02-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="How-to-add-css-and-jQuery-to-nopCommerce"><a href="#How-to-add-css-and-jQuery-to-nopCommerce" class="headerlink" title="How to add css and jQuery to nopCommerce"></a>How to add css and jQuery to nopCommerce</h1><p>For new Jquery plugin to nopCommerce,find the _root.head.cshtml file in Nop.Web\Views\Shared\ and add the following codes</p>
+<pre><code>Html.AppendScriptParts(@Url.Content(&quot;~/Scripts/public.ajaxcart.js&quot;));
+Html.AppendScriptParts(@Url.Content(&quot;~/Scripts/public.common.js&quot;));
+Html.AppendScriptParts(@Url.Content(&quot;~/Scripts/jquery-ui.min.js&quot;));
+Html.AppendScriptParts(@Url.Content(&quot;~/Scripts/jquery.validate.unobtrusive.min.js&quot;));
+Html.AppendScriptParts(@Url.Content(&quot;~/Scripts/jquery.validate.min.js&quot;));
+Html.AppendScriptParts(@Url.Content(&quot;~/Scripts/jquery.unobtrusive-ajax.min.js&quot;));
+Html.AppendScriptParts(@Url.Content(&quot;~/Scripts/jquery-1.7.1.min.js&quot;));
+</code></pre><p>If it says $ is undefined, you probably have used Html.AppendScriptParts</p>
+<p>For css, use</p>
+<pre><code>Html.AppendCssFileParts(@Url.Content(&quot;~/Content/smoothness/jquery-ui-1.8.17.custom.css&quot;));
+</code></pre><p>The path to upload jQuery code is /Script</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/08/update-the-hover-banner/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1785,139 +1916,6 @@ color:#111;
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/25/update-apk-version-to-google-play/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/09/25/update-apk-version-to-google-play/" itemprop="url">
-                  update apk version to google play
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-25T14:37:58+08:00">
-                2017-09-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="How-to-update-APK-to-Google-play"><a href="#How-to-update-APK-to-Google-play" class="headerlink" title="How to update APK to Google play"></a>How to update APK to Google play</h1><p>For people who use Android Studio the problem may be solved by editing  versionCode and versionName in </p>
-<pre><code>android/app/build.gradle
-</code></pre><p> instead of AndroidManifest.xml.e.g.</p>
-<pre><code>defaultConfig {
-    applicationId &quot;com.my.packageId&quot;
-    minSdkVersion 15
-    targetSdkVersion 22
-    versionCode 2      &lt;-- change this
-    versionName &quot;2.0&quot;  &lt;-- change this
-}
-</code></pre><p>If not, there will be error<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058284/error1_rut8jd.png" alt=""></p>
-<p>The way to update the apk is like following:<br>1.Eddit Release</p>
-<p><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk0_goi6wi.png" alt=""></p>
-<p>2.Add the new released apk(remember to check the version code!!!)<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk_pkdjdf.png" alt=""><br>3.Remember to save the change<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk2_kq3tcr.png" alt=""><br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk3_wzai4j.png" alt=""><br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk4_edc57u.png" alt=""><br>Start to roll-out to Beta<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058283/add_apk5_fuw5e2.png" alt=""><br>Then you will see the result<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058284/add_apk6_codtae.png" alt=""><br>4.Here is the place to view all the apk<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058729/review_all_the_apk_sclfsr.png" alt=""><br>5.Remember to check the status of apk<br><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1516058779/final_zgjer9.png" alt=""></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1967,7 +1965,7 @@ color:#111;
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">102</span>
+                <span class="site-state-item-count">103</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
