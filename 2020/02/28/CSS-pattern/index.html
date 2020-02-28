@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="WordPress," />
+  <meta name="keywords" content="Interview," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="After updating the Domain for WordPress go to wp-config.php  update:the URL with the latest one /** MySQL hostname */ define(&amp;apos;DB_HOST&amp;apos;, &amp;apos;microscience.com.au&amp;apos;); Same for another web">
-<meta name="keywords" content="WordPress">
+<meta name="description" content="通用css样式模板模板一 @charset &amp;quot;utf-8&amp;quot;; /* ------------------------------------全局定义---------------------------------------- */ /* 将具有默认margin和padding的标记置零，所有标记的margin、padding都在使用时具体定义 */ *{ margin:0;">
+<meta name="keywords" content="Interview">
 <meta property="og:type" content="article">
-<meta property="og:title" content="wordpress change domain">
-<meta property="og:url" content="http://yoursite.com/2017/05/22/wordpress-change-domain/index.html">
+<meta property="og:title" content="CSS pattern">
+<meta property="og:url" content="http://yoursite.com/2020/02/28/CSS-pattern/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="After updating the Domain for WordPress go to wp-config.php  update:the URL with the latest one /** MySQL hostname */ define(&amp;apos;DB_HOST&amp;apos;, &amp;apos;microscience.com.au&amp;apos;); Same for another web">
-<meta property="og:updated_time" content="2019-08-28T05:23:52.167Z">
+<meta property="og:description" content="通用css样式模板模板一 @charset &amp;quot;utf-8&amp;quot;; /* ------------------------------------全局定义---------------------------------------- */ /* 将具有默认margin和padding的标记置零，所有标记的margin、padding都在使用时具体定义 */ *{ margin:0;">
+<meta property="og:updated_time" content="2020-02-28T02:18:27.788Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="wordpress change domain">
-<meta name="twitter:description" content="After updating the Domain for WordPress go to wp-config.php  update:the URL with the latest one /** MySQL hostname */ define(&amp;apos;DB_HOST&amp;apos;, &amp;apos;microscience.com.au&amp;apos;); Same for another web">
+<meta name="twitter:title" content="CSS pattern">
+<meta name="twitter:description" content="通用css样式模板模板一 @charset &amp;quot;utf-8&amp;quot;; /* ------------------------------------全局定义---------------------------------------- */ /* 将具有默认margin和padding的标记置零，所有标记的margin、padding都在使用时具体定义 */ *{ margin:0;">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/22/wordpress-change-domain/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/02/28/CSS-pattern/"/>
 
 
 
 
 
-  <title> wordpress change domain | Bunny's  Code Burrow </title>
+  <title> CSS pattern | Bunny's  Code Burrow </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/22/wordpress-change-domain/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/28/CSS-pattern/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jenny Zeng">
@@ -318,7 +318,7 @@
             
             
               
-                wordpress change domain
+                CSS pattern
               
             
           </h1>
@@ -333,8 +333,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-22T21:29:41+08:00">
-                2017-05-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-28T10:12:52+08:00">
+                2020-02-28
               </time>
             
 
@@ -368,24 +368,67 @@
       
 
       
-        <h1 id="After-updating-the-Domain-for-WordPress"><a href="#After-updating-the-Domain-for-WordPress" class="headerlink" title="After updating the Domain for WordPress"></a>After updating the Domain for WordPress</h1><ol>
-<li>go to wp-config.php</li>
-</ol>
-<pre><code>update:the URL with the latest one
-/** MySQL hostname */
-define(&apos;DB_HOST&apos;, &apos;microscience.com.au&apos;);
-</code></pre><p>Same for another website</p>
-<pre><code>/** Sets up WordPress local environmental test only for local test */
-define( &apos;WP_SITEURL&apos;, &apos;http://localhost/didi&apos; );
-define( &apos;WP_HOME&apos;,    &apos;http://localhost/didi&apos; );
-</code></pre><ol>
-<li><p>go the the backend of WordPress:/wp-admin/options-general.php</p>
-<p> update the WordPress Address (URL) And Site Address (URL)<br><strong>This part might not be necessary</strong></p>
-</li>
-<li>sometimes we need access to database, modify the table :wp_options. In the tale of wp_options, find the two fields:home and siteurl, change the option_value to the same with wp-config.php. For example, for the website of didi, we use <a href="http://localhost/didi" target="_blank" rel="external">http://localhost/didi</a> for both fields.</li>
-<li></li>
-</ol>
+        <h1 id="通用css样式模板"><a href="#通用css样式模板" class="headerlink" title="通用css样式模板"></a>通用css样式模板</h1><p>模板一</p>
+<pre><code>@charset &quot;utf-8&quot;;
+/* ------------------------------------全局定义---------------------------------------- */
+/* 将具有默认margin和padding的标记置零，所有标记的margin、padding都在使用时具体定义 */
+*{ margin:0;padding:0;}
 
+/* 修正IE5.x和IE6的斜体溢出bug */
+* html body{ overflow:visible;}
+* html iframe, * html frame{ overflow:auto;}
+* html frameset{ overflow:hidden;}
+
+/* 常用标签，基本标签默认样式取消，HTML标签，取消基本标签默认样式，防止不同浏览器显示效果不同，text-align:center; 解决不同浏览器居中问题 */
+body{ color:#000; background:#FFF; font:12px/22px Verdana,Arial,sans-serif,&quot;Times New Roman&quot;,宋体; text-align:center;}
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,tr{ margin:0; padding:0;}
+input,select{ font-size:12px; vertical-align:middle;}
+</code></pre><a id="more"></a>
+<pre><code>/* 设置内容左对齐，恢复因BODY设置剧中产生的继承 */
+body div{ text-align:left;}
+
+/* 标签属性，textarea,input 强制输入时内容超出时换行 */
+textarea,input{ word-wrap:break-word; word-break:break-all; padding:0px;}
+
+/* 清除ul列表标记的样式，ul列表更多的用在不需要列表前置符号的样式里 */
+li{ list-style-type:none;}
+
+/* 定义图片边框，当图片作为链接内容被填充时，会有默认边框出现，重定义掉 */
+img{ border:0 none;}
+
+/* 定义默认的链接样式，仅仅是作为默认样式提供，可以在各自的实例中覆盖掉 */
+a:link, a:visited{ color:#04C; text-decoration:none;}
+a:hover{ color:#F60; text-decoration:underline;}
+
+/* 去掉链接的虚线框 */
+a { outline:none; star:expression(this.onFocus=this.blur());}
+
+/* 定义H系列标签，覆盖H系列标签默认属性 */
+h1{ font-size:24px;}
+h2{ font-size:20px;}
+h3{ font-size:18px;}
+h4{ font-size:16px;}
+h5{ font-size:14px;}
+h6{ font-size:12px;}
+</code></pre><p>通用样式2</p>
+<pre><code>@charset &quot;utf-8&quot;;
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td {margin:0;padding:0;}
+body, button, input, select, textarea {font:12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;}
+h1, h2, h3, h4, h5, h6 {font-size:100%;}
+address, cite, dfn, em, var {font-style:normal;}
+code, kbd, pre, samp {font-family:courier new, courier, monospace;}
+small {font-size:12px;}
+ul, ol {list-style:none;}
+a {text-decoration:none;}
+a:hover {text-decoration:underline;}
+sup {vertical-align:text-top;}
+sub {vertical-align:text-bottom;}
+legend {color:#000;}
+fieldset, img {border:0;}
+button, input, select, textarea {font-size:100%;}
+table {border-collapse:collapse;border-spacing:0;}
+</code></pre>
       
     </div>
 
@@ -414,7 +457,7 @@ define( &apos;WP_HOME&apos;,    &apos;http://localhost/didi&apos; );
       
         <div class="post-tags">
           
-            <a href="/tags/WordPress/" rel="tag"># WordPress</a>
+            <a href="/tags/Interview/" rel="tag"># Interview</a>
           
         </div>
       
@@ -427,18 +470,14 @@ define( &apos;WP_HOME&apos;,    &apos;http://localhost/didi&apos; );
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/22/ios-Apple-account-application/" rel="next" title="ios Apple account application">
-                <i class="fa fa-chevron-left"></i> ios Apple account application
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/19/RegExp/" rel="prev" title="RegExp">
-                RegExp <i class="fa fa-chevron-right"></i>
+              <a href="/2020/02/28/prototype/" rel="prev" title="prototype">
+                prototype <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -579,7 +618,7 @@ define( &apos;WP_HOME&apos;,    &apos;http://localhost/didi&apos; );
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#After-updating-the-Domain-for-WordPress"><span class="nav-number">1.</span> <span class="nav-text">After updating the Domain for WordPress</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#通用css样式模板"><span class="nav-number">1.</span> <span class="nav-text">通用css样式模板</span></a></li></ol></div>
             
 
           </div>

@@ -297,6 +297,131 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/19/Set-up-SSL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2019/09/19/Set-up-SSL/" itemprop="url">
+                  Set up SSL
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-19T09:05:04+08:00">
+                2019-09-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="SET-UP-SSL-FOR-NOPCOMMERCE-AND-WORDPRESS"><a href="#SET-UP-SSL-FOR-NOPCOMMERCE-AND-WORDPRESS" class="headerlink" title="SET UP SSL FOR NOPCOMMERCE AND WORDPRESS"></a>SET UP SSL FOR NOPCOMMERCE AND WORDPRESS</h1><p>In order to update for all these websites, first ,we need to ask the host to update the SSL from the server side.</p>
+<p>Then, for WordPress, it would be much easier.<br><img src="https://s2.ax1x.com/2019/09/19/nbrSot.png" alt=""><br><img src="https://s2.ax1x.com/2019/09/19/nbrZes.png" alt=""></p>
+<p>However, for Nopcommerce, the setting is different as below:<br>Go to the Administration-&gt;Configuration-&gt;Stores-&gt;Edit</p>
+<p>Update the Store URL with HTTPS</p>
+<p>Then enable the SSL</p>
+<p>Finally, go to General And Miscellaneous Settings,under the tab of Security settings, click the Force SSL for all site pages</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/13/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1532,421 +1657,6 @@ debug1: Exit status 1
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/20/add-a-pop-ups-to-nopcommerce/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/02/20/add-a-pop-ups-to-nopcommerce/" itemprop="url">
-                  add a pop-ups to nopcommerce
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-20T16:06:18+08:00">
-                2018-02-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="How-to-add-a-pop-ups-to-nopcommcerce"><a href="#How-to-add-a-pop-ups-to-nopcommcerce" class="headerlink" title="How to add a pop-ups to nopcommcerce"></a>How to add a pop-ups to nopcommcerce</h1><p>Here is the solution to add one without create new model and view.<br>Go to theme/xxx/view/home/Index.cshtml</p>
-<p>The key points to achieve it is Click p<strong>icture-&gt;popup dialog-&gt;input email-&gt;check email-&gt;check slide-&gt;send email</strong></p>
-<p>We use the function of emailproducttofriend, which doesn’t require recaptcha,however, in order to provent from spam, we use jQuery to fake one later.</p>
-<p>In order to avoid creating model and view, we use jQuery to post the data to server like below:</p>
-<pre><code>var data = {&quot;YourEmailAddress&quot;:YourEmailAddress,
-
-&quot;FriendEmail&quot;:&quot;jenny@microanalytix.co.nz&quot;,
-
-&quot;PersonalMessage&quot;:&quot;Email: &quot;+YourEmailAddress+&quot; Team: &quot;+team,
-
-&quot;send-email&quot;:&quot;Send email&quot;};
-
-$.ajax({  
-
-    type : &quot;post&quot;,  
-
-    url : &quot;productemailafriend/5443&quot;,  
-
-    data : data,  
-
-    async : false,  
-
-}); 
-</code></pre><p>Here is the html part to get the information, between the code, the </p>
-<pre><code>&lt;div id=&quot;drag&quot;&gt;&lt;/div&gt;
-</code></pre><p> is call the function of slide which will be used later</p>
-<pre><code>&lt;div id=&quot;footy&quot;&gt;
-    &lt;div&gt;      
-        &lt;label&gt;Please input your Email&lt;/label&gt;&lt;input id=&quot;YourEmailAddress&quot; name=&quot;YourEmailAddress&quot; type=&quot;text&quot;/&gt;
-
-         &lt;br&gt;
-
-        &lt;label&gt;Please choose your team&lt;/label&gt;
-
-        &lt;select id=&quot;team&quot;&gt;
-
-              &lt;option value=&quot;NRL&quot;&gt;NRL&lt;/option&gt;
-
-              &lt;option value=&quot;AFL&quot;&gt;AFL&lt;/option&gt;
-
-        &lt;/select&gt;
-
-    &lt;/div&gt;    
-    &lt;div id=&quot;drag&quot;&gt;&lt;/div&gt;
-    &lt;input id=&quot;footysubmit&quot; class=&quot;button-1&quot; type=&quot;button&quot; value=&quot;Send Email&quot;/&gt;
-
-    &lt;label class=&quot;footysend&quot;&gt;We will contact you later&lt;/label&gt;
-&lt;/div&gt;
-</code></pre><p>After finish the part of html, we would work on jQuery part. The plugin used for pop-ups is jQuery-ui, which could be see from _Root.Head.cshtml</p>
-<pre><code>Html.AddScriptParts(&quot;~/Scripts/jquery-ui/jquery-ui.js&quot;);
-Html.AppendCssFileParts(&quot;~/Scripts/base/jquery-ui.css&quot;);
-</code></pre><p>Then it is called in index.cshtml as below:</p>
-<pre><code>$(&apos;.footapp&apos;).click(function () {
-    $(&quot;#footy&quot; ).dialog(); 
-})
-</code></pre><p>Then work on the email validation, we choose RegExp to achieve it as below </p>
-<pre><code>/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/
-</code></pre><p>However, the website crashed due to the RegEx has @ char, while nopcommerce used the Razor which is using @ character, so we need to change it to </p>
-<pre><code>/^\w+((-\w+)|(\.\w+))*\@@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/
-</code></pre><p>Then we need to work on the slide, by adding the plugin of drag in _Root.Head.cshtml</p>
-<pre><code>Html.AddScriptParts(&quot;~/Scripts/drag/js/drag.js&quot;);
-Html.AppendCssFileParts(&quot;~/Scripts/drag/css/drag.css&quot;);
-</code></pre><p>However, we need to change the css and js of drag to fit our requirment:</p>
-<p>For js, we need to add an attribute which would be employed later to activate our buttom:</p>
-<pre><code>function dragOk(){
-            handler.removeClass(&apos;handler_bg&apos;).addClass(&apos;handler_ok_bg&apos;);
-            text.text(&apos;success&apos;);
-            text.attr(&quot;onselectstart&quot;,&quot;true&quot;);
-            drag.css({&apos;color&apos;: &apos;#fff&apos;});
-            handler.unbind(&apos;mousedown&apos;);
-            $(document).unbind(&apos;mousemove&apos;);
-            $(document).unbind(&apos;mouseup&apos;);
-        }
-</code></pre><p>Then call the attribute in index.cshtml like below:</p>
-<pre><code>$(&quot;#footysubmit&quot;).click(function(){
-
-   if($(&apos;.drag_text&apos;).attr(&quot;onselectstart&quot;)==&quot;true&quot;){
-</code></pre><p>which means if it = true, it passed the validation then we can send email.</p>
-<p>Here are some tips in drag.css, for example, adjust its height and width, update the photo by upload to server instead of using online one.</p>
-<pre><code>.handler_bg{
-    background: #fff url(&quot;../1.png&quot;) no-repeat center;
-}
-.handler_ok_bg{
-    background: #fff url(&quot;../2.png&quot;) no-repeat center
-}
-</code></pre><p>Here is the full code for index.cshtml</p>
-<pre><code>@{
-
-    Layout = &quot;~/Views/Shared/_ColumnsTwo.cshtml&quot;;
-
-}
-
-&lt;div class=&quot;page home-page&quot;&gt;
-
-    &lt;div class=&quot;page-body&quot;&gt;
-
-        @Html.Widget(&quot;home_page_top&quot;)
-
-        @Html.Action(&quot;TopicBlock&quot;, &quot;Topic&quot;, new { systemName = &quot;HomePageText&quot; })
-
-        @Html.Action(&quot;HomepageCategories&quot;, &quot;Catalog&quot;)
-
-        @Html.Action(&quot;HomepageProducts&quot;, &quot;Catalog&quot;)
-
-        @Html.Action(&quot;HomepageBestSellers&quot;, &quot;Catalog&quot;)
-
-        @Html.Action(&quot;HomePageNews&quot;, &quot;News&quot;)
-
-        @Html.Action(&quot;HomePagePolls&quot;, &quot;Poll&quot;)
-
-        @Html.Widget(&quot;home_page_bottom&quot;)
-
-    &lt;/div&gt;
-
-    &lt;div class=&quot;footapp&quot; &gt;
-
-        &lt;img style=&quot;width:158px;height:158px&quot;  src=&quot;../../Content/images/FOOTY.png&quot; &gt;
-
-    &lt;/div&gt;
-
-    &lt;div class=&quot;layapptop&quot;&gt;
-
-        &lt;!--&lt;div class=&quot;app&quot;&gt;
-
-             &lt;a  href=&quot;products-on-promotion&quot;&gt;
-
-                &lt;section class=&quot;slider-contaner&quot;&gt;
-
-                &lt;ul class=&quot;slider&quot;&gt;
-
-                &lt;li class=&quot;slider-item slider-item1&quot;&gt;&lt;/li&gt;
-
-                &lt;li class=&quot;slider-item slider-item2&quot;&gt;&lt;/li&gt;
-
-                &lt;/ul&gt;
-
-                &lt;/section&gt;
-
-            &lt;/a&gt;
-
-            &lt;div class=&quot;app_box&quot;&gt;
-
-                &lt;i class=&quot;icon_a&quot;&gt;&lt;/i&gt;
-
-                &lt;div class=&quot;app_tab_con&quot;&gt;
-
-                    &lt;img style=&quot;width:98px;height:98px&quot;  src=&quot;../../Content/images/tree.jpg&quot; &gt;
-
-                &lt;/div&gt;
-
-                &lt;h2&gt;Click to open gift&lt;/h2&gt;
-
-            &lt;/div&gt;
-
-        &lt;/div&gt;--&gt;          
-
-        &lt;div class=&quot;server_box&quot;&gt;
-
-            &lt;a class=&quot;server&quot; href=&quot;contactus&quot;&gt;
-
-                &lt;img style=&quot;width:98px;height:58px&quot;  src=&quot;../../Content/images/ContactUs.png&quot; &gt;
-
-            &lt;/a&gt;
-
-
-
-            &lt;div class=&quot;server_con&quot;&gt;
-
-                &lt;i class=&quot;icon_a&quot;&gt;&lt;/i&gt;
-
-                &lt;h2&gt;1800 643 339&lt;/h2&gt;
-
-                &lt;p&gt;worktime 9:00-17:00&lt;/p&gt;
-
-            &lt;/div&gt;
-
-
-
-        &lt;/div&gt;
-
-        &lt;div id=&quot;footy&quot;&gt;
-
-            &lt;div&gt;      
-
-                &lt;label&gt;Please input your Email&lt;/label&gt;&lt;input id=&quot;YourEmailAddress&quot; name=&quot;YourEmailAddress&quot; type=&quot;text&quot;/&gt;
-
-                &lt;br&gt;
-
-                &lt;label&gt;Please choose your team&lt;/label&gt;
-
-                &lt;select id=&quot;team&quot;&gt;
-
-                  &lt;option value=&quot;NRL&quot;&gt;NRL&lt;/option&gt;
-
-                  &lt;option value=&quot;AFL&quot;&gt;AFL&lt;/option&gt;
-
-                &lt;/select&gt;
-
-            &lt;/div&gt;
-
-
-            &lt;div id=&quot;drag&quot;&gt;&lt;/div&gt;
-            &lt;input id=&quot;footysubmit&quot; class=&quot;button-1&quot; type=&quot;button&quot; value=&quot;Send Email&quot;/&gt;
-
-            &lt;label class=&quot;footysend&quot;&gt;We will contact you later&lt;/label&gt;
-
-        &lt;/div&gt;
-
-    &lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;script&gt;
-
-    $(function() {
-     $(&apos;#drag&apos;).drag();
-
-
-
-        $(&apos;.footapp&apos;).click(function () {
-            $(&quot;#footy&quot; ).dialog(); 
-        })
-
-        $(&quot;#footysubmit&quot;).click(function(){
-
-            if($(&apos;.drag_text&apos;).attr(&quot;onselectstart&quot;)==&quot;true&quot;){
-
-                var team = $(&quot;#team&quot;).val();
-
-                var YourEmailAddress=$(&apos;#YourEmailAddress&apos;).val();
-
-                if(YourEmailAddress==&apos;&apos;){
-                    $(&apos;#YourEmailAddress&apos;).focus();
-                    alert(&quot;Please input your Email address&quot;);
-                }else{
-                     if(YourEmailAddress.match(/^\w+((-\w+)|(\.\w+))*\@@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/)){
-                            var data = {&quot;YourEmailAddress&quot;:YourEmailAddress,
-
-                            &quot;FriendEmail&quot;:&quot;jenny@microanalytix.co.nz&quot;,
-
-                            &quot;PersonalMessage&quot;:&quot;Email: &quot;+YourEmailAddress+&quot; Team: &quot;+team,
-
-                            &quot;send-email&quot;:&quot;Send email&quot;};
-
-                            $.ajax({  
-
-                                type : &quot;post&quot;,  
-
-                                url : &quot;productemailafriend/5443&quot;,  
-
-                                data : data,  
-
-                                async : false,  
-
-                            }); 
-
-                            $(&quot;.footysend&quot;).show(0.5);
-                            $(&apos;#YourEmailAddress&apos;).val(&quot;&quot;);
-
-                     }else{
-                         alert(&quot;Please input correct Email address&quot;);
-                         $(&apos;#YourEmailAddress&apos;).focus();
-                         return false;
-                     }
-
-                }
-
-            }else {
-                alert(&quot;Please slide to unlock&quot;)
-            }
-
-
-        });
-
-    })
-
-&lt;/script&gt;
-</code></pre><p>Here is the part of css we updated for the feature</p>
-<pre><code>#footy{
-  display: none;
-
-  text-align: center;
-
-}
-
-.footysend{
-  display: none;
-}
-.footapp{
-  width: 220px;
-  height: 140px;
-  position: fixed;
-  z-index: 99;
-  right: 20px;
-  bottom: 300px;
-}
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1996,7 +1706,7 @@ Html.AppendCssFileParts(&quot;~/Scripts/drag/css/drag.css&quot;);
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">103</span>
+                <span class="site-state-item-count">104</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
