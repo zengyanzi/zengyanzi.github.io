@@ -503,93 +503,22 @@ Html.AppendScriptParts(@Url.Content(&quot;~/Scripts/jquery-1.7.1.min.js&quot;));
 
       
         
-          
-            <h1 id="How-to-update-the-hover-banner-to-fix-the-bug-of-responsive"><a href="#How-to-update-the-hover-banner-to-fix-the-bug-of-responsive" class="headerlink" title="How to update the hover banner to fix the bug of responsive"></a>How to update the hover banner to fix the bug of responsive</h1><p>Here is the problem, after changing the content of categories, the height of hover categories changed as well,  which would effect the layout of banner</p>
+          <h1 id="How-to-update-the-hover-banner-to-fix-the-bug-of-responsive"><a href="#How-to-update-the-hover-banner-to-fix-the-bug-of-responsive" class="headerlink" title="How to update the hover banner to fix the bug of responsive"></a>How to update the hover banner to fix the bug of responsive</h1><p>Here is the problem, after changing the content of categories, the height of hover categories changed as well,  which would effect the layout of banner</p>
 <p><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1518049032/WeChat_Screenshot_20180207154407_wqauh3.png" alt=""></p>
 <ol>
 <li><p>go to   </p>
 <pre><code>Nop.Web/Themes/CustomMicroAnalytix/View/Catalog/TopMenu.cshtml
  Nop.Web/Themes/CustomMicroAnalytix/Content/styles.css
 </code></pre></li>
-<li><p>Update the code as below, just add class “holdercategory” and update the min-height of this part</p>
-</li>
-<li><p>In Nop.Web/Themes/CustomMicroAnalytix/View/TopMenu.cshtml</p>
-<pre><code>&lt;ul class=&quot;top-menu container&quot;&gt;
-
-  @Html.Widget(&quot;header_menu_before&quot;)
-
-  &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;HomePage&quot;)&quot;&gt;&lt;i class=&quot;glyphicon glyphicon-home&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-
-  @if (Model.Categories.Count &gt; 0)
-  {
-  &lt;li class=&quot;has-mega-menu&quot;&gt;
-  &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;
-  SHOP BY CATEGORY
-  &lt;/a&gt;
-  &lt;div class=&quot;top-menu-triangle&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;mega-menu&quot;&gt;
-  &lt;div class=&quot;row&quot;&gt;
-  @foreach (var category in Model.Categories)
-  {
-  var cat = categories.Where(c =&gt; c.Name == category.Name).SingleOrDefault();
-  var pictureId = cat.PictureId;
-  var picURL = pictureService.GetPictureUrl(pictureId, pictureSize);
-
-  &lt;div class=&quot;col-xs-12 col-md-3 categoryholder&quot;&gt;
-  &lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-xs-12&quot;&gt;
-  &lt;div class=&quot;group-heading&quot;&gt;&lt;strong&gt;@category.Name&lt;/strong&gt;&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-xs-12 col-md-5 visible-md&quot;&gt;
-  &lt;div class=&quot;img-holder&quot;&gt;
-  &lt;a href=&quot;@Url.RouteUrl(&quot;Category&quot;, new { SeName = category.SeName })&quot;&gt;&lt;img style=&quot;border: none; &quot; src=&quot;@picURL&quot; alt=&quot;&quot;&gt;&lt;/a&gt;
-  &lt;/div&gt;
-  &lt;/div&gt;
-  @if (category.SubCategories.Count &gt; 0)
-  {
-  &lt;div class=&quot;col-xs-12 col-md-7&quot;&gt;
-  &lt;ul&gt;
-
-  @{
-  var subCategoryCounter = 1;
-  }
-  @foreach (var subCategory in category.SubCategories)
-  {
-  if (subCategoryCounter &lt;= 3)
-  {
-  &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;Category&quot;, new { SeName = subCategory.SeName })&quot;&gt;@subCategory.Name&lt;/a&gt;&lt;/li&gt;
-  }
-  else
-  {
-  &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;Category&quot;, new { SeName = category.SeName })&quot;&gt;&lt;strong&gt;View All&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  break;
-
-  }
-
-  subCategoryCounter++;
-  }
-  &lt;/ul&gt;
-  &lt;/div&gt;
-  }
-  &lt;/div&gt;
-  &lt;/div&gt;
-  }
-  &lt;/div&gt;
-  &lt;/div&gt;&lt;!-- /.mega-menu --&gt;
-  &lt;/li&gt;
-  }
-</code></pre></li>
-<li><p>Update style.css</p>
-<pre><code>.categoryholder{
-  margin:15px 0 0 0;
-  min-height:210px !important;
-}
-</code></pre></li>
+<li>Update the code as below, just add class “holdercategory” and update the min-height of this part</li>
 </ol>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/02/08/update-the-hover-banner/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
