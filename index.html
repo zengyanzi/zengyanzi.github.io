@@ -581,8 +581,7 @@
 
       
         
-          
-            <h1 id="Cross-Site-Script"><a href="#Cross-Site-Script" class="headerlink" title="Cross Site Script "></a>Cross Site Script </h1><p>页面被注入恶意代码<br>-</p>
+          <h1 id="Cross-Site-Script"><a href="#Cross-Site-Script" class="headerlink" title="Cross Site Script "></a>Cross Site Script </h1><p>页面被注入恶意代码<br>-</p>
 <ul>
 <li>通常页面中包含的用户输入内容都在固定的容器或属性内，以文本的形式展示 </li>
 <li>攻击者利用这些页面的用户输入片段拼接特殊格式的字符串，突破原有位置的限制</li>
@@ -605,44 +604,13 @@ if (valid){
 <li><p>当JSON中包含U+2020或者U+2020这两个字符时，不能作为Javascript的字面量使用，否则会抛出语法错误</p>
 </li>
 <li><p>当JSON中包含字符<code>&lt;/script&gt;</code>时，当前的script标签将会被闭合，后面的字符串内容浏览器会按照HTML进行解析，通过增加下一个<code>&lt;script&gt;</code>标签等方法完成注入。</p>
-</li>
-</ul>
-<p>漏洞总结</p>
-<ul>
-<li>在HTML中内嵌的文本中，恶意内容以script标签形成注入</li>
-<li>在内联的JavaScript中，拼接的数据突破原本的限制(字符串，变量，方法名等)；</li>
-<li>在标签属性中，恶意内容包括引导，从而突破属性值的限制，注入其他属性或者标签</li>
-<li>在标签的href，scr等属性中，包含javascript:等可执行代码</li>
-<li>在onload,onerror,onclick等事件中，注入不受控制代码</li>
-<li>在style属性和标签中，包含类似background-image：url（“JavaScript：…”）的代码(新版本浏览器已经可以防范)</li>
-<li>在style属性和标签中，包含类似expression（…）的CSS表达式</li>
-</ul>
-<p>换句话说，如果开发者没有将用户输入的文本进行合适的过滤就贸然插入到HTML中，就很容易造成注入漏洞<br>cross site scripting，为了和CSS区别，就把攻击的第一个字母改成了X。<br>在处理输入时，以下内容都不可信</p>
-<ul>
-<li>来自用户的UGC信息</li>
-<li>来自第三方的链接</li>
-<li>URL参数</li>
-<li>post参数</li>
-<li>refere</li>
-<li>cookies</li>
-</ul>
-<p>XSS分类：可分为 存储性，反射性和DOM型三种</p>
-<p>存储性常用于用户保持数据的网站功能：论坛发帖，商品评论，用户私信等。</p>
-<p>反射性常见于URL传递参数的，比如网站搜索和跳转， POST 内容也可以触发反射性XSS。</p>
-<p>DOM型XSS攻击中，取出和执行恶意代码由浏览器端完成，属于前端JavaScript漏洞，而反射性和存储性属于服务器端的安全漏洞。</p>
-<p>XSS攻击的预防<br>XSS攻击的两大要素：来自攻击者提交恶意代码和浏览器提交恶意代码<br>所以：防止HMTL中出现注入， 防止JavaScript执行时，执行恶意代码</p>
-<p>方法<br>-</p>
-<ul>
-<li>纯前端渲染：</li>
-<li>1.浏览器先加载一个静态HTML，此HTML中不包含任何与业务相关的数据</li>
-<li>2.浏览器执行HTML中的JavaScript</li>
-<li>3.JavaScript通过Ajax加载业务数据，调用DOM API更新到页面上</li>
-<li>转义HTML</li>
-<li>如果拼接HTML是必要的，就需要采用合适的转义库，对HTML末班各处插入点进行充分的转义。常用的模板引擎 doT.js、ejs、FreeMarker</li>
-<li>DOM 中的内联事件监听器，location,onclick,onerror,onload,onmouseover等，set</li>
-</ul>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/02/26/xss-attack/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

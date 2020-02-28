@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2020/02/26/xss-attack/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
 <meta property="og:description" content="Cross Site Script 页面被注入恶意代码-  通常页面中包含的用户输入内容都在固定的容器或属性内，以文本的形式展示  攻击者利用这些页面的用户输入片段拼接特殊格式的字符串，突破原有位置的限制 攻击者通过在目标网站上注入脚本，使之在用户的浏览器上运行，从而引发潜在风险。 通过HTML 转义可以防止xss攻击（并没有如此easy），因为不仅仅是特殊字符，就是JavaScript的字符串如">
-<meta property="og:updated_time" content="2020-02-26T03:52:08.676Z">
+<meta property="og:updated_time" content="2020-02-28T00:29:29.812Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="xss attack">
 <meta name="twitter:description" content="Cross Site Script 页面被注入恶意代码-  通常页面中包含的用户输入内容都在固定的容器或属性内，以文本的形式展示  攻击者利用这些页面的用户输入片段拼接特殊格式的字符串，突破原有位置的限制 攻击者通过在目标网站上注入脚本，使之在用户的浏览器上运行，从而引发潜在风险。 通过HTML 转义可以防止xss攻击（并没有如此easy），因为不仅仅是特殊字符，就是JavaScript的字符串如">
@@ -391,10 +391,9 @@ if (valid){
 <li><p>当JSON中包含U+2020或者U+2020这两个字符时，不能作为Javascript的字面量使用，否则会抛出语法错误</p>
 </li>
 <li><p>当JSON中包含字符<code>&lt;/script&gt;</code>时，当前的script标签将会被闭合，后面的字符串内容浏览器会按照HTML进行解析，通过增加下一个<code>&lt;script&gt;</code>标签等方法完成注入。</p>
-</li>
-</ul>
+<a id="more"></a>
 <p>漏洞总结</p>
-<ul>
+</li>
 <li>在HTML中内嵌的文本中，恶意内容以script标签形成注入</li>
 <li>在内联的JavaScript中，拼接的数据突破原本的限制(字符串，变量，方法名等)；</li>
 <li>在标签属性中，恶意内容包括引导，从而突破属性值的限制，注入其他属性或者标签</li>
