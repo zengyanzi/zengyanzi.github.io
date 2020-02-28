@@ -306,7 +306,7 @@
     <url>%2F2017%2F11%2F27%2Fsearch-function%2F</url>
     <content type="text"><![CDATA[How do modify the full search function in nopCommerce1.Go to the Nop.Web/Controllers/CatalogController. find the search action and set the searchinDescriptions to be true IPagedList&lt;Product&gt; products = new PagedList&lt;Product&gt;(new List&lt;Product&gt;(), 0, 1); // only search if query string search keyword is set (used to avoid searching or displaying search term min length error message on /search page load) if (Request.Params[&quot;Q&quot;] != null) { if (model.Q.Length &lt; _catalogSettings.ProductSearchTermMinimumLength) { model.Warning = string.Format(_localizationService.GetResource(&quot;Search.SearchTermMinimumLengthIsNCharacters&quot;), _catalogSettings.ProductSearchTermMinimumLength); } else { var categoryIds = new List&lt;int&gt;(); int manufacturerId = 0; decimal? minPriceConverted = null; decimal? maxPriceConverted = null; bool searchInDescriptions = true; if (model.As) { //advanced search var categoryId = model.Cid; if (categoryId &gt; 0) { categoryIds.Add(categoryId); if (model.Isc) { //include subcategories categoryIds.AddRange(GetChildCategoryIds(categoryId)); } }]]></content>
       <tags>
-        <tag>nopcommerce</tag>
+        <tag>nopCommerce</tag>
       </tags>
   </entry>
   <entry>
