@@ -372,99 +372,14 @@
 
       
         
-          
-            <h1 id="Prototype"><a href="#Prototype" class="headerlink" title="Prototype"></a>Prototype</h1><p>class<br>-constructor  属性和方法<br>class名称以大写字母开头</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-    &lt;html lang=&quot;en&quot;&gt;
-        &lt;head&gt;
-            &lt;meta  http-equiv=&quot;Contect-Type&quot; charset=&quot;utf-8&quot;&gt;
-            &lt;title&gt;classdemo&lt;/title&gt;
-        &lt;/head&gt;
-        &lt;body&gt;
-        &lt;/body&gt;
-        &lt;p&gt;classdemo&lt;/p&gt;
-        &lt;script&gt;
-            class Student{
-                constructor(name,number){
-                    this.name =name
-                    this.number =number
-                }
-                sayHi(){
-                    console.log(
-                    `name ${this.name},number ${this.number}`
-                    )
-
-                }
-
-            }
-            //通过类声明对象实例
-            const james = new Student(&apos;james&apos;,100);
-            console.log(james.name);
-            console.log(james.number);
-            james.sayHi();
-
-            const tom = new Student(&apos;tom&apos;,101);
-
-            console.log(tom.name);
-            console.log(tom.number);
-            tom.sayHi();
-
-        &lt;/script&gt;
-    &lt;/html&gt;
-</code></pre><p>继承<br>-extends<br>-super<br>扩展或重写方法</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-    &lt;html lang=&quot;en&quot;&gt;
-        &lt;head&gt;
-            &lt;meta  http-equiv=&quot;Contect-Type&quot; charset=&quot;utf-8&quot;&gt;
-            &lt;title&gt;extendsdemo&lt;/title&gt;
-        &lt;/head&gt;
-        &lt;body&gt;
-        &lt;/body&gt;
-        &lt;p&gt;extendsdemo&lt;/p&gt;
-        &lt;script&gt;
-            class People{
-                constructor(name){
-                    this.name=name+&apos;sir&apos;
-                }
-                eat(){
-                    console.log(`${this.name} eat some food`)
-                }
-            }
-            //子类
-            class Teacher extends People{
-                    constructor(name,major){
-                    super(name)
-                    this.major=major
-                }
-                teach(){
-                    console.log(`${this.name},teach ${this.major}`)
-                }
-            }
-            class Student extends People{
-                constructor(name,number){
-                    super(name)
-                    this.number=number
-                }
-                sayHi(){
-                    console.log(`name ${this.name},number ${this.number}`)
-                }
-            }
-            const james = new Student(&apos;james&apos;,100);
-            console.log(james.name);
-            console.log(james.number);
-            james.sayHi();
-            james.eat();
-            const wang = new Teacher(&apos;wang&apos;,&apos;math&apos;);
-            console.log(wang.name);
-            console.log(wang.major);
-            wang.teach();
-            wang.eat();
-
-
-        &lt;/script&gt;
-    &lt;/html&gt;
-</code></pre>
-          
+          <h1 id="Prototype"><a href="#Prototype" class="headerlink" title="Prototype"></a>Prototype</h1><p>class<br>-constructor  属性和方法<br>class名称以大写字母开头<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/02/28/prototype/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -727,8 +642,7 @@ if (valid){
 
       
         
-          
-            <h1 id="Typeof"><a href="#Typeof" class="headerlink" title="Typeof "></a>Typeof </h1><p>变量类型和计算<br>-<br>题目：</p>
+          <h1 id="Typeof"><a href="#Typeof" class="headerlink" title="Typeof "></a>Typeof </h1><p>变量类型和计算<br>-<br>题目：</p>
 <p>-typeof 能判断哪些类型</p>
 <p>-何时使用=== 和==</p>
 <p>-值类型和引用类型的区别</p>
@@ -746,146 +660,14 @@ console.log(b)
 let b = a 
 b.age =21
 console.log(a.age)
-</code></pre><p>对于对象，是a指向了内存地址1， 内存地址1是{age：20}，接下来也是给b指向了内存地址1，所以当b.age更改为21的时候，a.age也会更改<br><img src="https://s2.ax1x.com/2020/02/25/3JYtiV.png" alt=""></p>
-<p>常见值类型</p>
-<pre><code>let a // undefined; 
-const s = &apos;abc&apos; 
-const n = 100
-const b = true
-const s = Symbol(&apos;s&apos;)
-</code></pre><p>常见引用类型</p>
-<pre><code>const obj ={x :100}
-const arr =[&apos;a&apos;,&apos;b&apos;,&apos;c&apos;]
-const n = null //特殊引用类型，指针指向为空地址
-// 特殊引用类型，但是不用于存储数据，所以没有‘拷贝复制函数’这一说
-</code></pre><p>Typeof 运算符</p>
-<p>识别所有值类型</p>
-<p>识别函数</p>
-<p>判断是否是引用类型(不可以再细分)</p>
-<pre><code>//判断所有值类型
- let a;   typeof a   //&apos;undefined&apos;
- const str = &apos;abc&apos;  typeof str  //&apos;string&apos;
- const n = 100; typeof n  // &apos;number&apos;
- const b = true  typeof b  //&apos;boolean&apos;
- const s =Symbol(&apos;s&apos;);  typeof s //&apos;Symbol&apos;
-
-//判断函数
-typeof console.log //&apos;function&apos;
-typeof function (){} // &apos;function&apos;
-
-   //能识别引用类型(不能再继续识别)
-typeof null //&apos;object&apos;
-typeof [&apos;a&apos;,&apos;b&apos;] //&apos;object&apos;
-typeof {x : 100}  //&apos;object&apos;
-</code></pre><p>深拷贝，考点：递归</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-    &lt;html lang=&quot;en&quot;&gt;
-        &lt;head&gt;
-            &lt;meta  http-equiv=&quot;Contect-Type&quot; charset=&quot;utf-8&quot;&gt;
-            &lt;title&gt;deepclone&lt;/title&gt;
-        &lt;/head&gt;
-        &lt;body&gt;
-        &lt;/body&gt;
-        &lt;p&gt;deepclone&lt;/p&gt;
-        &lt;script&gt;
-            const obj1={
-                age:20,
-                name:&apos;James&apos;,
-                address:{
-                   city:&apos;Chengdu&apos;,
-                   street:&apos;Zhonghe&apos;
-                },
-                arr :[&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;]
-            }
-            const obj2 =deepClone(obj1)
-
-            obj2.address.city =&apos;shanghai&apos;;
-            console.log(obj1.address.city);
-            console.log(&apos;deepClone&apos;);
-            function deepClone(obj={}){
-                if(typeof obj !== &apos;object&apos;|| obj == null){
-                // obj  is  null, just return 
-                   return obj
-                }
-                    //初始化返回结果
-                    let result
-                    if(obj instanceof Array){
-                        result =[]
-                    }else {
-                        result ={}
-                    }
-                    for(let key in obj){
-                        if(obj.hasOwnProperty(key)){
-                            //保证Key不是原型的属性,递归
-                            result[key] =deepClone(obj[key])
-                        }
-                    }
-
-                return result
-            }
-
-            &lt;/script&gt;
-        &lt;/html&gt;
-</code></pre><p>所谓深拷贝就是拷贝的对象的具体内容，其内容地址是自助分配的， 拷贝结束之后，内存中的值是相同的，但是内存地址是不一样的，所以两个对象之间相互不影响，也不干涉</p>
-<ul>
-<li>字符串拼接</li>
-<li>‘==’</li>
-<li>if语句和逻辑运算</li>
-</ul>
-<p>字符串拼接 +</p>
-<pre><code>const a =100 +10  //110
-const b =100+&apos;10&apos; //&apos;10010&apos;
-const c =true +&apos;10&apos; // &apos;true10&apos;
-</code></pre><p>==运算符 通过发生转换去相等</p>
-<pre><code>100 == &apos;100&apos; //true
-0 ==&apos; &apos;   //true
-0 == false //true
-false ==&apos; &apos; //true
-null == undefined // true
-</code></pre><p>//除了 == null 之外，其他都用===</p>
-<pre><code>const obj ={x : 100}
-if (obj.a == null){}
-//if（obj.a===null|| obj.a===undefined）
-</code></pre><p>if语句和逻辑运算符</p>
-<p>truly变量  !!a === true 的变量<br>falsely变量 !!a === false 的变量</p>
-<pre><code>//以下是falsely变量，初次之外都是truly变量
-!!0 === false
-!!NaN === false
-!!&apos;&apos; === false
-!!null === false
-!!undefined === false
-!!false === false
-
-if语句里
-//truly 变量
-const a = true
-if(a){
-    //...
-}
-const b = 100
-if(b){
-    //...
-}
-
-//falsely变量
-const c = &apos;&apos;
-if(c){
-    //
-}
-const d = null
-if(d){
-//
-}
-let e
-if(e){
-    //
-}
-</code></pre><p>逻辑判断</p>
-<pre><code>console.log(10 &amp;&amp; 0) //0
-console.log(&apos;&apos;||&apos;abc&apos;) //&apos;abc&apos;
-console.log(!windows.abc) //true
-</code></pre>
-          
+</code></pre><p>对于对象，是a指向了内存地址1， 内存地址1是{age：20}，接下来也是给b指向了内存地址1，所以当b.age更改为21的时候，a.age也会更改<br><img src="https://s2.ax1x.com/2020/02/25/3JYtiV.png" alt=""><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/02/25/typeof/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1002,71 +784,14 @@ console.log(!windows.abc) //true
 
       
         
-          
-            <h1 id="Data-format"><a href="#Data-format" class="headerlink" title="Data format"></a>Data format</h1><p>JS的数据格式化</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;meta http-equiv=&quot;Content-Type&quot; charset=&quot;utf-8&quot;?&gt;
-        &lt;title&gt;Dataformat&lt;/title&gt;
-        &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js&quot;&gt;&lt;/script&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;input type=&quot;text&quot; id=&quot;origin&quot;  placeholder=&quot;please input the number&quot;  /&gt;
-        &lt;br/&gt;
-        &lt;!-- &lt;input type=&quot;text&quot; id=&quot;count&quot; pleaceholder=&quot;please input the number of decimals&quot; /&gt; --&gt;
-        &lt;br/&gt;
-        &lt;button type=&quot;button&quot; onClick=&quot;myChange()&quot;&gt;Click&lt;/button&gt;
-        &lt;br/&gt;
-        &lt;input type=&quot;text&quot; id=&quot;output&quot;/&gt;
-        &lt;script&gt;
-            function myChange(){
-                const origindata= parseInt(document.getElementById(&quot;origin&quot;).value);
-                console.log(&quot;origindata&quot;+origindata);
-                //const count =parseInt(document.getElementById(&quot;count&quot;).value);
-                //console.log(&quot;count&quot;+count);
-                const outputdata = numeral(origindata).format(&apos;0,0.00&apos;)
-                document.getElementById(&quot;output&quot;).value=outputdata;
-            }
-            function num_format(number, decimals, dec_point, thousands_sep, roundtag){
-            /**
- * 格式化数字
- * @param  {[string | number]} number  [要格式化的数字]
- * @param  {[number]} decimals         [保留几位小数]
- * @param  {[string]} dec_point        [小数点符号]
- * @param  {[string]} thousands_sep    [千分位符号]
- * @param  {[string]} roundtag         [舍入参数，默认 &quot;ceil&quot; 向上取,&quot;floor&quot;向下取,&quot;round&quot; 四舍五入]
- * @return {[string]} 格式化后的结果
- */    
-                number =(number +&apos;&apos;).replace(/[^0-9+-Ee.]/g,&apos;&apos;);
-                roundtag =roundtag || &apos;ceil&apos;;//&quot;ceil&quot;,&quot;floor&quot;,&quot;round&quot;
-                var n =!isFinite(+number)?0 :number,
-                    prec =!isFinite(+decimal)?0:Math.abs(decimal),
-                    sep= (typeof thousands_sep ===&apos;undefined&apos;)?&apos;,&apos;:thousands_sep,
-                    dec =(typeof dec_point === &apos;undefined&apos;)?&apos;,&apos;:dec_point,
-                    s= &apos;&apos;,
-                    toFixedFix = function(n,prec){
-                         var k =Math.pow(10,prec);
-                         console.log();
-                         return &apos;&apos;+parseFloat(Math[roundtag](parseFloat(n *k ).toFixed((prec*2))).toFixed(prec*2))/k;
-
-                    };
-                    s=(prec? toFixedFix(n,prec):&apos;&apos;+Math.round(n)).split(&apos;.&apos;);
-                    var re =/(-?\d+)(\d{3})/;
-                    while(re.test(s[0])){
-                    s[0]=s[0].replace(re,&quot;$1&quot;+sep+&quot;$2&quot;);
-                    }
-                    if((s[1]||&apos;&apos;).length&lt;prec){
-                     s[1]=s[1]||&apos;&apos;;
-                     s[1]+= new Array(prec -s[1].length+1).join(&apos;0&apos;);
-                    }
-                    return s.join(dec);
-                }
-        &lt;/script&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-          
+          <h1 id="Data-format"><a href="#Data-format" class="headerlink" title="Data format"></a>Data format</h1><p>JS的数据格式化<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/02/21/data-format/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1183,115 +908,14 @@ console.log(!windows.abc) //true
 
       
         
-          
-            <h1 id="CSS-Sprite"><a href="#CSS-Sprite" class="headerlink" title="CSS Sprite"></a>CSS Sprite</h1><p>How to realise CSS Sprite<br>为啥要使用Sprite，减少HTTP请求数量，加速内容显示，因为每请求一次，就会和服务器建立一次链接，而建立链接是需要额外的时间。</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;meta http-equiv=&quot;Content-Type&quot; charset=&quot;utf-8&quot;&gt;
-        &lt;title&gt;css sprite&lt;/title&gt;
-
-        &lt;style type=&quot;text/css&quot;&gt;
-            h3,ul{
-            margin:0;
-            padding:0;
-            }
-            li {
-            list-style:none;
-            }
-            #wrap_demo{
-                width:150px;
-                background:#f5f5f5;
-                border:1px solid #bbbbbb;
-            }
-            li h3{
-            font-size:14px;
-            font-weight:400;
-            }
-            li{
-            display:block;
-            height:30px;
-            line-height:30px;
-            overflow:hidden;
-            border-bottom:1px solid #dddddd;
-            }
-            li i{
-
-            background:url(sp.jpg);
-            display:inline;
-            height:24px;
-            width:30px;
-            float:left;
-            margin:4px 10px 0 0 ;
-            }
-            .bg_demo1 i{
-            background-position:0 0;
-            }
-            .bg_demo2 i{
-            background-position:0 -24px;
-            }
-            .bg_demo3 i{
-            background-position:0 -48px;
-            }
-            .bg_demo4 i{
-            background-position:0 -72px;
-            }
-            .bg_demo5 i{
-            background-position:0 -96px;
-            }
-            .bg_demo6 i{
-            background-position:0 -120px;
-            }
-            .bg_demo7 i{
-            background-position:0 -144px;
-            }
-            .bg_demo8 i{
-            background-position:-38px 0;
-            }
-        &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;div id=&quot;wrap_demo&quot;&gt;
-            &lt;ul&gt;
-                &lt;li class=&quot;bg_demo1&quot;&gt;
-                    &lt;i&gt;&lt;/i&gt;
-                    &lt;h3&gt;Clothes&lt;/h3&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;bg_demo2&quot;&gt;
-                    &lt;i&gt;&lt;/i&gt;
-                    &lt;h3&gt;Shoes&lt;/h3&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;bg_demo3&quot;&gt;
-                    &lt;i &gt;&lt;/i&gt;
-                    &lt;h3&gt;Sports&lt;/h3&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;bg_demo4&quot;&gt;
-                    &lt;i &gt;&lt;/i&gt;
-                    &lt;h3&gt;Jewelry&lt;/h3&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;bg_demo5&quot;&gt;
-                    &lt;i &gt;&lt;/i&gt;
-                    &lt;h3&gt;Camera&lt;/h3&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;bg_demo6&quot;&gt;
-                    &lt;i &gt;&lt;/i&gt;
-                    &lt;h3&gt;Digital&lt;/h3&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;bg_demo7&quot;&gt;
-                    &lt;i &gt;&lt;/i&gt;
-                    &lt;h3&gt;Makeup&lt;/h3&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;bg_demo8&quot;&gt;
-                    &lt;i&gt;&lt;/i&gt;
-                    &lt;h3&gt;Office&lt;/h3&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;        
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p>为什么使用sprite的时候background-position属性为负数<br>在使用背景图时，背景图的初始位置是从容器的左上角开始铺满整个容器，background-position：0 0 ，然后开始左移x轴，左移就代表值会为负数，同理y轴也如此</p>
-
-          
+          <h1 id="CSS-Sprite"><a href="#CSS-Sprite" class="headerlink" title="CSS Sprite"></a>CSS Sprite</h1><p>How to realise CSS Sprite<br>为啥要使用Sprite，减少HTTP请求数量，加速内容显示，因为每请求一次，就会和服务器建立一次链接，而建立链接是需要额外的时间。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/02/20/postcsssprite/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1408,70 +1032,14 @@ console.log(!windows.abc) //true
 
       
         
-          
-            <h1 id="Lucky-roll"><a href="#Lucky-roll" class="headerlink" title="Lucky roll"></a>Lucky roll</h1><p>请写一个抽奖程序 ，已有参与抽奖的员工工号组成的数组 staffIds。<br>规则1：同一员工不可重复中奖<br>规则2：每轮执行抽奖程序，入参是本轮要抽取的中奖人数n，将中奖人工号打印出来</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Lucky roll&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;button onclick=&quot;onClear()&quot;&gt; Clear&lt;/button&gt;
-&lt;br/&gt;
-&lt;textarea name=&quot;staffids&quot; id=&quot;staffids&quot; cols=&quot;30&quot; rows=&quot;10&quot; placeholder=&quot;please input employeeid&quot;&gt;&lt;/textarea&gt;
-&lt;br/&gt;
-&lt;textarea name=&quot;numroll&quot; id=&quot;numroll&quot; cols=&quot;30&quot; rows=&quot;10&quot; placeholder=&quot;please input number to win,be less than the NO of employees&quot;&gt;&lt;/textarea&gt;
-&lt;br/&gt;
-&lt;button onclick=&quot;onRoll()&quot;&gt;Roll&lt;/button&gt;
-&lt;br/&gt;
-&lt;input type=&quot;text&quot; id=&quot;rollresult&quot; placeholder=&quot;winnerlist&quot;/&gt;
-
-&lt;script&gt;
-    var pool =[];
-    var exWinners = new Set([]);
-    function onClear() {
-        document.getElementById(&quot;employeeid&quot;).value=&apos;&apos;;
-        document.getElementById(&quot;rollresult&quot;).value=&apos;&apos;;
-        document.getElementById(&quot;numroll&quot;).value = &apos;&apos;;
-        exWinners.clear();
-        alert(&quot;All the staffids have been cleared&quot;);
-    }
-    function onRoll() {
-        staffids=document.getElementById(&quot;staffids&quot;).value.split(&quot;,&quot;);
-        console.log(staffids);
-        const count= parseInt(document.getElementById(&quot;numroll&quot;).value);
-        console.log(count);
-        pool =different(staffids,exWinners)
-        console.log(&quot;pool&quot;+pool);
-        if (pool.length ==0){
-            alert(&quot;all the employees have been selected&quot;)
-        }
-        shuffle(pool);
-        var winner = pool.slice(0,count);
-        for (var i=0;i&lt;winner.length;i++){
-            exWinners.add(winner[i]);
-        }
-        document.getElementById(&quot;rollresult&quot;).value= winner.join(&quot;,&quot;);
-
-    }
-    function different(staffids,exWinners) {
-        var res=[];
-        res = staffids.filter(x=&gt;!exWinners.has(x));
-        return res;
-    }
-    function shuffle(arr){
-        arr.sort(()=&gt;{
-            return  Math.random() &gt; 0.5 ? -1 : 1;
-            //返回值大于0，表示需要交换；小于等于0表示不需要交换
-        })
-    }
-
-    &lt;/script&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-</code></pre>
-          
+          <h1 id="Lucky-roll"><a href="#Lucky-roll" class="headerlink" title="Lucky roll"></a>Lucky roll</h1><p>请写一个抽奖程序 ，已有参与抽奖的员工工号组成的数组 staffIds。<br>规则1：同一员工不可重复中奖<br>规则2：每轮执行抽奖程序，入参是本轮要抽取的中奖人数n，将中奖人工号打印出来</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/02/20/lucky-roll/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
