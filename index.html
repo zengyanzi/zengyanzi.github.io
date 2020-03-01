@@ -297,6 +297,175 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/02/sticktop/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2020/03/02/sticktop/" itemprop="url">
+                  sticktop
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-02T05:35:19+08:00">
+                2020-03-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Sticktop"><a href="#Sticktop" class="headerlink" title="Sticktop"></a>Sticktop</h1><p>顾名思义，当元素靠近顶部时，自动固定在顶部。</p>
+<p>常用场景<br>1.导航栏<br>2.字母列表</p>
+<p>要实现导航吸顶效果，监听 scroll，然后设置导航的position：fixed</p>
+<p>有一种属性：position:sticky</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv=&quot;Content-type&quot;  charset=&quot;utf-8&quot;/&gt;
+        &lt;title&gt;Stickytop&lt;/title&gt;
+        &lt;style&gt;
+        .box{
+        position:-webkit-sticky;
+        position:sticky;
+        width:100%;
+        height:30px;
+        text-align:center;
+        color:#fff;
+        margin-bottom:50px;
+        }
+        .box1{
+        top:0;
+        z-index:1;
+        background:#007bff;
+        }
+        .box2{
+        top:30px;
+        z-index:1;
+        background:#ffc107;
+        }
+        .box3{
+         background: #f4516c;
+        }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div style=&quot;height:500px&quot;&gt;scroll&lt;/div&gt;
+        &lt;div class=&quot;box box1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;box box2&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;box box3&quot;&gt;&lt;/div&gt;
+        &lt;div style=&quot;height:500px&quot;&gt;&lt;/div&gt;
+    &lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><p>注意，由于top值不同，表现得也不同<br>box1，box2，box3在滚动之前，他们与相对定位一样<br>但是box1的top为0，就固定在顶部，box2的top为30，就在top30的地方固定，box3没有设置，就一直是相对定位</p>
+<p>所以，理解“粘粘定位是相对定位和固定定位的混合，元素在跨越固定阈值之前为相对定位，之后为固定定位，这个固定阈值就是top，也可以是right，left</p>
+<p>值得注意的是</p>
+<ol>
+<li>粘性定位的固定固定不一定是position:fixed，只要目标元素的任意父元素都没有设置position:relative,absolute,fixed, sticky的情况下，才与position：fixed表现一样</li>
+</ol>
+<p>还需要考虑兼容性。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/02/heap-and-stack/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1469,135 +1638,6 @@ for (let i of s){
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/18/how-to-solve-hover-problem/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2020/02/18/how-to-solve-hover-problem/" itemprop="url">
-                  how to solve hover problem
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-18T05:38:31+08:00">
-                2020-02-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="How-to-solve-hover-problem"><a href="#How-to-solve-hover-problem" class="headerlink" title="How to solve hover problem "></a>How to solve hover problem </h1><p><img src="https://s2.ax1x.com/2020/02/18/3iTRKA.png" alt=""><br>The hover banner used to be as above.<br>The reason was due to the height of those elements.<br>To solve it, just go to /Themes/CustomMicroAnalytix/View/Catalog, modify the TopMenu.cshmtl as below</p>
-<p>The key code here is to amend </p>
-<pre><code>if (subCategoryCounter &lt;= 3) 
-</code></pre><p>TO</p>
-<pre><code>if (subCategoryCounter &lt;= 2)
-</code></pre>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/02/18/how-to-solve-hover-problem/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1647,7 +1687,7 @@ for (let i of s){
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">105</span>
+                <span class="site-state-item-count">106</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
