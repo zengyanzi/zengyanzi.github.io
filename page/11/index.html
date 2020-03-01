@@ -297,6 +297,156 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/22/react-native-AsyncStorage/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/22/react-native-AsyncStorage/" itemprop="url">
+                  postreact native AsyncStorage
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-22T23:00:18+08:00">
+                2017-04-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="react-native-AsyncStorage"><a href="#react-native-AsyncStorage" class="headerlink" title="react native AsyncStorage"></a>react native AsyncStorage</h1><pre><code>componentDidMount() {
+ let _that=this;
+  AsyncStorage.getItem(&apos;userid&apos;,(err, result) =&gt; {
+     console.log(result);
+   var userid=result;
+   var startday=this.state.startday;//set date
+   var endday=this.state.endday;//set date
+   console.log(userid);
+   console.log(startday); //check date 
+   console.log(endday);
+   var url = &apos;http://47.90.60.206:8080/pt_server/sportchart.action&apos;; // create url 
+     // var url = &apos;http://192.168.20.12:8080/pt_server/traineelogin.action&apos;;
+     url += &apos;?userid=&apos;+userid+&apos;&amp;start=&apos;+startday+&apos;&amp;end=&apos;+endday;
+     console.log(url); //check url 
+     fetch(url).then(function(response) { 
+           return response.json();
+         }).then(function(res) {
+         console.log(res);//check json,then render the view again 
+           if (res[&quot;data&quot;]!=null) {
+             _that.setState(
+             {
+
+             }
+           );
+
+         }else{
+           Alert.alert(&apos;error&apos;); //alert warning and error 
+         }
+   });
+ });
+ }
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/22/react-native-ios-to-setup-network/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1027,7 +1177,7 @@ padding-bottom:40%;
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">104</span>
+                <span class="site-state-item-count">105</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -1040,7 +1190,7 @@ padding-bottom:40%;
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">36</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
