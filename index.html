@@ -372,59 +372,17 @@
 
       
         
-          
-            <h1 id="Sticktop"><a href="#Sticktop" class="headerlink" title="Sticktop"></a>Sticktop</h1><p>顾名思义，当元素靠近顶部时，自动固定在顶部。</p>
+          <h1 id="Sticktop"><a href="#Sticktop" class="headerlink" title="Sticktop"></a>Sticktop</h1><p>顾名思义，当元素靠近顶部时，自动固定在顶部。</p>
 <p>常用场景<br>1.导航栏<br>2.字母列表</p>
 <p>要实现导航吸顶效果，监听 scroll，然后设置导航的position：fixed</p>
 <p>有一种属性：position:sticky</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;meta http-equiv=&quot;Content-type&quot;  charset=&quot;utf-8&quot;/&gt;
-        &lt;title&gt;Stickytop&lt;/title&gt;
-        &lt;style&gt;
-        .box{
-        position:-webkit-sticky;
-        position:sticky;
-        width:100%;
-        height:30px;
-        text-align:center;
-        color:#fff;
-        margin-bottom:50px;
-        }
-        .box1{
-        top:0;
-        z-index:1;
-        background:#007bff;
-        }
-        .box2{
-        top:30px;
-        z-index:1;
-        background:#ffc107;
-        }
-        .box3{
-         background: #f4516c;
-        }
-        &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;div style=&quot;height:500px&quot;&gt;scroll&lt;/div&gt;
-        &lt;div class=&quot;box box1&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;box box2&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;box box3&quot;&gt;&lt;/div&gt;
-        &lt;div style=&quot;height:500px&quot;&gt;&lt;/div&gt;
-    &lt;/body&gt;
-
-&lt;/html&gt;
-</code></pre><p>注意，由于top值不同，表现得也不同<br>box1，box2，box3在滚动之前，他们与相对定位一样<br>但是box1的top为0，就固定在顶部，box2的top为30，就在top30的地方固定，box3没有设置，就一直是相对定位</p>
-<p>所以，理解“粘粘定位是相对定位和固定定位的混合，元素在跨越固定阈值之前为相对定位，之后为固定定位，这个固定阈值就是top，也可以是right，left</p>
-<p>值得注意的是</p>
-<ol>
-<li>粘性定位的固定固定不一定是position:fixed，只要目标元素的任意父元素都没有设置position:relative,absolute,fixed, sticky的情况下，才与position：fixed表现一样</li>
-</ol>
-<p>还需要考虑兼容性。</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/03/02/sticktop/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

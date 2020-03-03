@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="Sticktop顾名思义，当元素靠近顶部时，自动固定在顶部。 常用场景1.导航栏2.字母列表 要实现导航吸顶效果，监听 scroll，然后设置导航的position：fixed 有一种属性：position:sticky &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt;     &amp;lt;head&amp;gt;         &amp;lt;meta http-equiv=&amp;quot;Con">
+<meta name="description" content="Sticktop顾名思义，当元素靠近顶部时，自动固定在顶部。 常用场景1.导航栏2.字母列表 要实现导航吸顶效果，监听 scroll，然后设置导航的position：fixed 有一种属性：position:sticky">
 <meta name="keywords" content="Interview">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sticktop">
 <meta property="og:url" content="http://yoursite.com/2020/03/02/sticktop/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="Sticktop顾名思义，当元素靠近顶部时，自动固定在顶部。 常用场景1.导航栏2.字母列表 要实现导航吸顶效果，监听 scroll，然后设置导航的position：fixed 有一种属性：position:sticky &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt;     &amp;lt;head&amp;gt;         &amp;lt;meta http-equiv=&amp;quot;Con">
-<meta property="og:updated_time" content="2020-03-01T22:18:02.261Z">
+<meta property="og:description" content="Sticktop顾名思义，当元素靠近顶部时，自动固定在顶部。 常用场景1.导航栏2.字母列表 要实现导航吸顶效果，监听 scroll，然后设置导航的position：fixed 有一种属性：position:sticky">
+<meta property="og:updated_time" content="2020-03-03T21:39:58.013Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sticktop">
-<meta name="twitter:description" content="Sticktop顾名思义，当元素靠近顶部时，自动固定在顶部。 常用场景1.导航栏2.字母列表 要实现导航吸顶效果，监听 scroll，然后设置导航的position：fixed 有一种属性：position:sticky &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt;     &amp;lt;head&amp;gt;         &amp;lt;meta http-equiv=&amp;quot;Con">
+<meta name="twitter:description" content="Sticktop顾名思义，当元素靠近顶部时，自动固定在顶部。 常用场景1.导航栏2.字母列表 要实现导航吸顶效果，监听 scroll，然后设置导航的position：fixed 有一种属性：position:sticky">
 
 
 
@@ -372,6 +372,7 @@
 <p>常用场景<br>1.导航栏<br>2.字母列表</p>
 <p>要实现导航吸顶效果，监听 scroll，然后设置导航的position：fixed</p>
 <p>有一种属性：position:sticky</p>
+<a id="more"></a>
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -417,7 +418,53 @@
 <ol>
 <li>粘性定位的固定固定不一定是position:fixed，只要目标元素的任意父元素都没有设置position:relative,absolute,fixed, sticky的情况下，才与position：fixed表现一样</li>
 </ol>
-<p>还需要考虑兼容性。</p>
+<p>还需要考虑兼容性。sticky的兼容性不是很好。<br>接下来，用js来实现</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv=&quot;Content-type&quot;  charset=&quot;utf-8&quot;/&gt;
+        &lt;title&gt;Stickytop-onscroll&lt;/title&gt;
+        &lt;style&gt;
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                height:2000px;
+                background-image:linear-gradient(-180deg, #15f09d 0%, #25A0FF 50%, #fca72b 100%);
+            }
+            #wrap{
+                background-color:rgba(0,0,0,0.2);
+                width:100%;
+                height:100px;
+                margin-top：100;
+            }
+            #wrap[data-fixed=&quot;fixed&quot;]{
+                position:fixed;
+                top:0;
+                left:0;
+                margin:0;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id=&quot;wrap&quot;&gt;&lt;/div&gt;
+        &lt;script&gt;
+            var obj =document.getElementById(&quot;wrap&quot;);
+            var ot = obj.offsetTop;
+            document.onscroll= function (){
+                var st = document.body.scrollTop || document.documentElement.scrollTop;
+                obj.setAttribute(&quot;data-fixed&quot;,st&gt;ot?&quot;fixed&quot;:&quot;&quot;)
+            }
+
+        &lt;/script&gt;
+    &lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><p>offsetTop属性偏移量：元素相对于定位父级顶部内框的距离</p>
+<p>css中[]选择器，#wrap[data-fixed=”fixed”],选择data-fixed属性值为fixed</p>
+<p>获取当前页面滚动条纵坐标的位置：document.body.scrollTop||document.documentElement.scrollTop</p>
+<p>获取当前页面滚动条横坐标的位置：document.body.scrollLeft||document.documentElement.scrollLeft</p>
 
       
     </div>
