@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="React Native, nopCommerce" />
+  <meta name="keywords" content="Interview," />
 
 
 
@@ -90,15 +90,20 @@
 
 
 
-<meta name="description" content="Loving code ,especially javascript, React Native">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bunny's  Code Burrow">
-<meta property="og:url" content="http://yoursite.com/tags/AWS-SecureCRT/index.html">
+<meta name="description" content="Instanceof 原型链">
+<meta name="keywords" content="Interview">
+<meta property="og:type" content="article">
+<meta property="og:title" content="instanceof2">
+<meta property="og:url" content="http://yoursite.com/2020/03/11/instanceof2/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="Loving code ,especially javascript, React Native">
+<meta property="og:description" content="Instanceof 原型链">
+<meta property="og:image" content="https://s2.ax1x.com/2020/03/11/8FXzAP.png">
+<meta property="og:image" content="https://s2.ax1x.com/2020/03/11/8FjStf.png">
+<meta property="og:updated_time" content="2020-03-10T23:33:31.269Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bunny's  Code Burrow">
-<meta name="twitter:description" content="Loving code ,especially javascript, React Native">
+<meta name="twitter:title" content="instanceof2">
+<meta name="twitter:description" content="Instanceof 原型链">
+<meta name="twitter:image" content="https://s2.ax1x.com/2020/03/11/8FXzAP.png">
 
 
 
@@ -126,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/AWS-SecureCRT/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/03/11/instanceof2/"/>
 
 
 
 
 
-  <title> Tag: AWS,SecureCRT | Bunny's  Code Burrow </title>
+  <title> instanceof2 | Bunny's  Code Burrow </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -157,7 +162,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -285,46 +290,213 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        AWS,SecureCRT
-        <small>Tag</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/11/instanceof2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                instanceof2
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-11T05:38:12+08:00">
+                2020-03-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h1 id="Instanceof-原型链"><a href="#Instanceof-原型链" class="headerlink" title="Instanceof 原型链"></a>Instanceof 原型链</h1><p><img src="https://s2.ax1x.com/2020/03/11/8FXzAP.png" alt=""></p>
+<a id="more"></a>
+<pre><code>People.prototype===Student.prototype.__proto__  //True
+james.hasOwnProperty(&apos;sayhi&apos;) //false
+</code></pre><p><img src="https://s2.ax1x.com/2020/03/11/8FjStf.png" alt=""></p>
+<p>换句话说，<strong>proto</strong>就是去找上一层class的prototype</p>
+<p>Class是ES6语法规范，是由ECMA委员会发布<br>ECMA只规定语法规则，不规范如何实现<br>以上是V8引擎实现方式</p>
+<p>如何判断一个变量是否是数组array（instanceof）<br>        var ary=[1,2,3,4];<br>        console.log(ary.intanceof Array) //true</p>
+<p>class的原型是本质</p>
+<p>手写jquery插件</p>
+<pre><code>    console.log(&apos;jquerydemo&apos;);
+class JQuery{
+    constructor(selector){
+        const result =document.querySelectorAll(selector)
+        const length =result.length;
+        for (let i =0;i&lt;length;i++){
+            this[i]=result[i];
+        }
+        this.length=length
+        //类似于数组，但其实是object
+        this.selector=selector;
+    }
+    get(index){
+        return this[index]
+    }
+    each(fn){
+        for(let i = 0;i&lt;this.length;i++){
+            const elem =this[i]
+            fn(elem)
+        }
+    }
+    on(type,fn){
+        return this.each(elem=&gt;{
+            elem.addEventListener(type,fn,false)
+        })
+    }
+}
 
-      <h1 class="post-title">
+//插件
+JQuery.prototype.dialog=function(info){
+    alert(info)
+}
+
+class myJQuery extends JQuery{
+    constructor(selector){
+        super(selector)
+    }
+    addClass(className){
+
+    }
+    style(data){
+
+    }
+}
+
+    //const $p = new JQuery(&apos;p&apos;);
+    //$p.get(1)
+    //$p.each
+    //$p.on(&apos;click&apos;,()=&gt;alert(&apos;clicked&apos;))
+</code></pre>
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2017/05/23/AWS-with-SecureCRT/" itemprop="url">
-              
-                <span itemprop="name">AWS with SecureCRT</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-23T09:54:05+08:00"
-              content="2017-05-23" >
-          05-23
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Interview/" rel="tag"># Interview</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/03/10/instance-of/" rel="prev" title="instance of">
+                instance of <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -332,6 +504,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -351,8 +527,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460"
@@ -425,6 +610,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Instanceof-原型链"><span class="nav-number">1.</span> <span class="nav-text">Instanceof 原型链</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -554,6 +755,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[instanceof2]]></title>
+    <url>%2F2020%2F03%2F11%2Finstanceof2%2F</url>
+    <content type="text"><![CDATA[Instanceof 原型链 People.prototype===Student.prototype.__proto__ //True james.hasOwnProperty(&apos;sayhi&apos;) //false 换句话说，proto就是去找上一层class的prototype Class是ES6语法规范，是由ECMA委员会发布ECMA只规定语法规则，不规范如何实现以上是V8引擎实现方式 如何判断一个变量是否是数组array（instanceof） var ary=[1,2,3,4]; console.log(ary.intanceof Array) //true class的原型是本质 手写jquery插件 console.log(&apos;jquerydemo&apos;); class JQuery{ constructor(selector){ const result =document.querySelectorAll(selector) const length =result.length; for (let i =0;i&lt;length;i++){ this[i]=result[i]; } this.length=length //类似于数组，但其实是object this.selector=selector; } get(index){ return this[index] } each(fn){ for(let i = 0;i&lt;this.length;i++){ const elem =this[i] fn(elem) } } on(type,fn){ return this.each(elem=&gt;{ elem.addEventListener(type,fn,false) }) } } //插件 JQuery.prototype.dialog=function(info){ alert(info) } class myJQuery extends JQuery{ constructor(selector){ super(selector) } addClass(className){ } style(data){ } } //const $p = new JQuery(&apos;p&apos;); //$p.get(1) //$p.each //$p.on(&apos;click&apos;,()=&gt;alert(&apos;clicked&apos;))]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[instance of]]></title>
     <url>%2F2020%2F03%2F10%2Finstance-of%2F</url>
     <content type="text"><![CDATA[Instance of 类型判断victoria instanceof Student //true victoria instanceof People //true victoria isntanceof Object //true [] instanceof Array //true [] instanceof Object //true {} instanceof Object //true 原型 //class 实际是函数，可见是语法糖 typeof People //&apos;function&apos; typeof Student //&apos;funcction&apos; //隐式原型__proto__和显示原型prototype consolo.log(james.__proto__ console.log(Student.prototype) console.log(james.__proto__===Student.prototype) 每个class都有显示原型 prototype每个实例都有隐式原型proto实例的隐式原型proto指向对应的class的显示原型 prototype 执行规则获取属性的james.name或者执行方法james.sayhi()先在自身属性和方法里寻找如果找不到就自动去proto中查找]]></content>
