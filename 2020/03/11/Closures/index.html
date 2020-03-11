@@ -90,20 +90,19 @@
 
 
 
-<meta name="description" content="Instanceof 原型链">
+<meta name="description" content="作用域和闭包 this的不用应用场景如何取值 手写bind函数 闭包在实际开发中的应用场景 创建10个a标签，点击时候弹出来对应的序号">
 <meta name="keywords" content="Interview">
 <meta property="og:type" content="article">
-<meta property="og:title" content="instanceof2">
-<meta property="og:url" content="http://yoursite.com/2020/03/11/instanceof2/index.html">
+<meta property="og:title" content="Closures">
+<meta property="og:url" content="http://yoursite.com/2020/03/11/Closures/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="Instanceof 原型链">
-<meta property="og:image" content="https://s2.ax1x.com/2020/03/11/8FXzAP.png">
-<meta property="og:image" content="https://s2.ax1x.com/2020/03/11/8FjStf.png">
-<meta property="og:updated_time" content="2020-03-11T00:56:04.036Z">
+<meta property="og:description" content="作用域和闭包 this的不用应用场景如何取值 手写bind函数 闭包在实际开发中的应用场景 创建10个a标签，点击时候弹出来对应的序号">
+<meta property="og:image" content="https://s2.ax1x.com/2020/03/11/8kkN11.png">
+<meta property="og:updated_time" content="2020-03-11T03:42:03.302Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="instanceof2">
-<meta name="twitter:description" content="Instanceof 原型链">
-<meta name="twitter:image" content="https://s2.ax1x.com/2020/03/11/8FXzAP.png">
+<meta name="twitter:title" content="Closures">
+<meta name="twitter:description" content="作用域和闭包 this的不用应用场景如何取值 手写bind函数 闭包在实际开发中的应用场景 创建10个a标签，点击时候弹出来对应的序号">
+<meta name="twitter:image" content="https://s2.ax1x.com/2020/03/11/8kkN11.png">
 
 
 
@@ -131,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/03/11/instanceof2/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/03/11/Closures/"/>
 
 
 
 
 
-  <title> instanceof2 | Bunny's  Code Burrow </title>
+  <title> Closures | Bunny's  Code Burrow </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -300,7 +299,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/11/instanceof2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/11/Closures/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jenny Zeng">
@@ -321,7 +320,7 @@
             
             
               
-                instanceof2
+                Closures
               
             
           </h1>
@@ -336,7 +335,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-11T05:38:12+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-11T09:21:28+08:00">
                 2020-03-11
               </time>
             
@@ -371,66 +370,49 @@
       
 
       
-        <h1 id="Instanceof-原型链"><a href="#Instanceof-原型链" class="headerlink" title="Instanceof 原型链"></a>Instanceof 原型链</h1><p><img src="https://s2.ax1x.com/2020/03/11/8FXzAP.png" alt=""></p>
+        <h1 id="作用域和闭包"><a href="#作用域和闭包" class="headerlink" title="作用域和闭包"></a>作用域和闭包</h1><ul>
+<li>this的不用应用场景如何取值</li>
+<li>手写bind函数</li>
+<li>闭包在实际开发中的应用场景</li>
+<li>创建10个a标签，点击时候弹出来对应的序号 </li>
+</ul>
 <a id="more"></a>
-<pre><code>People.prototype===Student.prototype.__proto__  //True
-james.hasOwnProperty(&apos;sayhi&apos;) //false
-</code></pre><p><img src="https://s2.ax1x.com/2020/03/11/8FjStf.png" alt=""></p>
-<p>换句话说，<strong>proto</strong>就是去找上一层class的prototype</p>
-<p>Class是ES6语法规范，是由ECMA委员会发布<br>ECMA只规定语法规则，不规范如何实现<br>以上是V8引擎实现方式</p>
-<p>如何判断一个变量是否是数组array（instanceof）<br>        var ary=[1,2,3,4];<br>        console.log(ary.intanceof Array) //true</p>
-<p>class的原型是本质</p>
-<p>手写jquery插件</p>
-<pre><code>    console.log(&apos;jquerydemo&apos;);
-class JQuery{
-    constructor(selector){
-        const result =document.querySelectorAll(selector)
-        const length =result.length;
-        for (let i =0;i&lt;length;i++){
-            this[i]=result[i];
+<p><img src="https://s2.ax1x.com/2020/03/11/8kkN11.png" alt=""></p>
+<p>作用域：某个变量合法的使用范围，上图中a可以在最外层的红框里使用</p>
+<ul>
+<li>全局作用域</li>
+<li>函数作用域</li>
+<li>块级作用域</li>
+</ul>
+<p>自由变量</p>
+<p>一个变量在当前作用域没有定义，但被使用了<br>向上级作用域，一层一层依次寻找，直到找到为止<br>如果全局作用域都没有找到，则报错xx is not defined</p>
+<p>闭包<br>作用域应用的特殊情况，有两种表现</p>
+<ul>
+<li>函数作为参赛被传递</li>
+<li>函数作为返回值被返回</li>
+</ul>
+<pre><code>    //函数作为返回值
+function create(){
+    let a = 100
+    return function(){
+        console.log(a)
+    }
+}
+let fn = create()
+let a =200
+fn() // 100
+
+
+        function print(){
+            const a = 200
+            fn()
         }
-        this.length=length
-        //类似于数组，但其实是object
-        this.selector=selector;
-    }
-    get(index){
-        return this[index]
-    }
-    each(fn){
-        for(let i = 0;i&lt;this.length;i++){
-            const elem =this[i]
-            fn(elem)
+        const a = 100
+        function fn(){
+            console.log(a)
         }
-    }
-    on(type,fn){
-        return this.each(elem=&gt;{
-            elem.addEventListener(type,fn,false)
-        })
-    }
-}
-
-//插件
-JQuery.prototype.dialog=function(info){
-    alert(info)
-}
-
-class myJQuery extends JQuery{
-    constructor(selector){
-        super(selector)
-    }
-    addClass(className){
-
-    }
-    style(data){
-
-    }
-}
-
-    //const $p = new JQuery(&apos;p&apos;);
-    //$p.get(1)
-    //$p.each
-    //$p.on(&apos;click&apos;,()=&gt;alert(&apos;clicked&apos;))
-</code></pre><p>每个函数都有一个prototype属性<br>这个属性都有一个指针，指向一个对象<br>这个对象包含由特定类型所有实例共享的属性和方法<br>使用原型的好处是可以让所有对象实例共享他们包含的方法和属性<br>一般通过instanceof关键字来基于原型链来检测变量的类型<br>Object 是所有js class的父类</p>
+        print(fn)//100
+</code></pre><p>闭包：自由变量的查找是在函数定义的地方向上级作用域查找，不是在执行的地方</p>
 
       
     </div>
@@ -473,18 +455,14 @@ class myJQuery extends JQuery{
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/03/11/Closures/" rel="next" title="Closures">
-                <i class="fa fa-chevron-left"></i> Closures
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/03/10/instance-of/" rel="prev" title="instance of">
-                instance of <i class="fa fa-chevron-right"></i>
+              <a href="/2020/03/11/instanceof2/" rel="prev" title="instanceof2">
+                instanceof2 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -625,7 +603,7 @@ class myJQuery extends JQuery{
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Instanceof-原型链"><span class="nav-number">1.</span> <span class="nav-text">Instanceof 原型链</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#作用域和闭包"><span class="nav-number">1.</span> <span class="nav-text">作用域和闭包</span></a></li></ol></div>
             
 
           </div>
