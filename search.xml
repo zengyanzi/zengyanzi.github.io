@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[bind]]></title>
+    <url>%2F2020%2F03%2F12%2Fbind%2F</url>
+    <content type="text"><![CDATA[bindfunction.prototype.bind1=function(){ //将参数解析为数组 constargs = Array.prototype.slice.call(arguments) //获取this(取出数组第一项，数组剩余的就是传递的参数) const t = args.shift() const self = this //当前函数 //返回一个函数 return function () { //执行原函数，并返回结果 retrun self.appy(t,args) } }]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[this]]></title>
     <url>%2F2020%2F03%2F12%2Fthis%2F</url>
-    <content type="text"><![CDATA[this 作为普通函数 使用call apply bind 作为对象方法被调用 在class方法中被调用 箭头函数 this是在函数执行的时候确定，不是在函数定义的时候确定 function fn1(){ console.log(this) } fn1();//window fn1.call({x:100})// {x:100} const fn2 = fn1.bind({x:200}) fn2() //{x:200} 来看看其他例子 const zhangsan={ name:&apos;tom&apos;, sayHi(){ //this当前对象 console.log(this) } wait(){ setTimeout(function(){ //this === window console.log(this) }) } } const zhangsan={ name:&apos;tom&apos;, sayHi(){ //this当前对象 console.log(this) } waitAgain(){ setTimeout(()=&gt;{ //this 当前对象,箭头函数取上级作用域的this，自己本身不会有this console.log(this) }) } } class People{ constructor(name){ this.name = name this.age = 20 } sayHi(){ console.log(this) } } const zhangsan = new People; zhangsan.sayHi() //zhangsan]]></content>
+    <content type="text"><![CDATA[this 作为普通函数 使用call apply bind（传入什么就返回什么） 作为对象方法被调用 在class方法中被调用（当前实例本身） 箭头函数（上一级作用域的定义） this是在函数执行的时候确定，不是在函数定义的时候确定 function fn1(){ console.log(this) } fn1();//window fn1.call({x:100})// {x:100} const fn2 = fn1.bind({x:200}) fn2() //{x:200} 来看看其他例子 const zhangsan={ name:&apos;tom&apos;, sayHi(){ //this当前对象 console.log(this) } wait(){ setTimeout(function(){ //this === window console.log(this) }) } } const zhangsan={ name:&apos;tom&apos;, sayHi(){ //this当前对象 console.log(this) } waitAgain(){ setTimeout(()=&gt;{ //this 当前对象,箭头函数取上级作用域的this，自己本身不会有this console.log(this) }) } } class People{ constructor(name){ this.name = name this.age = 20 } sayHi(){ console.log(this) } } const zhangsan = new People; zhangsan.sayHi() //zhangsan]]></content>
       <tags>
         <tag>Interview</tag>
       </tags>
@@ -370,8 +378,8 @@
     <url>%2F2017%2F09%2F25%2FAndroid-studio-icon-on-device%2F</url>
     <content type="text"><![CDATA[How to change or set the Icon for your Android APP? Go to the path “..android\app\src\main\res” Update the images in those folders \mipmap-xxhdpi \mipmap-xhdpi \mipmap-mdpi \mipmap-hdpi You could use some online tool to generate your icon https://makeappicon.com/ which resizes all iOS icons and Android icons.]]></content>
       <tags>
-        <tag>Android</tag>
         <tag>React Native</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>

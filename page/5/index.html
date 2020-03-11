@@ -297,6 +297,143 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/11/update-the-tinymce-for-nopcommerce/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/01/11/update-the-tinymce-for-nopcommerce/" itemprop="url">
+                  update the tinymce for nopcommerce
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-11T11:06:09+08:00">
+                2018-01-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Update-the-tinyMce-for-nopCommerce"><a href="#Update-the-tinyMce-for-nopCommerce" class="headerlink" title="Update the tinyMce for nopCommerce"></a>Update the tinyMce for nopCommerce</h1><p>To fix the bug of table css in product full description, I add a plugin in tinyMCE as below:</p>
+<p>To add the Fullpage Plugin to the tinyMCE editor just edit:</p>
+<pre><code>/Administration/Views/Shared/EditorTemplates/RichEditor.cshtml
+</code></pre><p>And add “fullpage” to plugins: [..] and also to toolbar: “..”</p>
+<pre><code>inymce.init({
+        selector: &quot;#@ViewData.TemplateInfo.GetFullHtmlFieldId(string.Empty)&quot;,
+        height: 350,
+        width: 790,
+        valid_children : &quot;+body[style],-body[div],p[strong|a|#text]&quot;,
+        plugins: [
+            &quot;advlist autolink lists link image charmap print preview anchor&quot;,
+            &quot;searchreplace visualblocks code fullscreen fullpage&quot;,
+            &quot;insertdatetime media table contextmenu paste@(canUploadPictures ? &quot; jbimages&quot; : null)&quot;
+        ],
+        toolbar: &quot;insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image@(canUploadPictures ? &quot; jbimages&quot; : null) | fullpage&quot;,
+        //&quot;relative_urls&quot; required by jbimages plugin to be set to &quot;false&quot;
+        //but in this case it&apos;ll break existing links (e.g. message template tokens)
+        relative_urls: true
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/21/How-to-find-the-Additional-CSS-in-wordpress/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1792,453 +1929,11 @@ color:#111;
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/28/nopcommerce-from-3-3-to-3-9/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/06/28/nopcommerce-from-3-3-to-3-9/" itemprop="url">
-                  nopcommerce from 3.3 to 3.9
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-28T12:06:17+08:00">
-                2017-06-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="update-nopcommerce"><a href="#update-nopcommerce" class="headerlink" title="update nopcommerce"></a>update nopcommerce</h1><p>update nopcommerce from 3.3-3.9<br>Here is the steps to update</p>
-<ol>
-<li><p>download form nop</p>
-</li>
-<li><p><strong>unblock</strong> the zar for window securtiy issue,if not, there wil be problems when releasing</p>
-</li>
-<li>Extract files</li>
-<li>setup by: run NopCommerce.sln, clean and rebuild</li>
-<li>view in chrome</li>
-<li>you will see the installation page: input your local database and choose to create one database, it doesn’t matter, because you will rewrite it later, but it seems that you cannot skip the initial part</li>
-<li>open nop.web/app_data/setting.txt</li>
-<li>change the database to your own one. make sure the version of you database is same with the source code. if it is not ,you should download the update.sql from nopcommerce and run it one by one: 3.3-3.4, 3.4-3.5. when you run it, make sure you open the microsoft sql server and click the target database you want to update</li>
-<li><p>copy the original theme from v3.3 to 3.9, choose the new theme from backend of website, then you will notice  the difference ,what we are supposed to do is address them one by one:</p>
-</li>
-<li><p>solve the problem of responsive by go to the nop.web/views/shared/_Root.cshtml</p>
-</li>
-</ol>
-<pre><code>@{
-    Layout = &quot;~/Views/Shared/_Root.Head.cshtml&quot;;
-}
-@Html.Widget(&quot;body_start_html_tag_after&quot;)
-@Html.Partial(&quot;_Notifications&quot;)
-@Html.Action(&quot;JavaScriptDisabledWarning&quot;, &quot;Common&quot;)
-@Html.Partial(&quot;OldInternetExplorerWarning&quot;)
-
-&lt;div class=&quot;master-wrapper-page&quot;&gt;
-    @Html.Action(&quot;AdminHeaderLinks&quot;, &quot;Common&quot;)
-
-    &lt;div class=&quot;master-wrapper-content&quot;&gt;
-    @Html.Partial(&quot;Header&quot;)
-    &lt;script type=&quot;text/javascript&quot;&gt;
-        AjaxCart.init(false, &apos;.header-links .cart-qty&apos;, &apos;.header-links .wishlist-qty&apos;, &apos;#flyout-cart&apos;);
-    &lt;/script&gt;
-    &lt;div class=&quot;header-menu&quot;&gt;
-        @Html.Action(&quot;TopMenu&quot;, &quot;Catalog&quot;)
-    &lt;/div&gt;
-        @Html.Widget(&quot;content_before&quot;)
-        &lt;div class=&quot;master-wrappermain&quot;&gt;
-
-           &lt;div class=&quot;master-wrapper-main clearfix&quot;&gt;
-            @if (IsSectionDefined(&quot;Breadcrumb&quot;))
-                {
-                    @RenderSection(&quot;Breadcrumb&quot;) 
-                }
-             @RenderBody()
-            &lt;/div&gt;
-        &lt;/div&gt;
-        @Html.Widget(&quot;content_after&quot;)
-    &lt;/div&gt;
-    @Html.Action(&quot;Footer&quot;, &quot;Common&quot;)
-&lt;/div&gt;
-@Html.Action(&quot;EuCookieLaw&quot;, &quot;Common&quot;)
-@Html.Widget(&quot;body_end_html_tag_before&quot;)
-</code></pre><ol>
-<li><p>modify for the slider by go to the nop.web\Plugins\Nop.Plugin.Widgets.NivoSlider\Content\nivoslider\themes\custom</p>
-<pre><code>@media all and (min-width: 1001px) {
-.theme-custom {
-/*margin: -30px 0 60px;*/
-}
-</code></pre></li>
-<li><p>go to the views/common/footer.cshtml,update as below:</p>
-<pre><code>@model FooterModel
-@using Nop.Core
-@using Nop.Core.Domain.Tax
-@using Nop.Core.Infrastructure
-@using Nop.Web.Models.Common;
-
-&lt;div class=&quot;footer&quot;&gt;
-    &lt;div class=&quot;footer-menu-wrapper&quot;&gt;
-        &lt;div class=&quot;column information&quot;&gt;
-
-        &lt;h3&gt;@T(&quot;Footer.Information&quot;)&lt;/h3&gt;
-        &lt;ul&gt;
-</code></pre></li>
-</ol>
-<pre><code>        @if (Model.SitemapEnabled)
-        {
-            &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;Sitemap&quot;)&quot;&gt;@T(&quot;Sitemap&quot;)&lt;/a&gt;&lt;/li&gt;
-        }
-        &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;Topic&quot;, new {SeName = Html.GetTopicSeName(&quot;shippinginfo&quot;) })&quot;&gt;@T(&quot;ShippingReturns&quot;)&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;Topic&quot;, new {SeName = Html.GetTopicSeName(&quot;privacyinfo&quot;) })&quot;&gt;@T(&quot;PrivacyNotice&quot;)&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;Topic&quot;, new {SeName = Html.GetTopicSeName(&quot;conditionsofuse&quot;) })&quot;&gt;@T(&quot;ConditionsOfUse&quot;)&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;Topic&quot;, new {SeName = Html.GetTopicSeName(&quot;aboutus&quot;) })&quot;&gt;@T(&quot;AboutUs&quot;)&lt;/a&gt;&lt;/li&gt;
-
-
-
-
-        &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;ContactUs&quot;)&quot;&gt;@T(&quot;ContactUs&quot;)&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&quot;column customer-service&quot;&gt;
-
-    &lt;h3&gt;@T(&quot;Footer.CustomerService&quot;)&lt;/h3&gt;
-    &lt;ul&gt;
-
-
-        &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;ProductSearch&quot;)&quot;&gt;@T(&quot;Search&quot;)&lt;/a&gt; &lt;/li&gt;
-        @if (Model.NewsEnabled)
-        {
-            &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;NewsArchive&quot;)&quot;&gt;@T(&quot;News&quot;)&lt;/a&gt;&lt;/li&gt;
-        }
-        @if (Model.BlogEnabled)
-        {
-            &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;Blog&quot;)&quot;&gt;@T(&quot;Blog&quot;)&lt;/a&gt;&lt;/li&gt;
-        }
-        @if (Model.ForumEnabled)
-        {
-            &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;Boards&quot;)&quot;&gt;@T(&quot;Forum.Forums&quot;)&lt;/a&gt;&lt;/li&gt;
-        }
-        @if (Model.RecentlyViewedProductsEnabled)
-        {
-            &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;RecentlyViewedProducts&quot;)&quot;&gt;@T(&quot;Products.RecentlyViewedProducts&quot;)&lt;/a&gt;&lt;/li&gt;
-        }
-        @if (Model.CompareProductsEnabled)
-        {
-            &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;CompareProducts&quot;)&quot;&gt;@T(&quot;Products.Compare.List&quot;)&lt;/a&gt;&lt;/li&gt;
-        }
-        @if (Model.NewProductsEnabled)
-
-        {
-            &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;NewProducts&quot;)&quot;&gt;@T(&quot;Products.NewProducts&quot;)&lt;/a&gt;&lt;/li&gt;
-        }
-
-
-
-
-    &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&quot;column my-account&quot;&gt;
-
-    &lt;h3&gt;@T(&quot;Footer.MyAccount&quot;)&lt;/h3&gt;
-    &lt;ul&gt;
-
-
-        &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;CustomerInfo&quot;)&quot; class=&quot;account&quot;&gt;@T(&quot;Account.MyAccount&quot;)&lt;/a&gt;&lt;/li&gt;
-        @if (!Model.HideOrders)
-        {
-            &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;CustomerOrders&quot;)&quot;&gt;@T(&quot;Account.CustomerOrders&quot;)&lt;/a&gt;&lt;/li&gt;
-        }
-        @if (!Model.HideAddresses)
-        {
-            &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;CustomerAddresses&quot;)&quot; class=&quot;&quot;&gt;@T(&quot;Account.CustomerAddresses&quot;)&lt;/a&gt;&lt;/li&gt;
-        }
-        @if (Model.ShoppingCartEnabled)
-        {
-            &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;ShoppingCart&quot;)&quot; class=&quot;ico-cart&quot;&gt;@T(&quot;ShoppingCart&quot;)&lt;/a&gt;&lt;/li&gt;
-        }
-        @if (Model.WishlistEnabled)
-        {
-            &lt;li&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;Wishlist&quot;)&quot; class=&quot;ico-wishlist&quot;&gt;@T(&quot;Wishlist&quot;)&lt;/a&gt;&lt;/li&gt;
-        }
-    &lt;/ul&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;column follow-us&quot;&gt;
-              &lt;div class=&quot;social&quot;&gt;
-                &lt;div class=&quot;title&quot;&gt;
-                    &lt;strong&gt;@T(&quot;Footer.FollowUs&quot;)&lt;/strong&gt;
-                &lt;/div&gt;
-                @Html.Action(&quot;Social&quot;, &quot;Common&quot;)
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;footer-poweredby&quot;&gt;
-        Powered by &lt;a href=&quot;http://www.nopcommerce.com/&quot;&gt;nopCommerce&lt;/a&gt;
-        @*Would you like to remove the &quot;Powered by nopCommerce&quot; link in the bottom of the footer?
-            Find more info here http://www.nopcommerce.com/copyrightremoval.aspx*@
-
-    &lt;/div&gt;
-
-    @if (Model.DisplayTaxShippingInfoFooter)
-    {
-        var inclTax = EngineContext.Current.Resolve&lt;IWorkContext&gt;().TaxDisplayType == TaxDisplayType.IncludingTax;
-        &lt;div class=&quot;footer-tax-shipping&quot;&gt;
-            @T(inclTax ? &quot;Footer.TaxShipping.InclTax&quot; : &quot;Footer.TaxShipping.ExclTax&quot;, Url.RouteUrl(&quot;Topic&quot;, new {SeName = Html.GetTopicSeName(&quot;shippinginfo&quot;)}))
-        &lt;/div&gt;
-
-    }
-    &lt;div class=&quot;footer-disclaimer&quot;&gt;
-        @T(&quot;Content.CopyrightNotice&quot;, DateTime.Now.Year, Model.StoreName)
-    &lt;/div&gt;
-
-
-    &lt;div class=&quot;footer-store-theme&quot;&gt;
-        @Html.Action(&quot;StoreThemeSelector&quot;, &quot;Common&quot;)
-    &lt;/div&gt;
-
-    @Html.Widget(&quot;footer&quot;)
-&lt;/div&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-    $(document).ready(function () {
-        $(&apos;.footer-block .title&apos;).click(function () {
-            var e = window, a = &apos;inner&apos;;
-            if (!(&apos;innerWidth&apos; in window)) {
-                a = &apos;client&apos;;
-                e = document.documentElement || document.body;
-            }
-            var result = { width: e[a + &apos;Width&apos;], height: e[a + &apos;Height&apos;] };
-            if (result.width &lt; 769) {
-                $(this).siblings(&apos;.list&apos;).slideToggle(&apos;slow&apos;);
-            }
-        });
-    });
-&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-    $(document).ready(function () {
-        $(&apos;.block .title&apos;).click(function () {
-            var e = window, a = &apos;inner&apos;;
-            if (!(&apos;innerWidth&apos; in window)) {
-                a = &apos;client&apos;;
-                e = document.documentElement || document.body;
-            }
-            var result = { width: e[a + &apos;Width&apos;], height: e[a + &apos;Height&apos;] };
-            if (result.width &lt; 1001) {
-                $(this).siblings(&apos;.listbox&apos;).slideToggle(&apos;slow&apos;);
-            }
-        });
-    });
-&lt;/script&gt;
-</code></pre><p>meanwhile, go to the model/commom/FooterModel.cs modify as below:</p>
-<pre><code>using System.Collections.Generic;
-using Nop.Web.Framework.Mvc;
-
-namespace Nop.Web.Models.Common
-{
-    public partial class FooterModel : BaseNopModel
-    {
-        public FooterModel()
-        {
-            Topics = new List&lt;FooterTopicModel&gt;();
-        }
-        public string FacebookLink { get; set; }
-        public string TwitterLink { get; set; }
-        public string YoutubeLink { get; set; }
-        public string GooglePlusLink { get; set; }
-        public string StoreName { get; set; }
-        public bool WishlistEnabled { get; set; }
-        public bool ShoppingCartEnabled { get; set; }
-        public bool HideAddresses { get; set; }
-        public bool HideOrders { get; set; }
-        public bool SitemapEnabled { get; set; }
-        public bool NewsEnabled { get; set; }
-        public bool BlogEnabled { get; set; }
-        public bool CompareProductsEnabled { get; set; }
-        public bool ForumEnabled { get; set; }
-        public bool RecentlyViewedProductsEnabled { get; set; }
-        public bool NewProductsEnabled { get; set; }
-        public bool AllowCustomersToApplyForVendorAccount { get; set; }
-        public bool DisplayTaxShippingInfoFooter { get; set; }
-        public bool HidePoweredByNopCommerce { get; set; }
-
-        public int WorkingLanguageId { get; set; }
-
-        public IList&lt;FooterTopicModel&gt; Topics { get; set; }
-
-        #region Nested classes
-
-        public class FooterTopicModel : BaseNopEntityModel
-        {
-            public string Name { get; set; }
-            public string SeName { get; set; }
-
-            public bool IncludeInFooterColumn1 { get; set; }
-            public bool IncludeInFooterColumn2 { get; set; }
-            public bool IncludeInFooterColumn3 { get; set; }
-        }
-
-        #endregion
-    }
-}
-</code></pre><ol>
-<li><p>go to the model/commom/ContactUsModel.cs        </p>
-<pre><code>using System.Web.Mvc;
-using FluentValidation.Attributes;
-using Nop.Web.Framework;
-using Nop.Web.Framework.Mvc;
-using Nop.Web.Validators.Common;
-
-namespace Nop.Web.Models.Common
-{
-[Validator(typeof(ContactUsValidator))]
-public partial class ContactUsModel : BaseNopModel
-{
-[AllowHtml]
-[NopResourceDisplayName(&quot;ContactUs.Email&quot;)]
-public string Email { get; set; }
-
-[AllowHtml]
-[NopResourceDisplayName(&quot;ContactUs.Subject&quot;)]
-public string Subject { get; set; }
-public bool SubjectEnabled { get; set; }
-
-[AllowHtml]
-[NopResourceDisplayName(&quot;ContactUs.Enquiry&quot;)]
-public string Enquiry { get; set; }
-
-[AllowHtml]
-[NopResourceDisplayName(&quot;ContactUs.FullName&quot;)]
-public string FullName { get; set; }
-
-[AllowHtml]
-[NopResourceDisplayName(&quot;ContactUs.Business&quot;)]
-public string Business { get; set; }
-
-[AllowHtml]
-[NopResourceDisplayName(&quot;ContactUs.Department&quot;)]
-public string Department { get; set; }
-
-[AllowHtml]
-[NopResourceDisplayName(&quot;ContactUs.Phone&quot;)]
-public string Phone { get; set; }
-
-[AllowHtml]
-[NopResourceDisplayName(&quot;ContactUs.Mobile&quot;)]
-public string Mobile { get; set; }
-
-public bool SuccessfullySent { get; set; }
-public string Result { get; set; }
-
-public bool DisplayCaptcha { get; set; }
-    }
-}
-</code></pre></li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2283,7 +1978,7 @@ public bool DisplayCaptcha { get; set; }
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">110</span>
+                <span class="site-state-item-count">111</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

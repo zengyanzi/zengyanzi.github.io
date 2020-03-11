@@ -395,7 +395,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">110</span>
+                <span class="site-state-item-count">111</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -656,12 +656,11 @@
           var datas = $( "entry", xmlResponse ).map(function() {
             return {
               title: $( "title", this ).text(),
-          ,
               content: $("content",this).text(),
               url: $( "url" , this).text()
             };
           }).get();
-          var $ment.getElementById(search_id);
+          var $input = document.getElementById(search_id);
           var $resultContent = document.getElementById(content_id);
           $input.addEventListener('input', function(){
             var matchcounts = 0;
