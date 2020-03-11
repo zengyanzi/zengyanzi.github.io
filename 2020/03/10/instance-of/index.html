@@ -98,7 +98,7 @@
 <meta property="og:site_name" content="Bunny's  Code Burrow">
 <meta property="og:description" content="Instance of 类型判断victoria instanceof Student //true victoria instanceof People  //true victoria isntanceof Object  //true  [] instanceof Array //true [] instanceof Object //true {} instanceof Object //">
 <meta property="og:image" content="https://s2.ax1x.com/2020/03/11/8FXGY8.png">
-<meta property="og:updated_time" content="2020-03-10T21:35:12.420Z">
+<meta property="og:updated_time" content="2020-03-11T01:13:54.197Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="instance of">
 <meta name="twitter:description" content="Instance of 类型判断victoria instanceof Student //true victoria instanceof People  //true victoria isntanceof Object  //true  [] instanceof Array //true [] instanceof Object //true {} instanceof Object //">
@@ -379,7 +379,7 @@ victoria isntanceof Object  //true
 {} instanceof Object //true
 </code></pre><a id="more"></a>
 <p>原型</p>
-<pre><code>//class 实际是函数，可见是语法糖
+<pre><code>//class 实际是函数，可见是语法糖，class实际的理解是function
 typeof People //&apos;function&apos;
 typeof Student //&apos;funcction&apos;
 
@@ -388,7 +388,7 @@ consolo.log(james.__proto__
 console.log(Student.prototype)
 console.log(james.__proto__===Student.prototype)
 </code></pre><p><img src="https://s2.ax1x.com/2020/03/11/8FXGY8.png" alt=""></p>
-<p>每个class都有显示原型 prototype<br>每个实例都有隐式原型<strong>proto</strong><br>实例的隐式原型<strong>proto</strong>指向对应的class的显示原型 prototype</p>
+<p>每个class都有显示原型 prototype<br>每个实例都有隐式原型<strong>proto</strong><br>实例的隐式原型<strong>proto</strong>指向对应的class的显示原型 prototype<br>用的是====是引用地址全等</p>
 <p>执行规则<br>获取属性的james.name或者执行方法james.sayhi()<br>先在自身属性和方法里寻找<br>如果找不到就自动去<strong>proto</strong>中查找</p>
 
       
