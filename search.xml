@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[closure2]]></title>
+    <url>%2F2020%2F03%2F12%2Fclosure2%2F</url>
+    <content type="text"><![CDATA[closure闭包的应用 隐藏数据 做一个简单的cashe工具 console.log(&apos;cachedemo&apos;) //闭包隐藏数据，只提供API function createCache(){ const data ={}//闭包中的数据，被隐藏，不被外界访问 return { set:function (key,val){ data[key]=val }, get:function(key){ return data[key] } } } const c = createCache() c.set(&apos;a&apos;,100) console.log(c.get(&apos;a&apos;))]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[bind]]></title>
     <url>%2F2020%2F03%2F12%2Fbind%2F</url>
     <content type="text"><![CDATA[bindfunction.prototype.bind1=function(){ //将参数解析为数组 constargs = Array.prototype.slice.call(arguments) //获取this(取出数组第一项，数组剩余的就是传递的参数) const t = args.shift() const self = this //当前函数 //返回一个函数 return function () { //执行原函数，并返回结果 retrun self.appy(t,args) } }]]></content>
@@ -378,8 +386,8 @@
     <url>%2F2017%2F09%2F25%2FAndroid-studio-icon-on-device%2F</url>
     <content type="text"><![CDATA[How to change or set the Icon for your Android APP? Go to the path “..android\app\src\main\res” Update the images in those folders \mipmap-xxhdpi \mipmap-xhdpi \mipmap-mdpi \mipmap-hdpi You could use some online tool to generate your icon https://makeappicon.com/ which resizes all iOS icons and Android icons.]]></content>
       <tags>
-        <tag>React Native</tag>
         <tag>Android</tag>
+        <tag>React Native</tag>
       </tags>
   </entry>
   <entry>
