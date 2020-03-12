@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2020/03/12/this/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
 <meta property="og:description" content="this 作为普通函数 使用call apply bind（传入什么就返回什么） 作为对象方法被调用 在class方法中被调用（当前实例本身） 箭头函数（上一级作用域的定义）  this是在函数执行的时候确定，不是在函数定义的时候确定 function fn1(){     console.log(this) } fn1();//window  fn1.call({x:100})// {x:100">
-<meta property="og:updated_time" content="2020-03-12T01:06:16.288Z">
+<meta property="og:updated_time" content="2020-03-12T01:31:35.461Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="this">
 <meta name="twitter:description" content="this 作为普通函数 使用call apply bind（传入什么就返回什么） 作为对象方法被调用 在class方法中被调用（当前实例本身） 箭头函数（上一级作用域的定义）  this是在函数执行的时候确定，不是在函数定义的时候确定 function fn1(){     console.log(this) } fn1();//window  fn1.call({x:100})// {x:100">
@@ -429,6 +429,10 @@ class People{
 }
 const zhangsan = new People;
 zhangsan.sayHi() //zhangsan
+
+
+
+    James.__proto__.sayHi
 </code></pre>
       
     </div>
@@ -555,7 +559,7 @@ zhangsan.sayHi() //zhangsan
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">112</span>
+                <span class="site-state-item-count">113</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
