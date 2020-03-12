@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2020/03/12/Asynchronous/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
 <meta property="og:description" content="Asynchronous题目：  同步和异步的区别是什么 手写用promise加载一张图片 前端使用异步的场景有哪些  //setTimeout  console.log(1) setTimeout(function(){     console.log(2) },1000) console.log(3) setTimeout(function(){     console.log(4) },0)">
-<meta property="og:updated_time" content="2020-03-12T02:52:25.699Z">
+<meta property="og:updated_time" content="2020-03-12T03:21:14.957Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Asynchronous">
 <meta name="twitter:description" content="Asynchronous题目：  同步和异步的区别是什么 手写用promise加载一张图片 前端使用异步的场景有哪些  //setTimeout  console.log(1) setTimeout(function(){     console.log(2) },1000) console.log(3) setTimeout(function(){     console.log(4) },0)">
@@ -407,6 +407,40 @@ console.log(300)
 //同步
 console.log(100)
 alert(200)
+console.log(300)
+</code></pre><p>应用场景</p>
+<ul>
+<li>网络请求，如ajax图片加载</li>
+<li><p>定时任务，如setTimeout</p>
+<pre><code>//ajax        
+console.log(&apos;start&apos;)
+$.get(&apos;./data1.json&apos;,function(data1){
+    console.log(data1)
+})
+console.log(&apos;end&apos;)
+
+//图片加载        
+console.log(&apos;start&apos;)
+let img = document.createElement(&apos;imag)
+img.onload =function(){
+    console.log(&apos;loaded&apos;)
+}
+img.src=&apos;/xxx.png&apos;
+console.log(&apos;end&apos;)
+</code></pre></li>
+</ul>
+<pre><code>//setTimeout
+console.log(100)
+setTimeout(function(){
+    console.log(200)
+},1000)
+console.log(300)
+
+//setInterval 
+console.log(100)
+setInterval(function(){
+    console.log(200)
+},1000)
 console.log(300)
 </code></pre>
       
