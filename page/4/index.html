@@ -297,6 +297,172 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/19/how-to-install-docker-to-Ubuntu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2019/09/19/how-to-install-docker-to-Ubuntu/" itemprop="url">
+                  how to install docker to Ubuntu
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-19T11:43:14+08:00">
+                2019-09-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="How-to-install-docker-to-Ubuntu"><a href="#How-to-install-docker-to-Ubuntu" class="headerlink" title="How to install docker to Ubuntu"></a>How to install docker to Ubuntu</h1><p>To install Docker Engine - Community, you need the 64-bit version of one of these Ubuntu versions:</p>
+<p>Disco 19.04</p>
+<p>Cosmic 18.10</p>
+<p>Bionic 18.04 (LTS)</p>
+<p>Xenial 16.04 (LTS)</p>
+<p>To check the verion of your Ubuntu system,by </p>
+<pre><code>$sudo lsb_release -a
+</code></pre><p>Uninstall old versions<br>Older versions of Docker were called docker, docker.io , or docker-engine. If these are installed, uninstall them:</p>
+<pre><code>$ sudo apt-get remove docker docker-engine docker.io containerd runc
+</code></pre><p>Install Docker Engine - Community</p>
+<p>SET UP THE REPOSITORY</p>
+<p>Update the apt package index:</p>
+<pre><code>$ sudo apt-get update
+</code></pre><p>Install packages to allow apt to use a repository over HTTPS:</p>
+<pre><code>$ sudo apt-get install \
+apt-transport-https \
+ca-certificates \
+curl \
+gnupg-agent \
+software-properties-common
+</code></pre><p>Add Docker’s official GPG key:</p>
+<pre><code>$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+</code></pre><p>Verify that you now have the key with the fingerprint</p>
+<pre><code>9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88
+</code></pre><p> by searching for the last 8 characters of the fingerprint.</p>
+<pre><code>$ sudo apt-key fingerprint 0EBFCD88
+
+pub   rsa4096 2017-02-22 [SCEA]
+  9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+uid           [ unknown] Docker Release (CE deb) &lt;docker@docker.com&gt;
+sub   rsa4096 2017-02-22 [S]
+</code></pre><p>Use the following command to set up the stable repository. To add the nightly or test repository, add the word nightly or test (or both) after the word stable in the commands below. Learn about nightly and test channels.</p>
+<pre><code>$ sudo add-apt-repository \
+   &quot;deb [arch=amd64] https://download.docker.com/linux/    ubuntu \
+   $(lsb_release -cs) \
+   stable&quot;
+</code></pre><p>INSTALL DOCKER ENGINE - COMMUNITY</p>
+<p>Update the apt package index.</p>
+<pre><code>$ sudo apt-get update
+</code></pre><p>Install the latest version of Docker Engine - Community and containerd, or go to the next step to install a specific version:</p>
+<pre><code>$ sudo apt-get install docker-ce docker-ce-cli containerd.io
+</code></pre><p>List the versions available in your repo:</p>
+<pre><code>$ apt-cache madison docker-ce
+</code></pre><p><strong>However,if you don’t want to choose, just use $ sudo apt-get install docker-ce would install the latest version</strong></p>
+<p>Verify that Docker Engine - Community is installed correctly by running the hello-world image.</p>
+<pre><code>$ sudo docker run hello-world
+</code></pre><p>Enjoy</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/19/connect-Ubuntu-from-SecureCRT/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1514,159 +1680,6 @@ height=&quot;0&quot; width=&quot;0&quot; style=&quot;display:none;visibility:hid
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/23/update-hexo-with-shh/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/02/23/update-hexo-with-shh/" itemprop="url">
-                  update hexo with shh
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-23T15:11:06+08:00">
-                2018-02-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="fatal-could-not-read-Username-for-‘https-github-com‘-Invalid-argument"><a href="#fatal-could-not-read-Username-for-‘https-github-com‘-Invalid-argument" class="headerlink" title="fatal: could not read Username for ‘https://github.com‘: Invalid argument"></a>fatal: could not read Username for ‘<a href="https://github.com" target="_blank" rel="external">https://github.com</a>‘: Invalid argument</h1><p>Hexo g -d</p>
-<p>but get the error like below</p>
-<pre><code>fatal: could not read Username for &apos;https://github.com&apos;: Invalid argument
-FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
-Error: bash: /dev/tty: No such device or address
-error: failed to execute prompt script (exit code 1)
-fatal: could not read Username for &apos;https://github.com&apos;: Invalid argument
-</code></pre><p>The way to solve it is by two steps<br>1.go to the blog/_config.yml update the url like </p>
-<pre><code>deploy:
-type: git
-repo: git@github.com:zengyanzi/zengyanzi.github.io.git
-branch: master
-</code></pre><p>Instead of <a href="https://github.com/zengyanzi/zengyanzi.github.io" target="_blank" rel="external">https://github.com/zengyanzi/zengyanzi.github.io</a></p>
-<ol>
-<li>Generate ssh as below :</li>
-</ol>
-<p>A- Create a ssh key using Git Bash using following command</p>
-<pre><code>ssh-keygen -t rsa -b 4096 -C &quot;zengzhen.ucf@email.com&quot;
-</code></pre><p>After running this command just install the by default options and enter the password balnk when it prompts.(<strong>Three times of pressing space</strong>)</p>
-<p>B- Then run the following commands to locate the public/private key generated from step1</p>
-<pre><code>cd .ssh
-
-cd ~/.ssh
-</code></pre><p>3- Then run the following command to view your public:</p>
-<pre><code>cat id_rsa.pub
-</code></pre><p>4- Copy your public key and go to your <strong>GitHub account -&gt; settings -&gt; create a SSH and GPG keys</strong> then click new ssh key and past your public key in the in key text field.</p>
-<p>5- Verify your public key using Git Bash by running the following command:</p>
-<pre><code>ssh -vT git@github.com
-</code></pre><p>You will get output like this</p>
-<pre><code>debug1: channel 0: free: client-session, nchannels 1
-Transferred: sent 3848, received 2040 bytes, in 0.2 seconds
-Bytes per second: sent 16032.4, received 8499.5
-debug1: Exit status 1
-</code></pre><p>Then you no longer got “could not read Username for ‘<a href="https://github.com" target="_blank" rel="external">https://github.com</a>‘: Invalid argument”</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1716,7 +1729,7 @@ debug1: Exit status 1
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">115</span>
+                <span class="site-state-item-count">116</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
