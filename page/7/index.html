@@ -297,6 +297,180 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/07/react-native-map-ios/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/07/react-native-map-ios/" itemprop="url">
+                  post react native map ios
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-07T20:04:49+08:00">
+                2017-05-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="React-Native-map-ios"><a href="#React-Native-map-ios" class="headerlink" title="React Native map ios"></a>React Native map ios</h1><p>Installation<br>First, download the library from npm:</p>
+<pre><code>npm install react-native-maps --save
+</code></pre><p>package.json</p>
+<pre><code>&quot;dependencies&quot;: {
+&quot;react&quot;: &quot;15.4.2&quot;,
+&quot;react-native&quot;: &quot;0.41.2&quot;,
+&quot;react-native-chart&quot;: &quot;^1.0.8-beta&quot;,
+&quot;react-native-check-box&quot;: &quot;^1.0.4&quot;,
+&quot;react-native-checkbox&quot;: &quot;^1.1.0&quot;,
+&quot;react-native-dropdown&quot;: &quot;0.0.6&quot;,
+&quot;react-native-elements&quot;: &quot;^0.9.7&quot;,
+&quot;react-native-maps&quot;: &quot;^0.14.0&quot;,
+&quot;react-native-menu&quot;: &quot;^0.20.2&quot;,
+&quot;react-native-pathjs-charts&quot;: &quot;0.0.25&quot;,
+&quot;react-native-scrollable-tab-view&quot;: &quot;^0.7.2&quot;,
+&quot;react-native-slider&quot;: &quot;^0.9.1&quot;,
+&quot;react-native-swipeable&quot;: &quot;^0.3.2&quot;,
+&quot;react-native-swipeout&quot;: &quot;^2.0.12&quot;,
+&quot;react-native-swiper&quot;: &quot;^1.5.4&quot;,
+&quot;react-native-tab-navigator&quot;: &quot;^0.3.3&quot;,
+&quot;react-native-vector-icons&quot;: &quot;^4.0.0&quot;,
+&quot;rnpm&quot;: &quot;^1.9.0&quot;
+  },
+</code></pre><p>possible error might be </p>
+<pre><code>TransformError: xxx/.js Unknown plugin &quot;module-resolver&quot; specified in &quot;xxxxx/react-native-maps/.babelrc&quot; at 0, attempted to resolve relative to &quot;xxxxxx/react-native-maps&quot;
+</code></pre><p>to solve this error above:</p>
+<pre><code>npm install --save-dev babel-plugin-module-resolver
+npm cache clean
+</code></pre><p>close the package windows or the cmd windows,then start it again</p>
+<pre><code>react-native run-ios
+</code></pre><p>this problem might be removed</p>
+<p>then follow the manual option as below:</p>
+<blockquote>
+<p>Option 3: Manually</p>
+<ol>
+<li>This was already done for you if you ran “react-native link”</li>
+<li>Open your project in Xcode, right click on Libraries and click Add Files to “Your Project Name” Look under node_modules/react-native-maps/lib/ios and add AIRMaps.xcodeproj.</li>
+<li>Add libAIRMaps.a to `Build Phases -Link Binary With Libraries.</li>
+<li>Click on AIRMaps.xcodeproj in Libraries and go the Build Settings tab. Double click the text to the right of Header Search Paths and verify that it has $(SRCROOT)/../../react-native/React as well as $(SRCROOT)/../../react-native/Libraries/Image - if they aren’t, then add them. This is so Xcode is able to find the headers that the AIRMaps source files are referring to by pointing to the header files installed within the react-native node_modules directory.</li>
+<li>Whenever you want to use it within React code now you can: var MapView = require(‘react-native-maps’);</li>
+</ol>
+</blockquote>
+<p>then you might notice this error</p>
+<pre><code>iOS build failed RCTConver+Mapkit.o RCTConvert+Mapkit.m
+</code></pre><p>to solve this problem, just delete the RCTConver+AirMap.h RCTConvert+AirMap.m<br>this problem might be caused by the rename of files </p>
+<blockquote>
+<p>in Xcode open libraries -right click AirMaps.xcodeproj -add file to AirMaps -go to find react-native-maps into node_module -lib -ios -AirMaps -select RCTConvert+MapKit.h/m -add (to fix ‘File RCTConvert+MapKit.m not found’).<br>then make suer this step</p>
+</blockquote>
+<pre><code>libAirMaps.a to the Link Binary With Libraries
+</code></pre><p>then clean and build the product<br>then </p>
+<pre><code>npm install rnpm
+react-native link
+</code></pre><p>then</p>
+<pre><code>xcode-&gt;product-&gt;clean-&gt;build
+</code></pre><p><strong>All this above is the way to install map based on iOS map not Google Map.<br>As a result, the api of google map is not mentioned above!</strong></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/04/react-native-cmd/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1472,137 +1646,6 @@ if __name__ == &quot;__main__&quot;:
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/nopcommerce-3-3-source-code/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/24/nopcommerce-3-3-source-code/" itemprop="url">
-                  nopcommerce 3.3 source code
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T11:15:54+08:00">
-                2017-04-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="nopcommerce-3-3-source-code"><a href="#nopcommerce-3-3-source-code" class="headerlink" title="nopcommerce 3.3 source code"></a>nopcommerce 3.3 source code</h1><p>目前公司使用的nopcommerce 3.3 是无source code的版本，导致很多功能无法实现。<br>恢复步骤</p>
-<ol>
-<li>download from nopcommerce.com 3.3 source code</li>
-<li>open NopCommerce.sln</li>
-<li>先按照正常步骤setup</li>
-<li>在app data里更改数据库设置</li>
-<li>把customerise的theme拷贝到路径<blockquote>
-<p>\nopCommerce_3.30_Source\Presentation\Nop.Web\Themes<br>在vs2008中刷新，在浏览器中查看，点击更新theme，可以进行更改theme进行还原。</p>
-</blockquote>
-</li>
-</ol>
-<p>然后怎么发布呢？由于是vs2012，不是2013，如果在vs里选择发布就一直会报错。所以目前的措施是直接从nop.web中把程序copy出来放到c盘iss发布环境，也就是WWW下面，在浏览器输入localhost，就可以在本地看到网站了 </p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1652,7 +1695,7 @@ if __name__ == &quot;__main__&quot;:
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">113</span>
+                <span class="site-state-item-count">114</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
