@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[postjs base]]></title>
+    <title><![CDATA[js base]]></title>
     <url>%2F2020%2F03%2F16%2Fpostjs-base%2F</url>
     <content type="text"><![CDATA[JS summary 变量的类型和计算 原型和原型链 作用域和闭包 异步和单线程 typeof能判断哪些类型：undefined, strinig,’number’,boolean,symbol,function,object 何时使用=== 何时使用== 除了==null,其他都用===，因为==运算符 通过发生转换去相等 值类型和引用类型的区别]]></content>
       <tags>
