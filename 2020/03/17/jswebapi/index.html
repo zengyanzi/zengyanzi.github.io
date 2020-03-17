@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="React Native, nopCommerce" />
+  <meta name="keywords" content="Interview," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="Loving code ,especially javascript, React Native">
-<meta name="keywords">
+<meta name="description" content="JS Web API JS基础知识是规定语法（ECMA262标准） JS Web API，网页操作的API（W3C标准） 前者是后者的基础，两者结合才能真正实际应用  JS web API的范围  DOM操作 BOM操作 事件绑定 ajax 存储">
+<meta name="keywords" content="Interview">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jswebapi">
 <meta property="og:url" content="http://yoursite.com/2020/03/17/jswebapi/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="Loving code ,especially javascript, React Native">
-<meta property="og:updated_time" content="2020-03-16T21:39:47.808Z">
+<meta property="og:description" content="JS Web API JS基础知识是规定语法（ECMA262标准） JS Web API，网页操作的API（W3C标准） 前者是后者的基础，两者结合才能真正实际应用  JS web API的范围  DOM操作 BOM操作 事件绑定 ajax 存储">
+<meta property="og:updated_time" content="2020-03-17T01:26:12.233Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jswebapi">
-<meta name="twitter:description" content="Loving code ,especially javascript, React Native">
+<meta name="twitter:description" content="JS Web API JS基础知识是规定语法（ECMA262标准） JS Web API，网页操作的API（W3C标准） 前者是后者的基础，两者结合才能真正实际应用  JS web API的范围  DOM操作 BOM操作 事件绑定 ajax 存储">
 
 
 
@@ -368,7 +368,76 @@
       
 
       
-        
+        <h1 id="JS-Web-API"><a href="#JS-Web-API" class="headerlink" title="JS Web API"></a>JS Web API</h1><ul>
+<li>JS基础知识是规定语法（ECMA262标准）</li>
+<li>JS Web API，网页操作的API（W3C标准）</li>
+<li>前者是后者的基础，两者结合才能真正实际应用</li>
+</ul>
+<p>JS web API的范围</p>
+<ul>
+<li>DOM操作</li>
+<li>BOM操作</li>
+<li>事件绑定</li>
+<li>ajax</li>
+<li>存储</li>
+</ul>
+<a id="more"></a>
+<p>DOM的本质DOCUMENT OBJECT MODEL</p>
+<ul>
+<li>vue和React框架应用广发，封装了DOM操作</li>
+<li>但是DOM操作是前端工程师的基础，必备基础知识</li>
+<li>只会VUE和React的前端工程师是不够的</li>
+</ul>
+<p>题目：</p>
+<ol>
+<li>DOM是那种数据结构</li>
+<li>DOM操作常用的API</li>
+<li>attr和property的区别</li>
+<li>一次性插入多个DOM节点，考虑性能</li>
+</ol>
+<p>知识点</p>
+<ol>
+<li>DOM本质</li>
+<li>DOM节点操作</li>
+<li>DOM结构操作</li>
+<li>DOM性能</li>
+</ol>
+<p>DOM 本质</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding&quot;=UTF-8&quot;?&gt;
+&lt;note&gt;
+    &lt;to&gt;Tove&lt;/to&gt;
+    &lt;from&gt;Jani&lt;/from&gt;
+    &lt;heading&gt;Reminder&lt;/heading&gt;
+    &lt;body&gt;Don&apos;t forget me this weekend!&lt;/body&gt;
+    &lt;other&gt;
+        &lt;a&gt;&lt;/a&gt;
+        &lt;a&gt;&lt;/a&gt;
+    &lt;/other&gt;
+&lt;/note&gt;
+</code></pre><p>看一下以上的xml，可以自己定义标签，可以任意扩展</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;
+            &lt;p&gt;this is p&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>以上是html的示范，结构和xml相似，但是有自己的规定<br>DOM的本质是一颗树的结构，比如打开浏览器的开发者模式，看到elements，就可以看到这颗树的结构。但是浏览器下的DOM不是DOM，因为还有CSS。</p>
+<p>DOM节点操作</p>
+<ul>
+<li>获取DOM节点</li>
+<li>attribute</li>
+<li>property</li>
+</ul>
+<p>如何获取DOM节点</p>
+<pre><code>const div1=document.getElementById(&apos;div1&apos;) //元素
+const divList = document.getElementByTagName(&apos;div&apos;) // 集合
+</code></pre>
       
     </div>
 
@@ -394,6 +463,12 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Interview/" rel="tag"># Interview</a>
+          
+        </div>
       
 
       
@@ -459,8 +534,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460"
@@ -533,6 +617,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JS-Web-API"><span class="nav-number">1.</span> <span class="nav-text">JS Web API</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
