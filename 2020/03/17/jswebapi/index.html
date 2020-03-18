@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2020/03/17/jswebapi/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
 <meta property="og:description" content="JS Web API JS基础知识是规定语法（ECMA262标准） JS Web API，网页操作的API（W3C标准） 前者是后者的基础，两者结合才能真正实际应用  JS web API的范围  DOM操作 BOM操作 事件绑定 ajax 存储">
-<meta property="og:updated_time" content="2020-03-17T01:26:12.233Z">
+<meta property="og:updated_time" content="2020-03-18T09:22:57.656Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jswebapi">
 <meta name="twitter:description" content="JS Web API JS基础知识是规定语法（ECMA262标准） JS Web API，网页操作的API（W3C标准） 前者是后者的基础，两者结合才能真正实际应用  JS web API的范围  DOM操作 BOM操作 事件绑定 ajax 存储">
@@ -436,8 +436,32 @@
 </ul>
 <p>如何获取DOM节点</p>
 <pre><code>const div1=document.getElementById(&apos;div1&apos;) //元素
-const divList = document.getElementByTagName(&apos;div&apos;) // 集合
-</code></pre>
+const divList = document.getElementsByTagName(&apos;div&apos;) // 集合
+console.log(divList.length)
+console.log(divList[0])
+
+const containerList = document.getElementByClassName(&apos;.container&apos;) //集合
+const pList =document.querySelectorAll(&apos;p&apos;) // 集合
+</code></pre><p>DOM节点的property，修改的是js变量的属性，不会体现到HTML结构中</p>
+<pre><code>const pList = document.querySelectorAll(&apos;p&apos;);
+const p = pList[0]
+console.log(p.style.width) // 获取样式
+p.style.width = &apos;100px&apos; //修改样式
+console.log(p.className) //获取样式
+p.className = &apos;p1&apos; //修改 class
+
+// 获取nodeName和nodeType
+console.log(p.nadeName)
+console.log(p.nodeType)
+</code></pre><p>DOM节点的attribute,能真正作用到DOM里去，会改变html</p>
+<pre><code>const pList = document.querySelectorAll(&apos;p&apos;)
+const p = pList[0]
+p.getAttribute(&apos;dattta-name&apos;)
+p.setAttribute(&apos;data-name&apos;,&apos;imooc&apos;)
+p.getAttribute(&apos;sytle&apos;)
+p.setAttribute(&apos;style&apos;,&apos;font-size:30px;&apos;)
+</code></pre><p>property和attribute都会引起DOM重新渲染</p>
+
       
     </div>
 
