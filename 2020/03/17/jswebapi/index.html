@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2020/03/17/jswebapi/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
 <meta property="og:description" content="JS Web API JS基础知识是规定语法（ECMA262标准） JS Web API，网页操作的API（W3C标准） 前者是后者的基础，两者结合才能真正实际应用  JS web API的范围  DOM操作 BOM操作 事件绑定 ajax 存储">
-<meta property="og:updated_time" content="2020-03-18T09:22:57.656Z">
+<meta property="og:updated_time" content="2020-03-19T00:45:04.132Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jswebapi">
 <meta name="twitter:description" content="JS Web API JS基础知识是规定语法（ECMA262标准） JS Web API，网页操作的API（W3C标准） 前者是后者的基础，两者结合才能真正实际应用  JS web API的范围  DOM操作 BOM操作 事件绑定 ajax 存储">
@@ -461,7 +461,34 @@ p.setAttribute(&apos;data-name&apos;,&apos;imooc&apos;)
 p.getAttribute(&apos;sytle&apos;)
 p.setAttribute(&apos;style&apos;,&apos;font-size:30px;&apos;)
 </code></pre><p>property和attribute都会引起DOM重新渲染</p>
-
+<p>DOM 结构操作</p>
+<ul>
+<li>新增/插入节点</li>
+<li>获取子节点列表，获取父节点</li>
+<li>删除子节点</li>
+</ul>
+<pre><code>console.log(&apos;dom2&apos;)
+const div1 = document.getElementById(&apos;div1&apos;)
+const div2 = document.getElementById(&apos;div2&apos;)
+//新建节点
+const p1 = document.createElement(&apos;p&apos;)
+p1.innerHTML = &apos;this is p1&apos;
+ //插入节点
+div1.appendChild(p1)
+//移动节点
+const p2 = document.getElementById(&apos;p2&apos;)
+div2.appendChild(p2)
+</code></pre><p>获取子元素列表</p>
+<pre><code>const div1= document.getElementById(&apos;div1&apos;)
+const child = div1.childNodes
+</code></pre><p>获取父元素</p>
+<pre><code>const div1 = document.getElementById(&apos;div1&apos;)
+const parent =div1.parentDode
+</code></pre><p>删除节点</p>
+<pre><code>const div1= document.getElementById(&apos;div1&apos;)
+const child = div1.childNodes
+div1.removeChild(child[0])
+</code></pre>
       
     </div>
 
