@@ -297,6 +297,142 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/22/wordpress-change-domain/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/22/wordpress-change-domain/" itemprop="url">
+                  wordpress change domain
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-22T21:29:41+08:00">
+                2017-05-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="After-updating-the-Domain-for-WordPress"><a href="#After-updating-the-Domain-for-WordPress" class="headerlink" title="After updating the Domain for WordPress"></a>After updating the Domain for WordPress</h1><ol>
+<li>go to wp-config.php</li>
+</ol>
+<pre><code>update:the URL with the latest one
+/** MySQL hostname */
+define(&apos;DB_HOST&apos;, &apos;microscience.com.au&apos;);
+</code></pre><p>Same for another website</p>
+<pre><code>/** Sets up WordPress local environmental test only for local test */
+define( &apos;WP_SITEURL&apos;, &apos;http://localhost/didi&apos; );
+define( &apos;WP_HOME&apos;,    &apos;http://localhost/didi&apos; );
+</code></pre><ol>
+<li><p>go the the backend of WordPress:/wp-admin/options-general.php</p>
+<p> update the WordPress Address (URL) And Site Address (URL)<br><strong>This part might not be necessary</strong></p>
+</li>
+<li>sometimes we need access to database, modify the table :wp_options. In the tale of wp_options, find the two fields:home and siteurl, change the option_value to the same with wp-config.php. For example, for the website of didi, we use <a href="http://localhost/didi" target="_blank" rel="external">http://localhost/didi</a> for both fields.</li>
+<li></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/19/RegExp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1566,172 +1702,6 @@ npm -g uninstall &lt;name&gt; --save also remove it globally
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/nopcommerce-3-3-python/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/24/nopcommerce-3-3-python/" itemprop="url">
-                  nopcommerce 3.3 python
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T11:29:13+08:00">
-                2017-04-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="nopcommerce-3-3-use-Python-to-address-product-related"><a href="#nopcommerce-3-3-use-Python-to-address-product-related" class="headerlink" title="nopcommerce 3.3 use Python to address product related"></a>nopcommerce 3.3 use Python to address product related</h1><pre><code># ~*~ coding:utf-8 ~*~
-#csv是一个读取csv文件的lib
-import csv
-#itertools生成组合和排列的lib
-import itertools
-#pyodbc是连接ms sql server的lib
-import pyodbc
-#cnxn是数据库连接  更改数据库连接方式，账号密码
-cnxn = pyodbc.connect(DRIVER=&apos;{SQL Server Native Client 10.0}&apos;,SERVER=&apos;localhost&apos;,DATABASE=&apos;MicroAnalytix&apos;,UID=&apos;sa&apos;,PWD=&apos;密码&apos;)
-#cursor是数据库浮标
-cursor = cnxn.cursor()
-
-#主方法
-def process():
-    #读取csv，转换成list 更改文件存储位置
-    reader = list(csv.reader(open(&quot;c:/Users/Jenny/Desktop/related.csv&quot;)))
-    #遍历数据，并处理， tips：跳过第一行
-    for i in reader[1:]:
-        #Cn2产生组合
-        for j in itertools.combinations(i,2):
-            #处理产生的Cn2组合
-            recommend(j)
-def recommend(j):
-    #产生两次相互推荐
-    genRec(j[0],j[1])
-    genRec(j[1],j[0])
-def genRec(a,b):
-    #分别通过sku获得Product的Id
-    aid = getIdFromSku(a)
-    bid = getIdFromSku(b)
-    #生成写RelatedProduct表的sql语句
-    sql = &quot;insert into dbo.RelatedProduct (ProductId1,ProductId2,DisplayOrder) values(%d,%d,%d)&quot; % (aid,bid,0)
-    #执行sql语句
-    cursor.execute(sql)
-    #提交事务
-    cnxn.commit()
-def getIdFromSku(a):
-    sql = &quot;select Id from dbo.Product where Sku=&apos;%s&apos;&quot; % a
-    print sql
-    cursor.execute(sql)
-    row = cursor.fetchone()
-    if row:
-        return row[0]
-
-
-if __name__ == &quot;__main__&quot;:
-    process()
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1781,7 +1751,7 @@ if __name__ == &quot;__main__&quot;:
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">116</span>
+                <span class="site-state-item-count">117</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -1794,7 +1764,7 @@ if __name__ == &quot;__main__&quot;:
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

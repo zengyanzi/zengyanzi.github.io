@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2020/03/17/jswebapi/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
 <meta property="og:description" content="JS Web API JS基础知识是规定语法（ECMA262标准） JS Web API，网页操作的API（W3C标准） 前者是后者的基础，两者结合才能真正实际应用  JS web API的范围  DOM操作 BOM操作 事件绑定 ajax 存储">
-<meta property="og:updated_time" content="2020-03-19T00:45:04.132Z">
+<meta property="og:updated_time" content="2020-04-09T08:48:28.042Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jswebapi">
 <meta name="twitter:description" content="JS Web API JS基础知识是规定语法（ECMA262标准） JS Web API，网页操作的API（W3C标准） 前者是后者的基础，两者结合才能真正实际应用  JS web API的范围  DOM操作 BOM操作 事件绑定 ajax 存储">
@@ -488,6 +488,28 @@ const parent =div1.parentDode
 <pre><code>const div1= document.getElementById(&apos;div1&apos;)
 const child = div1.childNodes
 div1.removeChild(child[0])
+</code></pre><p>DOM性能</p>
+<ul>
+<li>DOM操作非常昂贵的：耗时，占用CPU计算，所以要尽量避免频繁的DOM操作，可能会卡顿</li>
+<li>对DOM查询做缓存</li>
+<li>将频繁操作改为一次性操作</li>
+</ul>
+<pre><code>    DOM查询做缓存
+//不缓存DOM查询结果
+for(let =0;i&lt;document.getElementsByTagName(&apos;p&apos;).length;i++){
+    //每次循环，都会计算length，频繁进行DOM查询
+}
+const pList = document.getElementsByTagName(&apos;p&apos;)
+const length = pList.length
+for(let i =0;i&lt;length;i++){
+//缓存了length，只进行一次DOM查询
+}
+
+
+将频繁操作改为一次性操作
+const listNode =document.getElementById(&apos;list&apos;);
+
+//创建一个文档片段，此时还没插入到DOM树中
 </code></pre>
       
     </div>
@@ -529,6 +551,10 @@ div1.removeChild(child[0])
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/04/09/access-website-from-AWS-to-local/" rel="next" title="access website from AWS to local">
+                <i class="fa fa-chevron-left"></i> access website from AWS to local
+              </a>
             
           </div>
 
@@ -610,7 +636,7 @@ div1.removeChild(child[0])
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">116</span>
+                <span class="site-state-item-count">117</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -623,7 +649,7 @@ div1.removeChild(child[0])
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
