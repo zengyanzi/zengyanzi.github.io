@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[BOM]]></title>
+    <url>%2F2020%2F04%2F12%2FBOM%2F</url>
+    <content type="text"><![CDATA[BOM(Browser Object Model)如何识别浏览器的类型 分析拆解url各个部分 知识点navigator //navigator const ua=navigator.userAgent const isChrome =ua.indexOf(&apos;Chrome&apos;); console.log(isChrome) screen screen.width screen.height location console.log(location.href) console.log(location.protocol) console.log(location.host) console.log(location.search) console.log(location.hash) console.log(location.pathname) history history.back() history.forward()]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[access website from AWS to local]]></title>
     <url>%2F2020%2F04%2F09%2Faccess-website-from-AWS-to-local%2F</url>
     <content type="text"><![CDATA[How to move website from AWS to localFirst, we need the file of pem to connect to the EC2 Instance by SSH. Then, use PuTTY to connect Windows to EC2.Install PuTTY on your local computerDownload PuTTY first. Convert private key using PuTTYgen The private key is a file(.pem file),we need to convert .pem file to a .ppk file with by PuTTY. 1.load the .pem from PuTTYgen 2.Click load to load file choose all files then you could find .pem 4.Connecting to Your Linux Instance,find out more 5.Public DNS) To connect using your instance’s public DNS, enter user_name@public_dns_name.For Amazon Linux 2 or the Amazon Linux AMI, the user name is ec2-user.In the Category pane, expand Connection, expand SSH, and then choose Auth. Complete the following: Choose Browse. Select the .ppk file that you generated for your key pair and choose Open. Transferring Files to Your Linux Instance Using WinSCP. Download and install WinSCP from http://winscp.net/eng/download.php. For most users, the default installation options are OK. At the WinSCP login screen, for Host name, enter the public DNS hostname For Amazon Linux 2 or the Amazon Linux AMI, the user name is ec2-user.Specify the private key for your instance. For Private key, enter the path to your private key, or choose the “…” button to browse for the file. To open the advanced site settings, for newer versions of WinSCP, choose Advanced. To find the Private key file setting, under SSH, choose Authentication. Second plan is to connect by FTP After login to your instance, how to find the website(if you are not the person to create the original one) Go to website URL, F12-&gt;network-&gt;click one of the element-&gt;check the response header]]></content>
