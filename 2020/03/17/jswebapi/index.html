@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2020/03/17/jswebapi/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
 <meta property="og:description" content="JS Web API JS基础知识是规定语法（ECMA262标准） JS Web API，网页操作的API（W3C标准） 前者是后者的基础，两者结合才能真正实际应用  JS web API的范围  DOM操作 BOM操作 事件绑定 ajax 存储">
-<meta property="og:updated_time" content="2020-04-09T08:48:28.042Z">
+<meta property="og:updated_time" content="2020-04-12T08:59:12.826Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jswebapi">
 <meta name="twitter:description" content="JS Web API JS基础知识是规定语法（ECMA262标准） JS Web API，网页操作的API（W3C标准） 前者是后者的基础，两者结合才能真正实际应用  JS web API的范围  DOM操作 BOM操作 事件绑定 ajax 存储">
@@ -510,6 +510,43 @@ for(let i =0;i&lt;length;i++){
 const listNode =document.getElementById(&apos;list&apos;);
 
 //创建一个文档片段，此时还没插入到DOM树中
+const frag =document.createDocumentFragment()
+//执行插入
+
+for(let x = 0;x&lt;10;x++){
+    const li = document.createElement(&quot;li&quot;)
+    li.innerHTML =&quot;List item&quot;+x
+    frag.appendChild(li)
+}
+//都完成之后，再插入DOM树中
+listNode.appendChild(frag)
+
+
+   console.log(&apos;dom3.js&apos;);
+const list = document.getElementById(&quot;list&quot;);
+
+/* for (let i=0;i&lt;10;i++){
+    const li = document.createElement(&apos;li&apos;);
+    li.innerHTML =`list item ${i}`
+    list.appendChild(li)
+} */
+
+    //不应该在循环里插入
+
+    //将频繁操作改为一次性操作
+
+    //创建一个文档片段，此时还没插入到DOM树中
+    const frag =document.createDocumentFragment()
+    //执行插入
+    for (let i=0;i&lt;20;i++){
+    const li = document.createElement(&apos;li&apos;);
+    li.innerHTML =`list item ${i}`
+
+    //先插入文档片段
+    frag.appendChild(li)
+
+    list.appendChild(frag)
+    }
 </code></pre>
       
     </div>
