@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="nopCommerce," />
+  <meta name="keywords" content="Interview," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="bulk add attribute  # ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc import MySQLdb #cnxn是数据库连接  更改数据库连接方式，账号密码  #c">
-<meta name="keywords" content="nopCommerce">
+<meta name="description" content="Event 事件编写一个通用的事件监听函数描述事件冒泡的流程无限下拉的图片列表，如何监听每个图片的点击 事件绑定 事件冒泡 事件代理">
+<meta name="keywords" content="Interview">
 <meta property="og:type" content="article">
-<meta property="og:title" content="bulk add attribute">
-<meta property="og:url" content="http://yoursite.com/2017/04/24/bulk-add-attribute/index.html">
+<meta property="og:title" content="event">
+<meta property="og:url" content="http://yoursite.com/2020/04/13/event/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="bulk add attribute  # ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc import MySQLdb #cnxn是数据库连接  更改数据库连接方式，账号密码  #c">
-<meta property="og:updated_time" content="2017-04-23T22:23:29.110Z">
+<meta property="og:description" content="Event 事件编写一个通用的事件监听函数描述事件冒泡的流程无限下拉的图片列表，如何监听每个图片的点击 事件绑定 事件冒泡 事件代理">
+<meta property="og:updated_time" content="2020-04-13T09:35:23.421Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="bulk add attribute">
-<meta name="twitter:description" content="bulk add attribute  # ~*~ coding:utf-8 ~*~ #csv是一个读取csv文件的lib import csv #itertools生成组合和排列的lib import itertools #pyodbc是连接ms sql server的lib import pyodbc import MySQLdb #cnxn是数据库连接  更改数据库连接方式，账号密码  #c">
+<meta name="twitter:title" content="event">
+<meta name="twitter:description" content="Event 事件编写一个通用的事件监听函数描述事件冒泡的流程无限下拉的图片列表，如何监听每个图片的点击 事件绑定 事件冒泡 事件代理">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/24/bulk-add-attribute/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/04/13/event/"/>
 
 
 
 
 
-  <title> bulk add attribute | Bunny's  Code Burrow </title>
+  <title> event | Bunny's  Code Burrow </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/bulk-add-attribute/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/13/event/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jenny Zeng">
@@ -318,7 +318,7 @@
             
             
               
-                bulk add attribute
+                event
               
             
           </h1>
@@ -333,8 +333,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T10:23:02+08:00">
-                2017-04-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-13T16:54:09+08:00">
+                2020-04-13
               </time>
             
 
@@ -368,77 +368,59 @@
       
 
       
-        <h1 id="bulk-add-attribute"><a href="#bulk-add-attribute" class="headerlink" title="bulk add attribute  "></a>bulk add attribute  </h1><pre><code># ~*~ coding:utf-8 ~*~
-#csv是一个读取csv文件的lib
-import csv
-#itertools生成组合和排列的lib
-import itertools
-#pyodbc是连接ms sql server的lib
-import pyodbc
-import MySQLdb
-#cnxn是数据库连接  更改数据库连接方式，账号密码
-
-#cursor是数据库浮标
-cursor = cnxn.cursor()
-
-
-
-#主方法
-def process():
-    #读取csv，转换成list 更改文件存储位置
-    reader = list(csv.reader(open(&quot;c:/Users/Jenny/Desktop/ski/attribute/attribute.csv&quot;)))
-    header = reader[0]
-    #遍历数据，并处理， tips：跳过第一行
-    for i in reader[1:]:
-        sku = i[0]
-        product_id = getIdFromSku(sku)
-        if product_id == 0:
-            print &quot;error sku %s&quot; % sku
-            continue
-        options = i[1]
-        option_id=int(options)
-        if exist(product_id,option_id):
-            pass
-        else:
-            insert(product_id,option_id)
-
-
-def exist(product_id,option_id):
-    sql = &quot;select * from dbo.Product_SpecificationAttribute_Mapping where ProductId = %d and SpecificationAttributeOptionId = %d&quot; % (product_id,option_id)
-    cursor.execute(sql)
-    rows = cursor.fetchall()
-    if len(rows)==0:
-        return False
-    else:
-        print rows
-        return True
+        <h1 id="Event-事件"><a href="#Event-事件" class="headerlink" title="Event 事件"></a>Event 事件</h1><p>编写一个通用的事件监听函数<br>描述事件冒泡的流程<br>无限下拉的图片列表，如何监听每个图片的点击</p>
+<p>事件绑定</p>
+<p>事件冒泡</p>
+<p>事件代理</p>
+<a id="more"></a>
+<ol>
+<li><p>事件绑定</p>
+<pre><code>const btn = document.getElementById(&apos;btn&apos;)
+btn.addEventListener(&apos;click&apos;,event=&gt;{
+    console.log(&apos;clicked&apos;)
+})
+</code></pre><p>  //通用的绑定函数<br> function bindEvent(elem,type,fn){</p>
+<pre><code>elem.addEventListener(type,fn)
+</code></pre><p> }<br> const a = document.getElementById(‘link1’)<br> bindEvent(a,’click’,e=&gt;{</p>
+<pre><code>e.preventDefault() //阻止默认行为
+alert(&apos;clicked&apos;)
+</code></pre><p> })</p>
+</li>
+</ol>
+<pre><code>console.log(&apos;event.js&apos;);
+function bindEvent(elem,type,fn){
+    elem.addEventListener(type,fn)
+}
+const btn1 = document.getElementById(&apos;btn1&apos;);
+bindEvent(btn1,&apos;click&apos;,event=&gt;{
+    //console.log(event.target) //获取触发元素
+    event.preventDefault()//组织默认行为
+    alert(&apos;clicked&apos;)
+})
+</code></pre><p>事件冒泡</p>
+<pre><code>&lt;body&gt;
+    &lt;div&gt;
+        &lt;p id=&quot;p1&quot;&gt;激活&lt;/p&gt;
+        &lt;p id=&quot;p2&quot;&gt;取消&lt;/p&gt;
+        &lt;p id=&quot;p3&quot;&gt;取消&lt;/p&gt;
+        &lt;p id=&quot;p4&quot;&gt;取消&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;p id=&quot;p5&quot;&gt;取消&lt;/p&gt;
+        &lt;p id=&quot;p6&quot;&gt;取消&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
 
 
-def insert(product_id,option_id):
-    sql = &quot;insert into dbo.Product_SpecificationAttribute_Mapping (ProductId,SpecificationAttributeOptionId,DisplayOrder,AllowFiltering,ShowOnProductPage) values(%d,%d,%d,%d,%d)&quot; % (product_id,option_id,0,0,1)
-    print sql
-    cursor.execute(sql)
-    cnxn.commit()
-
-def getIdFromSku(a):
-    sql = &quot;select Id from dbo.Product where Sku=&apos;%s&apos; and deleted=0&quot; % a
-    cursor.execute(sql)
-    row = cursor.fetchall()
-    if row:
-        return row[0][0]
-    else:
-        return 0
-
-def test(skuset):
-    err = False
-    for sku in skuset:
-        product_id = getIdFromSku(sku)
-        if not product_id:
-            print &quot;can&apos;t find product id where sku=&apos;%s&apos;&quot; % sku
-            err = True    
-
-if __name__ == &quot;__main__&quot;:
-    process()
+const p1 = document.getElementById(&apos;p1&apos;)
+const body = ducoment.body
+bindEvent(p1,&apos;click&apos;,e=&gt;{
+    e.stopPropagation()//注释掉这一行来体会事件冒泡
+    alert(&apos;激活&apos;)
+})
+bindEvent(body,&apos;click&apos;,e=&gt;{
+    alert(&apos;取消&apos;)
+})
 </code></pre>
       
     </div>
@@ -468,7 +450,7 @@ if __name__ == &quot;__main__&quot;:
       
         <div class="post-tags">
           
-            <a href="/tags/nopCommerce/" rel="tag"># nopCommerce</a>
+            <a href="/tags/Interview/" rel="tag"># Interview</a>
           
         </div>
       
@@ -481,18 +463,14 @@ if __name__ == &quot;__main__&quot;:
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/24/remove-application-css/" rel="next" title="remove application css">
-                <i class="fa fa-chevron-left"></i> remove application css
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/24/tireprice/" rel="prev" title="tireprice  ">
-                tireprice   <i class="fa fa-chevron-right"></i>
+              <a href="/2020/04/12/BOM/" rel="prev" title="BOM">
+                BOM <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -633,7 +611,7 @@ if __name__ == &quot;__main__&quot;:
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#bulk-add-attribute"><span class="nav-number">1.</span> <span class="nav-text">bulk add attribute  </span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Event-事件"><span class="nav-number">1.</span> <span class="nav-text">Event 事件</span></a></li></ol></div>
             
 
           </div>
