@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[postajax]]></title>
+    <url>%2F2020%2F04%2F14%2Fpostajax%2F</url>
+    <content type="text"><![CDATA[ajax]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[event delegation]]></title>
     <url>%2F2020%2F04%2F14%2Fevent-delegation%2F</url>
     <content type="text"><![CDATA[Event delegation事件代理 &lt;div id=&quot;div1&quot;&gt; &lt;a href=&quot;#&quot;&gt;a1&lt;/a&gt; &lt;a href=&quot;#&quot;&gt;a2&lt;/a&gt; &lt;a href=&quot;#&quot;&gt;a3&lt;/a&gt; &lt;a href=&quot;#&quot;&gt;a4&lt;/a&gt; &lt;/div&gt; &lt;button&gt; click to add more a &lt;/button&gt; const div1 = document.getElementById(&apos;div1&apos;) div1.addEventListener(&apos;click&apos;,e=&gt;{ const target = e.target if(e.nodeName === &apos;A&apos;){ alert(target.innerHTML) } }) 代码简洁 减少浏览器内存使用 但是不要滥用 通用的事件绑定函数 function bindEvent(elem,type,selector,fn){ if(fn == null){ fn = selector selector = null } elem.addEventListener(type,e=&gt;{ let target if(selector){ //需要代理 target = e.target if(target.matches(selector)){ fn.call(target,e) } }else{ //不需要代理 fn.call(target,e) } }) } 描述事件冒泡的流程 基于DOM树形结构 事件会顺着触发元素向上冒泡 应用场景：代理 无限下拉图片列表，如何监听每个图片的点击1.事件代理2.用e.target获取触发元素3.用matches来判断是否判断元素]]></content>
@@ -426,7 +434,7 @@
     <url>%2F2017%2F12%2F07%2Fhow-to-solve-the-ipv6-issue-for-Apple-Store%2F</url>
     <content type="text"><![CDATA[How to set up the ipv6 to pass Apple store reviewAfter submitting the ios apk to Apple store, I got the message from Apple mentioned Apple Store Guideline 2.1—running iOS 10.3.3 on Wi-Fi connected to an IPv6 network. The solution is replacing all the api with domain name and test it under ipv6 in local network. The first step is registering a domain name for our App. Then I will explan how did we set up an ipv6 network with iPhone Connect your iPhone with your Mac Eable the hotpot in your iPhone and choose and choose through Only USB Connect to your iPhone wifi in Mac Go to reference, and click the “option” and open “sharing” at the same time open NAT64 use another iphone to test the ipv6]]></content>
       <tags>
-        <tag>ios</tag>
+        <tag>iOS</tag>
       </tags>
   </entry>
   <entry>
@@ -501,7 +509,7 @@
     <url>%2F2017%2F05%2F22%2Fios-Apple-account-application%2F</url>
     <content type="text"><![CDATA[How apply the ios development account as company Apply DUNS number https://developer.apple.com/program/enroll/dunsLookupForm.action this part should be easy, but if you encountered any issues, please feel free to contact the DUNS support, manually process this application https://developer.apple.com/programs/enroll/ create an apple id, especially for this company or project HERE,PLEASE PAY ATTENTION TO CHOSE TYPEFor most cases, the issue will trouble you is the DUNS, feel free to contact DUNS support or Apple supportfor example, I struggled here for almost one month, due to the so called waiting time 14 working days, actually they work faster than I expected.Then I contact the DUNS company by calling them and filled a form online with problem, here is the reply from Apple support ,from then on, my applicaiton went on a normal way. Hello Jenny, Thank you for contacting Apple Developer Program Support. My name is Charlie and I’ll be happy to assist you with your company’s enrollment. I understand that the system is not accepting your company’s DUNS information and is not allowing you to continue. I would be concerned as well if the D-U-N-S Number that has been assigned to my organization is not being accepted. I will do what I can to help you get your enrollment processed. I&apos;ve reviewed your enrollment information and found that your DUNS Number doesn’t include full information of your company. However, I may be able to process your enrollment by verifying your company information manually. I’ve gone ahead and altered your enrollment to proceed to the next step. Please use the same Apple ID and submit your enrollment once more. https://developer.apple.com/programs Please let me know once you’ve submitted the enrollment so that I can request business document to verify your information manually. Here is the following of the staff suppot Dear Jenny Zeng, We’ve received your enrollment request. Once we verify that you have the authority to bind your organization to Apple Developer Program legal agreements, we’ll email you with instructions on how to complete your enrollment. Then I receice an Email required as below: Dear Jenny Zeng, To continue your enrollment in the Apple Developer Program (Enrollment ID: sssss???), please upload the following documents. The information in these documents should match the information you provided for enrollment: Company Number Upload Documents Here the document means the qualification of you company.Then you will go through the next two steps till your boss receiving a call from Apple to confirm you are working there towards iOS development.Then making the payment!Congrats!]]></content>
       <tags>
-        <tag>ios</tag>
+        <tag>iOS</tag>
       </tags>
   </entry>
   <entry>
