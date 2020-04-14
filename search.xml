@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[event delegation]]></title>
+    <url>%2F2020%2F04%2F14%2Fevent-delegation%2F</url>
+    <content type="text"><![CDATA[Event delegation事件代理 &lt;div id=&quot;div1&quot;&gt; &lt;a href=&quot;#&quot;&gt;a1&lt;/a&gt; &lt;a href=&quot;#&quot;&gt;a2&lt;/a&gt; &lt;a href=&quot;#&quot;&gt;a3&lt;/a&gt; &lt;a href=&quot;#&quot;&gt;a4&lt;/a&gt; &lt;/div&gt; &lt;button&gt; click to add more a &lt;/button&gt; const div1 = document.getElementById(&apos;div1&apos;) div1.addEventListener(&apos;click&apos;,e=&gt;{ const target = e.target if(e.nodeName === &apos;A&apos;){ alert(target.innerHTML) } }) 代码简洁 减少浏览器内存使用 但是不要滥用 通用的事件绑定函数 function bindEvent(elem,type,selector,fn){ if(fn == null){ fn = selector selector = null } elem.addEventListener(type,e=&gt;{ let target if(selector){ //需要代理 target = e.target if(target.matches(selector)){ fn.call(target,e) } }else{ //不需要代理 fn(e) } }) }]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[event]]></title>
     <url>%2F2020%2F04%2F13%2Fevent%2F</url>
     <content type="text"><![CDATA[Event 事件编写一个通用的事件监听函数描述事件冒泡的流程无限下拉的图片列表，如何监听每个图片的点击 事件绑定 事件冒泡 事件代理 事件绑定 const btn = document.getElementById(&apos;btn&apos;) btn.addEventListener(&apos;click&apos;,event=&gt;{ console.log(&apos;clicked&apos;) }) //通用的绑定函数 function bindEvent(elem,type,fn){ elem.addEventListener(type,fn) } const a = document.getElementById(‘link1’) bindEvent(a,’click’,e=&gt;{ e.preventDefault() //阻止默认行为 alert(&apos;clicked&apos;) }) console.log(&apos;event.js&apos;); function bindEvent(elem,type,fn){ elem.addEventListener(type,fn) } const btn1 = document.getElementById(&apos;btn1&apos;); bindEvent(btn1,&apos;click&apos;,event=&gt;{ //console.log(event.target) //获取触发元素 event.preventDefault()//组织默认行为 alert(&apos;clicked&apos;) }) 事件冒泡 &lt;body&gt; &lt;div&gt; &lt;p id=&quot;p1&quot;&gt;激活&lt;/p&gt; &lt;p id=&quot;p2&quot;&gt;取消&lt;/p&gt; &lt;p id=&quot;p3&quot;&gt;取消&lt;/p&gt; &lt;p id=&quot;p4&quot;&gt;取消&lt;/p&gt; &lt;/div&gt; &lt;div&gt; &lt;p id=&quot;p5&quot;&gt;取消&lt;/p&gt; &lt;p id=&quot;p6&quot;&gt;取消&lt;/p&gt; &lt;/div&gt; &lt;/body&gt; const p1 = document.getElementById(&apos;p1&apos;) const body = ducoment.body bindEvent(p1,&apos;click&apos;,e=&gt;{ e.stopPropagation()//注释掉这一行来体会事件冒泡 alert(&apos;激活&apos;) }) bindEvent(body,&apos;click&apos;,e=&gt;{ alert(&apos;取消&apos;) })]]></content>

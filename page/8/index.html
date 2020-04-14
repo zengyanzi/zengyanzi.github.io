@@ -297,6 +297,138 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/nopcommerce3-3-newsletter/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/24/nopcommerce3-3-newsletter/" itemprop="url">
+                  nopcommerce3.3 newsletter
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T11:37:47+08:00">
+                2017-04-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="nopcommerce3-3-newsletter"><a href="#nopcommerce3-3-newsletter" class="headerlink" title="nopcommerce3.3 newsletter"></a>nopcommerce3.3 newsletter</h1><p>需要添加subscribe按钮到邮件正文中。当前邮件可以允许使用的token如下 </p>
+<pre><code>%Store.Name%, %Store.URL%, %Store.Email%, %NewsLetterSubscription.Email%, %NewsLetterSubscription.ActivationUrl%, %NewsLetterSubscription.DeactivationUrl%
+</code></pre><p>其中，</p>
+<pre><code>%NewsLetterSubscription.ActivationUrl%, 为subscribe
+%NewsLetterSubscription.DeactivationUrl% 为unsubscribe
+</code></pre><p>可以在正文中输入文字click here 再插入link</p>
+<p>但是，由于进行了相对引用和绝对引用的修改，此处的</p>
+<pre><code>%NewsLetterSubscription.DeactivationUrl% 
+</code></pre><p>在发送出去的邮件正文中显示出了</p>
+<pre><code>http://microanalytix.co.nz/http://microanalytix.co.nz/edit%NewsLetterSubscription.DeactivationUrl% 
+</code></pre><p>所以需要对富文本编辑器再进行修改</p>
+<p>路径如同上一篇日志，修改js中“convert_urls”为！1<br>此修改禁止了该富文本编辑器对url的增加或者删除功能。</p>
+<p>在此之后进行insert link需要对source code进行check以保证正常显示</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/nopcommerce-3-3-local-database/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1555,126 +1687,6 @@ if __name__ == &quot;__main__&quot;:
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/sql-not-in/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/24/sql-not-in/" itemprop="url">
-                  sql not in
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T10:40:14+08:00">
-                2017-04-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="SQL-not-in"><a href="#SQL-not-in" class="headerlink" title="SQL not in"></a>SQL not in</h1><pre><code>select Id from [MicroAnalytix].[dbo].[Product] where Deleted=0 and Id NOT IN ( SELECT ProductId FROM [MicroAnalytix].[dbo].[TierPrice] ); 
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1724,7 +1736,7 @@ if __name__ == &quot;__main__&quot;:
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">119</span>
+                <span class="site-state-item-count">120</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
