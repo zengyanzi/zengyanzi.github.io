@@ -372,9 +372,30 @@
 
       
         
-          
-            <h1 id="ajax"><a href="#ajax" class="headerlink" title="ajax"></a>ajax</h1>
-          
+          <h1 id="ajax"><a href="#ajax" class="headerlink" title="ajax"></a>ajax</h1><p>手写一个简单的ajax</p>
+<p>跨域的常用实现方式</p>
+<p>知识点</p>
+<p>XMLHttpRequest<br>状态码<br>跨域：同源策略，跨域解决方案</p>
+<pre><code>//get请求
+const xhr = new XMLHttpRequest()
+xhr.open(&quot;GET&quot;,&quot;/api&quot;,false)
+xhr.onreadystatechange = function(){
+    //这里的函数异步执行，可参考之前JS 基础中的异步模块
+    if(xhr.readyState == 4){
+        if(xhr.status == 200){
+            alert(xhr.responseTexe)
+        }
+    }
+}
+xhr.send(null)
+</code></pre>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/14/postajax/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
