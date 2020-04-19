@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2020/04/14/postajax/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
 <meta property="og:description" content="ajax手写一个简单的ajax 跨域的常用实现方式 知识点 XMLHttpRequest状态码跨域：同源策略，跨域解决方案 //get请求 const xhr = new XMLHttpRequest() xhr.open(&amp;quot;GET&amp;quot;,&amp;quot;/api&amp;quot;,false) xhr.onreadystatechange = function(){     //这里的函数">
-<meta property="og:updated_time" content="2020-04-17T03:05:38.606Z">
+<meta property="og:updated_time" content="2020-04-19T20:53:14.310Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="postajax">
 <meta name="twitter:description" content="ajax手写一个简单的ajax 跨域的常用实现方式 知识点 XMLHttpRequest状态码跨域：同源策略，跨域解决方案 //get请求 const xhr = new XMLHttpRequest() xhr.open(&amp;quot;GET&amp;quot;,&amp;quot;/api&amp;quot;,false) xhr.onreadystatechange = function(){     //这里的函数">
@@ -401,8 +401,8 @@ xhr.onreadystatechange = function (){
 xhr.send(null)
 
 const xhr = new XMLHttpRequest()
-//false代表异步请求，因为是网络请求，不能卡顿
-xhr.open(&apos;POST&apos;,&apos;/login&apos;,false)
+//true，因为是网络请求，不能卡顿
+xhr.open(&apos;POST&apos;,&apos;/login&apos;,true)
 xhr.onreadystatechange = function (){
     if(xhr.readyState ===4){
         if(xhr.status ===200){
