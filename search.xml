@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[CORS]]></title>
+    <url>%2F2020%2F04%2F20%2FCORS%2F</url>
+    <content type="text"><![CDATA[CORS跨域什么是跨域（同源策略） JSONP CORS(服务端支持) 1.同源策略 ajax请求时，浏览器要求当前网页和server必须同源 同源：协议，域名，端口，三者必须一致 加载图片css js 可无视同源策略 可用于统计打点，可使用第三方统计服务 可以使用CDN,CDN一般都是外域 可使用JSONP 跨域 所有的跨域，都必须经过server端允许和配合 未经过server端允许就实现跨域，说明浏览器有漏洞 JSONP 访问一个地址，服务端一定返回的一个html文件吗？ 服务器可以任意动态拼接数据返回，只要符合html格式 可绕过跨域限制 服务器可以任意动态拼接数据返回 所以，就可以获得跨域的数据，只要数据的愿意返回 window.callback = function(data){ //这是我们跨域得到的信息 console.log（data） } jQuery 实现jsonp $.ajax({ url:&apos;&apos; dataType:&apos;jsonp&apos;, jsonpCallback:&apos;callback&apos;, success:function(data){ console.log(data) } })]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[postajax]]></title>
     <url>%2F2020%2F04%2F14%2Fpostajax%2F</url>
     <content type="text"><![CDATA[ajax手写一个简单的ajax 跨域的常用实现方式 知识点 XMLHttpRequest状态码跨域：同源策略，跨域解决方案 //get请求 const xhr = new XMLHttpRequest() xhr.open(&quot;GET&quot;,&quot;/api&quot;,false) xhr.onreadystatechange = function(){ //这里的函数异步执行，可参考之前JS 基础中的异步模块 if(xhr.readyState == 4){ if(xhr.status == 200){ alert(xhr.responseTexe) } } } xhr.send(null) console.log(&quot;ajax&quot;) const xhr = new XMLHttpRequest() //false代表异步请求，因为是网络请求，不能卡顿 xhr.open(&apos;GET&apos;,&apos;/test.json&apos;,false) xhr.onreadystatechange = function (){ if(xhr.readyState ===4){ if(xhr.status ===200){ alert(xhr.responseText) }else{ console.log(&quot;other situatio&quot;) } } } xhr.send(null) const xhr = new XMLHttpRequest() //true，因为是网络请求，不能卡顿 xhr.open(&apos;POST&apos;,&apos;/login&apos;,true) xhr.onreadystatechange = function (){ if(xhr.readyState ===4){ if(xhr.status ===200){ alert(xhr.responseText) }else{ console.log(&quot;other situatio&quot;) } } } const postData={ userName:&apos;jason&apos;, password:&apos;xxx&apos; } xhr.send(JSON stringify(postData)) xhr.readyState 0:未初始化 还没调用send（）方法1：载入，已调用send（）方法，正在发送请求2：载入完成 send()方法执行完成，已经接收到3：交互 正在解析相应内容4：完成 相应内容解析完成，可以在客户端调用 xhr.status 2xx：表示成功3xx：重定向，浏览器直接跳转4xx：客户端请求错误，404 403无权限5xx：服务器端报错]]></content>

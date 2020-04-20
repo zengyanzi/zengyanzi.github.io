@@ -297,6 +297,171 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/20/CORS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2020/04/20/CORS/" itemprop="url">
+                  CORS
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-20T04:54:54+08:00">
+                2020-04-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="CORS跨域"><a href="#CORS跨域" class="headerlink" title="CORS跨域"></a>CORS跨域</h1><p>什么是跨域（同源策略）</p>
+<p>JSONP</p>
+<p>CORS(服务端支持)</p>
+<p>1.同源策略 </p>
+<p>ajax请求时，浏览器要求当前网页和server必须同源</p>
+<p>同源：协议，域名，端口，三者必须一致</p>
+<p>加载图片css js 可无视同源策略</p>
+<ul>
+<li><img src="跨域的图片地址/">  <img>可用于统计打点，可使用第三方统计服务</li>
+<li><img href="跨域的css地址/"></li>
+<li><script src="跨域的js地址"></script></li>
+<li><link> <script>可以使用CDN,CDN一般都是外域</li>
+<li><script>可使用JSONP</li>
+</ul>
+<p>跨域</p>
+<ul>
+<li>所有的跨域，都必须经过server端允许和配合</li>
+<li>未经过server端允许就实现跨域，说明浏览器有漏洞</li>
+</ul>
+<p>JSONP</p>
+<p>访问一个地址，服务端一定返回的一个html文件吗？</p>
+<p>服务器可以任意动态拼接数据返回，只要符合html格式</p>
+<script>可绕过跨域限制
+
+服务器可以任意动态拼接数据返回
+
+所以，<script>就可以获得跨域的数据，只要数据的愿意返回
+
+        <script>
+            window.callback = function(data){
+            //这是我们跨域得到的信息
+            console.log（data）
+            }
+        </script>
+        <script src="https://imooc.com/getData.js"></script>
+
+
+<p>jQuery 实现jsonp</p>
+<pre><code>$.ajax({
+url:&apos;&apos;
+dataType:&apos;jsonp&apos;,
+jsonpCallback:&apos;callback&apos;,
+success:function(data){
+    console.log(data)
+}
+})
+</code></pre></li></ul>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/14/postajax/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1520,145 +1685,6 @@ console.log(5)
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/12/closure2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2020/03/12/closure2/" itemprop="url">
-                  closure2
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-12T06:52:15+08:00">
-                2020-03-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="closure闭包的应用"><a href="#closure闭包的应用" class="headerlink" title="closure闭包的应用"></a>closure闭包的应用</h1><ul>
-<li>隐藏数据</li>
-<li>做一个简单的cashe工具</li>
-</ul>
-<pre><code>console.log(&apos;cachedemo&apos;)
-//闭包隐藏数据，只提供API
-function createCache(){
-    const data ={}//闭包中的数据，被隐藏，不被外界访问
-    return {
-        set:function (key,val){
-            data[key]=val
-        },
-        get:function(key){
-            return data[key]
-        }
-    }
-}
-const c = createCache()
-c.set(&apos;a&apos;,100)
-console.log(c.get(&apos;a&apos;))
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1708,7 +1734,7 @@ console.log(c.get(&apos;a&apos;))
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">121</span>
+                <span class="site-state-item-count">122</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

@@ -90,20 +90,19 @@
 
 
 
-<meta name="description" content="Instanceof 原型链">
+<meta name="description" content="CORS跨域什么是跨域（同源策略） JSONP CORS(服务端支持) 1.同源策略  ajax请求时，浏览器要求当前网页和server必须同源 同源：协议，域名，端口，三者必须一致 加载图片css js 可无视同源策略    可用于统计打点，可使用第三方统计服务    可以使用CDN,CDN一般都是外域 可使用JSONP  跨域  所有的跨域，都必须经过server端允许和配合 未经过serve">
 <meta name="keywords" content="Interview">
 <meta property="og:type" content="article">
-<meta property="og:title" content="instanceof2">
-<meta property="og:url" content="http://yoursite.com/2020/03/11/instanceof2/index.html">
+<meta property="og:title" content="CORS">
+<meta property="og:url" content="http://yoursite.com/2020/04/20/CORS/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="Instanceof 原型链">
-<meta property="og:image" content="https://s2.ax1x.com/2020/03/11/8FXzAP.png">
-<meta property="og:image" content="https://s2.ax1x.com/2020/03/11/8FjStf.png">
-<meta property="og:updated_time" content="2020-03-11T00:56:04.036Z">
+<meta property="og:description" content="CORS跨域什么是跨域（同源策略） JSONP CORS(服务端支持) 1.同源策略  ajax请求时，浏览器要求当前网页和server必须同源 同源：协议，域名，端口，三者必须一致 加载图片css js 可无视同源策略    可用于统计打点，可使用第三方统计服务    可以使用CDN,CDN一般都是外域 可使用JSONP  跨域  所有的跨域，都必须经过server端允许和配合 未经过serve">
+<meta property="og:image" content="http://yoursite.com/2020/04/20/CORS/跨域的图片地址/">
+<meta property="og:updated_time" content="2020-04-20T09:55:13.208Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="instanceof2">
-<meta name="twitter:description" content="Instanceof 原型链">
-<meta name="twitter:image" content="https://s2.ax1x.com/2020/03/11/8FXzAP.png">
+<meta name="twitter:title" content="CORS">
+<meta name="twitter:description" content="CORS跨域什么是跨域（同源策略） JSONP CORS(服务端支持) 1.同源策略  ajax请求时，浏览器要求当前网页和server必须同源 同源：协议，域名，端口，三者必须一致 加载图片css js 可无视同源策略    可用于统计打点，可使用第三方统计服务    可以使用CDN,CDN一般都是外域 可使用JSONP  跨域  所有的跨域，都必须经过server端允许和配合 未经过serve">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/20/CORS/跨域的图片地址/">
 
 
 
@@ -131,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/03/11/instanceof2/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/04/20/CORS/"/>
 
 
 
 
 
-  <title> instanceof2 | Bunny's  Code Burrow </title>
+  <title> CORS | Bunny's  Code Burrow </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -300,7 +299,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/11/instanceof2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/20/CORS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jenny Zeng">
@@ -321,7 +320,7 @@
             
             
               
-                instanceof2
+                CORS
               
             
           </h1>
@@ -336,8 +335,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-11T05:38:12+08:00">
-                2020-03-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-20T04:54:54+08:00">
+                2020-04-20
               </time>
             
 
@@ -371,67 +370,53 @@
       
 
       
-        <h1 id="Instanceof-原型链"><a href="#Instanceof-原型链" class="headerlink" title="Instanceof 原型链"></a>Instanceof 原型链</h1><p><img src="https://s2.ax1x.com/2020/03/11/8FXzAP.png" alt=""></p>
-<a id="more"></a>
-<pre><code>People.prototype===Student.prototype.__proto__  //True
-james.hasOwnProperty(&apos;sayhi&apos;) //false
-</code></pre><p><img src="https://s2.ax1x.com/2020/03/11/8FjStf.png" alt=""></p>
-<p>换句话说，<strong>proto</strong>就是去找上一层class的prototype</p>
-<p>Class是ES6语法规范，是由ECMA委员会发布<br>ECMA只规定语法规则，不规范如何实现<br>以上是V8引擎实现方式</p>
-<p>如何判断一个变量是否是数组array（instanceof）<br>        var ary=[1,2,3,4];<br>        console.log(ary.intanceof Array) //true</p>
-<p>class的原型是本质</p>
-<p>手写jquery插件</p>
-<pre><code>    console.log(&apos;jquerydemo&apos;);
-class JQuery{
-    constructor(selector){
-        const result =document.querySelectorAll(selector)
-        const length =result.length;
-        for (let i =0;i&lt;length;i++){
-            this[i]=result[i];
-        }
-        this.length=length
-        //类似于数组，但其实是object
-        this.selector=selector;
-    }
-    get(index){
-        return this[index]
-    }
-    each(fn){
-        for(let i = 0;i&lt;this.length;i++){
-            const elem =this[i]
-            fn(elem)
-        }
-    }
-    on(type,fn){
-        return this.each(elem=&gt;{
-            elem.addEventListener(type,fn,false)
-        })
-    }
+        <h1 id="CORS跨域"><a href="#CORS跨域" class="headerlink" title="CORS跨域"></a>CORS跨域</h1><p>什么是跨域（同源策略）</p>
+<p>JSONP</p>
+<p>CORS(服务端支持)</p>
+<p>1.同源策略 </p>
+<p>ajax请求时，浏览器要求当前网页和server必须同源</p>
+<p>同源：协议，域名，端口，三者必须一致</p>
+<p>加载图片css js 可无视同源策略</p>
+<ul>
+<li><img src="跨域的图片地址/">  <img>可用于统计打点，可使用第三方统计服务</li>
+<li><img href="跨域的css地址/"></li>
+<li><script src="跨域的js地址"></script></li>
+<li><link> <script>可以使用CDN,CDN一般都是外域</li>
+<li><script>可使用JSONP</li>
+</ul>
+<p>跨域</p>
+<ul>
+<li>所有的跨域，都必须经过server端允许和配合</li>
+<li>未经过server端允许就实现跨域，说明浏览器有漏洞</li>
+</ul>
+<p>JSONP</p>
+<p>访问一个地址，服务端一定返回的一个html文件吗？</p>
+<p>服务器可以任意动态拼接数据返回，只要符合html格式</p>
+<script>可绕过跨域限制
+
+服务器可以任意动态拼接数据返回
+
+所以，<script>就可以获得跨域的数据，只要数据的愿意返回
+
+        <script>
+            window.callback = function(data){
+            //这是我们跨域得到的信息
+            console.log（data）
+            }
+        </script>
+        <script src="https://imooc.com/getData.js"></script>
+
+
+<p>jQuery 实现jsonp</p>
+<pre><code>$.ajax({
+url:&apos;&apos;
+dataType:&apos;jsonp&apos;,
+jsonpCallback:&apos;callback&apos;,
+success:function(data){
+    console.log(data)
 }
-
-//插件
-JQuery.prototype.dialog=function(info){
-    alert(info)
-}
-
-class myJQuery extends JQuery{
-    constructor(selector){
-        super(selector)
-    }
-    addClass(className){
-
-    }
-    style(data){
-
-    }
-}
-
-    //const $p = new JQuery(&apos;p&apos;);
-    //$p.get(1)
-    //$p.each
-    //$p.on(&apos;click&apos;,()=&gt;alert(&apos;clicked&apos;))
-</code></pre><p>每个函数都有一个prototype属性<br>这个属性都有一个指针，指向一个对象<br>这个对象包含由特定类型所有实例共享的属性和方法<br>使用原型的好处是可以让所有对象实例共享他们包含的方法和属性<br>一般通过instanceof关键字来基于原型链来检测变量的类型<br>Object 是所有js class的父类</p>
-
+})
+</code></pre></li></ul>
       
     </div>
 
@@ -473,18 +458,14 @@ class myJQuery extends JQuery{
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/03/11/Closures/" rel="next" title="Closures">
-                <i class="fa fa-chevron-left"></i> Closures
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/03/10/instance-of/" rel="prev" title="instance of">
-                instance of <i class="fa fa-chevron-right"></i>
+              <a href="/2020/04/14/postajax/" rel="prev" title="postajax">
+                postajax <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -625,7 +606,7 @@ class myJQuery extends JQuery{
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Instanceof-原型链"><span class="nav-number">1.</span> <span class="nav-text">Instanceof 原型链</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CORS跨域"><span class="nav-number">1.</span> <span class="nav-text">CORS跨域</span></a></li></ol></div>
             
 
           </div>

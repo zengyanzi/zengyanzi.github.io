@@ -297,6 +297,133 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/04/remove-node/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/04/remove-node/" itemprop="url">
+                  postremove node
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-04T14:24:02+08:00">
+                2017-05-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="How-to-remove-node-module-after-install-it"><a href="#How-to-remove-node-module-after-install-it" class="headerlink" title="How to remove node module after install it?"></a>How to remove node module after install it?</h1><p>Here are different options:</p>
+<pre><code>npm uninstall &lt;name&gt; removes the module from node_modules, but not package.json
+
+npm uninstall &lt;name&gt; --save also remove from dependencies in package.json
+
+npm uninstall &lt;name&gt; --save-dev also remove from devDependencies in package.json
+
+npm -g uninstall &lt;name&gt; --save also remove it globally
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/nopcommerce-3-3-image-display/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1475,223 +1602,6 @@ if __name__ == &quot;__main__&quot;:
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/nopcommerce-monitor-duplicated-attributes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/24/nopcommerce-monitor-duplicated-attributes/" itemprop="url">
-                  nopcommerce monitor duplicated attributes
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T11:06:53+08:00">
-                2017-04-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="nopcommerce-monitor-duplicated-attributes"><a href="#nopcommerce-monitor-duplicated-attributes" class="headerlink" title="nopcommerce monitor duplicated attributes"></a>nopcommerce monitor duplicated attributes</h1><pre><code>import requests
-import re
-import csv
-root = &quot;websites&quot;
-a = open(&quot;./alertau.txt&quot;,&quot;wb&quot;)
-columns = {&quot;SKU&quot;:0,&quot;Type&quot;:1,&quot;Colour&quot;:2,&quot;Media&quot;:3,&quot;Pore size&quot;:4,&quot;Length&quot;:5,&quot;i.d.&quot;:6,&quot;Volume&quot;:7,&quot;Diameter&quot;:8,&quot;Pack Size&quot;:9}
-skus = []
-skus.append([&quot;SKU&quot;,&quot;Type&quot;,&quot;Colour&quot;,&quot;Media&quot;,&quot;Pore size&quot;,&quot;Length&quot;,&quot;i.d.&quot;,&quot;Volume&quot;,&quot;Diameter&quot;,&quot;Pack Size&quot;])
-def process():
-    url = &quot;websites&quot;
-    html = requests.get(url).content
-    cs = extract(html)
-    for c in cs:
-        visit(c)
-    write2file()
-def write2file():
-    csvfile = file(&apos;./au.csv&apos;, &apos;wb&apos;)
-    writer = csv.writer(csvfile)
-    writer.writerows(skus)
-def visit(c):
-    url = root + c
-    print url
-    html = requests.get(url).content
-    maxnum = findmax(html)
-    print maxnum
-    for i in range(1,maxnum+1):
-        visitv(c,i)
-def visitv(c,i):
-    url = root + c + &quot;?pagenumber=%d&quot; % i
-    print url
-    html = requests.get(url).content
-    if iscat(html):
-        links = extractlink(html)
-        print links
-        for link in links:
-            visit(link)
-    else:
-        extractproduct(html)
-def findmax(html):
-    res = re.findall(&quot;pagenumber=(\d+)\&quot;&gt;Last&lt;/a&gt;&quot;, html, re.I|re.M|re.DOTALL)
-    print res
-    if res:
-        return int(res[0])
-    res = re.findall(&quot;pagenumber=(\d+)\&quot;&gt;\d+&quot;, html, re.I|re.M|re.DOTALL)
-    if res:
-        return int(res[-1])
-    return 1
-def iscat(html):
-    if html.find(&quot;&lt;span class=\&quot;label\&quot;&gt;SKU: &lt;/span&gt;&quot;) != -1:
-        return False
-    return True
-def extractproduct(html):
-    sku = extractsku(html)
-    attr = extractattr(html)
-    print sku
-    print attr
-    ats = set([])
-    r = False
-    for k,v in attr:
-        if k in ats:
-            r = True
-        else:
-            ats.add(k)
-    if r:
-        a.write(&quot;%s\n&quot; % sku)
-        a.flush()
-    export(sku,attr)
-def export(sku,attr):
-    p = [&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;]
-    p[0] = sku
-    for k,v in attr:
-        p[columns[k]] = v
-    skus.append(p)
-def extractsku(html):
-    return re.findall(&quot;&lt;span class=\&quot;value\&quot; itemprop=\&quot;sku\&quot; id=\&quot;sku\-\d+\&quot;&gt;(.*?)&lt;/span&gt;&quot;, html, re.I|re.M|re.DOTALL)[0]
-def extractattr(html):
-    attr = []
-    res = re.findall(&quot;&lt;td class=\&quot;a-left spec\-name\&quot;&gt;(.*?)&lt;/td&gt;\s+&lt;td class=\&quot;a-left spec-value\&quot;&gt;(.*?)&lt;/td&gt;&quot;,html,re.I|re.M|re.DOTALL)
-    for a in res:
-        attr.append([clean(a[0]),clean(a[1])])
-    return attr
-def clean(a):    
-    return a.replace(&quot;\r\n&quot;,&quot;&quot;).strip()
-def extractlink(html):
-    res = []
-    res1 = re.findall(&quot;&lt;h2 class=\&quot;title\&quot;&gt;\s+&lt;a href=\&quot;(/.*?)\&quot;&quot;, html, re.I|re.M|re.DOTALL)
-    res2 = re.findall(&quot;&lt;h2 class=\&quot;product\-title\&quot;&gt;\s+&lt;a href=\&quot;(/.*?)\&quot;&quot;, html, re.I|re.M|re.DOTALL)
-    for i in res1:
-        res.append(i)
-    for i in res2:
-        res.append(i)
-    return res
-def extract(html):
-    res = re.findall(&quot;&lt;li class=\&quot;inactive\&quot;&gt;\s+&lt;a href=\&quot;(/.*?)\&quot;&gt;.*?&lt;/a&gt;\s+&lt;/li&gt;&quot;,html,re.I|re.M|re.DOTALL)
-    return [i for i in res]
-
-if __name__ == &quot;__main__&quot;:
-    process()
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1741,7 +1651,7 @@ if __name__ == &quot;__main__&quot;:
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">121</span>
+                <span class="site-state-item-count">122</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
