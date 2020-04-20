@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ajax interview]]></title>
+    <url>%2F2020%2F04%2F21%2Fajax-interview%2F</url>
+    <content type="text"><![CDATA[ajax interview手写一个简易的ajax 跨域的常用实现方式 手写一个简易的ajax function ajax(url,successFn){ const xhr = new XMLHttpRequest() xhr.open(&quot;GET&quot;,url,true) xhr.onreadystatechange = function(){ if（xhr.readyState ===4）{ } } } xhr.send(null) } function ajax(url){ const p = new Promise((resolve,reject)=&gt;{ const xhr = XMLHttpRequest() xhr.open(&apos;GET&apos;,url,true) xhr.onreaystatechange = function(){ if(xhr.readyState ===4 ){ if(xhr.status === 200){ resolve（ JSON.parse(xhr.responseText) ） }else if (xhr.status === 404){ reject(new Error) } } } xhr.send(null) }) } return p const url = &apos;data/test.json&apos; ajax(url) .then(res=&gt;console.log(res)) .catch(err=&gt;console.error(err))]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[CORS]]></title>
     <url>%2F2020%2F04%2F20%2FCORS%2F</url>
     <content type="text"><![CDATA[CORS跨域什么是跨域（同源策略） JSONP CORS(服务端支持) 1.同源策略 ajax请求时，浏览器要求当前网页和server必须同源 同源：协议，域名，端口，三者必须一致 加载图片css js 可无视同源策略 可用于统计打点，可使用第三方统计服务 可以使用CDN,CDN一般都是外域 可使用JSONP 跨域 所有的跨域，都必须经过server端允许和配合 未经过server端允许就实现跨域，说明浏览器有漏洞 JSONP 访问一个地址，服务端一定返回的一个html文件吗？ 服务器可以任意动态拼接数据返回，只要符合html格式 可绕过跨域限制 服务器可以任意动态拼接数据返回 所以，就可以获得跨域的数据，只要数据的愿意返回 window.callback = function(data){ //这是我们跨域得到的信息 console.log（data） } jQuery 实现jsonp $.ajax({ url:&apos;&apos; dataType:&apos;jsonp&apos;, jsonpCallback:&apos;callback&apos;, success:function(data){ console.log(data) } })]]></content>
