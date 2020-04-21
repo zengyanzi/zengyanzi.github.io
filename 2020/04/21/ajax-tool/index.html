@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="ajax interview手写一个简易的ajax 跨域的常用实现方式 手写一个简易的ajax         function ajax(url,successFn){         const xhr = new XMLHttpRequest()         xhr.open(&amp;quot;GET&amp;quot;,url,true)         xhr.onreadystatechange">
+<meta name="description" content="ajax tooljQuery $(function(){      //请求参数     var list ={};     //     $.ajax({     //请求方式     type:&amp;quot;POST&amp;quot;     //请求的媒体类型     contentType:&amp;quot;application/json;charset=UTF-8&amp;quot;,     //请求地">
 <meta name="keywords" content="Interview">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ajax interview">
-<meta property="og:url" content="http://yoursite.com/2020/04/21/ajax-interview/index.html">
+<meta property="og:title" content="ajax tool">
+<meta property="og:url" content="http://yoursite.com/2020/04/21/ajax-tool/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="ajax interview手写一个简易的ajax 跨域的常用实现方式 手写一个简易的ajax         function ajax(url,successFn){         const xhr = new XMLHttpRequest()         xhr.open(&amp;quot;GET&amp;quot;,url,true)         xhr.onreadystatechange">
-<meta property="og:updated_time" content="2020-04-20T21:58:57.198Z">
+<meta property="og:description" content="ajax tooljQuery $(function(){      //请求参数     var list ={};     //     $.ajax({     //请求方式     type:&amp;quot;POST&amp;quot;     //请求的媒体类型     contentType:&amp;quot;application/json;charset=UTF-8&amp;quot;,     //请求地">
+<meta property="og:updated_time" content="2020-04-21T00:19:21.938Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ajax interview">
-<meta name="twitter:description" content="ajax interview手写一个简易的ajax 跨域的常用实现方式 手写一个简易的ajax         function ajax(url,successFn){         const xhr = new XMLHttpRequest()         xhr.open(&amp;quot;GET&amp;quot;,url,true)         xhr.onreadystatechange">
+<meta name="twitter:title" content="ajax tool">
+<meta name="twitter:description" content="ajax tooljQuery $(function(){      //请求参数     var list ={};     //     $.ajax({     //请求方式     type:&amp;quot;POST&amp;quot;     //请求的媒体类型     contentType:&amp;quot;application/json;charset=UTF-8&amp;quot;,     //请求地">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/04/21/ajax-interview/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/04/21/ajax-tool/"/>
 
 
 
 
 
-  <title> ajax interview | Bunny's  Code Burrow </title>
+  <title> ajax tool | Bunny's  Code Burrow </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/21/ajax-interview/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/21/ajax-tool/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jenny Zeng">
@@ -318,7 +318,7 @@
             
             
               
-                ajax interview
+                ajax tool
               
             
           </h1>
@@ -333,7 +333,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-21T05:31:15+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-21T06:03:04+08:00">
                 2020-04-21
               </time>
             
@@ -368,46 +368,43 @@
       
 
       
-        <h1 id="ajax-interview"><a href="#ajax-interview" class="headerlink" title="ajax interview"></a>ajax interview</h1><p>手写一个简易的ajax</p>
-<p>跨域的常用实现方式</p>
-<pre><code>手写一个简易的ajax    
-    function ajax(url,successFn){
-        const xhr = new XMLHttpRequest()
-        xhr.open(&quot;GET&quot;,url,true)
-        xhr.onreadystatechange = function(){
-            if（xhr.readyState ===4）{
-            }
-        }
+        <h1 id="ajax-tool"><a href="#ajax-tool" class="headerlink" title="ajax tool"></a>ajax tool</h1><p>jQuery</p>
+<pre><code>$(function(){
+
+    //请求参数
+    var list ={};
+    //
+    $.ajax({
+    //请求方式
+    type:&quot;POST&quot;
+    //请求的媒体类型
+    contentType:&quot;application/json;charset=UTF-8&quot;,
+    //请求地址
+    url:&quot;http://127.0.0.1/admin/list/&quot;
+    //数据，json字符串
+    data：JSON.stringify(list)
+    //请求成功
+    success:function(result){
+        console.log(result);
+    },
+    //请求失败，包含据图的错误信息
+    error:function(e){
+        console.log(e.status);
+        console.log(e.responseText);
     }
-    xhr.send(null)
-}
-</code></pre><a id="more"></a>
-<pre><code>function ajax(url){
-    const p = new Promise((resolve,reject)=&gt;{
-        const xhr = XMLHttpRequest()
-        xhr.open(&apos;GET&apos;,url,true)
-        xhr.onreaystatechange = function(){
-             if(xhr.readyState ===4 ){
 
-                if(xhr.status === 200){
-                    resolve（
-                        JSON.parse(xhr.responseText)
-                    ）
-                }else if (xhr.status === 404){
-                    reject(new Error)
-                }
-            }
-        }
-        xhr.send(null)
+    });
+});
+
+
+使用fetch        
+fetch(&apos;http://example.com/movies.json&apos;)
+    .then(function(response){
+        return response.json();
     })
-}
-return p
-
-
-const url = &apos;data/test.json&apos;
-ajax(url)
-.then(res=&gt;console.log(res))
-.catch(err=&gt;console.error(err))
+    .then(function(myJson)){
+        console.log(myJson)
+    }
 </code></pre>
       
     </div>
@@ -450,18 +447,14 @@ ajax(url)
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/21/ajax-tool/" rel="next" title="ajax tool">
-                <i class="fa fa-chevron-left"></i> ajax tool
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/20/CORS/" rel="prev" title="CORS">
-                CORS <i class="fa fa-chevron-right"></i>
+              <a href="/2020/04/21/ajax-interview/" rel="prev" title="ajax interview">
+                ajax interview <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -602,7 +595,7 @@ ajax(url)
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ajax-interview"><span class="nav-number">1.</span> <span class="nav-text">ajax interview</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ajax-tool"><span class="nav-number">1.</span> <span class="nav-text">ajax tool</span></a></li></ol></div>
             
 
           </div>
