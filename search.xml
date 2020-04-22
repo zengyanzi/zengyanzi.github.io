@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[chrome]]></title>
+    <url>%2F2020%2F04%2F22%2Fchrome%2F</url>
+    <content type="text"><![CDATA[Chrome debugElements:evnent listeners console Application: local storage, sessionstorage,cookies network: 刷新页面，加载资源，可以选择all，可以选择img，可以选择media debugger（sources）：在代码中写debugger是断点，]]></content>
+      <tags>
+        <tag>Interveiw</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[develop enviroment]]></title>
     <url>%2F2020%2F04%2F22%2Fdevelop-enviroment%2F</url>
     <content type="text"><![CDATA[develop toolgit 调试工具 抓包 webpack babel linux常用命令，如何连上测试机 git：最常用的代码版本管理工具：大型项目需要多人协作开发，必须使用gitMacOS自带git，window下载 git常用服务端 github，coding.net 大公司会搭建自己的内网git服务 git add . git checkkout xxx git commit -m”xxx” git push origin master git pull origin master git branch git checkout -b xxx/git checkout xxx git merge xxx git 常用命令演示 git checkout -b feature-login//switch to branch git fetch//拉下来所有分支 git branch git checkout 切换 git pull origin feature-login看看有没有更新 git checkout master切回master再进行merge git merge feature-login git status git log git stash pop]]></content>
