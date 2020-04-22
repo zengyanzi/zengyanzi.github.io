@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[cookies]]></title>
+    <url>%2F2020%2F04%2F21%2Fcookies%2F</url>
+    <content type="text"><![CDATA[cookies描述cookies localStorage 和sessionStorage的区别 cookielocalStoragesessionStorage 本身用于浏览器和server通讯被借用到本地存储来可用document.cookie =’xxx’来修改cookie是追加而不是覆盖可用通过前端对cookie进行赋值，能进行本地存储 cookie 的缺点 存储大小，最大4kb http请求时需要发送到服务端，增加请求数据量 只能用document.cookie=’xxx’来修改 localStorage和sessionStorage HTML5专门为存储设计，最大可5M API简易可以setItem getItem不会随着http请求发送 localStorage.setItem(&apos;a&apos;,100) localStorage.getItem(&apos;a&apos;) localStorage数据会永久存储，除非代码手动删除sessionStorage数据只存在当前会话，浏览器关闭会清空 描述cookie localStorage sessionStorage区别 容量 API易用性 是否跟随http请求发送出去]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ajax tool]]></title>
     <url>%2F2020%2F04%2F21%2Fajax-tool%2F</url>
     <content type="text"><![CDATA[ajax tooljQuery $(function(){ //请求参数 var list ={}; // $.ajax({ //请求方式 type:&quot;POST&quot; //请求的媒体类型 contentType:&quot;application/json;charset=UTF-8&quot;, //请求地址 url:&quot;http://127.0.0.1/admin/list/&quot; //数据，json字符串 data：JSON.stringify(list) //请求成功 success:function(result){ console.log(result); }, //请求失败，包含据图的错误信息 error:function(e){ console.log(e.status); console.log(e.responseText); } }); }); 使用fetch fetch(&apos;http://example.com/movies.json&apos;) .then(function(response){ return response.json(); }) .then(function(myJson)){ console.log(myJson) }]]></content>
