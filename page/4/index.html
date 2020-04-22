@@ -297,6 +297,135 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/18/how-to-solve-hover-problem/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2020/02/18/how-to-solve-hover-problem/" itemprop="url">
+                  how to solve hover problem
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-18T05:38:31+08:00">
+                2020-02-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="How-to-solve-hover-problem"><a href="#How-to-solve-hover-problem" class="headerlink" title="How to solve hover problem "></a>How to solve hover problem </h1><p><img src="https://s2.ax1x.com/2020/02/18/3iTRKA.png" alt=""><br>The hover banner used to be as above.<br>The reason was due to the height of those elements.<br>To solve it, just go to /Themes/CustomMicroAnalytix/View/Catalog, modify the TopMenu.cshmtl as below</p>
+<p>The key code here is to amend </p>
+<pre><code>if (subCategoryCounter &lt;= 3) 
+</code></pre><p>TO</p>
+<pre><code>if (subCategoryCounter &lt;= 2)
+</code></pre>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/02/18/how-to-solve-hover-problem/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/17/interview-css-html/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1435,172 +1564,6 @@ ip install PyMySQL
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/19/how-to-install-docker-to-Ubuntu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2019/09/19/how-to-install-docker-to-Ubuntu/" itemprop="url">
-                  how to install docker to Ubuntu
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-19T11:43:14+08:00">
-                2019-09-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="How-to-install-docker-to-Ubuntu"><a href="#How-to-install-docker-to-Ubuntu" class="headerlink" title="How to install docker to Ubuntu"></a>How to install docker to Ubuntu</h1><p>To install Docker Engine - Community, you need the 64-bit version of one of these Ubuntu versions:</p>
-<p>Disco 19.04</p>
-<p>Cosmic 18.10</p>
-<p>Bionic 18.04 (LTS)</p>
-<p>Xenial 16.04 (LTS)</p>
-<p>To check the verion of your Ubuntu system,by </p>
-<pre><code>$sudo lsb_release -a
-</code></pre><p>Uninstall old versions<br>Older versions of Docker were called docker, docker.io , or docker-engine. If these are installed, uninstall them:</p>
-<pre><code>$ sudo apt-get remove docker docker-engine docker.io containerd runc
-</code></pre><p>Install Docker Engine - Community</p>
-<p>SET UP THE REPOSITORY</p>
-<p>Update the apt package index:</p>
-<pre><code>$ sudo apt-get update
-</code></pre><p>Install packages to allow apt to use a repository over HTTPS:</p>
-<pre><code>$ sudo apt-get install \
-apt-transport-https \
-ca-certificates \
-curl \
-gnupg-agent \
-software-properties-common
-</code></pre><p>Add Docker’s official GPG key:</p>
-<pre><code>$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-</code></pre><p>Verify that you now have the key with the fingerprint</p>
-<pre><code>9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88
-</code></pre><p> by searching for the last 8 characters of the fingerprint.</p>
-<pre><code>$ sudo apt-key fingerprint 0EBFCD88
-
-pub   rsa4096 2017-02-22 [SCEA]
-  9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
-uid           [ unknown] Docker Release (CE deb) &lt;docker@docker.com&gt;
-sub   rsa4096 2017-02-22 [S]
-</code></pre><p>Use the following command to set up the stable repository. To add the nightly or test repository, add the word nightly or test (or both) after the word stable in the commands below. Learn about nightly and test channels.</p>
-<pre><code>$ sudo add-apt-repository \
-   &quot;deb [arch=amd64] https://download.docker.com/linux/    ubuntu \
-   $(lsb_release -cs) \
-   stable&quot;
-</code></pre><p>INSTALL DOCKER ENGINE - COMMUNITY</p>
-<p>Update the apt package index.</p>
-<pre><code>$ sudo apt-get update
-</code></pre><p>Install the latest version of Docker Engine - Community and containerd, or go to the next step to install a specific version:</p>
-<pre><code>$ sudo apt-get install docker-ce docker-ce-cli containerd.io
-</code></pre><p>List the versions available in your repo:</p>
-<pre><code>$ apt-cache madison docker-ce
-</code></pre><p><strong>However,if you don’t want to choose, just use $ sudo apt-get install docker-ce would install the latest version</strong></p>
-<p>Verify that Docker Engine - Community is installed correctly by running the hello-world image.</p>
-<pre><code>$ sudo docker run hello-world
-</code></pre><p>Enjoy</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1650,7 +1613,7 @@ sub   rsa4096 2017-02-22 [S]
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">125</span>
+                <span class="site-state-item-count">126</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

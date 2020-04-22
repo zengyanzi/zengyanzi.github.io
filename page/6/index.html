@@ -297,6 +297,159 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/23/update-hexo-with-shh/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/02/23/update-hexo-with-shh/" itemprop="url">
+                  update hexo with shh
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-23T15:11:06+08:00">
+                2018-02-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="fatal-could-not-read-Username-for-‘https-github-com‘-Invalid-argument"><a href="#fatal-could-not-read-Username-for-‘https-github-com‘-Invalid-argument" class="headerlink" title="fatal: could not read Username for ‘https://github.com‘: Invalid argument"></a>fatal: could not read Username for ‘<a href="https://github.com" target="_blank" rel="external">https://github.com</a>‘: Invalid argument</h1><p>Hexo g -d</p>
+<p>but get the error like below</p>
+<pre><code>fatal: could not read Username for &apos;https://github.com&apos;: Invalid argument
+FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
+Error: bash: /dev/tty: No such device or address
+error: failed to execute prompt script (exit code 1)
+fatal: could not read Username for &apos;https://github.com&apos;: Invalid argument
+</code></pre><p>The way to solve it is by two steps<br>1.go to the blog/_config.yml update the url like </p>
+<pre><code>deploy:
+type: git
+repo: git@github.com:zengyanzi/zengyanzi.github.io.git
+branch: master
+</code></pre><p>Instead of <a href="https://github.com/zengyanzi/zengyanzi.github.io" target="_blank" rel="external">https://github.com/zengyanzi/zengyanzi.github.io</a></p>
+<ol>
+<li>Generate ssh as below :</li>
+</ol>
+<p>A- Create a ssh key using Git Bash using following command</p>
+<pre><code>ssh-keygen -t rsa -b 4096 -C &quot;zengzhen.ucf@email.com&quot;
+</code></pre><p>After running this command just install the by default options and enter the password balnk when it prompts.(<strong>Three times of pressing space</strong>)</p>
+<p>B- Then run the following commands to locate the public/private key generated from step1</p>
+<pre><code>cd .ssh
+
+cd ~/.ssh
+</code></pre><p>3- Then run the following command to view your public:</p>
+<pre><code>cat id_rsa.pub
+</code></pre><p>4- Copy your public key and go to your <strong>GitHub account -&gt; settings -&gt; create a SSH and GPG keys</strong> then click new ssh key and past your public key in the in key text field.</p>
+<p>5- Verify your public key using Git Bash by running the following command:</p>
+<pre><code>ssh -vT git@github.com
+</code></pre><p>You will get output like this</p>
+<pre><code>debug1: channel 0: free: client-session, nchannels 1
+Transferred: sent 3848, received 2040 bytes, in 0.2 seconds
+Bytes per second: sent 16032.4, received 8499.5
+debug1: Exit status 1
+</code></pre><p>Then you no longer got “could not read Username for ‘<a href="https://github.com" target="_blank" rel="external">https://github.com</a>‘: Invalid argument”</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/23/yarn-install-problem-with-xcode/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1925,154 +2078,6 @@ ifconfig
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/27/search-function/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/11/27/search-function/" itemprop="url">
-                  search function
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-27T09:45:33+08:00">
-                2017-11-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="How-do-modify-the-full-search-function-in-nopCommerce"><a href="#How-do-modify-the-full-search-function-in-nopCommerce" class="headerlink" title="How do modify the full search function in nopCommerce"></a>How do modify the full search function in nopCommerce</h1><p>1.Go to the Nop.Web/Controllers/CatalogController. find the search action and set the searchinDescriptions to be true</p>
-<pre><code>IPagedList&lt;Product&gt; products = new PagedList&lt;Product&gt;(new List&lt;Product&gt;(), 0, 1);
-           // only search if query string search keyword is set (used to avoid searching or displaying search term min length error message on /search page load)
-           if (Request.Params[&quot;Q&quot;] != null)
-           {
-               if (model.Q.Length &lt; _catalogSettings.ProductSearchTermMinimumLength)
-               {
-                   model.Warning = string.Format(_localizationService.GetResource(&quot;Search.SearchTermMinimumLengthIsNCharacters&quot;), _catalogSettings.ProductSearchTermMinimumLength);
-               }
-               else
-               {
-                   var categoryIds = new List&lt;int&gt;();
-                   int manufacturerId = 0;
-                   decimal? minPriceConverted = null;
-                   decimal? maxPriceConverted = null;
-                   bool searchInDescriptions = true;
-                   if (model.As)
-                   {
-                       //advanced search
-                       var categoryId = model.Cid;
-                       if (categoryId &gt; 0)
-                       {
-                           categoryIds.Add(categoryId);
-                           if (model.Isc)
-                           {
-                               //include subcategories
-                               categoryIds.AddRange(GetChildCategoryIds(categoryId));
-                           }
-                       }
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -2122,7 +2127,7 @@ ifconfig
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">125</span>
+                <span class="site-state-item-count">126</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

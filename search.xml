@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[develop enviroment]]></title>
+    <url>%2F2020%2F04%2F22%2Fdevelop-enviroment%2F</url>
+    <content type="text"><![CDATA[develop toolgit 调试工具 抓包 webpack babel linux常用命令，如何连上测试机 git：最常用的代码版本管理工具：大型项目需要多人协作开发，必须使用gitMacOS自带git，window下载 git常用服务端 github，coding.net 大公司会搭建自己的内网git服务 git add . git checkkout xxx git commit -m”xxx” git push origin master git pull origin master git branch git checkout -b xxx/git checkout xxx git merge xxx git 常用命令演示 git checkout -b feature-login//switch to branch git fetch//拉下来所有分支 git branch git checkout 切换 git pull origin feature-login看看有没有更新 git checkout master切回master再进行merge git merge feature-login git status git log git stash pop]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[cookies]]></title>
     <url>%2F2020%2F04%2F21%2Fcookies%2F</url>
     <content type="text"><![CDATA[cookies描述cookies localStorage 和sessionStorage的区别 cookielocalStoragesessionStorage 本身用于浏览器和server通讯被借用到本地存储来可用document.cookie =’xxx’来修改cookie是追加而不是覆盖可用通过前端对cookie进行赋值，能进行本地存储 cookie 的缺点 存储大小，最大4kb http请求时需要发送到服务端，增加请求数据量 只能用document.cookie=’xxx’来修改 localStorage和sessionStorage HTML5专门为存储设计，最大可5M API简易可以setItem getItem不会随着http请求发送 localStorage.setItem(&apos;a&apos;,100) localStorage.getItem(&apos;a&apos;) localStorage数据会永久存储，除非代码手动删除sessionStorage数据只存在当前会话，浏览器关闭会清空 描述cookie localStorage sessionStorage区别 容量 API易用性 是否跟随http请求发送出去]]></content>
