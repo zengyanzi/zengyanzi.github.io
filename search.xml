@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[packet capture]]></title>
+    <url>%2F2020%2F04%2F23%2Fpacket-capture%2F</url>
+    <content type="text"><![CDATA[packet capture移动端H5页，查看网络请求，需要用工具抓包 windows一般用fiddler MacOS 用Charles 手机和电脑必须连同一个局域网 将手机代理到电脑上 手机浏览网页，即可抓包 查看网络请求 网址代理 https]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[chrome]]></title>
     <url>%2F2020%2F04%2F22%2Fchrome%2F</url>
     <content type="text"><![CDATA[Chrome debugElements:evnent listeners console Application: local storage, sessionstorage,cookies network: 刷新页面，加载资源，可以选择all，可以选择img，可以选择media debugger（sources）：在代码中写debugger是断点，]]></content>
