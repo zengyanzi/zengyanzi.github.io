@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="nopCommerce," />
+  <meta name="keywords" content="Interview," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="solve the problem of Responsive Layout add in styles.css .master-wrappermain{ display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; justify-content: center; al">
-<meta name="keywords" content="nopCommerce">
+<meta name="description" content="webpack babelES6模块化，浏览器暂不支持 ES6语法，浏览器不完全支持 压缩代码 整合代码 以让网页加载更快 node-v//查看node版本 npm init -y npm install webpack webpack-cli -D借助淘宝镜像 建一个配置文件 webpack.config.js        const path = require(‘path’)">
+<meta name="keywords" content="Interview">
 <meta property="og:type" content="article">
-<meta property="og:title" content="postsolve the problem of Responsive Layout">
-<meta property="og:url" content="http://yoursite.com/2017/04/22/solve-the-problem-of-Responsive-Layout/index.html">
+<meta property="og:title" content="webpack babel">
+<meta property="og:url" content="http://yoursite.com/2020/04/23/webpack-babel/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="solve the problem of Responsive Layout add in styles.css .master-wrappermain{ display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; justify-content: center; al">
-<meta property="og:updated_time" content="2017-04-22T11:46:07.955Z">
+<meta property="og:description" content="webpack babelES6模块化，浏览器暂不支持 ES6语法，浏览器不完全支持 压缩代码 整合代码 以让网页加载更快 node-v//查看node版本 npm init -y npm install webpack webpack-cli -D借助淘宝镜像 建一个配置文件 webpack.config.js        const path = require(‘path’)">
+<meta property="og:updated_time" content="2020-04-25T10:13:23.957Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="postsolve the problem of Responsive Layout">
-<meta name="twitter:description" content="solve the problem of Responsive Layout add in styles.css .master-wrappermain{ display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; justify-content: center; al">
+<meta name="twitter:title" content="webpack babel">
+<meta name="twitter:description" content="webpack babelES6模块化，浏览器暂不支持 ES6语法，浏览器不完全支持 压缩代码 整合代码 以让网页加载更快 node-v//查看node版本 npm init -y npm install webpack webpack-cli -D借助淘宝镜像 建一个配置文件 webpack.config.js        const path = require(‘path’)">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/22/solve-the-problem-of-Responsive-Layout/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/04/23/webpack-babel/"/>
 
 
 
 
 
-  <title> postsolve the problem of Responsive Layout | Bunny's  Code Burrow </title>
+  <title> webpack babel | Bunny's  Code Burrow </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/22/solve-the-problem-of-Responsive-Layout/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/23/webpack-babel/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jenny Zeng">
@@ -318,7 +318,7 @@
             
             
               
-                postsolve the problem of Responsive Layout
+                webpack babel
               
             
           </h1>
@@ -333,8 +333,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-22T23:40:45+08:00">
-                2017-04-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-23T06:55:59+08:00">
+                2020-04-23
               </time>
             
 
@@ -368,43 +368,186 @@
       
 
       
-        <h1 id="solve-the-problem-of-Responsive-Layout"><a href="#solve-the-problem-of-Responsive-Layout" class="headerlink" title="solve the problem of Responsive Layout"></a>solve the problem of Responsive Layout</h1><ol>
-<li><p>add in styles.css</p>
-<pre><code>.master-wrappermain{
-display: -webkit-flex;
-display: -moz-flex;
-display: -ms-flex;
-display: -o-flex;
-display: flex;
-justify-content: center;
-align-items: center;
+        <h1 id="webpack-babel"><a href="#webpack-babel" class="headerlink" title="webpack babel"></a>webpack babel</h1><p>ES6模块化，浏览器暂不支持</p>
+<p>ES6语法，浏览器不完全支持</p>
+<p>压缩代码 整合代码 以让网页加载更快</p>
+<p>node-v<br>//查看node版本</p>
+<p>npm init -y</p>
+<p>npm install webpack webpack-cli -D<br>借助淘宝镜像</p>
+<p>建一个配置文件 webpack.config.js<br>        const path = require(‘path’)<br>        module.exports ={</p>
+<pre><code>    mode:&apos;development&apos; // production
+    entry:path.join(__dirname,&apos;src&apos;,‘index.js)//__dirname当前目录 src/index.js是整个文件的入口
+    output:{
+        filename:&apos;bundle.js&apos;
+        path:path.join(__dirname,&apos;dist&apos;)//目录，dist是文件夹
+    },
+    plugins:[
+        new HtmlWebpackPlugin({
+            template:path.join(__dirname,&apos;src&apos;,‘index.js)//找到以后的index.html
+            filename:&apos;index.html&apos;//产出的index.html
+
+        })
+    ]，
+    devServer:{
+        port:3000,//定义端口
+        contentBase:path.join(__dirname,&apos;dist&apos;)//当前目录，devSever是启动本地服务
+    }
 }
-</code></pre></li>
-<li><p>remove the width off</p>
-<p> .master-wrapper-main<br> /<em>  width:75%;<br>   margin:0 auto;<br>   max-width:1170px;<br>   background:#fff;</em>/</p>
-</li>
-<li><p>add div in root :views/shared/_root.cshtml<br>  <div class="master-wrappermain"></div></p>
-<pre><code>    &lt;div class=&quot;master-wrapper-main clearfix&quot;&gt;
-        @RenderBody()
-    &lt;/div&gt;
-&lt;/div&gt;
-</code></pre><p>upload to FTP and test<br>considering the IE browser<br>change with another way</p>
-</li>
-<li>add text-align in master-wrapper-main</li>
-<li>add<br> .master-wrapper-main .side-2 li{<pre><code>text-align: left;
-</code></pre> }</li>
-<li><p>add in master-wrappermain<br> master-wrappermain{</p>
-<pre><code>text-align: center;
-</code></pre><p> }</p>
-<p> .master-wrapper-main {<br>   font-family: arial,helvetica,sans-serif;<br>   color: #5C5B5B;<br>   display: inline-block;<br>   /<em>width:75%;<br>   margin:0 auto;<br>   max-width:1170px;</em>/<br>   background:#fff;<br> }</p>
-<p> /<em> one column master page </em>/<br> .master-wrapper-main .center-1 {<br>   float: left;<br>   width: 910px;<br>   min-height: 400px;<br>   padding: 10px;<br>   background: #FFF;<br>   display: inline;<br>   border-radius: 5px;<br> }</p>
-<p> /<em> two column master page </em>/<br> .master-wrapper-main .side-2 {<br>   float: left;<br>   width: 190px;<br>   margin: 10px 0  10px 5px;<br>   display: inline;<br> }<br> .master-wrapper-main .side-2 li{</p>
-<pre><code>text-align: left;
-</code></pre><p> }<br> update 24012017<br> due to the modify of master-wrappermain{</p>
-<pre><code>text-align: center;
-</code></pre><p> }<br>it effected other layout including:one column;two column and three column<br>we need to add text-align into them.</p>
-</li>
-</ol>
+</code></pre><a id="more"></a>
+<p>在package.json中加入</p>
+<pre><code>{    
+    &quot;name&quot;:&quot;webpack-demo&quot;,
+    &quot;version&quot;:&quot;1.0.1&quot;,
+    &quot;description&quot;:&quot;index.js&quot;,
+    &quot;main&quot;:&quot;index.js&quot;,
+    &quot;scripts&quot;:{
+        &quot;test&quot;:&quot;echo \&quot;Error: no test specified\\ &amp;&amp; exit 1&quot;,
+        &quot;build&quot;:&quot;webpack -- config webpack.config.js&quot;,
+        &quot;dev&quot;：&quot;webpack-dev-server&quot;
+    },
+    &quot;keywords&quot;:[],
+    &quot;author&quot;:&quot;&quot;,
+    &quot;license&quot;:&quot;ISC&quot;,
+    &quot;devDependencies&quot;:{
+        &quot;wepack&quot;:&quot;^4.41.0&quot;,
+        &quot;webpack-cli&quot;:&quot;^3.3.9&quot;
+    }
+}
+</code></pre><p>npm run build</p>
+<p>如果是production模式，bundle.js会被压缩的比较小一点，development模式没有压缩，方便调试</p>
+<p>建立网页，再安装一个插件</p>
+<p>npm install html-webpack-plugin -D</p>
+<p>npm run dev </p>
+<p>如何配置babel</p>
+<p>写一个ES6语法</p>
+<pre><code>const sum = (a,b)=&gt;{
+     return a +b
+}
+const res = sum(10,20)
+conole.log(res)
+</code></pre><p>用babel进行ES6编译</p>
+<p>npm install @babel/core @babel/preset-env babel-loader -D</p>
+<p>新建.babelrc文件</p>
+<pre><code>{
+    &quot;presets&quot;:[&quot;@babel/preset-env&quot;]
+}
+</code></pre><p>在webpack.config.js进行配置</p>
+<pre><code>const path = require(&apos;path&apos;)
+  module.exports ={
+
+      mode:&apos;development&apos; // production
+      entry:path.join(__dirname,&apos;src&apos;,‘index.js)//__dirname当前目录 src/index.js是整个文件的入口
+      output:{
+          filename:&apos;bundle.js&apos;
+          path:path.join(__dirname,&apos;dist&apos;)//目录，dist是文件夹
+      },
+      module:{
+          rules:[
+              {
+                  test:/\.js$/,
+                  loader:[&apos;babel-loader&apos;];
+                  include:path.join(__dirname,&apos;src&apos;),
+                  exclude:/node_modues/
+
+              }
+          ]
+      }
+      plugins:[
+          new HtmlWebpackPlugin({
+              template:path.join(__dirname,&apos;src&apos;,‘index.js)//找到以后的index.html
+              filename:&apos;index.html&apos;//产出的index.html
+
+          })
+      ]，
+      devServer:{
+          port:3000,//定义端口
+          contentBase:path.join(__dirname,&apos;dist&apos;)//当前目录，devSever是启动本地服务
+      }
+  }
+</code></pre><p>ES6模块化规范是什么</p>
+<pre><code>export function fn(){
+    console.log(&apos;fn&apos;)
+}
+
+export const name =&apos;a&apos;
+export const obj ={
+    name:&apos;james&apos;
+}
+</code></pre><p>如何导入</p>
+<pre><code>import {fn,name,obj} from &apos;./xxx&apos;  //解构赋值的语法
+
+fn()
+console.log(name)
+console.log(obj)
+</code></pre><p>另外一种</p>
+<pre><code>    function fn(){
+    console.log(&apos;fn&apos;)
+}
+
+const name =&apos;a&apos;
+ const obj ={
+    name:&apos;james&apos;
+}
+
+export{
+    fn,
+    name,
+    obj
+}
+</code></pre><p>第三种<br>            const obj={<br>                name:’xxx’<br>            }<br>            export default obj //只导出一个，用import 获取，就用default</p>
+<p>导入<br>                import obj from ‘/…’</p>
+<p>如何配置webpack生产环境</p>
+<p>新建webpack.prod.js</p>
+<p>copy webpack.config.js，再进行如下修改</p>
+<pre><code>      const path = require(&apos;path&apos;)
+module.exports ={
+
+    mode:&apos;production&apos; // 
+    entry:path.join(__dirname,&apos;src&apos;,‘index.js)//__dirname当前目录 src/index.js是整个文件的入口
+    output:{
+        filename:&apos;bundle.[contenthash].js&apos;
+        path:path.join(__dirname,&apos;dist&apos;)//目录，dist是文件夹
+    },
+    module:{
+        rules:[
+            {
+                test:/\.js$/,
+                loader:[&apos;babel-loader&apos;];
+                include:path.join(__dirname,&apos;src&apos;),
+                exclude:/node_modues/
+
+            }
+        ]
+    }
+    plugins:[
+        new HtmlWebpackPlugin({
+            template:path.join(__dirname,&apos;src&apos;,‘index.js)//找到以后的index.html
+            filename:&apos;index.html&apos;//产出的index.html
+
+        })
+    ]，
+
+}
+</code></pre><p>修改package.json</p>
+<pre><code>{    
+    &quot;name&quot;:&quot;webpack-demo&quot;,
+    &quot;version&quot;:&quot;1.0.1&quot;,
+    &quot;description&quot;:&quot;index.js&quot;,
+    &quot;main&quot;:&quot;index.js&quot;,
+    &quot;scripts&quot;:{
+        &quot;test&quot;:&quot;echo \&quot;Error: no test specified\\ &amp;&amp; exit 1&quot;,
+        &quot;build&quot;:&quot;webpack -- config webpack.prod.js&quot;,
+        &quot;dev&quot;：&quot;webpack-dev-server&quot;
+    },
+    &quot;keywords&quot;:[],
+    &quot;author&quot;:&quot;&quot;,
+    &quot;license&quot;:&quot;ISC&quot;,
+    &quot;devDependencies&quot;:{
+        &quot;wepack&quot;:&quot;^4.41.0&quot;,
+        &quot;webpack-cli&quot;:&quot;^3.3.9&quot;
+    }
+}
+</code></pre><p>增加hash值的原因是能够更快的命中html缓存，能够加载更快</p>
 
       
     </div>
@@ -434,7 +577,7 @@ align-items: center;
       
         <div class="post-tags">
           
-            <a href="/tags/nopCommerce/" rel="tag"># nopCommerce</a>
+            <a href="/tags/Interview/" rel="tag"># Interview</a>
           
         </div>
       
@@ -447,18 +590,14 @@ align-items: center;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/22/FullText-IsSupported/" rel="next" title="postFullText_IsSupported">
-                <i class="fa fa-chevron-left"></i> postFullText_IsSupported
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/22/add-hover-to-promotion/" rel="prev" title="postadd hover to promotion">
-                postadd hover to promotion <i class="fa fa-chevron-right"></i>
+              <a href="/2020/04/23/packet-capture/" rel="prev" title="packet capture">
+                packet capture <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -599,7 +738,7 @@ align-items: center;
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#solve-the-problem-of-Responsive-Layout"><span class="nav-number">1.</span> <span class="nav-text">solve the problem of Responsive Layout</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#webpack-babel"><span class="nav-number">1.</span> <span class="nav-text">webpack babel</span></a></li></ol></div>
             
 
           </div>

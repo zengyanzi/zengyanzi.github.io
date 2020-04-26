@@ -297,6 +297,155 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/23/webpack-babel/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2020/04/23/webpack-babel/" itemprop="url">
+                  webpack babel
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-23T06:55:59+08:00">
+                2020-04-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="webpack-babel"><a href="#webpack-babel" class="headerlink" title="webpack babel"></a>webpack babel</h1><p>ES6模块化，浏览器暂不支持</p>
+<p>ES6语法，浏览器不完全支持</p>
+<p>压缩代码 整合代码 以让网页加载更快</p>
+<p>node-v<br>//查看node版本</p>
+<p>npm init -y</p>
+<p>npm install webpack webpack-cli -D<br>借助淘宝镜像</p>
+<p>建一个配置文件 webpack.config.js<br>        const path = require(‘path’)<br>        module.exports ={</p>
+<pre><code>    mode:&apos;development&apos; // production
+    entry:path.join(__dirname,&apos;src&apos;,‘index.js)//__dirname当前目录 src/index.js是整个文件的入口
+    output:{
+        filename:&apos;bundle.js&apos;
+        path:path.join(__dirname,&apos;dist&apos;)//目录，dist是文件夹
+    },
+    plugins:[
+        new HtmlWebpackPlugin({
+            template:path.join(__dirname,&apos;src&apos;,‘index.js)//找到以后的index.html
+            filename:&apos;index.html&apos;//产出的index.html
+
+        })
+    ]，
+    devServer:{
+        port:3000,//定义端口
+        contentBase:path.join(__dirname,&apos;dist&apos;)//当前目录，devSever是启动本地服务
+    }
+}
+</code></pre>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/23/webpack-babel/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/23/packet-capture/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1535,133 +1684,6 @@ xhr.send(null)
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/13/event/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2020/04/13/event/" itemprop="url">
-                  event
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-13T16:54:09+08:00">
-                2020-04-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Event-事件"><a href="#Event-事件" class="headerlink" title="Event 事件"></a>Event 事件</h1><p>编写一个通用的事件监听函数<br>描述事件冒泡的流程<br>无限下拉的图片列表，如何监听每个图片的点击</p>
-<p>事件绑定</p>
-<p>事件冒泡</p>
-<p>事件代理</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/04/13/event/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1711,7 +1733,7 @@ xhr.send(null)
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">128</span>
+                <span class="site-state-item-count">129</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
