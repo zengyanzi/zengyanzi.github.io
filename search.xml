@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[webpage render]]></title>
+    <url>%2F2020%2F04%2F27%2Fwebpage-render%2F</url>
+    <content type="text"><![CDATA[Webpage render题目 从输入url到渲染出页面的整个过程 window.onload 和DOMContentLoaded的区别 加载资源的形式 加载资源的过程 渲染页面的过程 资源的形式html代码媒体文件，如图片，视频等JavaScript css 加载过程 DNS解析：域名-&gt;IP地址 domain name server浏览器根据IP 地址向服务器发起http请求 渲染过程-1 根据HTML代码生成DOM Tree 根据CSS 代码生成CSSOM 将DOM Tree和CSSOM整合形成 RenderTree 根据Render Tree渲染页面 遇到则暂停渲染，优先加载并执行JS代码，完成再继续render]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[frontend linux]]></title>
     <url>%2F2020%2F04%2F26%2Ffrontend-linux%2F</url>
     <content type="text"><![CDATA[Frontend Linux线上机器一般都是linux测试机也需要保持一致，和线上机器一致测试机或者线上机出了问题，本地又不能复现，需要去排查、 ls 查看文件夹 ll 看列表 clear 清屏 mkdir 创建文件夹 rm -rf abc 删除abc文件夹 cd dist ll mv index.html index1.html 修改文件名 用tab键填满 mv 移动文件 mv index.html ../index.html 移动到上级目录 cp a.js a1.js复制 touch d.js 新建d.js vi d.js 新建并且打开d.js 进入编译器,点一下i才可以输入，esc就推出，输入： 点w 回车，保存写入，点q 退出 console.log vi d.js或者 vim d.js 查看文件打开 cat package.json 打印文件所有内容在空白处 head package.json 打开前面几行 tail package.json 末尾的几行 grep “Babel” package.json 查找文件内容 在vim里用光标进行移动 vimtutor vim的教程]]></content>
