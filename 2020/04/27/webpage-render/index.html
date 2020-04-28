@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2020/04/27/webpage-render/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
 <meta property="og:description" content="Webpage render题目   从输入url到渲染出页面的整个过程 window.onload 和DOMContentLoaded的区别 加载资源的形式 加载资源的过程 渲染页面的过程">
-<meta property="og:updated_time" content="2020-04-27T10:04:04.062Z">
+<meta property="og:updated_time" content="2020-04-28T03:37:41.418Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpage render">
 <meta name="twitter:description" content="Webpage render题目   从输入url到渲染出页面的整个过程 window.onload 和DOMContentLoaded的区别 加载资源的形式 加载资源的过程 渲染页面的过程">
@@ -385,7 +385,43 @@
 <p>根据CSS 代码生成CSSOM</p>
 <p>将DOM Tree和CSSOM整合形成 RenderTree</p>
 <p>根据Render Tree渲染页面</p>
+<!--more-->
 <p>遇到<script>则暂停渲染，优先加载并执行JS代码，完成再继续render</p>
+<pre><code>实例1
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;test&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre><p>为何建议把css放head里,DOM tree生成的时候一步渲染完成<br>       示例2<br>            &lt;!DOCTYPE html&gt;<br>            <html><br>            <head><br>                <meta charset="UTF-8"><br>                <title>Document</title><br>                <link rel="stylesheet" type="text/css" href="test.css"><br>            </head><br>            <body><br>                <div>test</div><br>            </body><br>            </html></p>
+<p>为何js放在body最后？</p>
+<p> window.onload 和DOMContentLoaded的区别</p>
+<pre><code>window.addEventListener(&apos;loader&apos;,function(){
+    //页面的全部资源加载完之后才会执行，包括图片，视频等
+})
+document.addEventListener(&apos;DOMConentLoaded&apos;,function(){
+    //DOM渲染完即可执行，此时图片，视频还可能没加载完
+})
+</code></pre><p>相关面试题</p>
+<ul>
+<li><p>从输入url到渲染出页面的整个过程<br>下载资源，各个资源类型，下载过程<br>渲染页面：结合html css JavaScript图片等</p>
+<pre><code>const img1= document.getElemnetById(&apos;img1&apos;)
+img1.onload = function(){
+    console.log(&apos;img loaded&apos;)
+}
+window.addEventListener(&apos;load&apos;,function(){
+    console.log(&apos;window loaded&apos;)
+})
+document.addEventListener(&apos;DOMContentLoaded&apos;,function(){
+    console.log(&apos;dom content loaded&apos;)
+})
+</code></pre></li>
+</ul>
 </script></p>
       
     </div>
