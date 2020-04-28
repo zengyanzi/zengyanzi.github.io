@@ -297,6 +297,291 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/22/css-to-realise-the-slider/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/22/css-to-realise-the-slider/" itemprop="url">
+                  css to realise the slider
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-22T22:14:37+08:00">
+                2017-04-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="CSS-to-modify-the-slider"><a href="#CSS-to-modify-the-slider" class="headerlink" title="CSS to modify the slider"></a>CSS to modify the slider</h1><pre><code>de  &gt;/*css reset start*/
+*{
+margin:0;
+padding:0;
+}
+ul,li{
+list-style: none;
+}
+/*css reset end*/
+
+/*css public start*/
+.floatfix {
+*zoom: 1;
+}
+.floatfix:after {
+content: &quot;&quot;;
+display: table;
+clear: both;
+}
+/*css public end*/
+
+/*slider start*/
+.slider-contaner{
+width:100%;
+position:relative;
+}
+.slider-item + .slider-item{
+opacity:0;
+}
+.slider-item{
+width:100%;
+position:absolute;
+animation-timing-function: linear;
+animation-name:fade;
+animation-iteration-count: infinite;
+background-size:100%;
+}
+.focus-container{
+position:absolute;
+z-index:7;
+margin:0 auto;
+left:0;
+right:0;
+}
+.focus-container li{
+width:10px;
+height:10px;
+border-radius:50%;
+float:left;
+margin-right:10px;
+background:#fff;
+}
+.focus-item{
+width:100%;
+height:100%;
+border-radius:inherit;
+animation-timing-function: linear;
+animation-name:fade;
+animation-iteration-count: infinite;
+}
+.focus-item2,.focus-item3,.focus-item4,.focus-item5{
+opacity:0;
+}
+.focus-container ul{
+margin-left:46%;
+}
+/*set the position of focus*/
+.focus-container{
+bottom:2%;
+}
+/*set the color of image*/
+.focus-item{
+background:#51B1D9;
+}
+/*set the animation time*/
+.slider-item,.focus-item{
+animation-duration: 20s;
+}
+.slider-item1,.focus-item1{
+animation-delay: -1s;
+}
+.slider-item2,.focus-item2{
+animation-delay: 3s;
+}
+.slider-item3,.focus-item3{
+animation-delay: 7s;
+}
+.slider-item4,.focus-item4{
+animation-delay: 11s;
+}
+.slider-item5,.focus-item5{
+animation-delay: 15s;
+}
+@keyframes fade{
+0%{
+opacity:0;
+z-index:2;
+}
+5%{
+opacity:1;
+z-index: 1;
+}
+20%{
+opacity:1;
+z-index:1;
+}
+25%{
+opacity:0;
+z-index:0;
+}
+100%{
+opacity:0;
+z-index:0;
+}
+}
+/*set the path */
+.slider-item1{
+background-image:url(imgs/1.jpg);
+}
+.slider-item2{
+background-image:url(imgs/2.jpg);
+}
+.slider-item3{
+background-image:url(imgs/3.jpg);
+}
+.slider-item4{
+background-image:url(imgs/4.jpg);
+}
+.slider-item5{
+background-image:url(imgs/5.jpg);
+}
+/*set the height of image*/
+.slider,.slider-item{
+padding-bottom:40%;
+}de&gt;
+&lt;div class=&quot;layapptop&quot;&gt;
+        &lt;div class=&quot;app&quot;&gt;
+            &lt;a  href=&quot;products-on-promotion&quot;&gt;
+                &lt;section class=&quot;slider-contaner&quot;&gt;
+                &lt;ul class=&quot;slider&quot;&gt;
+                &lt;li class=&quot;slider-item slider-item1&quot;&gt;&lt;/li&gt;
+                &lt;li class=&quot;slider-item slider-item2&quot;&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;/section&gt;
+            &lt;/a&gt;
+           &lt;!--&lt;div class=&quot;app_box&quot;&gt;
+                &lt;i class=&quot;icon_a&quot;&gt;&lt;/i&gt;
+                &lt;div class=&quot;app_tab_con&quot;&gt;
+                    &lt;img style=&quot;width:98px;height:98px&quot;  src=&quot;../../Content/images/tree.jpg&quot; &gt;
+                &lt;/div&gt;
+                &lt;h2&gt;Click to open gift&lt;/h2&gt;
+            &lt;/div&gt;--&gt; 
+        &lt;/div&gt;
+        &lt;div class=&quot;server_box&quot;&gt;
+            &lt;a class=&quot;server&quot; href=&quot;contactus&quot;&gt;
+                &lt;img style=&quot;width:98px;height:58px&quot;  src=&quot;../../Content/images/ContactUs.png&quot; &gt;
+            &lt;/a&gt;
+            &lt;div class=&quot;server_con&quot;&gt;
+                &lt;i class=&quot;icon_a&quot;&gt;&lt;/i&gt;
+                &lt;h2&gt;0800 1 289 266&lt;/h2&gt;
+                &lt;p&gt;worktime 9:00-17:00&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+
+&lt;/div&gt;
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/20/React-Native-Google-Map/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -489,7 +774,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">131</span>
+                <span class="site-state-item-count">132</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

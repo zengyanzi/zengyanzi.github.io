@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2020/04/27/webpage-render/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
 <meta property="og:description" content="Webpage render题目   从输入url到渲染出页面的整个过程 window.onload 和DOMContentLoaded的区别 加载资源的形式 加载资源的过程 渲染页面的过程">
-<meta property="og:updated_time" content="2020-04-28T03:37:41.418Z">
+<meta property="og:updated_time" content="2020-04-28T04:17:02.883Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpage render">
 <meta name="twitter:description" content="Webpage render题目   从输入url到渲染出页面的整个过程 window.onload 和DOMContentLoaded的区别 加载资源的形式 加载资源的过程 渲染页面的过程">
@@ -415,11 +415,11 @@ img1.onload = function(){
     console.log(&apos;img loaded&apos;)
 }
 window.addEventListener(&apos;load&apos;,function(){
-    console.log(&apos;window loaded&apos;)
+    console.log(&apos;window loaded&apos;)//所有图片下载完之后才出来
 })
 document.addEventListener(&apos;DOMContentLoaded&apos;,function(){
     console.log(&apos;dom content loaded&apos;)
-})
+})//立刻出来
 </code></pre></li>
 </ul>
 </script></p>
@@ -463,6 +463,10 @@ document.addEventListener(&apos;DOMContentLoaded&apos;,function(){
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/04/28/optimization/" rel="next" title="optimization">
+                <i class="fa fa-chevron-left"></i> optimization
+              </a>
             
           </div>
 
@@ -544,7 +548,7 @@ document.addEventListener(&apos;DOMContentLoaded&apos;,function(){
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">131</span>
+                <span class="site-state-item-count">132</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
