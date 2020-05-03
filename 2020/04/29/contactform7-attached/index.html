@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2020/04/29/contactform7-attached/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
 <meta property="og:description" content="Contact form7 attached fileUseful link as below：https://whatsabyte.com/P1/byteconverter.htm  First, set up in the Form. Use class style to set the form as below: Pay attention to the file, use whatsab">
-<meta property="og:updated_time" content="2020-05-03T09:23:46.887Z">
+<meta property="og:updated_time" content="2020-05-03T09:48:13.842Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="contactform7 attached">
 <meta name="twitter:description" content="Contact form7 attached fileUseful link as below：https://whatsabyte.com/P1/byteconverter.htm  First, set up in the Form. Use class style to set the form as below: Pay attention to the file, use whatsab">
@@ -524,6 +524,56 @@ If yes, state the balance and monthly payment: &lt;div style=&quot;margin-bottom
 
 
 [submit &quot;Send&quot;]
+</code></pre><p>Two column test</p>
+<pre><code>&lt;div class=&quot;one-half&quot;&gt;
+&lt;label&gt; Your Name (required) 
+     [text* text-yourname]&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;one-half lastcf7&quot;&gt;
+&lt;label&gt; Your Email (required)
+    [email* your-email] &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;label&gt; Your Message
+    [textarea your-message] &lt;/label&gt;
+
+
+[submit &quot;Send&quot;]
+</code></pre><p>Bootstrap</p>
+<pre><code>    &lt;hr /&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+
+  &lt;div class=&quot;col-md-4&quot;&gt;
+    [text* your-name class:form-control placeholder &quot;Name (required)&quot;]
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-md-4&quot;&gt;
+    [email* your-email class:form-control placeholder &quot;Email (required)&quot;]
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-md-4&quot;&gt;
+    [text your-subject class:form-control placeholder &quot;Subject&quot;]
+  &lt;/div&gt;
+
+&lt;/div&gt; &lt;!-- end of .row --&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-12&quot;&gt;
+    [textarea your-message class:form-control placeholder &quot;Message&quot;]
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-12&quot;&gt;
+    [submit class:btn-block class:btn class:btn-primary class:btn-lg &quot;Send&quot; ]
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
       
     </div>
