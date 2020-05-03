@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2020/04/29/contactform7-attached/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
 <meta property="og:description" content="Contact form7 attached fileUseful link as below：https://whatsabyte.com/P1/byteconverter.htm  First, set up in the Form. Use class style to set the form as below: Pay attention to the file, use whatsab">
-<meta property="og:updated_time" content="2020-04-29T03:28:00.718Z">
+<meta property="og:updated_time" content="2020-05-03T09:23:46.887Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="contactform7 attached">
 <meta name="twitter:description" content="Contact form7 attached fileUseful link as below：https://whatsabyte.com/P1/byteconverter.htm  First, set up in the Form. Use class style to set the form as below: Pay attention to the file, use whatsab">
@@ -440,7 +440,91 @@ File attachments:[bank]
 </code></pre><p>In File attachments</p>
 <pre><code>[driverlicence][passport][Payslip][bank]
 </code></pre><p>The key factor to set the attached file is to keep the right size and put the file in <strong>Message body</strong>     and <strong>File attachments</strong> at the same time.</p>
+<pre><code>  &lt;label&gt; First Name (required) &lt;/label&gt;
 
+&lt;div style=&quot;margin-bottom: 25px;margin-right:550px; [text* firstname placeholder &quot;First Name&quot;]&lt;/div&gt;
+
+&lt;label&gt; Last Name (required) &lt;/label&gt;
+&lt;div style=&quot;margin-bottom: 25px;margin-right:550px; [text* lastname placeholder &quot; last name&quot;]&lt;/div&gt;
+
+&lt;label&gt; Driver Licence No and Version (required) &lt;/label&gt;
+&lt;div style=&quot;margin-bottom: 25px;margin-right:550px;[text* LicenceNo placeholder &quot; driver licence no&quot;]&lt;/div&gt;
+&lt;div style=&quot;margin-bottom: 25px;margin-right:850px;[text* Version &quot; version&quot;]&lt;/div&gt;
+
+&lt;label&gt; Driver Licence Expire date (required) &lt;/label&gt;
+&lt;div style=&quot;margin-bottom: 25px;margin-right:850px;[text* Expiredate  placeholder &quot;YYYY/MM/DD&quot;]&lt;/div&gt;
+
+&lt;label&gt; Date of birth (required) &lt;/label&gt;
+&lt;div style=&quot;margin-bottom: 25px;margin-right:850px;[text* date-birth  placeholder &quot;YYYY/MM/DD&quot;]&lt;/div&gt;
+
+&lt;label&gt;  Your Phone number (required) &lt;/label&gt;
+&lt;div style=&quot;margin-bottom: 25px;margin-right:550px;[tel* tel-phone]&lt;/div&gt;  
+
+&lt;label&gt; Email Address (required) &lt;/label&gt;
+&lt;div style=&quot;margin-bottom: 25px;margin-right:550px; [email* your-email] &lt;/div&gt;
+
+&lt;label&gt;  What is your employer&apos;s name? (required) &lt;/label&gt;
+&lt;div style=&quot;margin-bottom: 25px;margin-right:550px; [text* employer]&lt;/div&gt;
+
+&lt;label&gt;   How long have you worked in the current job?  (required) &lt;/label&gt;
+&lt;div style=&quot;margin-bottom: 25px;margin-right:550px;  [text* worktimecurrent]&lt;/div&gt;
+
+&lt;label&gt; What is your after tax weekly income? (required) &lt;/label&gt;
+&lt;div style=&quot;margin-bottom: 25px;margin-right:550px;&quot; [text* text-paid]&lt;/div&gt;
+
+&lt;label&gt;   How long have you worked in last job?  (required) &lt;/label&gt;
+&lt;div style=&quot;margin-bottom: 25px;margin-right:550px;  [text* worktimeprevious]&lt;/div&gt;
+
+&lt;label&gt; Living status (required) &lt;/label&gt;
+&lt;div style=&quot; margin-bottom:25px;margin-right:550px;[select* livingsituation &quot;rent&quot; &quot;own&quot; &quot;board&quot; &quot;other&quot;]&lt;/div&gt;
+
+&lt;label&gt; Marriage Status &lt;/label&gt;
+&lt;div style=&quot;margin-bottom: 25px;margin-right:550px; [select* Marriage &quot;Married&quot; &quot;De facto&quot; &quot;Widowed&quot; &quot;Divorced&quot; &quot;Single&quot;]&lt;/div&gt;
+
+&lt;label&gt; Your Current Address (required)&lt;/label&gt;
+&lt;div style=&quot;margin-bottom: 25px;margin-right:550px; [text* text-address placeholder &quot; start typing your address&quot;] &lt;/div&gt;
+
+
+
+&lt;label&gt; How many dependent children? (required)&lt;/label&gt;
+&lt;div style=&quot;margin-bottom: 25px;margin-right:550px; [text* text-children placeholder &quot; children number&quot;] &lt;/div&gt;
+
+
+
+&lt;label&gt; How much do you pay weekly for rent/mortgage? (required)&lt;/label&gt;
+&lt;div style=&quot;margin-bottom: 25px;margin-right:550px;&quot; [text* text-expenses] &lt;/div&gt;
+
+&lt;label&gt; How long have you lived in current address? (required)&lt;/label&gt;
+&lt;div style=&quot;margin-bottom: 25px;margin-right:550px;&quot; [text* text-currentaddress] &lt;/div&gt;
+
+&lt;label&gt; How long have you lived in previous address? (required)&lt;/label&gt;
+&lt;div style=&quot;margin-bottom: 25px;margin-right:550px;&quot; [text* text-previousaddress] &lt;/div&gt;
+
+&lt;label&gt; Visa status?(required)&lt;/label&gt;
+&lt;div style=&quot;margin-bottom: 25px;margin-right:550px;&quot; [select* visa &quot;nz citizen&quot;&quot; NZ PR&quot;&quot;nz residence&quot; &quot;visa work&quot; &quot;other visa&quot;]  &lt;/div&gt;
+
+&lt;label&gt; Do you have any finance owning? (required)&lt;/label&gt;
+
+&lt;div style=&quot;margin-bottom: 25px;margin-right:550px;&quot; [select* owning include_blank &quot;YES&quot; &quot;NO&quot;]  &lt;/div&gt;
+
+[group finance]
+If yes, state the balance and monthly payment: &lt;div style=&quot;margin-bottom: 25px;margin-right:550px;&quot; [textarea state] &lt;/div&gt;
+[/group]
+
+&lt;label&gt; Please upload your driver licence(required)&lt;/label&gt;
+[file* driverlicence limit:5242880 filetypes:rar|pdf|zip|doc|docx|xsl]
+
+&lt;label&gt; Please Upload recent 2 month bank statement(required)&lt;/label&gt;
+[file* statement limit:5242880 filetypes:rar|pdf|zip|doc|docx|xsl]
+
+&lt;label&gt; Please Upload other document&lt;/label&gt;
+[file Other limit:5242880 filetypes:rar|pdf|zip|doc|docx|xsl]
+
+[acceptance your-consent] Please acknowledge you have read the Privacy Declaration. [/acceptance]
+
+
+[submit &quot;Send&quot;]
+</code></pre>
       
     </div>
 
@@ -481,6 +565,10 @@ File attachments:[bank]
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/04/29/debounce/" rel="next" title="debounce">
+                <i class="fa fa-chevron-left"></i> debounce
+              </a>
             
           </div>
 
@@ -562,7 +650,7 @@ File attachments:[bank]
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">133</span>
+                <span class="site-state-item-count">134</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

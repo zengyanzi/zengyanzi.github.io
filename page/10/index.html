@@ -297,6 +297,137 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/nopcommerce-3-3-source-code/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/24/nopcommerce-3-3-source-code/" itemprop="url">
+                  nopcommerce 3.3 source code
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T11:15:54+08:00">
+                2017-04-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="nopcommerce-3-3-source-code"><a href="#nopcommerce-3-3-source-code" class="headerlink" title="nopcommerce 3.3 source code"></a>nopcommerce 3.3 source code</h1><p>目前公司使用的nopcommerce 3.3 是无source code的版本，导致很多功能无法实现。<br>恢复步骤</p>
+<ol>
+<li>download from nopcommerce.com 3.3 source code</li>
+<li>open NopCommerce.sln</li>
+<li>先按照正常步骤setup</li>
+<li>在app data里更改数据库设置</li>
+<li>把customerise的theme拷贝到路径<blockquote>
+<p>\nopCommerce_3.30_Source\Presentation\Nop.Web\Themes<br>在vs2008中刷新，在浏览器中查看，点击更新theme，可以进行更改theme进行还原。</p>
+</blockquote>
+</li>
+</ol>
+<p>然后怎么发布呢？由于是vs2012，不是2013，如果在vs里选择发布就一直会报错。所以目前的措施是直接从nop.web中把程序copy出来放到c盘iss发布环境，也就是WWW下面，在浏览器输入localhost，就可以在本地看到网站了 </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/Excel-bugs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1654,128 +1785,6 @@ process()
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/message-template/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/24/message-template/" itemprop="url">
-                  message template
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T10:11:26+08:00">
-                2017-04-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="message-template的token修改"><a href="#message-template的token修改" class="headerlink" title="message template的token修改 "></a>message template的token修改 </h1><p>由于修改了full text 编辑器的URL设定，导致部分token无法正常使用，需要将</p>
-<pre><code>&lt;a href=&quot;/Admin/MessageTemplate/Edit/%Store.URL%&quot;&gt;%Store.Name%&lt;/a&gt;
-</code></pre><p>中的/Admin/MessageTemplate/Edit/部分去除</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1825,7 +1834,7 @@ process()
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">133</span>
+                <span class="site-state-item-count">134</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

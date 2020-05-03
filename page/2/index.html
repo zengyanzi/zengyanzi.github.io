@@ -297,6 +297,162 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/21/ajax-tool/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2020/04/21/ajax-tool/" itemprop="url">
+                  ajax tool
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-21T06:03:04+08:00">
+                2020-04-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="ajax-tool"><a href="#ajax-tool" class="headerlink" title="ajax tool"></a>ajax tool</h1><p>jQuery</p>
+<pre><code>$(function(){
+
+    //请求参数
+    var list ={};
+    //
+    $.ajax({
+    //请求方式
+    type:&quot;POST&quot;
+    //请求的媒体类型
+    contentType:&quot;application/json;charset=UTF-8&quot;,
+    //请求地址
+    url:&quot;http://127.0.0.1/admin/list/&quot;
+    //数据，json字符串
+    data：JSON.stringify(list)
+    //请求成功
+    success:function(result){
+        console.log(result);
+    },
+    //请求失败，包含据图的错误信息
+    error:function(e){
+        console.log(e.status);
+        console.log(e.responseText);
+    }
+
+    });
+});
+
+
+使用fetch        
+fetch(&apos;http://example.com/movies.json&apos;)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(myJson)){
+        console.log(myJson)
+    }
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/21/ajax-interview/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1545,143 +1701,6 @@ history.forward()
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/16/promise/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2020/03/16/promise/" itemprop="url">
-                  promise
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-16T06:41:49+08:00">
-                2020-03-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h1><p>callback hell</p>
-<pre><code>//获取第一份数据
-$.get(url1,(data1)=&gt;{
-    console.log(data1)
-    //获取第二份数据
-    $.get(url2,(data2)=&gt;{
-        console.log(data2)
-        //获取第三份数据
-        $.get(url3,(data3)=&gt;{
-            console.log(data3)
-        })
-    })
-})
-</code></pre>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/03/16/promise/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1731,7 +1750,7 @@ $.get(url1,(data1)=&gt;{
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">133</span>
+                <span class="site-state-item-count">134</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
