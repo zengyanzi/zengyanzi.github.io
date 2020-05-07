@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[throttle]]></title>
+    <url>%2F2020%2F05%2F07%2Fthrottle%2F</url>
+    <content type="text"><![CDATA[手写节流throttle拖拽一个元素时，要随时拿到该元素被拖拽带的位置 直接用drag事件，则会频繁触发，很容易导致卡顿 节流：无论拖拽速度多快，都会每100ms触发一次 const div1 = document.getElementById(&apos;div1&apos;); let timer = null div1.addEventListener(&apos;drag&apos;,function(e){ if(timer){ return } timer =setTimeout(()=&gt;{ console.log(e.offsetX,e.offsetY) timer=null },100) }) 节流 function throttle(fn,delay=100){ let timer = null; return function(){ if(timer){ return } timer = setTimeout(()=&gt;{ fn.apply(this,arguments) timer=null },delay) } } div1.addEventListener(&apos;drag&apos;,throttle(function(e){ console.log(e.offsetX,e.offsetY) },200))]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[debounce]]></title>
     <url>%2F2020%2F04%2F29%2Fdebounce%2F</url>
     <content type="text"><![CDATA[Debounce监听一个输入框，文字变化后触发change事件 直接用keyup事件，则会频繁触发change事件 防抖：用户输入结束或者暂停时，才会触发change事件 const input1=document.getElementById(&quot;input1&quot;); let timer = null input1.addEventListener(&apos;keyup&apos;,function(){ if(timer){ clearTimeout(timer) } timer = setTimeout(()=&gt;{ //触发change事件 console.log(input1.value) timer = null },500) }) 封装debounce函数 function debounce(fn,delay = 500){ //timer是在闭包中的 let timer = null return function(){ if(timer){ clearTimeout(timer) } timer = setTimeout(()=&gt;{ fn.apply(this.arguments) timer= null },delay) } } input1.addEventListener(&apos;keyup&apos;,debounce(()=&gt;{ console.log(input1.value) }),600)]]></content>

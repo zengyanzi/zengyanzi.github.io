@@ -297,6 +297,138 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/21/cookies/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2020/04/21/cookies/" itemprop="url">
+                  cookies
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-21T16:28:52+08:00">
+                2020-04-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="cookies"><a href="#cookies" class="headerlink" title="cookies"></a>cookies</h1><p>描述cookies localStorage 和sessionStorage的区别</p>
+<p>cookie<br>localStorage<br>sessionStorage</p>
+<p>本身用于浏览器和server通讯<br>被借用到本地存储来<br>可用document.cookie =’xxx’来修改<br>cookie是追加而不是覆盖<br>可用通过前端对cookie进行赋值，能进行本地存储</p>
+<p>cookie 的缺点</p>
+<ol>
+<li>存储大小，最大4kb</li>
+<li>http请求时需要发送到服务端，增加请求数据量</li>
+<li>只能用document.cookie=’xxx’来修改</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/21/cookies/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/21/ajax-tool/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1549,158 +1681,6 @@ history.forward()
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/16/postjs-base/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2020/03/16/postjs-base/" itemprop="url">
-                  js base
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-16T10:49:34+08:00">
-                2020-03-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="JS-summary"><a href="#JS-summary" class="headerlink" title="JS summary"></a>JS summary</h1><ul>
-<li>变量的类型和计算</li>
-<li>原型和原型链</li>
-<li>作用域和闭包</li>
-<li><p>异步和单线程</p>
-</li>
-<li><p>typeof能判断哪些类型：undefined, strinig,’number’,boolean,symbol,function,object</p>
-</li>
-<li>何时使用=== 何时使用==   除了==null,其他都用===，因为==运算符 通过发生转换去相等</li>
-<li>值类型和引用类型的区别</li>
-<li>值类型 vs引用类型，堆栈模型，深拷贝</li>
-<li>typeof 运算符</li>
-<li>类型转换， truly和falely变量</li>
-<li>如何判断一个变量是不是数组 intanceof</li>
-<li>首先一个建议的jquery，考虑插件和扩展性</li>
-<li>class的原型本质</li>
-<li>class和继承，结合手写jquery的示例来理解</li>
-<li>intanceof</li>
-<li>原型和原型链</li>
-<li>this的不用应用场景</li>
-<li>手写bind函数</li>
-<li>实际开发中闭包的应用场景</li>
-<li>十个a标签，弹出序号</li>
-<li>作用域和自由变量</li>
-<li>闭包：两种常见形式和自由变量查找规则（函数定义的地方查找）</li>
-<li>异步和同步的区别</li>
-<li>手写promise加载一个图片</li>
-<li>单线程和异步，异步和同步的区别</li>
-<li>前端异步的应用场景:网络请求和定时任务</li>
-<li>Promise解决callback hell</li>
-<li></li>
-<li></li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1750,7 +1730,7 @@ history.forward()
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">134</span>
+                <span class="site-state-item-count">135</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
