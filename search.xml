@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[xss]]></title>
+    <url>%2F2020%2F05%2F07%2Fxss%2F</url>
+    <content type="text"><![CDATA[如何预防xss攻击xss跨站请求攻击 XSRF跨站请求伪造 XSS攻击 一个博客网站，发表一篇blog，其中嵌入 &lt;script&gt;脚本 脚本内容：获取cookie，发送到我的服务器（服务器允许跨域） 发布这篇blog，有人查看，我就轻松收割访问者的cookie &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt; &lt;meta http-equiv=&quot;Contect-Type&quot; charset=&quot;utf-8&quot;&gt; &lt;title&gt;xss&lt;/title&gt; &lt;style&gt; &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;p&gt;part1&lt;/p&gt; &lt;p&gt;part2&lt;/p&gt; &lt;p&gt;part3&lt;/p&gt; &lt;script&gt;alert(document.cookie);&lt;/script&gt; &lt;/body&gt; &lt;/html&gt; XSS预防 替换特殊字符 如变 &lt; 为&amp;|t； &gt;为&amp;gt； 这样 &lt;script&gt; 变为&amp;|t；script为&amp;gt； https://www.npmjs.com/package/xss]]></content>
+      <tags>
+        <tag>Interveiw</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[throttle]]></title>
     <url>%2F2020%2F05%2F07%2Fthrottle%2F</url>
     <content type="text"><![CDATA[手写节流throttle拖拽一个元素时，要随时拿到该元素被拖拽带的位置 直接用drag事件，则会频繁触发，很容易导致卡顿 节流：无论拖拽速度多快，都会每100ms触发一次 const div1 = document.getElementById(&apos;div1&apos;); let timer = null div1.addEventListener(&apos;drag&apos;,function(e){ if(timer){ return } timer =setTimeout(()=&gt;{ console.log(e.offsetX,e.offsetY) timer=null },100) }) 节流 function throttle(fn,delay=100){ let timer = null; return function(){ if(timer){ return } timer = setTimeout(()=&gt;{ fn.apply(this,arguments) timer=null },delay) } } div1.addEventListener(&apos;drag&apos;,throttle(function(e){ console.log(e.offsetX,e.offsetY) },200))]]></content>

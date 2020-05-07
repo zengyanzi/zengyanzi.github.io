@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="WordPress," />
+  <meta name="keywords" content="Interveiw," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="After updating the Domain for WordPress go to wp-config.php  update:the URL with the latest one /** MySQL hostname */ define(&amp;apos;DB_HOST&amp;apos;, &amp;apos;microscience.com.au&amp;apos;); Same for another web">
-<meta name="keywords" content="WordPress">
+<meta name="description" content="如何预防xss攻击xss跨站请求攻击 XSRF跨站请求伪造 XSS攻击 一个博客网站，发表一篇blog，其中嵌入 &amp;lt;script&amp;gt;脚本 脚本内容：获取cookie，发送到我的服务器（服务器允许跨域） 发布这篇blog，有人查看，我就轻松收割访问者的cookie">
+<meta name="keywords" content="Interveiw">
 <meta property="og:type" content="article">
-<meta property="og:title" content="wordpress change domain">
-<meta property="og:url" content="http://yoursite.com/2017/05/22/wordpress-change-domain/index.html">
+<meta property="og:title" content="xss">
+<meta property="og:url" content="http://yoursite.com/2020/05/07/xss/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="After updating the Domain for WordPress go to wp-config.php  update:the URL with the latest one /** MySQL hostname */ define(&amp;apos;DB_HOST&amp;apos;, &amp;apos;microscience.com.au&amp;apos;); Same for another web">
-<meta property="og:updated_time" content="2019-08-28T05:23:52.167Z">
+<meta property="og:description" content="如何预防xss攻击xss跨站请求攻击 XSRF跨站请求伪造 XSS攻击 一个博客网站，发表一篇blog，其中嵌入 &amp;lt;script&amp;gt;脚本 脚本内容：获取cookie，发送到我的服务器（服务器允许跨域） 发布这篇blog，有人查看，我就轻松收割访问者的cookie">
+<meta property="og:updated_time" content="2020-05-07T05:17:23.793Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="wordpress change domain">
-<meta name="twitter:description" content="After updating the Domain for WordPress go to wp-config.php  update:the URL with the latest one /** MySQL hostname */ define(&amp;apos;DB_HOST&amp;apos;, &amp;apos;microscience.com.au&amp;apos;); Same for another web">
+<meta name="twitter:title" content="xss">
+<meta name="twitter:description" content="如何预防xss攻击xss跨站请求攻击 XSRF跨站请求伪造 XSS攻击 一个博客网站，发表一篇blog，其中嵌入 &amp;lt;script&amp;gt;脚本 脚本内容：获取cookie，发送到我的服务器（服务器允许跨域） 发布这篇blog，有人查看，我就轻松收割访问者的cookie">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/22/wordpress-change-domain/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/05/07/xss/"/>
 
 
 
 
 
-  <title> wordpress change domain | Bunny's  Code Burrow </title>
+  <title> xss | Bunny's  Code Burrow </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/22/wordpress-change-domain/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/07/xss/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jenny Zeng">
@@ -318,7 +318,7 @@
             
             
               
-                wordpress change domain
+                xss
               
             
           </h1>
@@ -333,8 +333,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-22T21:29:41+08:00">
-                2017-05-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-07T12:55:30+08:00">
+                2020-05-07
               </time>
             
 
@@ -368,23 +368,34 @@
       
 
       
-        <h1 id="After-updating-the-Domain-for-WordPress"><a href="#After-updating-the-Domain-for-WordPress" class="headerlink" title="After updating the Domain for WordPress"></a>After updating the Domain for WordPress</h1><ol>
-<li>go to wp-config.php</li>
-</ol>
-<pre><code>update:the URL with the latest one
-/** MySQL hostname */
-define(&apos;DB_HOST&apos;, &apos;microscience.com.au&apos;);
-</code></pre><p>Same for another website</p>
-<pre><code>/** Sets up WordPress local environmental test only for local test */
-define( &apos;WP_SITEURL&apos;, &apos;http://localhost/didi&apos; );
-define( &apos;WP_HOME&apos;,    &apos;http://localhost/didi&apos; );
-</code></pre><ol>
-<li><p>go the the backend of WordPress:/wp-admin/options-general.php</p>
-<p> update the WordPress Address (URL) And Site Address (URL)<br><strong>This part might not be necessary</strong></p>
-</li>
-<li>sometimes we need access to database, modify the table :wp_options. In the tale of wp_options, find the two fields:home and siteurl, change the option_value to the same with wp-config.php. For example, for the website of didi, we use <a href="http://localhost/didi" target="_blank" rel="external">http://localhost/didi</a> for both fields.</li>
-<li></li>
-</ol>
+        <h1 id="如何预防xss攻击"><a href="#如何预防xss攻击" class="headerlink" title="如何预防xss攻击"></a>如何预防xss攻击</h1><p>xss跨站请求攻击</p>
+<p>XSRF跨站请求伪造</p>
+<p>XSS攻击</p>
+<p>一个博客网站，发表一篇blog，其中嵌入 <code>&lt;script&gt;</code>脚本</p>
+<p>脚本内容：获取cookie，发送到我的服务器（服务器允许跨域）</p>
+<p>发布这篇blog，有人查看，我就轻松收割访问者的cookie</p>
+<a id="more"></a>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta  http-equiv=&quot;Contect-Type&quot; charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;xss&lt;/title&gt;
+        &lt;style&gt;
+
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;part1&lt;/p&gt;
+        &lt;p&gt;part2&lt;/p&gt;
+        &lt;p&gt;part3&lt;/p&gt;
+        &lt;script&gt;alert(document.cookie);&lt;/script&gt;
+    &lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><p>XSS预防</p>
+<p>替换特殊字符 如变 &lt; 为&amp;|t； &gt;为&amp;gt；</p>
+<p>这样 <code>&lt;script&gt;</code> 变为&amp;|t；script为&amp;gt；</p>
+<p><a href="https://www.npmjs.com/package/xss" target="_blank" rel="external">https://www.npmjs.com/package/xss</a></p>
 
       
     </div>
@@ -414,7 +425,7 @@ define( &apos;WP_HOME&apos;,    &apos;http://localhost/didi&apos; );
       
         <div class="post-tags">
           
-            <a href="/tags/WordPress/" rel="tag"># WordPress</a>
+            <a href="/tags/Interveiw/" rel="tag"># Interveiw</a>
           
         </div>
       
@@ -427,18 +438,14 @@ define( &apos;WP_HOME&apos;,    &apos;http://localhost/didi&apos; );
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/22/ios-Apple-account-application/" rel="next" title="ios Apple account application">
-                <i class="fa fa-chevron-left"></i> ios Apple account application
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/19/RegExp/" rel="prev" title="RegExp">
-                RegExp <i class="fa fa-chevron-right"></i>
+              <a href="/2020/05/07/throttle/" rel="prev" title="throttle">
+                throttle <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -579,7 +586,7 @@ define( &apos;WP_HOME&apos;,    &apos;http://localhost/didi&apos; );
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#After-updating-the-Domain-for-WordPress"><span class="nav-number">1.</span> <span class="nav-text">After updating the Domain for WordPress</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#如何预防xss攻击"><span class="nav-number">1.</span> <span class="nav-text">如何预防xss攻击</span></a></li></ol></div>
             
 
           </div>
