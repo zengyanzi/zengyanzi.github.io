@@ -376,7 +376,38 @@
             <h1 id="Debounce"><a href="#Debounce" class="headerlink" title="Debounce"></a>Debounce</h1><p>监听一个输入框，文字变化后触发change事件</p>
 <p>直接用keyup事件，则会频繁触发change事件</p>
 <p>防抖：用户输入结束或者暂停时，才会触发change事件</p>
+<pre><code>const input1=document.getElementById(&quot;input1&quot;);
+let timer = null
+input1.addEventListener(&apos;keyup&apos;,function(){
+    if(timer){
+        clearTimeout(timer)
+    }
+    timer = setTimeout(()=&gt;{
+        //触发change事件
+        console.log(input1.value)
+        timer = null
+    },500)
 
+})
+</code></pre><p>封装debounce函数</p>
+<pre><code>function debounce(fn,delay = 500){
+    //timer是在闭包中的
+    let timer = null
+    return function(){
+        if(timer){
+            clearTimeout(timer)
+        }
+        timer = setTimeout(()=&gt;{
+            fn.apply(this.arguments)
+            timer= null
+        },delay)
+    }
+}
+
+input1.addEventListener(&apos;keyup&apos;,debounce(()=&gt;{
+    console.log(input1.value)
+}),600)
+</code></pre>
           
         
       
