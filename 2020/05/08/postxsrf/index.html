@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="React Native, nopCommerce" />
+  <meta name="keywords" content="Interview," />
 
 
 
@@ -90,15 +90,19 @@
 
 
 
-<meta name="description" content="Loving code ,especially javascript, React Native">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bunny's  Code Burrow">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+<meta name="description" content="XSRF攻击你正在购物，看中了某个商品，商品ID是100 付费接口是xxx.com/pay?id=100，但是没有任何验证 我是攻击者， 我看中了一个商品，id是200 我给你发一封电子邮件，邮件标题很吸引人 但是邮件正文隐藏着 你一查看邮件，就帮我购买了id是200的商品 使用post 接口">
+<meta name="keywords" content="Interview">
+<meta property="og:type" content="article">
+<meta property="og:title" content="postxsrf">
+<meta property="og:url" content="http://yoursite.com/2020/05/08/postxsrf/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="Loving code ,especially javascript, React Native">
+<meta property="og:description" content="XSRF攻击你正在购物，看中了某个商品，商品ID是100 付费接口是xxx.com/pay?id=100，但是没有任何验证 我是攻击者， 我看中了一个商品，id是200 我给你发一封电子邮件，邮件标题很吸引人 但是邮件正文隐藏着 你一查看邮件，就帮我购买了id是200的商品 使用post 接口">
+<meta property="og:image" content="http://yoursite.com/2020/05/08/postxsrf/xxx.com/pay?id=200/">
+<meta property="og:updated_time" content="2020-05-08T10:00:36.603Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bunny's  Code Burrow">
-<meta name="twitter:description" content="Loving code ,especially javascript, React Native">
+<meta name="twitter:title" content="postxsrf">
+<meta name="twitter:description" content="XSRF攻击你正在购物，看中了某个商品，商品ID是100 付费接口是xxx.com/pay?id=100，但是没有任何验证 我是攻击者， 我看中了一个商品，id是200 我给你发一封电子邮件，邮件标题很吸引人 但是邮件正文隐藏着 你一查看邮件，就帮我购买了id是200的商品 使用post 接口">
+<meta name="twitter:image" content="http://yoursite.com/2020/05/08/postxsrf/xxx.com/pay?id=200/">
 
 
 
@@ -126,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/05/08/postxsrf/"/>
 
 
 
 
 
-  <title> Archive | Bunny's  Code Burrow </title>
+  <title> postxsrf | Bunny's  Code Burrow </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -157,7 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -285,402 +289,172 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-       
-        
-      Great! 137 posts in total. Keep on posting.
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/08/postxsrf/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                postxsrf
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-08T17:35:03+08:00">
+                2020-05-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
-      
 
+      
+        <h1 id="XSRF攻击"><a href="#XSRF攻击" class="headerlink" title="XSRF攻击"></a>XSRF攻击</h1><p>你正在购物，看中了某个商品，商品ID是100</p>
+<p>付费接口是xxx.com/pay?id=100，但是没有任何验证</p>
+<p>我是攻击者， 我看中了一个商品，id是200</p>
+<p>我给你发一封电子邮件，邮件标题很吸引人</p>
+<p>但是邮件正文隐藏着<img src="xxx.com/pay?id=200/"></p>
+<p>你一查看邮件，就帮我购买了id是200的商品</p>
+<p>使用post 接口</p>
+<a id="more"></a>
+<p>运行环境 </p>
+<p>加载资源的形式</p>
+<p>加载资源的过程</p>
+<p>渲染页面的过程</p>
+<p>减少资源体积：压缩代码</p>
+<p>减少访问次数，合并代码，SSR服务器端渲染，缓存</p>
+<p>使用更快的网络 CDN</p>
+<p>CSS 放在head，JS放在body最下面，图片懒加载</p>
+<p>对DOM查询进行缓存， 频繁DOM操作，合并到一起插入DOM结构</p>
+<p>节流throttle防抖debounce</p>
+
+      
+    </div>
+
+    <div>
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Interview/" rel="tag"># Interview</a>
+          
         </div>
       
+
+      
+        
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          <span class="post-nav-divider"></span>
 
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/21/How-to-find-the-Additional-CSS-in-wordpress/" itemprop="url">
-              
-                <span itemprop="name">How to find the Additional CSS in wordpress</span>
-              
-            </a>
-        
-      </h1>
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/05/07/xss/" rel="prev" title="xss">
+                xss <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-21T10:20:38+08:00"
-              content="2017-12-21" >
-          12-21
-        </time>
-      </div>
-
-    </header>
+      
+      
+    </footer>
   </article>
 
 
 
-    
-
+    <div class="post-spread">
       
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/20/wordpress-functions/" itemprop="url">
-              
-                <span itemprop="name">wordpress functions</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-20T10:54:58+08:00"
-              content="2017-12-20" >
-          12-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/08/how-to-install-xshell-and-ip-for-linux/" itemprop="url">
-              
-                <span itemprop="name">how to install xshell and ip for linux</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-08T09:23:02+08:00"
-              content="2017-12-08" >
-          12-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/07/how-to-solve-the-ipv6-issue-for-Apple-Store/" itemprop="url">
-              
-                <span itemprop="name">how to solve the ipv6 issue for Apple Store</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-07T13:57:33+08:00"
-              content="2017-12-07" >
-          12-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/27/search-function/" itemprop="url">
-              
-                <span itemprop="name">search function</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-27T09:45:33+08:00"
-              content="2017-11-27" >
-          11-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/27/less/" itemprop="url">
-              
-                <span itemprop="name">less</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-27T15:54:11+08:00"
-              content="2017-09-27" >
-          09-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/25/Android-studio-icon-on-device/" itemprop="url">
-              
-                <span itemprop="name">Android studio icon on device</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-25T14:42:55+08:00"
-              content="2017-09-25" >
-          09-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/25/update-apk-version-to-google-play/" itemprop="url">
-              
-                <span itemprop="name">update apk version to google play</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-25T14:37:58+08:00"
-              content="2017-09-25" >
-          09-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/31/how-to-upload-app-to-ios-app-store/" itemprop="url">
-              
-                <span itemprop="name">how to upload app to ios app store</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-31T14:33:21+08:00"
-              content="2017-08-31" >
-          08-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/06/28/nopcommerce-from-3-3-to-3-9/" itemprop="url">
-              
-                <span itemprop="name">nopcommerce from 3.3 to 3.9</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-28T12:06:17+08:00"
-              content="2017-06-28" >
-          06-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2017/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2017/page/7/">7</a><a class="extend next" rel="next" href="/archives/2017/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
-
+    </div>
+  </div>
 
 
           </div>
@@ -688,6 +462,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -707,8 +485,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460"
@@ -781,6 +568,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#XSRF攻击"><span class="nav-number">1.</span> <span class="nav-text">XSRF攻击</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -910,11 +713,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
 
 
   

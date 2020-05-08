@@ -297,6 +297,198 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/07/nopcommerce-new-window/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/06/07/nopcommerce-new-window/" itemprop="url">
+                  nopcommerce new window
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-07T13:11:42+08:00">
+                2018-06-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="How-to-open-new-page-in-new-windows-for-nopCommerce"><a href="#How-to-open-new-page-in-new-windows-for-nopCommerce" class="headerlink" title="How to open new page in new windows for nopCommerce"></a>How to open new page in new windows for nopCommerce</h1><p>The file is _Root.Head.cshtml, the path is Nop.Web/View/Shared/ _Root.Head.cshtml, add <base target="_blank"> before  as below:</p>
+<pre><code>@using Nop.Core
+@using Nop.Core.Domain.Common;
+@using Nop.Core.Infrastructure;
+@{
+var displayMiniProfiler = CommonHelper.GetTrustLevel() &gt;= AspNetHostingPermissionLevel.High &amp;&amp;
+    EngineContext.Current.Resolve&lt;Nop.Core.Domain.StoreInformationSettings&gt;().DisplayMiniProfilerInPublicStore;
+
+//resources
+Html.AppendCssFileParts(&quot;~/Content/jquery-ui-themes/smoothness/jquery-ui-1.10.3.custom.min.css&quot;);
+
+Html.AppendScriptParts(&quot;~/Scripts/public.ajaxcart.js&quot;);
+Html.AppendScriptParts(&quot;~/Scripts/public.common.js&quot;);
+Html.AppendScriptParts(&quot;~/Scripts/jquery-migrate-1.2.1.min.js&quot;);
+Html.AppendScriptParts(&quot;~/Scripts/jquery-ui-1.10.3.custom.min.js&quot;);
+Html.AppendScriptParts(&quot;~/Scripts/jquery.validate.unobtrusive.min.js&quot;);
+Html.AppendScriptParts(&quot;~/Scripts/jquery.validate.min.js&quot;);
+Html.AppendScriptParts(&quot;~/Scripts/jquery-1.10.2.min.js&quot;);
+//add pupop
+Html.AppendScriptParts(&quot;~/Scripts/pupopTip.js&quot;);
+
+//X-UA-Compatible tag
+var commonSettings = EngineContext.Current.Resolve&lt;CommonSettings&gt;();
+if (commonSettings.RenderXuaCompatible)
+{
+    Html.AppendHeadCustomParts(string.Format(&quot;&lt;meta http-equiv=\&quot;X-UA-Compatible\&quot; content=\&quot;{0}\&quot;/&gt;&quot;, commonSettings.XuaCompatibleValue));
+}
+}
+&lt;!DOCTYPE html&gt;
+&lt;html @Html.Partial(&quot;LanguageAttributes&quot;)&gt;
+&lt;head&gt;
+    &lt;!-- Google Tag Manager --&gt;
+    &lt;script&gt;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({&apos;gtm.start&apos;:
+    new Date().getTime(),event:&apos;gtm.js&apos;});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!=&apos;dataLayer&apos;?&apos;&amp;l=&apos;+l:&apos;&apos;;j.async=true;j.src=
+    &apos;https://www.googletagmanager.com/gtm.js?id=&apos;+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,&apos;script&apos;,&apos;dataLayer&apos;,&apos;GTM-MT3JMK&apos;);&lt;/script&gt;
+    &lt;!-- End Google Tag Manager --&gt;
+&lt;title&gt;@Html.NopTitle(true)&lt;/title&gt;
+&lt;meta http-equiv=&quot;Content-type&quot; content=&quot;text/html;charset=UTF-8&quot; /&gt;
+&lt;meta name=&quot;description&quot; content=&quot;@(Html.NopMetaDescription())&quot; /&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;@(Html.NopMetaKeywords())&quot; /&gt;
+&lt;meta name=&quot;generator&quot; content=&quot;nopCommerce&quot; /&gt;
+&lt;meta name=&quot;google-site-verification&quot; content=&quot;YcdHXMIdUFkSueRbht63U4qY-BRV4JiU_p3otFwEd50&quot; /&gt;
+@Html.NopHeadCustom()
+@*This is used so that themes can inject content into the header*@
+@Html.Partial(&quot;Head&quot;)
+@Html.Widget(&quot;head_html_tag&quot;)
+@Html.NopCssFiles(this.Url, ResourceLocation.Head)
+@Html.NopScripts(this.Url, ResourceLocation.Head)
+@Html.NopCanonicalUrls()
+@Html.Action(&quot;RssHeaderLink&quot;, &quot;News&quot;)
+@Html.Action(&quot;RssHeaderLink&quot;, &quot;Blog&quot;)
+@*Favicon - upload favicon.ico file to the root directory*@
+@Html.Action(&quot;Favicon&quot;, &quot;Common&quot;)
+@if (displayMiniProfiler)
+{
+    @StackExchange.Profiling.MiniProfiler.RenderIncludes()
+}
+&lt;!--Powered by nopCommerce - http://www.nopCommerce.com--&gt;
+&lt;!--Copyright (c) 2008-2013--&gt;
+&lt;base target=&quot;_blank&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- Google Tag Manager (noscript) --&gt;
+&lt;noscript&gt;&lt;iframe src=&quot;https://www.googletagmanager.com/ns.html?id=GTM-MT3JMK&quot;
+height=&quot;0&quot; width=&quot;0&quot; style=&quot;display:none;visibility:hidden&quot;&gt;&lt;/iframe&gt;&lt;/noscript&gt;
+&lt;!-- End Google Tag Manager (noscript) --&gt;
+@RenderBody()
+@Html.NopCssFiles(this.Url, ResourceLocation.Foot)
+@Html.NopScripts(this.Url, ResourceLocation.Foot)
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/23/update-hexo-with-shh/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1937,147 +2129,6 @@ ifconfig
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/07/how-to-solve-the-ipv6-issue-for-Apple-Store/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/12/07/how-to-solve-the-ipv6-issue-for-Apple-Store/" itemprop="url">
-                  how to solve the ipv6 issue for Apple Store
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-07T13:57:33+08:00">
-                2017-12-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="How-to-set-up-the-ipv6-to-pass-Apple-store-review"><a href="#How-to-set-up-the-ipv6-to-pass-Apple-store-review" class="headerlink" title="How to set up the ipv6 to pass Apple store review"></a>How to set up the ipv6 to pass Apple store review</h1><p>After submitting the ios apk to Apple store, I got the message from Apple mentioned Apple Store  Guideline 2.1—running iOS 10.3.3 on Wi-Fi connected to an IPv6 network.</p>
-<p>The solution is replacing all the api with domain name and test it under ipv6 in local network.</p>
-<p>The first step is registering a domain name for our App.</p>
-<p>Then I will explan how did we set up an ipv6 network with iPhone</p>
-<ol>
-<li><p>Connect your iPhone with your Mac </p>
-</li>
-<li><p>Eable the hotpot in your iPhone and choose  and choose through <strong> Only USB</strong></p>
-</li>
-<li><p>Connect to your iPhone wifi in Mac</p>
-</li>
-<li><p>Go to reference, and click the “option” and open “sharing” at the same time</p>
-</li>
-</ol>
-<p><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1513042694/mac_vpcpml.jpg" alt=""></p>
-<ol>
-<li>open NAT64</li>
-</ol>
-<p><img src="http://res.cloudinary.com/dcb1eeoiv/image/upload/v1513042693/mac_2_qom5xu.jpg" alt=""></p>
-<ol>
-<li>use another iphone to test the ipv6</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -2127,7 +2178,7 @@ ifconfig
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">136</span>
+                <span class="site-state-item-count">137</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
