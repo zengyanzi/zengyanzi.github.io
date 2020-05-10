@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[postInterview test1]]></title>
+    <url>%2F2020%2F05%2F10%2FpostInterview-test1%2F</url>
+    <content type="text"><![CDATA[Interview test oneQ:var 和 let const 区别 A:var是ES5语法，let const是ES6语法；var有变量提升 var 和let是变量，可修改，const是常量，不可修改 let const 有块级作用域，var没有 代码演示 var-let-const.js //变量提升ES5 console.log(a)//undefined var a =200 var a console.log(a)//undefined a = 200 //函数表达式 vs 函数声明 块级作用域 var 没有块级作用域 for(var i=0;i&lt;10;i++){ var j = i + 1 } console.log(i,j)//10,10 for(let i=0;i&lt;10;i++){ let j = i + 1 } console.log(i,j)//undefined typeof 返回哪些类型 undefined string number boolean symbol object(注意，typeof null === ‘object’) function 列举强制类型转换和隐式类型转换 强制 parseInt parseFloat toString等 隐式 if 逻辑运算 == ，+拼接字符串]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[postxsrf]]></title>
     <url>%2F2020%2F05%2F08%2Fpostxsrf%2F</url>
     <content type="text"><![CDATA[XSRF攻击你正在购物，看中了某个商品，商品ID是100 付费接口是xxx.com/pay?id=100，但是没有任何验证 我是攻击者， 我看中了一个商品，id是200 我给你发一封电子邮件，邮件标题很吸引人 但是邮件正文隐藏着 你一查看邮件，就帮我购买了id是200的商品 使用post 接口 运行环境 加载资源的形式 加载资源的过程 渲染页面的过程 减少资源体积：压缩代码 减少访问次数，合并代码，SSR服务器端渲染，缓存 使用更快的网络 CDN CSS 放在head，JS放在body最下面，图片懒加载 对DOM查询进行缓存， 频繁DOM操作，合并到一起插入DOM结构 节流throttle防抖debounce]]></content>
