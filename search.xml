@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[isEqual]]></title>
+    <url>%2F2020%2F05%2F11%2FisEqual%2F</url>
+    <content type="text"><![CDATA[isEqual手写深度比较，模拟loadash is Equal split()和join()的区别 数组的pop push unshift shift分别做什么 手写深度比较lodash.isEqual 实现如下效果 const obj1={a:10，b:{x:100,y:200}} const obj2={a:10,b:{x:100,y:200}} isEqual(obj1,obj2)===true 代码演示 //判断是否对象或者数组 function isObject(obj){ return typeof obj === &apos;object&apos; &amp;&amp; obj!==null } //全相等 function isEqual(obj1,obj2){ if(!isObject(obj1)||isObject(obj2)){ //值类型，注意，参与equal一般不会是函数 return obj1 === obj2 } if(obj1===obj2){ return true } //两个都是对象或者数组并且不相同 //1.先取出obj和obj2的keys，比较个数 const obj1Keys = Object.keys(obj1) const obj2Keys = Object.keys(obj2) if(obj1Keys.length ! == obj2Keys.length){ return false }//以obj1为基准，和obj2依次递归比较 for(for key in obj1){ //比较当前key的value 递归 const res = isEqual(obj1[key],obj2[key]) if(!res){ return false } } //全相等 return true } isEqual.js const obj1={ a:100, b:{ x:100, y:200 } } const obj2={ a:100, b:{ x:100, y:200 } } //console.log(obj1 === obj2)//false console.log(isEqual(obj1,obj2)//false split()和join()的区别 &apos;1-2-3&apos;.split(&apos;-&apos;)//[1,2,3] [1,2,3].join(&apos;-&apos;)//&apos;1-2-3&apos; 数组的pop push unshift shift分别做什么 功能是什么？返回值是什么？是否会对原数组造成影响 代码演示 arry-api.js const arr =[10,20,30,40] //pop const popRes = arr.pop() console.log(popRes,arr)//40 [10,20,30] // push const pushRes = arr.push(50)//追加一个50，返回一个length console.log(pushRes,arr)//[10,20,30，40，50] //unshift const unshiftRes = arr.unshift(5) console.log(unshiftRes,arr)// [5,10,20,30,40] //shift const shiftRes = arr.shift()//10 console.log(shiftRes,arr)//10 [20,30,40] [扩展]数组的API，有哪些是纯函数1.不改变源数组（没有副作用）2返回一个数组 //concat const arr1 = arr.concat([50,60,70]) // map const arr2 = arr.map(num=&gt;num*10) //filter const arr3 = arr.filter(num=&gt;num&gt;35) //slice const arr4 = arr.slice()//类似一个深拷贝 非纯函数 push pop shift unshift]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[postInterview test1]]></title>
     <url>%2F2020%2F05%2F10%2FpostInterview-test1%2F</url>
     <content type="text"><![CDATA[Interview test oneQ:var 和 let const 区别 A:var是ES5语法，let const是ES6语法；var有变量提升 var 和let是变量，可修改，const是常量，不可修改 let const 有块级作用域，var没有 代码演示 var-let-const.js //变量提升ES5 console.log(a)//undefined var a =200 var a console.log(a)//undefined a = 200 //函数表达式 vs 函数声明 块级作用域 var 没有块级作用域 for(var i=0;i&lt;10;i++){ var j = i + 1 } console.log(i,j)//10,10 for(let i=0;i&lt;10;i++){ let j = i + 1 } console.log(i,j)//undefined typeof 返回哪些类型 undefined string number boolean symbol object(注意，typeof null === ‘object’) function 列举强制类型转换和隐式类型转换 强制 parseInt parseFloat toString等 隐式 if 逻辑运算 == ，+拼接字符串]]></content>

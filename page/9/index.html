@@ -297,6 +297,144 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/23/AWS-with-SecureCRT/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/23/AWS-with-SecureCRT/" itemprop="url">
+                  AWS with SecureCRT
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-23T09:54:05+08:00">
+                2017-05-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="How-to-deploy-AWS-with-SecureCRT"><a href="#How-to-deploy-AWS-with-SecureCRT" class="headerlink" title="How to deploy AWS with SecureCRT"></a>How to deploy AWS with SecureCRT</h1><ol>
+<li>rz -be</li>
+<li>cd tomcat/webapps</li>
+<li>../bin/shutdown.sh</li>
+<li>rm -rf ./*</li>
+<li>mv ~/pt_server.war .</li>
+<li>../bin/startup.sh</li>
+<li>../bin/shutdown.sh</li>
+<li>vim ./pt_server/WEB-INF/jdbc.properties</li>
+<li>modify </li>
+<li>I<br>jdbc.driverClassName=com.mysql.jdbc.Driver<br>jdbc.url=jdbc:mysql://localhost:3306/pt?characterEncoding=utf-8<br>jdbc.username=xxxx<br>jdbc.password=xxxxx<br>ESC</li>
+<li>: wq</li>
+<li>../bin/startup.sh</li>
+<li>if there were something went wrong ,check here: cat pt_server/WEB-INF/jdbc.properties</li>
+<li>How to download from AWS</li>
+<li>cd tomcat/webapps</li>
+<li>sz pt_server.war</li>
+<li>Then find it in option session options — X/Y/Zmodem</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/22/ios-Apple-account-application/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1634,133 +1772,6 @@ npm -g uninstall &lt;name&gt; --save also remove it globally
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/nopcommerce-3-3-local-database/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/24/nopcommerce-3-3-local-database/" itemprop="url">
-                  nopcommerce 3.3 local database
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T11:35:45+08:00">
-                2017-04-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="nopcommerce-3-3-local-database-connect"><a href="#nopcommerce-3-3-local-database-connect" class="headerlink" title="nopcommerce 3.3 local database connect"></a>nopcommerce 3.3 local database connect</h1><p>在local machine 安装了nopcommerce3.3的no source 环境（即将线上文件放在本地IIS 环境www下），同时将线上数据库进行backup，在本地恢复后。<br>恢复步骤</p>
-<ol>
-<li>点击任一数据库右键，选择还原数据库<br>新建名称，点击 源设备，添加文件，勾选文件，进行还原。</li>
-<li>修改数据库连接：App_Data\setting.txt</li>
-<li>在本地数据库执行：SqlServer.StoredProcedures.sql<br>执行方式，在sql serve 2008 连接本地数据库后，</li>
-<li>在该数据库MicroAnalytix中新建查询</li>
-<li>打开文件，打开SqlServer.StoredProcedures.sql文件，将内容复制粘贴到新建查询中，为了防止可能出现的问题，全选该sql语言，然后进行执行。<br>若不执行2，可能在localhost环境下进行global setting的测试会出现错误。</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1810,7 +1821,7 @@ npm -g uninstall &lt;name&gt; --save also remove it globally
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">138</span>
+                <span class="site-state-item-count">139</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
