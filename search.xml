@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[new closure]]></title>
+    <url>%2F2020%2F05%2F13%2Fnew-closure%2F</url>
+    <content type="text"><![CDATA[再讲闭包closure]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[map]]></title>
     <url>%2F2020%2F05%2F12%2Fmap%2F</url>
     <content type="text"><![CDATA[MAP 数组slice和splice的区别slice是一个纯函数，splice不是一个纯函数 [10,20,30].map(parseInt)返回结果是什么 ajax get和post的结果区别 数组slice和splice的区别 功能区别(slice -切片，splice-剪接) 参数和返回值 是否纯函数 const arr =[10,20,30,40,50] const arr1 = arr.slice() const arr2 = arr.slice(1,4)//开始index和结束index const arr3 = arr.slice(2) //[30,40,50]第二个元素之后之后的 const arr4 = arr.slice(-2)//最后两个[40,50] //splice 非纯函数 const spliceRes = arr.splice(1,2,&apos;a&apos;,&apos;b&apos;,&apos;c&apos;) console.log(spliceRes,arr)// [20,30] [10,20,&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,40,50]从开始位置1，选2个长度的元素剪切出来，再把&apos;a&apos;,&apos;b&apos;,&apos;c&apos;贴进去 [10,20,30].map(parseInt)返回结果是什么返回值：一个数组 const res =[10,20,30].map(parseInt) console.log(res)// [10,NaN,NaN] //拆解 [10,20,30].map((numb,index)=&gt;{ return parseInt(num,index) }) // parseInt(10,0) //10 // parseInt(10,10) //10 // parseInt(20,1) // NaN,因为1不符合parseInt转换格式 ajax get和post的结果区别 get一般用于查询操作，post一般用于提交操作 get 参数拼接在url上，post放在请求体内 post易于防止CSRF]]></content>
@@ -17,16 +25,16 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[postInterview test1]]></title>
-    <url>%2F2020%2F05%2F10%2FpostInterview-test1%2F</url>
+    <title><![CDATA[Interview test1]]></title>
+    <url>%2F2020%2F05%2F10%2FInterview-test1%2F</url>
     <content type="text"><![CDATA[Interview test oneQ:var 和 let const 区别 A:var是ES5语法，let const是ES6语法；var有变量提升 var 和let是变量，可修改，const是常量，不可修改 let const 有块级作用域，var没有 代码演示 var-let-const.js //变量提升ES5 console.log(a)//undefined var a =200 var a console.log(a)//undefined a = 200 //函数表达式 vs 函数声明 块级作用域 var 没有块级作用域 for(var i=0;i&lt;10;i++){ var j = i + 1 } console.log(i,j)//10,10 for(let i=0;i&lt;10;i++){ let j = i + 1 } console.log(i,j)//undefined typeof 返回哪些类型 undefined string number boolean symbol object(注意，typeof null === ‘object’) function 列举强制类型转换和隐式类型转换 强制 parseInt parseFloat toString等 隐式 if 逻辑运算 == ，+拼接字符串]]></content>
       <tags>
         <tag>Interview</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[postxsrf]]></title>
-    <url>%2F2020%2F05%2F08%2Fpostxsrf%2F</url>
+    <title><![CDATA[xsrf]]></title>
+    <url>%2F2020%2F05%2F08%2Fxsrf%2F</url>
     <content type="text"><![CDATA[XSRF攻击你正在购物，看中了某个商品，商品ID是100 付费接口是xxx.com/pay?id=100，但是没有任何验证 我是攻击者， 我看中了一个商品，id是200 我给你发一封电子邮件，邮件标题很吸引人 但是邮件正文隐藏着 你一查看邮件，就帮我购买了id是200的商品 使用post 接口 运行环境 加载资源的形式 加载资源的过程 渲染页面的过程 减少资源体积：压缩代码 减少访问次数，合并代码，SSR服务器端渲染，缓存 使用更快的网络 CDN CSS 放在head，JS放在body最下面，图片懒加载 对DOM查询进行缓存， 频繁DOM操作，合并到一起插入DOM结构 节流throttle防抖debounce]]></content>
       <tags>
         <tag>Interview</tag>
@@ -153,8 +161,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[postajax]]></title>
-    <url>%2F2020%2F04%2F14%2Fpostajax%2F</url>
+    <title><![CDATA[ajax]]></title>
+    <url>%2F2020%2F04%2F14%2Fajax%2F</url>
     <content type="text"><![CDATA[ajax手写一个简单的ajax 跨域的常用实现方式 知识点 XMLHttpRequest状态码跨域：同源策略，跨域解决方案 //get请求 const xhr = new XMLHttpRequest() xhr.open(&quot;GET&quot;,&quot;/api&quot;,false) xhr.onreadystatechange = function(){ //这里的函数异步执行，可参考之前JS 基础中的异步模块 if(xhr.readyState == 4){ if(xhr.status == 200){ alert(xhr.responseTexe) } } } xhr.send(null) console.log(&quot;ajax&quot;) const xhr = new XMLHttpRequest() //false代表异步请求，因为是网络请求，不能卡顿 xhr.open(&apos;GET&apos;,&apos;/test.json&apos;,false) xhr.onreadystatechange = function (){ if(xhr.readyState ===4){ if(xhr.status ===200){ alert(xhr.responseText) }else{ console.log(&quot;other situatio&quot;) } } } xhr.send(null) const xhr = new XMLHttpRequest() //true，因为是网络请求，不能卡顿 xhr.open(&apos;POST&apos;,&apos;/login&apos;,true) xhr.onreadystatechange = function (){ if(xhr.readyState ===4){ if(xhr.status ===200){ alert(xhr.responseText) }else{ console.log(&quot;other situatio&quot;) } } } const postData={ userName:&apos;jason&apos;, password:&apos;xxx&apos; } xhr.send(JSON stringify(postData)) xhr.readyState 0:未初始化 还没调用send（）方法1：载入，已调用send（）方法，正在发送请求2：载入完成 send()方法执行完成，已经接收到3：交互 正在解析相应内容4：完成 相应内容解析完成，可以在客户端调用 xhr.status 2xx：表示成功3xx：重定向，浏览器直接跳转4xx：客户端请求错误，404 403无权限5xx：服务器端报错]]></content>
       <tags>
         <tag>Interview</tag>
@@ -202,7 +210,7 @@
   </entry>
   <entry>
     <title><![CDATA[js base]]></title>
-    <url>%2F2020%2F03%2F16%2Fpostjs-base%2F</url>
+    <url>%2F2020%2F03%2F16%2Fjs-base%2F</url>
     <content type="text"><![CDATA[JS summary 变量的类型和计算 原型和原型链 作用域和闭包 异步和单线程 typeof能判断哪些类型：undefined, strinig,’number’,boolean,symbol,function,object 何时使用=== 何时使用== 除了==null,其他都用===，因为==运算符 通过发生转换去相等 值类型和引用类型的区别 值类型 vs引用类型，堆栈模型，深拷贝 typeof 运算符 类型转换， truly和falely变量 如何判断一个变量是不是数组 intanceof 首先一个建议的jquery，考虑插件和扩展性 class的原型本质 class和继承，结合手写jquery的示例来理解 intanceof 原型和原型链 this的不用应用场景 手写bind函数 实际开发中闭包的应用场景 十个a标签，弹出序号 作用域和自由变量 闭包：两种常见形式和自由变量查找规则（函数定义的地方查找） 异步和同步的区别 手写promise加载一个图片 单线程和异步，异步和同步的区别 前端异步的应用场景:网络请求和定时任务 Promise解决callback hell]]></content>
       <tags>
         <tag>Interview</tag>
@@ -330,7 +338,7 @@
   </entry>
   <entry>
     <title><![CDATA[csssprite]]></title>
-    <url>%2F2020%2F02%2F20%2Fpostcsssprite%2F</url>
+    <url>%2F2020%2F02%2F20%2Fcsssprite%2F</url>
     <content type="text"><![CDATA[CSS SpriteHow to realise CSS Sprite为啥要使用Sprite，减少HTTP请求数量，加速内容显示，因为每请求一次，就会和服务器建立一次链接，而建立链接是需要额外的时间。 &lt;!DOCTYPE html&gt; css sprite &lt;style type=&quot;text/css&quot;&gt; h3,ul{ margin:0; padding:0; } li { list-style:none; } #wrap_demo{ width:150px; background:#f5f5f5; border:1px solid #bbbbbb; } li h3{ font-size:14px; font-weight:400; } li{ display:block; height:30px; line-height:30px; overflow:hidden; border-bottom:1px solid #dddddd; } li i{ background:url(sp.jpg); display:inline; height:24px; width:30px; float:left; margin:4px 10px 0 0 ; } .bg_demo1 i{ background-position:0 0; } .bg_demo2 i{ background-position:0 -24px; } .bg_demo3 i{ background-position:0 -48px; } .bg_demo4 i{ background-position:0 -72px; } .bg_demo5 i{ background-position:0 -96px; } .bg_demo6 i{ background-position:0 -120px; } .bg_demo7 i{ background-position:0 -144px; } .bg_demo8 i{ background-position:-38px 0; } &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&quot;wrap_demo&quot;&gt; &lt;ul&gt; &lt;li class=&quot;bg_demo1&quot;&gt; &lt;i&gt;&lt;/i&gt; &lt;h3&gt;Clothes&lt;/h3&gt; &lt;/li&gt; &lt;li class=&quot;bg_demo2&quot;&gt; &lt;i&gt;&lt;/i&gt; &lt;h3&gt;Shoes&lt;/h3&gt; &lt;/li&gt; &lt;li class=&quot;bg_demo3&quot;&gt; &lt;i &gt;&lt;/i&gt; &lt;h3&gt;Sports&lt;/h3&gt; &lt;/li&gt; &lt;li class=&quot;bg_demo4&quot;&gt; &lt;i &gt;&lt;/i&gt; &lt;h3&gt;Jewelry&lt;/h3&gt; &lt;/li&gt; &lt;li class=&quot;bg_demo5&quot;&gt; &lt;i &gt;&lt;/i&gt; &lt;h3&gt;Camera&lt;/h3&gt; &lt;/li&gt; &lt;li class=&quot;bg_demo6&quot;&gt; &lt;i &gt;&lt;/i&gt; &lt;h3&gt;Digital&lt;/h3&gt; &lt;/li&gt; &lt;li class=&quot;bg_demo7&quot;&gt; &lt;i &gt;&lt;/i&gt; &lt;h3&gt;Makeup&lt;/h3&gt; &lt;/li&gt; &lt;li class=&quot;bg_demo8&quot;&gt; &lt;i&gt;&lt;/i&gt; &lt;h3&gt;Office&lt;/h3&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;/body&gt; &lt;/html&gt; 为什么使用sprite的时候background-position属性为负数在使用背景图时，背景图的初始位置是从容器的左上角开始铺满整个容器，background-position：0 0 ，然后开始左移x轴，左移就代表值会为负数，同理y轴也如此]]></content>
       <tags>
         <tag>Interview</tag>
