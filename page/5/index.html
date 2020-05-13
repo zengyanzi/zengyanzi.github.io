@@ -297,6 +297,152 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/26/xss-attack/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2020/02/26/xss-attack/" itemprop="url">
+                  xss attack
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-26T06:36:47+08:00">
+                2020-02-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Cross-Site-Script"><a href="#Cross-Site-Script" class="headerlink" title="Cross Site Script "></a>Cross Site Script </h1><p>页面被注入恶意代码<br>-</p>
+<ul>
+<li>通常页面中包含的用户输入内容都在固定的容器或属性内，以文本的形式展示 </li>
+<li>攻击者利用这些页面的用户输入片段拼接特殊格式的字符串，突破原有位置的限制</li>
+<li>攻击者通过在目标网站上注入脚本，使之在用户的浏览器上运行，从而引发潜在风险。</li>
+<li>通过HTML 转义可以防止xss攻击（并没有如此easy），因为不仅仅是特殊字符，就是JavaScript的字符串如果出现在特定的位置也会引发xss攻击。</li>
+<li><p>对于链接跳转，如 &lt;a href=”xxx” 或者localtion.href=”xxx”.要检验其内容，禁止以JavaScript:开头的链接，和其他非法的scheme</p>
+<pre><code>allowSchemes =[&quot;http&quot;,&quot;https&quot;];
+valid = isValid(getParameter(&quot;redirect_to&quot;),allowSchemes);
+if (valid){
+    &lt;a href=&quot;&lt;%= escapeHTML(getParameter(&quot;redirect_to&quot;))%&gt;&quot;&gt;
+        跳转...
+    &lt;/a&gt;
+    }else{
+        &lt;a href=&quot;/404&quot;&gt;
+        &lt;/a&gt;
+    }
+</code></pre></li>
+</ul>
+<ul>
+<li><p>当JSON中包含U+2020或者U+2020这两个字符时，不能作为Javascript的字面量使用，否则会抛出语法错误</p>
+</li>
+<li><p>当JSON中包含字符<code>&lt;/script&gt;</code>时，当前的script标签将会被闭合，后面的字符串内容浏览器会按照HTML进行解析，通过增加下一个<code>&lt;script&gt;</code>标签等方法完成注入。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/02/26/xss-attack/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/25/typeof/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1441,130 +1587,6 @@ box-sizing:border-box;
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/23/how-to-update-RevSlider-plugin-after-updating-to-PHP7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2019/12/23/how-to-update-RevSlider-plugin-after-updating-to-PHP7/" itemprop="url">
-                  how to update RevSlider plugin after updating to PHP7
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-23T05:32:13+08:00">
-                2019-12-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="How-to-update-RevSlider-Plugin-after-updating-to-PHP7"><a href="#How-to-update-RevSlider-Plugin-after-updating-to-PHP7" class="headerlink" title="How to update RevSlider Plugin after updating to PHP7"></a>How to update RevSlider Plugin after updating to PHP7</h1><p>After updating to PHP7, login to the admin of wordpress, there would be an error as follows:</p>
-<pre><code>revslider\inc_php\framework\base_admin.class.php on line 73
-</code></pre><p>The solution is to go to the file and update in the line 22 as follows:</p>
-<pre><code>    private static $menuRole = self::ROLE_ADMIN;
-//private static $arrMetaBoxes = &quot;&quot;;    
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1614,7 +1636,7 @@ box-sizing:border-box;
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">141</span>
+                <span class="site-state-item-count">142</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

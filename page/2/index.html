@@ -297,6 +297,182 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/28/optimization/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2020/04/28/optimization/" itemprop="url">
+                  optimization
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-28T11:45:07+08:00">
+                2020-04-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Frontend-Optimization"><a href="#Frontend-Optimization" class="headerlink" title="Frontend Optimization"></a>Frontend Optimization</h1><p>综合性问题，要求思路思考尽量全面</p>
+<p>某些细节问题可能会单独提问：手写防抖，节流</p>
+<p>性能优化原则</p>
+<p>多使用内存，缓存或者其他方法</p>
+<p>减少CPU计算量，减少网络加载耗时</p>
+<p>适用所有编程的性能优化，用空间换时间</p>
+<p>从何入手</p>
+<p>1.让加载更快<br>2.让渲染更快</p>
+<p>减少资源体积，压缩代码 比如webpack<br>减少访问次数：合并代码 SSR服务端渲染，缓存，比如雪碧图<br>使用更快的网络：CDN</p>
+<p>让渲染更快：CSS放head，JS放在body最下面</p>
+<p>尽早开始执行JS,用DOMComtentLoaded触发</p>
+<p>懒加载(图片懒加载，什么时候用什么时候加载，上滑加载更多)</p>
+<p>对DOM查询进行缓存</p>
+<p>频繁DOM操作，合并到一起插入DOM结构</p>
+<p>节流throttle 防抖 debounce</p>
+<p>资源合并实例</p>
+<pre><code>&lt;script scr=&quot;a.js&quot;&gt;&lt;/script&gt;
+&lt;script scr=&quot;b.js&quot;&gt;&lt;/script&gt;
+&lt;script scr=&quot;c.js&quot;&gt;&lt;/script&gt;
+
+&lt;script scr=&quot;abc.js&quot;&gt;&lt;/script&gt;
+</code></pre><p>缓存</p>
+<pre><code>module:{
+    rules:[
+        {
+            test:/\.js$/,
+            loader:[&apos;babel-loader&apos;];
+            include:path.join(__dirname,&apos;src&apos;),
+            exclude:/node_modues/
+
+        }
+    ]
+}
+</code></pre><p>静态资源加hash后缀，根据文件内容计算hash，<br>文件变hash变，文件不变hash不变则url不变<br>url和文件不变，则会自动触发http缓存机制，返回304<br>所以，老的文件可以直接命中304，而新的文件才会自动下载</p>
+<p>SSR：服务端渲染<br>将网页和数据一起加载一起渲染<br>非SSR（前后端分离）：先加载网页，再加载数据，再渲染数据<br>从早先的JSP ASP PHP 到现在vue React SSR</p>
+<p>懒加载</p>
+<pre><code>&lt;img id=&quot;img1&quot; src=&quot;preview.png&quot; data-realsrc=&quot;abc.png&quot;&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    var img1= document.getElementById(&apos;img1&apos;)
+    img1.src =img1.getAttribute(&apos;data-realsrc&apos;)
+
+&lt;/script&gt;
+</code></pre><p>缓存DOM查询</p>
+<pre><code>//不缓存DOM查询结果
+for(let i= 0; i&lt;document.getElementByTagName(&apos;p&apos;).length;i++){
+    //每次循环，都会计算length，频繁进行DOM查询
+}
+//缓存DOM查询结果
+const pList =document.getElementByTagName(&apos;p&apos;)
+const length = pList.length
+for(let i =0;i&lt;lenght;i++){
+    //缓存length，只进行一次DOM查询
+}
+</code></pre><p>尽早开始JS执行</p>
+<p><label> Please upload your Passport(required)</label><br>[file* passport limit:1048576 filetypes:rar|pdf|zip|doc|docx|xsl]</p>
+<p><label> Please upload your Payslip(required)</label><br>[file* Payslip limit:1048576 filetypes:rar|pdf|zip|doc|docx|xsl]</p>
+<p><label> Please upload your Bank statement(required)</label><br>[file* bank limit:1048576 filetypes:rar|pdf|zip|doc|docx|xsl]</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/27/webpage-render/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1507,171 +1683,6 @@ fetch(&apos;http://example.com/movies.json&apos;)
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/20/CORS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2020/04/20/CORS/" itemprop="url">
-                  CORS
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-20T04:54:54+08:00">
-                2020-04-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="CORS跨域"><a href="#CORS跨域" class="headerlink" title="CORS跨域"></a>CORS跨域</h1><p>什么是跨域（同源策略）</p>
-<p>JSONP</p>
-<p>CORS(服务端支持)</p>
-<p>1.同源策略 </p>
-<p>ajax请求时，浏览器要求当前网页和server必须同源</p>
-<p>同源：协议，域名，端口，三者必须一致</p>
-<p>加载图片css js 可无视同源策略</p>
-<ul>
-<li><img src="跨域的图片地址/">  <img>可用于统计打点，可使用第三方统计服务</li>
-<li><img href="跨域的css地址/"></li>
-<li><script src="跨域的js地址"></script></li>
-<li><link> <script>可以使用CDN,CDN一般都是外域</li>
-<li><script>可使用JSONP</li>
-</ul>
-<p>跨域</p>
-<ul>
-<li>所有的跨域，都必须经过server端允许和配合</li>
-<li>未经过server端允许就实现跨域，说明浏览器有漏洞</li>
-</ul>
-<p>JSONP</p>
-<p>访问一个地址，服务端一定返回的一个html文件吗？</p>
-<p>服务器可以任意动态拼接数据返回，只要符合html格式</p>
-<script>可绕过跨域限制
-
-服务器可以任意动态拼接数据返回
-
-所以，<script>就可以获得跨域的数据，只要数据的愿意返回
-
-        <script>
-            window.callback = function(data){
-            //这是我们跨域得到的信息
-            console.log（data）
-            }
-        </script>
-        <script src="https://imooc.com/getData.js"></script>
-
-
-<p>jQuery 实现jsonp</p>
-<pre><code>$.ajax({
-url:&apos;&apos;
-dataType:&apos;jsonp&apos;,
-jsonpCallback:&apos;callback&apos;,
-success:function(data){
-    console.log(data)
-}
-})
-</code></pre></li></ul>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1721,7 +1732,7 @@ success:function(data){
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">141</span>
+                <span class="site-state-item-count">142</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

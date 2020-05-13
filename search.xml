@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[interview 5]]></title>
+    <url>%2F2020%2F05%2F13%2Finterview-5%2F</url>
+    <content type="text"><![CDATA[Interview 5如何阻止事件冒泡和默认行为？ event.stopPropagation() event.preventDefault() 查找，添加，删除，移动DOM节点的方法 如何减少DOM操作]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[new closure]]></title>
     <url>%2F2020%2F05%2F13%2Fnew-closure%2F</url>
     <content type="text"><![CDATA[再讲闭包closure函数call和apply区别 事件代理(委托)是什么 闭包是什么，有什么特性，有什么区别 函数call和apply区别 fn.call(this,p1,p2,p3)// call的参数是一个个拆分传进去 fn.apply(this,arguments)// arguments是数组或者类数组传参 事件代理(委托)是什么 const p1 = document.getElementById(&apos;p1&apos;) const body = document.body bindEvent(p1,&apos;click&apos;,e=&gt;{ e.stopPropagation()//注释掉这一行，来体会事件冒泡 alert(&apos;active&apos;) }) bindEvent(body,&apos;click&apos;,e=&gt;{ alert(&apos;cancel&apos;) }) 闭包是什么，有什么特性，有什么区别 回顾作用域和自由变量 回顾闭包应用场景：作为参数被传入，作为返回值被返回 回顾：自由变量的查找，要在函数定义的地方（而非执行的地方） 影响：变量会常驻内存，得不到释放，闭包不要乱用]]></content>
