@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[jsonp and ajax]]></title>
+    <url>%2F2020%2F05%2F13%2Fjsonp-and-ajax%2F</url>
+    <content type="text"></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[interview 5]]></title>
     <url>%2F2020%2F05%2F13%2Finterview-5%2F</url>
-    <content type="text"><![CDATA[Interview 5如何阻止事件冒泡和默认行为？ event.stopPropagation() event.preventDefault() 查找，添加，删除，移动DOM节点的方法 如何减少DOM操作]]></content>
+    <content type="text"><![CDATA[Interview 5如何阻止事件冒泡和默认行为？ event.stopPropagation() event.preventDefault() 查找，添加，删除，移动DOM节点的方法 如何减少DOM操作 缓存DOM查询结果 多次DOM操作合并到一次插入]]></content>
       <tags>
         <tag>Interview</tag>
       </tags>
