@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="再讲闭包closure">
+<meta name="description" content="再讲闭包closure函数call和apply区别 事件代理(委托)是什么  闭包是什么，有什么特性，有什么区别 函数call和apply区别 fn.call(this,p1,p2,p3)// call的参数是一个个拆分传进去 fn.apply(this,arguments)// arguments是数组或者类数组传参 事件代理(委托)是什么">
 <meta name="keywords" content="Interview">
 <meta property="og:type" content="article">
 <meta property="og:title" content="new closure">
 <meta property="og:url" content="http://yoursite.com/2020/05/13/new-closure/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="再讲闭包closure">
-<meta property="og:updated_time" content="2020-05-12T22:36:20.982Z">
+<meta property="og:description" content="再讲闭包closure函数call和apply区别 事件代理(委托)是什么  闭包是什么，有什么特性，有什么区别 函数call和apply区别 fn.call(this,p1,p2,p3)// call的参数是一个个拆分传进去 fn.apply(this,arguments)// arguments是数组或者类数组传参 事件代理(委托)是什么">
+<meta property="og:updated_time" content="2020-05-13T02:14:41.459Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="new closure">
-<meta name="twitter:description" content="再讲闭包closure">
+<meta name="twitter:description" content="再讲闭包closure函数call和apply区别 事件代理(委托)是什么  闭包是什么，有什么特性，有什么区别 函数call和apply区别 fn.call(this,p1,p2,p3)// call的参数是一个个拆分传进去 fn.apply(this,arguments)// arguments是数组或者类数组传参 事件代理(委托)是什么">
 
 
 
@@ -368,7 +368,29 @@
       
 
       
-        <h1 id="再讲闭包closure"><a href="#再讲闭包closure" class="headerlink" title="再讲闭包closure"></a>再讲闭包closure</h1>
+        <h1 id="再讲闭包closure"><a href="#再讲闭包closure" class="headerlink" title="再讲闭包closure"></a>再讲闭包closure</h1><p>函数call和apply区别</p>
+<p>事件代理(委托)是什么 </p>
+<p>闭包是什么，有什么特性，有什么区别</p>
+<p>函数call和apply区别</p>
+<pre><code>fn.call(this,p1,p2,p3)// call的参数是一个个拆分传进去
+fn.apply(this,arguments)// arguments是数组或者类数组传参
+</code></pre><p>事件代理(委托)是什么 </p>
+<a id="more"></a>
+<pre><code> const p1 = document.getElementById(&apos;p1&apos;)
+ const body = document.body
+ bindEvent(p1,&apos;click&apos;,e=&gt;{
+    e.stopPropagation()//注释掉这一行，来体会事件冒泡
+    alert(&apos;active&apos;)
+})
+bindEvent(body,&apos;click&apos;,e=&gt;{
+    alert(&apos;cancel&apos;)
+})
+</code></pre><p>闭包是什么，有什么特性，有什么区别</p>
+<p>回顾作用域和自由变量</p>
+<p>回顾闭包应用场景：作为参数被传入，作为返回值被返回</p>
+<p>回顾：自由变量的查找，要在函数定义的地方（而非执行的地方）</p>
+<p>影响：变量会常驻内存，得不到释放，闭包不要乱用</p>
+
       
     </div>
 
