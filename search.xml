@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[jsonp and ajax]]></title>
     <url>%2F2020%2F05%2F13%2Fjsonp-and-ajax%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[jsonp本质是ajax吗jsonp本质是ajax吗? ajax是通过xml实现jsonp是通过html实现 浏览器的同源策略（服务端没有同源策略）和跨域哪些html标签能绕过跨域？img scriptjsonp定义一个全局函数去访问一个js document.load（网页全部加载完成才实现）和ready（dom渲染完成即可实现）的区别 == 和=== 区别 == 会尝试类型转换 === 严格执行]]></content>
       <tags>
         <tag>Interview</tag>
       </tags>
