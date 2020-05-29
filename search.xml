@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[interview 8]]></title>
+    <url>%2F2020%2F05%2F29%2Finterview-8%2F</url>
+    <content type="text"><![CDATA[Interview 8关于作用域和自由变量的场景题 判断字符串以字母开头，后面字母数字下划线，长度6-30 关于作用域和自由变量的场景题]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[objectcreate()]]></title>
     <url>%2F2020%2F05%2F21%2Fobjectcreate%2F</url>
-    <content type="text"><![CDATA[How to use Object.create()函数声明和函数表达式的区别 函数声明 function fn(){} 函数表达式 const fn = function(){}先定义一个变量再赋值为函数 函数声明会在代码执行前预加载，而函数表达式不会 代码演示 const res = sum(10,20) console.log(res) //函数声明，会在代码执行器预加载 function sum(x,y){ return x+y } //函数表达式不行 const sum=function sum(x,y) { return x+y } new Object()和Object.create()的区别 {}等同于new Object(),原型是Object.prototypeObject.create(null)是没有原型Object.create({…})可指定原型代码演示 object.js const obj1= { a:10, b:20, sum(){ return this.a+ this.b } } const obj2 = new Object({ a:10, b:20, sum(){ return this.a + this.b } }) console.log（obj1===obj2）//true const obj3 = new Object({ a:10, b:20, sum(){ return this.a+this.b } }) const obj4 = Object.create({})//没有prototype const obj5 = new Object({})//有prototype console.log（obj1===obj3）//false const obj 6 =Object.create({ a:10, b:20, sum(){ return this.a + this.b } })// 有__proto__创建一个空对象，将空对象的原型指向了传入的对象 cosnt obj7 = Object.create(obj1) 关于this的场景题 const User={ count:1， getCount： function(){ return this.count } } console.log(User.getCount())// 1 const func = User.getCount console.log(func())//undefine]]></content>
+    <content type="text"><![CDATA[How to use Object.create()函数声明和函数表达式的区别 函数声明 function fn(){} 函数表达式 const fn = function(){}先定义一个变量再赋值为函数 函数声明会在代码执行前预加载，而函数表达式不会 代码演示 const res = sum(10,20) console.log(res) //函数声明，会在代码执行器预加载 function sum(x,y){ return x+y } //函数表达式不行 const sum=function sum(x,y) { return x+y } new Object()和Object.create()的区别 {}等同于new Object(),原型是Object.prototypeObject.create(null)是没有原型Object.create({…})可指定原型代码演示 object.js const obj1= { a:10, b:20, sum(){ return this.a+ this.b } } const obj2 = new Object({ a:10, b:20, sum(){ return this.a + this.b } }) console.log（obj1===obj2）//true const obj3 = new Object({ a:10, b:20, sum(){ return this.a+this.b } }) const obj4 = Object.create({})//没有prototype const obj5 = new Object({})//有prototype console.log（obj1===obj3）//false const obj 6 =Object.create({ a:10, b:20, sum(){ return this.a + this.b } })// 有__proto__创建一个空对象，将空对象的原型指向了传入的对象 cosnt obj7 = Object.create(obj1) 关于this的场景题 const User={ count:1， getCount： function(){ return this.count } } console.log(User.getCount())// 1 const func = User.getCount console.log(func())//undefine 函数的this在执行的时候才知道]]></content>
       <tags>
         <tag>Interveiw</tag>
       </tags>
