@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="nopCommerce," />
+  <meta name="keywords" content="Interveiw," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="How do modify the full search function in nopCommerce1.Go to the Nop.Web/Controllers/CatalogController. find the search action and set the searchinDescriptions to be true IPagedList&amp;lt;Product&amp;gt; pro">
-<meta name="keywords" content="nopCommerce">
+<meta name="description" content="How to use Object.create()函数声明和函数表达式的区别 函数声明 function fn(){} 函数表达式 const fn = function(){}先定义一个变量再赋值为函数 函数声明会在代码执行前预加载，而函数表达式不会 代码演示  const res = sum(10,20)  console.log(res) //函数声明，会在代码执行器预加载     fun">
+<meta name="keywords" content="Interveiw">
 <meta property="og:type" content="article">
-<meta property="og:title" content="search function">
-<meta property="og:url" content="http://yoursite.com/2017/11/27/search-function/index.html">
+<meta property="og:title" content="objectcreate()">
+<meta property="og:url" content="http://yoursite.com/2020/05/21/objectcreate/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="How do modify the full search function in nopCommerce1.Go to the Nop.Web/Controllers/CatalogController. find the search action and set the searchinDescriptions to be true IPagedList&amp;lt;Product&amp;gt; pro">
-<meta property="og:updated_time" content="2020-02-28T02:32:31.086Z">
+<meta property="og:description" content="How to use Object.create()函数声明和函数表达式的区别 函数声明 function fn(){} 函数表达式 const fn = function(){}先定义一个变量再赋值为函数 函数声明会在代码执行前预加载，而函数表达式不会 代码演示  const res = sum(10,20)  console.log(res) //函数声明，会在代码执行器预加载     fun">
+<meta property="og:updated_time" content="2020-05-29T03:25:36.616Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="search function">
-<meta name="twitter:description" content="How do modify the full search function in nopCommerce1.Go to the Nop.Web/Controllers/CatalogController. find the search action and set the searchinDescriptions to be true IPagedList&amp;lt;Product&amp;gt; pro">
+<meta name="twitter:title" content="objectcreate()">
+<meta name="twitter:description" content="How to use Object.create()函数声明和函数表达式的区别 函数声明 function fn(){} 函数表达式 const fn = function(){}先定义一个变量再赋值为函数 函数声明会在代码执行前预加载，而函数表达式不会 代码演示  const res = sum(10,20)  console.log(res) //函数声明，会在代码执行器预加载     fun">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/27/search-function/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/05/21/objectcreate/"/>
 
 
 
 
 
-  <title> search function | Bunny's  Code Burrow </title>
+  <title> objectcreate() | Bunny's  Code Burrow </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/27/search-function/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/21/objectcreate/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jenny Zeng">
@@ -318,7 +318,7 @@
             
             
               
-                search function
+                objectcreate()
               
             
           </h1>
@@ -333,8 +333,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-27T09:45:33+08:00">
-                2017-11-27
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-21T11:39:32+08:00">
+                2020-05-21
               </time>
             
 
@@ -368,35 +368,75 @@
       
 
       
-        <h1 id="How-do-modify-the-full-search-function-in-nopCommerce"><a href="#How-do-modify-the-full-search-function-in-nopCommerce" class="headerlink" title="How do modify the full search function in nopCommerce"></a>How do modify the full search function in nopCommerce</h1><p>1.Go to the Nop.Web/Controllers/CatalogController. find the search action and set the searchinDescriptions to be true</p>
-<pre><code>IPagedList&lt;Product&gt; products = new PagedList&lt;Product&gt;(new List&lt;Product&gt;(), 0, 1);
-           // only search if query string search keyword is set (used to avoid searching or displaying search term min length error message on /search page load)
-           if (Request.Params[&quot;Q&quot;] != null)
-           {
-               if (model.Q.Length &lt; _catalogSettings.ProductSearchTermMinimumLength)
-               {
-                   model.Warning = string.Format(_localizationService.GetResource(&quot;Search.SearchTermMinimumLengthIsNCharacters&quot;), _catalogSettings.ProductSearchTermMinimumLength);
-               }
-               else
-               {
-                   var categoryIds = new List&lt;int&gt;();
-                   int manufacturerId = 0;
-                   decimal? minPriceConverted = null;
-                   decimal? maxPriceConverted = null;
-                   bool searchInDescriptions = true;
-                   if (model.As)
-                   {
-                       //advanced search
-                       var categoryId = model.Cid;
-                       if (categoryId &gt; 0)
-                       {
-                           categoryIds.Add(categoryId);
-                           if (model.Isc)
-                           {
-                               //include subcategories
-                               categoryIds.AddRange(GetChildCategoryIds(categoryId));
-                           }
-                       }
+        <h1 id="How-to-use-Object-create"><a href="#How-to-use-Object-create" class="headerlink" title="How to use Object.create()"></a>How to use Object.create()</h1><p>函数声明和函数表达式的区别</p>
+<p>函数声明 function fn(){}</p>
+<p>函数表达式 const fn = function(){}先定义一个变量再赋值为函数</p>
+<p>函数声明会在代码执行前预加载，而函数表达式不会</p>
+<p>代码演示</p>
+<pre><code> const res = sum(10,20)
+ console.log(res)
+//函数声明，会在代码执行器预加载
+    function sum(x,y){
+        return x+y
+    }
+
+
+
+//函数表达式不行
+const sum=function sum(x,y)
+    {
+        return x+y
+    }
+</code></pre><a id="more"></a>
+<p>new Object()和Object.create()的区别</p>
+<p>{}等同于new Object(),原型是Object.prototype<br>Object.create(null)是没有原型<br>Object.create({…})可指定原型<br>代码演示</p>
+<pre><code>object.js
+const obj1= {
+    a:10,
+    b:20,
+    sum(){
+        return this.a+ this.b
+    }
+}
+const obj2 = new Object({
+    a:10,
+    b:20,
+    sum(){
+        return this.a + this.b
+    }
+})
+
+console.log（obj1===obj2）//true
+
+const obj3 = new Object({
+    a:10,
+    b:20,
+    sum(){
+        return this.a+this.b
+    }
+})
+const obj4 = Object.create({})//没有prototype
+const obj5 = new Object({})//有prototype
+console.log（obj1===obj3）//false
+
+const obj 6 =Object.create({
+    a:10,
+    b:20,
+    sum(){
+        return this.a + this.b
+    }
+})// 有__proto__创建一个空对象，将空对象的原型指向了传入的对象
+cosnt obj7 = Object.create(obj1)
+</code></pre><p>关于this的场景题</p>
+<pre><code>const User={
+    count:1，
+    getCount： function(){
+        return this.count
+    }
+}
+console.log(User.getCount())// 1
+const func = User.getCount
+console.log(func())//undefine
 </code></pre>
       
     </div>
@@ -426,7 +466,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/nopCommerce/" rel="tag"># nopCommerce</a>
+            <a href="/tags/Interveiw/" rel="tag"># Interveiw</a>
           
         </div>
       
@@ -439,18 +479,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/07/how-to-solve-the-ipv6-issue-for-Apple-Store/" rel="next" title="how to solve the ipv6 issue for Apple Store">
-                <i class="fa fa-chevron-left"></i> how to solve the ipv6 issue for Apple Store
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/09/27/less/" rel="prev" title="less">
-                less <i class="fa fa-chevron-right"></i>
+              <a href="/2020/05/13/jsonp-and-ajax/" rel="prev" title="jsonp and ajax">
+                jsonp and ajax <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -591,7 +627,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#How-do-modify-the-full-search-function-in-nopCommerce"><span class="nav-number">1.</span> <span class="nav-text">How do modify the full search function in nopCommerce</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#How-to-use-Object-create"><span class="nav-number">1.</span> <span class="nav-text">How to use Object.create()</span></a></li></ol></div>
             
 
           </div>

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[objectcreate()]]></title>
+    <url>%2F2020%2F05%2F21%2Fobjectcreate%2F</url>
+    <content type="text"><![CDATA[How to use Object.create()函数声明和函数表达式的区别 函数声明 function fn(){} 函数表达式 const fn = function(){}先定义一个变量再赋值为函数 函数声明会在代码执行前预加载，而函数表达式不会 代码演示 const res = sum(10,20) console.log(res) //函数声明，会在代码执行器预加载 function sum(x,y){ return x+y } //函数表达式不行 const sum=function sum(x,y) { return x+y } new Object()和Object.create()的区别 {}等同于new Object(),原型是Object.prototypeObject.create(null)是没有原型Object.create({…})可指定原型代码演示 object.js const obj1= { a:10, b:20, sum(){ return this.a+ this.b } } const obj2 = new Object({ a:10, b:20, sum(){ return this.a + this.b } }) console.log（obj1===obj2）//true const obj3 = new Object({ a:10, b:20, sum(){ return this.a+this.b } }) const obj4 = Object.create({})//没有prototype const obj5 = new Object({})//有prototype console.log（obj1===obj3）//false const obj 6 =Object.create({ a:10, b:20, sum(){ return this.a + this.b } })// 有__proto__创建一个空对象，将空对象的原型指向了传入的对象 cosnt obj7 = Object.create(obj1) 关于this的场景题 const User={ count:1， getCount： function(){ return this.count } } console.log(User.getCount())// 1 const func = User.getCount console.log(func())//undefine]]></content>
+      <tags>
+        <tag>Interveiw</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[jsonp and ajax]]></title>
     <url>%2F2020%2F05%2F13%2Fjsonp-and-ajax%2F</url>
     <content type="text"><![CDATA[jsonp本质是ajax吗jsonp本质是ajax吗? ajax是通过xml实现jsonp是通过html实现 浏览器的同源策略（服务端没有同源策略）和跨域哪些html标签能绕过跨域？img scriptjsonp定义一个全局函数去访问一个js document.load（网页全部加载完成才实现）和ready（dom渲染完成即可实现）的区别 == 和=== 区别 == 会尝试类型转换 === 严格执行]]></content>
