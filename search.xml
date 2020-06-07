@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[wordpress access host]]></title>
+    <url>%2F2020%2F06%2F08%2Fwordpress-access-host%2F</url>
+    <content type="text"><![CDATA[Wordpress提示错误 WordPress无法建立到WordPress.org的安全连接，请联系您的服务器管理员 solution windows系统解决： 修改Host: win系统下host文件路径：c:\windows\system32\drivers\etc 添加如下一行到 hosts 文件末尾： 66.155.40.249 wordpress.org]]></content>
+      <tags>
+        <tag>WordPress</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[interview 8]]></title>
     <url>%2F2020%2F05%2F29%2Finterview-8%2F</url>
-    <content type="text"><![CDATA[Interview 8关于作用域和自由变量的场景题 判断字符串以字母开头，后面字母数字下划线，长度6-30 关于作用域和自由变量的场景题]]></content>
+    <content type="text"><![CDATA[Interview 8关于作用域和自由变量的场景题 判断字符串以字母开头，后面字母数字下划线，长度6-30 关于作用域和自由变量的场景题 关于作用域和自由变量的场景题 let i for(i=1;i&lt;=3;i++){ setTimeout(function(){ console.log(i) },0) } 判断字符串以字母开头，后面字母数字下划线，长度6-30 const reg = /^[a-zA-Z]\w{5,29}$/ // /不用管 ^是字符串的开头，[]是选择，^[a-zA-Z]对应字母开头 \w是一个整体，命中字母数字下划线 {5，29}长度范围 学习正则表达式的规则\s 匹配任何一个空白\S 匹配任何一个非空白\n 匹配任何一个换行符\r 匹配一个回车\d 数字$ 结尾（）集合*匹配前面的表达式0次或者多次+匹配一次或者多次.匹配任何一个字符限制符{n}正好匹配n{n,m}/^$/ 不一定要有开头结尾，如果全部满足可以加上常用的//邮政编码 /\d{6}/ //开头小写英文字母 /^[a-z]+$///英文字母 /^[a-zA-Z]+$/ //日期格式 /^\d{4}-\d{1,2}-\d{1,2}$///用户名/^[a-zA-Z]\w{5,17}$/ //简单的ip地址匹配 /\d+.\d+.\d+.\d+/ 关于作用域和自由变量的场景题 let a =100 function test(){ alert(a) a= 10 alert(a) } test() alert(a) // 100 10 10]]></content>
       <tags>
         <tag>Interview</tag>
       </tags>

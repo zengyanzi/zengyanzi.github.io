@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2020/05/29/interview-8/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
 <meta property="og:description" content="Interview 8关于作用域和自由变量的场景题 判断字符串以字母开头，后面字母数字下划线，长度6-30 关于作用域和自由变量的场景题">
-<meta property="og:updated_time" content="2020-05-29T03:44:10.395Z">
+<meta property="og:updated_time" content="2020-06-03T20:41:35.473Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="interview 8">
 <meta name="twitter:description" content="Interview 8关于作用域和自由变量的场景题 判断字符串以字母开头，后面字母数字下划线，长度6-30 关于作用域和自由变量的场景题">
@@ -372,6 +372,32 @@
 <p>判断字符串以字母开头，后面字母数字下划线，长度6-30</p>
 <p>关于作用域和自由变量的场景题</p>
 <a id="more"></a>
+<p>关于作用域和自由变量的场景题</p>
+<pre><code>let i 
+for(i=1;i&lt;=3;i++){
+    setTimeout(function(){
+        console.log(i)
+    },0)
+}
+</code></pre><p>判断字符串以字母开头，后面字母数字下划线，长度6-30</p>
+<pre><code>const reg = /^[a-zA-Z]\w{5,29}$/   // /不用管
+^是字符串的开头，[]是选择，^[a-zA-Z]对应字母开头 \w是一个整体，命中字母数字下划线 {5，29}长度范围
+</code></pre><p>学习正则表达式的规则<br>\s 匹配任何一个空白<br>\S 匹配任何一个非空白<br>\n 匹配任何一个换行符<br>\r 匹配一个回车<br>\d 数字<br>$ 结尾<br>（）集合<br>*匹配前面的表达式0次或者多次<br>+匹配一次或者多次<br>.匹配任何一个字符<br>限制符<br>{n}正好匹配n<br>{n,m}<br>/^$/ 不一定要有开头结尾，如果全部满足可以加上<br>常用的//邮政编码<br>     /\d{6}/</p>
+<p>//开头小写英文字母<br>        /^[a-z]+$/<br>//英文字母<br>    /^[a-zA-Z]+$/</p>
+<p>//日期格式<br>    /^\d{4}-\d{1,2}-\d{1,2}$/<br>//用户名<br>/^[a-zA-Z]\w{5,17}$/</p>
+<p>//简单的ip地址匹配</p>
+<p>/\d+.\d+.\d+.\d+/</p>
+<p>关于作用域和自由变量的场景题</p>
+<pre><code>let a =100
+function test(){
+    alert(a)
+    a= 10
+    alert(a)
+}
+test()
+alert(a)
+// 100 10 10
+</code></pre>
       
     </div>
 
@@ -412,6 +438,10 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/06/08/wordpress-access-host/" rel="next" title="wordpress access host">
+                <i class="fa fa-chevron-left"></i> wordpress access host
+              </a>
             
           </div>
 
@@ -493,7 +523,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">145</span>
+                <span class="site-state-item-count">146</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
