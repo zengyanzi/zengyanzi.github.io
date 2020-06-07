@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[unavailable for scheduled maintenance]]></title>
+    <url>%2F2020%2F06%2F08%2Funavailable-for-scheduled-maintenance%2F</url>
+    <content type="text"><![CDATA[How to Fix Briefly Unavailable for Scheduled Maintenance Error in WordPressTo get your wordpress website out of maintenance mode,just delete the .maintenance file from site’s root folder using FTP. The “Briefly unavailable for scheduled maintenance” error is caused by slow server response or low memory issue on web hosting server. Instead of quickly clicking on the Update link, we recommend patiently updating one plugin at a time.]]></content>
+      <tags>
+        <tag>wordpress</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[wordpress access host]]></title>
     <url>%2F2020%2F06%2F08%2Fwordpress-access-host%2F</url>
     <content type="text"><![CDATA[Wordpress提示错误 WordPress无法建立到WordPress.org的安全连接，请联系您的服务器管理员 solution windows系统解决： 修改Host: win系统下host文件路径：c:\windows\system32\drivers\etc 添加如下一行到 hosts 文件末尾： 66.155.40.249 wordpress.org]]></content>

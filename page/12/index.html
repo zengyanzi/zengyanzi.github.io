@@ -297,6 +297,196 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/bulk-add-attribute/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/24/bulk-add-attribute/" itemprop="url">
+                  bulk add attribute
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T10:23:02+08:00">
+                2017-04-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="bulk-add-attribute"><a href="#bulk-add-attribute" class="headerlink" title="bulk add attribute  "></a>bulk add attribute  </h1><pre><code># ~*~ coding:utf-8 ~*~
+#csv是一个读取csv文件的lib
+import csv
+#itertools生成组合和排列的lib
+import itertools
+#pyodbc是连接ms sql server的lib
+import pyodbc
+import MySQLdb
+#cnxn是数据库连接  更改数据库连接方式，账号密码
+
+#cursor是数据库浮标
+cursor = cnxn.cursor()
+
+
+
+#主方法
+def process():
+    #读取csv，转换成list 更改文件存储位置
+    reader = list(csv.reader(open(&quot;c:/Users/Jenny/Desktop/ski/attribute/attribute.csv&quot;)))
+    header = reader[0]
+    #遍历数据，并处理， tips：跳过第一行
+    for i in reader[1:]:
+        sku = i[0]
+        product_id = getIdFromSku(sku)
+        if product_id == 0:
+            print &quot;error sku %s&quot; % sku
+            continue
+        options = i[1]
+        option_id=int(options)
+        if exist(product_id,option_id):
+            pass
+        else:
+            insert(product_id,option_id)
+
+
+def exist(product_id,option_id):
+    sql = &quot;select * from dbo.Product_SpecificationAttribute_Mapping where ProductId = %d and SpecificationAttributeOptionId = %d&quot; % (product_id,option_id)
+    cursor.execute(sql)
+    rows = cursor.fetchall()
+    if len(rows)==0:
+        return False
+    else:
+        print rows
+        return True
+
+
+def insert(product_id,option_id):
+    sql = &quot;insert into dbo.Product_SpecificationAttribute_Mapping (ProductId,SpecificationAttributeOptionId,DisplayOrder,AllowFiltering,ShowOnProductPage) values(%d,%d,%d,%d,%d)&quot; % (product_id,option_id,0,0,1)
+    print sql
+    cursor.execute(sql)
+    cnxn.commit()
+
+def getIdFromSku(a):
+    sql = &quot;select Id from dbo.Product where Sku=&apos;%s&apos; and deleted=0&quot; % a
+    cursor.execute(sql)
+    row = cursor.fetchall()
+    if row:
+        return row[0][0]
+    else:
+        return 0
+
+def test(skuset):
+    err = False
+    for sku in skuset:
+        product_id = getIdFromSku(sku)
+        if not product_id:
+            print &quot;can&apos;t find product id where sku=&apos;%s&apos;&quot; % sku
+            err = True    
+
+if __name__ == &quot;__main__&quot;:
+    process()
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/tireprice/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1562,136 +1752,6 @@ if __name__ == &quot;__main__&quot;:
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/change-homepage-layout/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/24/change-homepage-layout/" itemprop="url">
-                  change homepage layout
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T09:32:22+08:00">
-                2017-04-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="how-to-update-nopcommerce-homepage-layout"><a href="#how-to-update-nopcommerce-homepage-layout" class="headerlink" title="how to update nopcommerce homepage layout  "></a>how to update nopcommerce homepage layout  </h1><ol>
-<li>find this file under the themes/themesname/views/home/index.cshtml</li>
-<li><p>change the </p>
-<pre><code>@{
-    Layout = &quot;~/Views/Shared/_ColumnsThree.cshtml&quot;;
-}
-</code></pre></li>
-<li><p>generate</p>
-</li>
-<li>refresh</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1741,7 +1801,7 @@ if __name__ == &quot;__main__&quot;:
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">146</span>
+                <span class="site-state-item-count">147</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

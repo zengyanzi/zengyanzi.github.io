@@ -297,6 +297,130 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/15/how-to-install-Python3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2019/11/15/how-to-install-Python3/" itemprop="url">
+                  how to install Python3
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-15T08:16:04+08:00">
+                2019-11-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="How-to-install-Python3"><a href="#How-to-install-Python3" class="headerlink" title="How to install Python3 "></a>How to install Python3 </h1><p>1.Download the latest version of Python and install it<br>2.In order to connect python with database, some libs need to be installed</p>
+<pre><code>pip install pyodbc
+ip install PyMySQL
+</code></pre><p>For Python3 on windows you might have issue like “error Microsoft Visual C++ 14.0 is required”<br>Install using any ONE of these choices:<br><a href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&amp;rel=16" target="_blank" rel="external">Microsoft Build Tools for Visual Studio.</a><br>Select: Workloads → C++ build tools.</p>
+<p>Other errors might like “PYODBC–Data source name not found and no default driver specified” try to “cnxn = pyodbc.connect(‘DRIVER={ODBC Driver 13 for SQL Server}”  instead of ‘DRIVER={SQL Server}’</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/19/how-to-install-docker-to-Ubuntu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1488,198 +1612,6 @@ End Sub
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/07/nopcommerce-new-window/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/06/07/nopcommerce-new-window/" itemprop="url">
-                  nopcommerce new window
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-07T13:11:42+08:00">
-                2018-06-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="How-to-open-new-page-in-new-windows-for-nopCommerce"><a href="#How-to-open-new-page-in-new-windows-for-nopCommerce" class="headerlink" title="How to open new page in new windows for nopCommerce"></a>How to open new page in new windows for nopCommerce</h1><p>The file is _Root.Head.cshtml, the path is Nop.Web/View/Shared/ _Root.Head.cshtml, add <base target="_blank"> before  as below:</p>
-<pre><code>@using Nop.Core
-@using Nop.Core.Domain.Common;
-@using Nop.Core.Infrastructure;
-@{
-var displayMiniProfiler = CommonHelper.GetTrustLevel() &gt;= AspNetHostingPermissionLevel.High &amp;&amp;
-    EngineContext.Current.Resolve&lt;Nop.Core.Domain.StoreInformationSettings&gt;().DisplayMiniProfilerInPublicStore;
-
-//resources
-Html.AppendCssFileParts(&quot;~/Content/jquery-ui-themes/smoothness/jquery-ui-1.10.3.custom.min.css&quot;);
-
-Html.AppendScriptParts(&quot;~/Scripts/public.ajaxcart.js&quot;);
-Html.AppendScriptParts(&quot;~/Scripts/public.common.js&quot;);
-Html.AppendScriptParts(&quot;~/Scripts/jquery-migrate-1.2.1.min.js&quot;);
-Html.AppendScriptParts(&quot;~/Scripts/jquery-ui-1.10.3.custom.min.js&quot;);
-Html.AppendScriptParts(&quot;~/Scripts/jquery.validate.unobtrusive.min.js&quot;);
-Html.AppendScriptParts(&quot;~/Scripts/jquery.validate.min.js&quot;);
-Html.AppendScriptParts(&quot;~/Scripts/jquery-1.10.2.min.js&quot;);
-//add pupop
-Html.AppendScriptParts(&quot;~/Scripts/pupopTip.js&quot;);
-
-//X-UA-Compatible tag
-var commonSettings = EngineContext.Current.Resolve&lt;CommonSettings&gt;();
-if (commonSettings.RenderXuaCompatible)
-{
-    Html.AppendHeadCustomParts(string.Format(&quot;&lt;meta http-equiv=\&quot;X-UA-Compatible\&quot; content=\&quot;{0}\&quot;/&gt;&quot;, commonSettings.XuaCompatibleValue));
-}
-}
-&lt;!DOCTYPE html&gt;
-&lt;html @Html.Partial(&quot;LanguageAttributes&quot;)&gt;
-&lt;head&gt;
-    &lt;!-- Google Tag Manager --&gt;
-    &lt;script&gt;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({&apos;gtm.start&apos;:
-    new Date().getTime(),event:&apos;gtm.js&apos;});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!=&apos;dataLayer&apos;?&apos;&amp;l=&apos;+l:&apos;&apos;;j.async=true;j.src=
-    &apos;https://www.googletagmanager.com/gtm.js?id=&apos;+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,&apos;script&apos;,&apos;dataLayer&apos;,&apos;GTM-MT3JMK&apos;);&lt;/script&gt;
-    &lt;!-- End Google Tag Manager --&gt;
-&lt;title&gt;@Html.NopTitle(true)&lt;/title&gt;
-&lt;meta http-equiv=&quot;Content-type&quot; content=&quot;text/html;charset=UTF-8&quot; /&gt;
-&lt;meta name=&quot;description&quot; content=&quot;@(Html.NopMetaDescription())&quot; /&gt;
-&lt;meta name=&quot;keywords&quot; content=&quot;@(Html.NopMetaKeywords())&quot; /&gt;
-&lt;meta name=&quot;generator&quot; content=&quot;nopCommerce&quot; /&gt;
-&lt;meta name=&quot;google-site-verification&quot; content=&quot;YcdHXMIdUFkSueRbht63U4qY-BRV4JiU_p3otFwEd50&quot; /&gt;
-@Html.NopHeadCustom()
-@*This is used so that themes can inject content into the header*@
-@Html.Partial(&quot;Head&quot;)
-@Html.Widget(&quot;head_html_tag&quot;)
-@Html.NopCssFiles(this.Url, ResourceLocation.Head)
-@Html.NopScripts(this.Url, ResourceLocation.Head)
-@Html.NopCanonicalUrls()
-@Html.Action(&quot;RssHeaderLink&quot;, &quot;News&quot;)
-@Html.Action(&quot;RssHeaderLink&quot;, &quot;Blog&quot;)
-@*Favicon - upload favicon.ico file to the root directory*@
-@Html.Action(&quot;Favicon&quot;, &quot;Common&quot;)
-@if (displayMiniProfiler)
-{
-    @StackExchange.Profiling.MiniProfiler.RenderIncludes()
-}
-&lt;!--Powered by nopCommerce - http://www.nopCommerce.com--&gt;
-&lt;!--Copyright (c) 2008-2013--&gt;
-&lt;base target=&quot;_blank&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;!-- Google Tag Manager (noscript) --&gt;
-&lt;noscript&gt;&lt;iframe src=&quot;https://www.googletagmanager.com/ns.html?id=GTM-MT3JMK&quot;
-height=&quot;0&quot; width=&quot;0&quot; style=&quot;display:none;visibility:hidden&quot;&gt;&lt;/iframe&gt;&lt;/noscript&gt;
-&lt;!-- End Google Tag Manager (noscript) --&gt;
-@RenderBody()
-@Html.NopCssFiles(this.Url, ResourceLocation.Foot)
-@Html.NopScripts(this.Url, ResourceLocation.Foot)
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1729,7 +1661,7 @@ height=&quot;0&quot; width=&quot;0&quot; style=&quot;display:none;visibility:hid
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">146</span>
+                <span class="site-state-item-count">147</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
