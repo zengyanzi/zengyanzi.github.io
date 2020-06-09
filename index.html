@@ -297,6 +297,187 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/10/IIS-log/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2020/06/10/IIS-log/" itemprop="url">
+                  IIS log 
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-10T06:36:07+08:00">
+                2020-06-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="IIS-log"><a href="#IIS-log" class="headerlink" title="IIS log"></a>IIS log</h1><p>date:发出请求时候的日期</p>
+<p>time：发出请求时候的师姐，默认是格林威治时间，北京+8</p>
+<p>c-ip：客户端地址</p>
+<p>cs-username:用户名，访问服务器的已经经过验证用户的名称，匿名用户用连接符-表示</p>
+<p>s-sitename：服务器名，记录当记录事件运行于客户端上的Internet服务的名称和实例的编号</p>
+<p>s-computer:服务器的名称</p>
+<p>s-ip:服务器的ip地址</p>
+<p>s-port:为服务配置的服务端端口号</p>
+<p>cs-method:请求中使用的HTTP方法，GET/POST</p>
+<p>cs-uri-stem:URI资源，记录作为操作目标的同意资源标识符（URI）即访问的页面文件</p>
+<p>cs-uri-query:URI查询，记录客户尝试执行的查询，只有动态页面需要URI查询，如果有则记录，没有则以连接符-表示</p>
+<p>sc-status:协议状态，记录HTTP状态代码，200表示成功，403表示没有权限，404表示找不到该页面</p>
+<p>sc-win32-status:win32状态，记录windows状态码</p>
+<p>sc-bytes: 服务器发送的字节数</p>
+<p>cs-bytes: 服务器接收的字节数</p>
+<p>cs-version：记录客户端使用的协议版本，HTTP或者FTP</p>
+<p>cs-host：记录主机头名称，没有的话用-表示</p>
+<p>cs(User-Agent) : 用户代理,客户端浏览器，操作系统等情况</p>
+<p>cs(Cookie) :记录发送或者接收cookies内容，没有的话-表示</p>
+<p>cs(Referer)： 引用站点，即访问来源</p>
+<p>HTTP协议状态码的含义,协议状态sc-status，是服务器日记扩展属性的一项。下面是各状态码含义列表:</p>
+<p>“100” : Continue 客户必须继续发出请求</p>
+<p>“101” : witching Protocols 客户要求服务器根据请求转换HTTP协议版本　　200交易成功</p>
+<p>“200” : OK 交易成功</p>
+<p>“201” : Created 提示知道新文件的URL</p>
+<p>“202” : Accepted 接受和处理、但处理未完成</p>
+<p>“203” : Non-Authoritative Information 返回信息不确定或不完整</p>
+<p>“204” : No Content 请求收到，但返回信息为空</p>
+<p>“205” : Reset Content 服务器完成了请求，用户代理必须复位当前已经浏览过的文件</p>
+<p>“206” : Partial Content 服务器已经完成了部分用户的GET请求</p>
+<p>“300” : Multiple Choices 请求的资源可在多处得到</p>
+<p>“301” : Moved Permanently 删除请求数据</p>
+<p>“302” : Found 在其他地址发现了请求数据</p>
+<p>“303” : See Other 建议客户访问其他URL或访问方式</p>
+<p>“304” : Not Modified 客户端已经执行了GET，但文件未变化</p>
+<p>“305” : Use Proxy 请求的资源必须从服务器指定的地址得到</p>
+<p>“306” 前一版本HTTP中使用的代码，现行版本中不再使用</p>
+<p>“307” : Temporary Redirect 申明请求的资源临时性删除</p>
+<p>“400” : Bad Request 错误请求，如语法错误</p>
+<p>“401” : Unauthorized 请求授权失败</p>
+<p>“402” : Payment Required 保留有效ChargeTo头响应</p>
+<p>“403” : Forbidden 请求不答应</p>
+<p>“404” : Not Found 没有发现文件、查询或URl</p>
+<p>“405” : Method Not Allowed 用户在Request-Line字段定义的方法不答应</p>
+<p>“406” : Not Acceptable 根据用户发送的Accept拖，请求资源不可访问</p>
+<p>“407” : Proxy Authentication Required 类似401，用户必须首先在代理服务器上得到授权</p>
+<p>“408” : Request Time-out 客户端没有在用户指定的饿时间内完成请求</p>
+<p>“409” : Conflict 对当前资源状态，请求不能完成</p>
+<p>“410” : Gone 服务器上不再有此资源且无进一步的参考地址</p>
+<p>“411” : Length Required 服务器拒绝用户定义的Content-Length属性请求</p>
+<p>“412” : Precondition Failed 一个或多个请求头字段在当前请求中错误</p>
+<p>“413” : Request Entity Too Large 请求的资源大于服务器答应的大小</p>
+<p>“414” : Request-URI Too Large 请求的资源URL长于服务器答应的长度</p>
+<p>“415” : Unsupported Media Type 请求资源不支持请求项目格式　</p>
+<p>“416” : Requested range not satisfiable 请求中包含Range请求头字段，在当前请求资源范围内没有range指示值，请求也不包含If-Range请求头字段</p>
+<p>“417” : Expectation Failed 服务器不满足请求Expect头字段指定的期望值，假如是代理服务器，</p>
+<p>“500” : Internal Server Error 服务器产生内部错误</p>
+<p>“501” : Not Implemented 服务器不支持请求的函数</p>
+<p>“502” : Bad Gateway 服务器暂时不可用，有时是为了防止发生系统过载</p>
+<p>“503” : Service Unavailable 服务器过载或暂停维修</p>
+<p>“504” : Gateway Time-out 关口过载，服务器使用另一个关口或服务来响应用户，等待时间设定值较长</p>
+<p>“505” : HTTP Version not supported 服务器不支持或拒绝支请求头中指定的HTTP版本</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/08/unavailable-for-scheduled-maintenance/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1447,143 +1628,6 @@ isEqual(obj1,obj2)===true
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/10/Interview-test1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2020/05/10/Interview-test1/" itemprop="url">
-                  Interview test1
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-10T13:01:12+08:00">
-                2020-05-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Interview-test-one"><a href="#Interview-test-one" class="headerlink" title="Interview test one"></a>Interview test one</h1><p>Q:var 和 let const 区别</p>
-<p>A:var是ES5语法，let const是ES6语法；var有变量提升<br> var 和let是变量，可修改，const是常量，不可修改<br>  let const 有块级作用域，var没有</p>
-<p>代码演示</p>
-<pre><code>var-let-const.js
-//变量提升ES5
-console.log(a)//undefined
-var a =200
-
-var a
-console.log(a)//undefined
-a = 200
-
-//函数表达式 vs 函数声明
-</code></pre>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/05/10/Interview-test1/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1633,7 +1677,7 @@ a = 200
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">147</span>
+                <span class="site-state-item-count">148</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -1646,7 +1690,7 @@ a = 200
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">35</span>
+                <span class="site-state-item-count">36</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
