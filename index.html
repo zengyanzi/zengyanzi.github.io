@@ -297,6 +297,151 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/16/how-to-achieve-the-max/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2020/06/16/how-to-achieve-the-max/" itemprop="url">
+                  how to achieve the max
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-16T10:11:05+08:00">
+                2020-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="How-to-achieve-the-max"><a href="#How-to-achieve-the-max" class="headerlink" title="How to achieve the max"></a>How to achieve the max</h1><p>手写字符串trim方法，保证浏览器兼容性</p>
+<p>如何获取多个数字中的最大值</p>
+<p>手写字符串trim保证浏览器兼容性</p>
+<pre><code>String.prototype.trim = function (){
+    return this.replace(/^\s+/,&apos;&apos;).replace(/\s+$/,&apos;&apos;)
+}
+//（原型，this，正则表达式 命中从开头开始的空白字符，替换为空字符串，和结尾靠近的空白字符命中，用空字符串替换掉）
+</code></pre><p>如何获取多个数字中的最大值</p>
+<pre><code>function max(){
+    const nums = Array.prototype.slice.call(arguments)
+    let max =0
+    nums.forEach(n=&gt;{
+        if(n&gt;max){
+            max=n
+        }
+    })
+    return max
+}
+
+ Math.max(10,20,30,50,40,80)
+
+ Math.min(10,20,30,50,40,80)
+</code></pre><p>如何用JS实现继承</p>
+<pre><code>class继承
+
+prototype 继承
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/10/IIS-log/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1496,138 +1641,6 @@ fn.apply(this,arguments)// arguments是数组或者类数组传参
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/11/isEqual/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2020/05/11/isEqual/" itemprop="url">
-                  isEqual
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-11T07:10:01+08:00">
-                2020-05-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="isEqual"><a href="#isEqual" class="headerlink" title="isEqual"></a>isEqual</h1><p>手写深度比较，模拟loadash is Equal</p>
-<p>split()和join()的区别</p>
-<p>数组的pop push unshift shift分别做什么</p>
-<p>手写深度比较lodash.isEqual</p>
-<pre><code>实现如下效果
-const obj1={a:10，b:{x:100,y:200}}
-const obj2={a:10,b:{x:100,y:200}}
-isEqual(obj1,obj2)===true
-</code></pre><p>代码演示</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/05/11/isEqual/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1677,7 +1690,7 @@ isEqual(obj1,obj2)===true
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">148</span>
+                <span class="site-state-item-count">149</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

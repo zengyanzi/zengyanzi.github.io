@@ -297,6 +297,212 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/first-page-choose/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/23/first-page-choose/" itemprop="url">
+                  postfirst page choose
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-23T00:26:07+08:00">
+                2017-04-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="first-page-choose"><a href="#first-page-choose" class="headerlink" title="first page choose  "></a>first page choose  </h1><pre><code>import React, { Component } from &apos;react&apos;;
+import { AppRegistry,ScrollView,View,Text,Image,TouchableOpacity,StyleSheet} from &apos;react-native&apos;;
+class PT extends React.Component {
+  render() {
+    return (
+      &lt;ScrollView
+        contentContainerStyle={{flex:1}}
+        keyboardDismissMode=&apos;on-drag&apos;
+        keyboardShouldPersistTaps={false}
+      &gt;
+       &lt;View style={styles.container}&gt;
+          &lt;View style={styles.Top}&gt;
+           &lt;Text style={styles.WelcomeText}&gt;Welcome to Virtual PT&lt;/Text&gt;
+          &lt;/View&gt;
+       &lt;/View&gt;
+       &lt;View style={styles.maincontain}&gt;
+         &lt;Image
+              source={{uri: 'http://oss-hz.qianmi.com/qianmicom/u/cms/qmwww/201511/03102524l6ur.png'}}
+              style={styles.logo}/&gt;
+
+            &lt;View style={styles.choose}&gt;
+              &lt;TouchableOpacity style={styles.btn}
+              onPress={()=&gt; console.log(&apos;press me&apos;)}&gt;
+              &lt;Text style={styles.text}&gt;Register&lt;/Text&gt;
+              &lt;/TouchableOpacity&gt;
+              &lt;TouchableOpacity style={styles.btn}
+              onPress={() =&gt; console.log(&apos;press me&apos;)}&gt;
+              &lt;Text style={styles.text}&gt; Login&lt;/Text&gt;
+              &lt;/TouchableOpacity&gt;
+            &lt;/View&gt;
+        &lt;/View&gt;
+      &lt;/ScrollView&gt;
+   );
+  }
+}
+var styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    backgroundColor: &apos;#F4FCFF&apos;,
+  },
+  Top:{
+    height:50,
+    alignItems: &apos;center&apos;,
+    backgroundColor:&apos;#f5f2f0&apos;,
+    justifyContent: &apos;center&apos;,
+  },
+  WelcomeText:{
+    fontWeight: &apos;bold&apos;,
+    fontSize: 18,
+    color: &apos;#d7499a&apos;, 
+    borderWidth: 2,
+    borderBottomColor:&apos;#b8a6b0&apos;,
+  },
+  maincontain:
+  {
+    flex: 10,
+    paddingLeft: 10,
+    paddingRight: 10,
+    backgroundColor: &apos;#F4FCFF&apos;,
+    justifyContent: &apos;center&apos;,
+    alignItems: &apos;center&apos;,
+  },
+   logo:{
+    width:160,
+    height:160,
+  },
+  choose:{
+    flexDirection:&apos;row&apos;
+  },
+  btn:{
+     alignSelf: &apos;stretch&apos;,
+     alignItems: &apos;center&apos;,
+     justifyContent: &apos;center&apos;,
+     backgroundColor: &apos;#80b8e4&apos;,
+     height: 40,
+     borderRadius: 5,
+     width:100,
+     marginTop: 100,
+     marginLeft:20,
+  },
+  text:{
+    fontWeight: &apos;bold&apos;,
+    fontSize: 14,
+    color: &apos;#FFF&apos;
+  },
+});
+AppRegistry.registerComponent(&apos;PT&apos;, () =&gt; PT);
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/react-native-jump-to-target-page/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1610,181 +1816,6 @@ align-items: center;
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/22/add-hover-to-promotion/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/22/add-hover-to-promotion/" itemprop="url">
-                  postadd hover to promotion
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-22T23:18:32+08:00">
-                2017-04-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="add-hover-to-promotion"><a href="#add-hover-to-promotion" class="headerlink" title="add hover to promotion"></a>add hover to promotion</h1><ol>
-<li>add class=”has-mega-menu” to li </li>
-<li>add div class=”mega-menu”</li>
-<li>add class=”row” div </li>
-<li>add class=”col-xs-4 col-md-4”  //here is the bootstrap desigining ,could be changed according to the different layout</li>
-<li>add class=”img-holder”</li>
-<li>add a </li>
-<li>add img</li>
-<li>add ul and li</li>
-</ol>
-<p>here is the code </p>
-<pre><code>&lt;li class=&quot;has-mega-menu&quot;&gt;&lt;a href=&quot;@Url.RouteUrl(&quot;Topic&quot;, new {SeName = Html.GetTopicSeName(&quot;promotions&quot;) })&quot;&gt;PROMOTIONS&lt;/a&gt;
-
-   &lt;div class=&quot;top-menu-triangle&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;mega-menu&quot;&gt;
-        &lt;div class=&quot;row&quot;&gt;
-            &lt;div class=&quot;col-xs-4 col-md-4 &quot;  &gt;
-                &lt;div class=&quot;img-holder&quot;&gt;
-                    &lt;a href=&quot;products-on-promotion&quot;&gt;
-                    &lt;img style=&quot;width:50%;height:50%;float:left&quot; src=&quot;../../Content/images/step1.png&quot; &gt;
-                    &lt;ul style=&quot;float:left;margin-top:5px;text-align:left&quot;&gt;
-                        &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Enjoy our website&lt;/li&gt;
-                        &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Enjoy our promotion&lt;/li&gt;
-                        &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Enjoy your account&lt;/li&gt;
-                    &lt;/ul&gt;
-                   &lt;/a&gt;
-                &lt;/div&gt;
-
-            &lt;/div&gt;
-            &lt;div class=&quot;col-xs-4 col-md-4&quot;&gt;
-                &lt;div class=&quot;img-holder&quot;&gt;
-                    &lt;a href=&quot;products-on-promotion&quot;&gt;
-                    &lt;img style=&quot;width:50%;height:50%;float:left&quot; src=&quot;../../Content/images/step2.png&quot; &gt;
-                    &lt;ul style=&quot;float:left;margin-top:5px;text-align:left &quot;&gt;
-                        &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Find your items&lt;/li&gt;
-                        &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Add to shopping cart&lt;/li&gt;
-                        &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Just check out&lt;/li&gt;
-                    &lt;/ul&gt;
-                   &lt;/a&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;col-xs-4 col-md-4&quot; &gt;
-                &lt;div class=&quot;img-holder&quot;&gt;
-                    &lt;a href=&quot;products-on-promotion&quot;&gt;
-                    &lt;img style=&quot;width:50%;height:50%;float:left&quot; src=&quot;../../Content/images/step3.png&quot; &gt;
-                    &lt;ul style=&quot;float:left;margin-top:5px;text-align:left&quot;&gt;
-                        &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Convenient&lt;/li&gt;
-                        &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Fast&lt;/li&gt;
-                        &lt;li style=&quot;list-style:none;color:#757b81&quot;&gt;Easy&lt;/li&gt;
-                    &lt;/ul&gt;
-                   &lt;/a&gt;
-                &lt;/div&gt;
-
-        &lt;/div&gt;
-    &lt;/div&gt;
-</code></pre><p>   </p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1834,7 +1865,7 @@ align-items: center;
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">148</span>
+                <span class="site-state-item-count">149</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
