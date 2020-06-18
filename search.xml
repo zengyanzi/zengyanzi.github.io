@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[array remove duplicated]]></title>
+    <url>%2F2020%2F06%2F18%2Farray-remove-duplicated%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[URL factor]]></title>
+    <url>%2F2020%2F06%2F18%2FURL-factor%2F</url>
+    <content type="text"><![CDATA[URL element如何捕获JS程序中的异常 什么是JSON 获取当前页面URL的参数 如何捕获JS程序中的异常 try{ //todo }catch(ex){ console.error(ex)//手动捕获catch }finially{ //todo } //自动捕获异常 window.onerror = function(message,source,lineNum,colNum,error){ //第一，对跨域的js，如CND，不会有详细的报错信息 //第二，对于压缩的js，还要配后sourceMap反查到位压缩代码的行列 } 什么是JSON JSON是一种数据格式，本质是一段字符串JSON格式和js对象结构一致，对js语言更友好window.JSON是一个全局对象，JSON.stringify JSON.parse 获取当前页面URL的参数 -传统方式，查找location.search-新API,URLSearchParams query.js function query(name){ const search =location.search.substr(1)//类似slice //search:&apos;a=10&amp;b=20&amp;c=30&apos; const reg = new RegExp(&apos;(^|&amp;)${name}=([^&amp;]*)(&amp;|$)&apos;,&apos;i&apos;) const res =search.match(reg) if(res===null){ retrun null } console.log(res) return res[2] } query(&apos;b&apos;) query(&apos;a&apos;) query(&apos;c&apos;) 新API,URLSearchParams //URLSearchParams function query(name){ const search = location.search const p = new URLSearchParams(search) return p.get(name) } console..log(query(&apos;a&apos;))]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[how to achieve the max]]></title>
     <url>%2F2020%2F06%2F16%2Fhow-to-achieve-the-max%2F</url>
     <content type="text"><![CDATA[How to achieve the max手写字符串trim方法，保证浏览器兼容性 如何获取多个数字中的最大值 手写字符串trim保证浏览器兼容性 String.prototype.trim = function (){ return this.replace(/^\s+/,&apos;&apos;).replace(/\s+$/,&apos;&apos;) } //（原型，this，正则表达式 命中从开头开始的空白字符，替换为空字符串，和结尾靠近的空白字符命中，用空字符串替换掉） 如何获取多个数字中的最大值 function max(){ const nums = Array.prototype.slice.call(arguments) let max =0 nums.forEach(n=&gt;{ if(n&gt;max){ max=n } }) return max } Math.max(10,20,30,50,40,80) Math.min(10,20,30,50,40,80) 如何用JS实现继承 class继承 prototype 继承]]></content>
