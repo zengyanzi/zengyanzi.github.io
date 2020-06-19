@@ -3,7 +3,10 @@
   <entry>
     <title><![CDATA[array remove duplicated]]></title>
     <url>%2F2020%2F06%2F18%2Farray-remove-duplicated%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[Array interview讲url参数解析为JS对象 //传统方式，分析search function queryToObj(){ const res ={} const search =location.search.substr(1)//去掉前面的？ search.split(&apos;&amp;&apos;).forEach(paraStr=&gt;{ const arr = paraStr.split(&apos;=&apos;) const key = arr[0] const val = arr[1] res[key] = val }) return res } 手写flatern考虑多层级 flat([[1,2],3,[4,5,[6,7,[8,9,[10,11]]]]]) //[1,2,3,4,5,6,7,8,9,10,11] flat.js function flat(arr){ //验证arr中还有没有深层数组 const isDeep=arr.some(item=&gt;item instance of Array) if(!isDeep){ return arr//已经是flatern } const res =Array.prototype.concat.applay([],arr) return flat(res)//递归 } const res =flat([1,2,[3,4],5]) console.log(res) 数组去重 传统方式：遍历元素挨个比较，去重unique.js function unique(arr){ const res =[] arr.forEach(item=&gt;{ if(res.indexOf(item)&lt;0){ res.push(item) } }) return res } const res =unique([30,20,10,20,30]) console.log(res) 使用set funtion unique(arr){ const set = new Set(arr) return […set] } const res =unique([30,20,10,20,30]) console.log(res)]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[URL factor]]></title>

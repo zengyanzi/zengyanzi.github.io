@@ -372,9 +372,27 @@
 
       
         
-          
-            
-          
+          <h1 id="Array-interview"><a href="#Array-interview" class="headerlink" title="Array interview"></a>Array interview</h1><p>讲url参数解析为JS对象</p>
+<pre><code>//传统方式，分析search
+function queryToObj(){
+    const res ={}
+    const search =location.search.substr(1)//去掉前面的？
+    search.split(&apos;&amp;&apos;).forEach(paraStr=&gt;{
+        const arr = paraStr.split(&apos;=&apos;)
+        const key = arr[0]
+        const val = arr[1]
+        res[key] = val
+    })
+    return res
+}
+</code></pre>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/06/18/array-remove-duplicated/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

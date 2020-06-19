@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="React Native, nopCommerce" />
+  <meta name="keywords" content="Interview," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="Loving code ,especially javascript, React Native">
-<meta name="keywords">
+<meta name="description" content="Array interview讲url参数解析为JS对象 //传统方式，分析search function queryToObj(){     const res ={}     const search =location.search.substr(1)//去掉前面的？     search.split(&amp;apos;&amp;amp;&amp;apos;).forEach(paraStr=&amp;gt;{">
+<meta name="keywords" content="Interview">
 <meta property="og:type" content="article">
 <meta property="og:title" content="array remove duplicated">
 <meta property="og:url" content="http://yoursite.com/2020/06/18/array-remove-duplicated/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="Loving code ,especially javascript, React Native">
-<meta property="og:updated_time" content="2020-06-18T03:53:16.262Z">
+<meta property="og:description" content="Array interview讲url参数解析为JS对象 //传统方式，分析search function queryToObj(){     const res ={}     const search =location.search.substr(1)//去掉前面的？     search.split(&amp;apos;&amp;amp;&amp;apos;).forEach(paraStr=&amp;gt;{">
+<meta property="og:updated_time" content="2020-06-19T03:12:00.391Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="array remove duplicated">
-<meta name="twitter:description" content="Loving code ,especially javascript, React Native">
+<meta name="twitter:description" content="Array interview讲url参数解析为JS对象 //传统方式，分析search function queryToObj(){     const res ={}     const search =location.search.substr(1)//去掉前面的？     search.split(&amp;apos;&amp;amp;&amp;apos;).forEach(paraStr=&amp;gt;{">
 
 
 
@@ -368,7 +368,55 @@
       
 
       
-        
+        <h1 id="Array-interview"><a href="#Array-interview" class="headerlink" title="Array interview"></a>Array interview</h1><p>讲url参数解析为JS对象</p>
+<pre><code>//传统方式，分析search
+function queryToObj(){
+    const res ={}
+    const search =location.search.substr(1)//去掉前面的？
+    search.split(&apos;&amp;&apos;).forEach(paraStr=&gt;{
+        const arr = paraStr.split(&apos;=&apos;)
+        const key = arr[0]
+        const val = arr[1]
+        res[key] = val
+    })
+    return res
+}
+</code></pre><a id="more"></a>
+<p>手写flatern考虑多层级</p>
+<pre><code>flat([[1,2],3,[4,5,[6,7,[8,9,[10,11]]]]])
+//[1,2,3,4,5,6,7,8,9,10,11]
+</code></pre><p>flat.js</p>
+<pre><code>function flat(arr){
+//验证arr中还有没有深层数组
+    const isDeep=arr.some(item=&gt;item instance of Array)
+    if(!isDeep){
+        return arr//已经是flatern
+    }
+    const res =Array.prototype.concat.applay([],arr)
+    return flat(res)//递归
+
+}
+const res =flat([1,2,[3,4],5])
+console.log(res)
+</code></pre><p>数组去重</p>
+<p>传统方式：遍历元素挨个比较，去重<br>unique.js</p>
+<pre><code>function unique(arr){
+    const res =[]
+    arr.forEach(item=&gt;{
+        if(res.indexOf(item)&lt;0){
+            res.push(item)
+        }
+
+    })
+    return res
+}
+const res =unique([30,20,10,20,30])
+console.log(res)
+</code></pre><p>使用set<br>        funtion unique(arr){<br>            const set = new Set(arr)<br>            return […set]</p>
+<pre><code>}
+const res =unique([30,20,10,20,30])
+console.log(res)
+</code></pre>
       
     </div>
 
@@ -394,6 +442,12 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Interview/" rel="tag"># Interview</a>
+          
+        </div>
       
 
       
@@ -459,8 +513,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460"
@@ -533,6 +596,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Array-interview"><span class="nav-number">1.</span> <span class="nav-text">Array interview</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
