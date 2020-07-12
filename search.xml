@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[css holy grail]]></title>
+    <url>%2F2020%2F07%2F13%2Fcss-holy-grail%2F</url>
+    <content type="text"><![CDATA[css布局之圣杯布局和双飞翼布局圣杯布局 html布局 &lt;div class=&quot;header&quot;&gt;&lt;/div&gt; &lt;div class=&quot;content&quot;&gt; &lt;div class=&quot;middle&quot;&gt;&lt;/div&gt; &lt;div class=&quot;left&quot;&gt;&lt;/div&gt; &lt;div class=&quot;right&quot;&gt;&lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;/div&gt; css样式 .header{ width:100%; height:30px; background:red; } .content{ overflow:hidden; padding:0 100px; } .footer{ width:100%; height:30px; background:red; } .middle{ positioin:relative; width:100%; float:left; height:80px; background:green; } .left{ position:relative; width:100px; float:left; left:-100px; height:80px; margin-left:-100%;//使它上移一行，同时right向左移占据left原先位置 background:yellow; } .right{ position:relative; width:100px; float:left; right:-100px; height:80px; margin-left:-100px;//使它上移并靠右 background:pink } 双飞翼布局 html布局 &lt;div class=&quot;header&quot;&gt;&lt;/div&gt; &lt;div class=&quot;content&quot;&gt; &lt;div class=&quot;middle&quot;&gt; &lt;div class=&quot;inner-middle&quot;&gt;&lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;left&quot;&gt;&lt;/div&gt; &lt;div class=&quot;right&quot;&gt;&lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;/div&gt; css布局 .header{ width:100%; height:30px; background:red; } .content{ overflow:hidden; } .footer{ width:100%; height:30px; background:red; } .middle{ widht:100%; float:left; } .innder-middle{ width:100%; height:80px; background:green; } .left{ width:100px; float:left; height:80px; margin-left:-100%; background:yellow; }]]></content>
+      <tags>
+        <tag>Holy grail</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[requestAnimationFrame]]></title>
+    <url>%2F2020%2F06%2F19%2FrequestAnimationFrame%2F</url>
+    <content type="text"><![CDATA[手写深拷贝 function deepClone(obj={}){ if(typeof obj !==&apos;object&apos;|| obj == null){ return obj } let result if(obj instancof Array){ result=[] }else{ result={} } for{let key in obj}{ if(obj.hasOwnProperty(key)){ //递归调用 result[key]=deepClone(obj[key]) } } return result } 注意：Object.assign不是深拷贝介绍一下RAF requestAnimationFrame 要想动画流程，更新频率要60帧/s，即16.67ms更新一次 setTimeout要手动控制频率，而RAF浏览器会自动控制 后台标签或隐藏在iframe中，RAF会暂停，而setTimeout依然会执行 bootcdn上把jquery引入https://www.bootstrapcdn.com/RAF.JS //3s把宽度从100px变为640 px， 即增加为540px // 60帧/s ，3s 就是180帧， 每次变化3px const $div1=$(‘#div1’) let curWidth = 100 const maxWidth =640 //setTimeout function animate(){ curWidth =curWidth +3 $div1.css(‘width,curWidth){ if(curWidth&lt;maxWidth){ setTimeout(animate,16.7)//自己控制时间 } } animate() } funtion animate(){ curWidth =curWidth +3 $div1.css(&apos;width,curWidth){ if(curWidth&lt;maxWidth){ window.requestAnimationFrame(animate) } } animate() }]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[array remove duplicated]]></title>
     <url>%2F2020%2F06%2F18%2Farray-remove-duplicated%2F</url>
     <content type="text"><![CDATA[Array interview讲url参数解析为JS对象 //传统方式，分析search function queryToObj(){ const res ={} const search =location.search.substr(1)//去掉前面的？ search.split(&apos;&amp;&apos;).forEach(paraStr=&gt;{ const arr = paraStr.split(&apos;=&apos;) const key = arr[0] const val = arr[1] res[key] = val }) return res } 手写flatern考虑多层级 flat([[1,2],3,[4,5,[6,7,[8,9,[10,11]]]]]) //[1,2,3,4,5,6,7,8,9,10,11] flat.js function flat(arr){ //验证arr中还有没有深层数组 const isDeep=arr.some(item=&gt;item instance of Array) if(!isDeep){ return arr//已经是flatern } const res =Array.prototype.concat.applay([],arr) return flat(res)//递归 } const res =flat([1,2,[3,4],5]) console.log(res) 数组去重 传统方式：遍历元素挨个比较，去重unique.js function unique(arr){ const res =[] arr.forEach(item=&gt;{ if(res.indexOf(item)&lt;0){ res.push(item) } }) return res } const res =unique([30,20,10,20,30]) console.log(res) 使用set funtion unique(arr){ const set = new Set(arr) return […set] } const res =unique([30,20,10,20,30]) console.log(res)]]></content>
