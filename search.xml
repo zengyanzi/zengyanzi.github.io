@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[flex]]></title>
+    <url>%2F2020%2F07%2F17%2Fflex%2F</url>
+    <content type="text"><![CDATA[Flex常见语法回顾 flex-direction:默认值row，还可以row-reverse|column|column-reverse|initial|inherit; justfiy-content：用于设置元素在主轴或者横轴上的对齐方式 flex-start容器开头|flex-end容器结尾|center居中|space-between各元素直接留有空白|space-around各行之间，前后都有空白|initial默认值|inherit继承父元素; align-items：flex的子项在flex容器当前行的侧轴，纵轴上的对齐方式stretch默认值，拉伸以适应容器|center位于容器中心|flex-start位于容器开头|flex-end位于容易结尾|baseline在容器基准线上，如果行内轴和侧轴为同一条，与flex-start一致|initial默认值|inherit父类继承; flex-wrap align-self]]></content>
+      <tags>
+        <tag>Interview</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[css holy grail]]></title>
     <url>%2F2020%2F07%2F13%2Fcss-holy-grail%2F</url>
     <content type="text"><![CDATA[css布局之圣杯布局和双飞翼布局圣杯布局 html布局 &lt;div class=&quot;header&quot;&gt;&lt;/div&gt; &lt;div class=&quot;content&quot;&gt; &lt;div class=&quot;middle&quot;&gt;&lt;/div&gt; &lt;div class=&quot;left&quot;&gt;&lt;/div&gt; &lt;div class=&quot;right&quot;&gt;&lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;/div&gt; css样式 .header{ width:100%; height:30px; background:red; } .content{ overflow:hidden; padding:0 100px; } .footer{ width:100%; height:30px; background:red; } .middle{ positioin:relative; width:100%; float:left; height:80px; background:green; } .left{ position:relative; width:100px; float:left; left:-100px; height:80px; margin-left:-100%;//使它上移一行，同时right向左移占据left原先位置 background:yellow; } .right{ position:relative; width:100px; float:left; right:-100px; height:80px; margin-left:-100px;//使它上移并靠右 background:pink } 双飞翼布局 html布局 &lt;div class=&quot;header&quot;&gt;&lt;/div&gt; &lt;div class=&quot;content&quot;&gt; &lt;div class=&quot;middle&quot;&gt; &lt;div class=&quot;inner-middle&quot;&gt;&lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;left&quot;&gt;&lt;/div&gt; &lt;div class=&quot;right&quot;&gt;&lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;footer&quot;&gt;&lt;/div&gt; css布局 .header{ width:100%; height:30px; background:red; } .content{ overflow:hidden; } .footer{ width:100%; height:30px; background:red; } .middle{ widht:100%; float:left; } .innder-middle{ width:100%; height:80px; background:green; } .left{ width:100px; float:left; height:80px; margin-left:-100%; background:yellow; } 双飞翼布局比圣杯布局的复杂性低一点margin-left的负值是把该元素往左拖移，margin-right的负值是把右边相邻元素往左拖移 关于手写clearfix .clearfix:after{ content:&quot;&quot;; display:table; clear:both; } .clearfix:{ *zoom:1 }]]></content>

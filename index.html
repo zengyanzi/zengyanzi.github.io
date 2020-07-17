@@ -297,6 +297,131 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/17/flex/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2020/07/17/flex/" itemprop="url">
+                  flex
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-17T11:28:40+08:00">
+                2020-07-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Flex"><a href="#Flex" class="headerlink" title="Flex"></a>Flex</h1><p>常见语法回顾</p>
+<p>flex-direction:默认值row，还可以row-reverse|column|column-reverse|initial|inherit;</p>
+<p>justfiy-content：用于设置元素在主轴或者横轴上的对齐方式 flex-start容器开头|flex-end容器结尾|center居中|space-between各元素直接留有空白|space-around各行之间，前后都有空白|initial默认值|inherit继承父元素;</p>
+<p>align-items：flex的子项在flex容器当前行的侧轴，纵轴上的对齐方式stretch默认值，拉伸以适应容器|center位于容器中心|flex-start位于容器开头|flex-end位于容易结尾|baseline在容器基准线上，如果行内轴和侧轴为同一条，与flex-start一致|initial默认值|inherit父类继承;</p>
+<p>flex-wrap</p>
+<p>align-self</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/13/css-holy-grail/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1529,149 +1654,6 @@ prototype 继承
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/21/objectcreate/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2020/05/21/objectcreate/" itemprop="url">
-                  objectcreate()
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-21T11:39:32+08:00">
-                2020-05-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="How-to-use-Object-create"><a href="#How-to-use-Object-create" class="headerlink" title="How to use Object.create()"></a>How to use Object.create()</h1><p>函数声明和函数表达式的区别</p>
-<p>函数声明 function fn(){}</p>
-<p>函数表达式 const fn = function(){}先定义一个变量再赋值为函数</p>
-<p>函数声明会在代码执行前预加载，而函数表达式不会</p>
-<p>代码演示</p>
-<pre><code> const res = sum(10,20)
- console.log(res)
-//函数声明，会在代码执行器预加载
-    function sum(x,y){
-        return x+y
-    }
-
-
-
-//函数表达式不行
-const sum=function sum(x,y)
-    {
-        return x+y
-    }
-</code></pre>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/05/21/objectcreate/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1721,7 +1703,7 @@ const sum=function sum(x,y)
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">153</span>
+                <span class="site-state-item-count">154</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

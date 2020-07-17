@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="isEqual手写深度比较，模拟loadash is Equal split()和join()的区别 数组的pop push unshift shift分别做什么 手写深度比较lodash.isEqual 实现如下效果 const obj1={a:10，b:{x:100,y:200}} const obj2={a:10,b:{x:100,y:200}} isEqual(obj1,obj2)===t">
+<meta name="description" content="Flex常见语法回顾 flex-direction:默认值row，还可以row-reverse|column|column-reverse|initial|inherit; justfiy-content：用于设置元素在主轴或者横轴上的对齐方式 flex-start容器开头|flex-end容器结尾|center居中|space-between各元素直接留有空白|space-around各行之间，">
 <meta name="keywords" content="Interview">
 <meta property="og:type" content="article">
-<meta property="og:title" content="isEqual">
-<meta property="og:url" content="http://yoursite.com/2020/05/11/isEqual/index.html">
+<meta property="og:title" content="flex">
+<meta property="og:url" content="http://yoursite.com/2020/07/17/flex/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
-<meta property="og:description" content="isEqual手写深度比较，模拟loadash is Equal split()和join()的区别 数组的pop push unshift shift分别做什么 手写深度比较lodash.isEqual 实现如下效果 const obj1={a:10，b:{x:100,y:200}} const obj2={a:10,b:{x:100,y:200}} isEqual(obj1,obj2)===t">
-<meta property="og:updated_time" content="2020-05-12T02:26:49.935Z">
+<meta property="og:description" content="Flex常见语法回顾 flex-direction:默认值row，还可以row-reverse|column|column-reverse|initial|inherit; justfiy-content：用于设置元素在主轴或者横轴上的对齐方式 flex-start容器开头|flex-end容器结尾|center居中|space-between各元素直接留有空白|space-around各行之间，">
+<meta property="og:updated_time" content="2020-07-17T03:48:08.028Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="isEqual">
-<meta name="twitter:description" content="isEqual手写深度比较，模拟loadash is Equal split()和join()的区别 数组的pop push unshift shift分别做什么 手写深度比较lodash.isEqual 实现如下效果 const obj1={a:10，b:{x:100,y:200}} const obj2={a:10,b:{x:100,y:200}} isEqual(obj1,obj2)===t">
+<meta name="twitter:title" content="flex">
+<meta name="twitter:description" content="Flex常见语法回顾 flex-direction:默认值row，还可以row-reverse|column|column-reverse|initial|inherit; justfiy-content：用于设置元素在主轴或者横轴上的对齐方式 flex-start容器开头|flex-end容器结尾|center居中|space-between各元素直接留有空白|space-around各行之间，">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/05/11/isEqual/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/07/17/flex/"/>
 
 
 
 
 
-  <title> isEqual | Bunny's  Code Burrow </title>
+  <title> flex | Bunny's  Code Burrow </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -297,7 +297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/11/isEqual/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/17/flex/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jenny Zeng">
@@ -318,7 +318,7 @@
             
             
               
-                isEqual
+                flex
               
             
           </h1>
@@ -333,8 +333,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-11T07:10:01+08:00">
-                2020-05-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-17T11:28:40+08:00">
+                2020-07-17
               </time>
             
 
@@ -368,91 +368,12 @@
       
 
       
-        <h1 id="isEqual"><a href="#isEqual" class="headerlink" title="isEqual"></a>isEqual</h1><p>手写深度比较，模拟loadash is Equal</p>
-<p>split()和join()的区别</p>
-<p>数组的pop push unshift shift分别做什么</p>
-<p>手写深度比较lodash.isEqual</p>
-<pre><code>实现如下效果
-const obj1={a:10，b:{x:100,y:200}}
-const obj2={a:10,b:{x:100,y:200}}
-isEqual(obj1,obj2)===true
-</code></pre><p>代码演示</p>
-<a id="more"></a>
-<pre><code>//判断是否对象或者数组
-function isObject(obj){
-    return typeof obj === &apos;object&apos; &amp;&amp; obj!==null
-}
-//全相等
-function isEqual(obj1,obj2){
-    if(!isObject(obj1)||isObject(obj2)){
-        //值类型，注意，参与equal一般不会是函数
-        return obj1 === obj2
-    }
-    if(obj1===obj2){
-        return true
-    }
-    //两个都是对象或者数组并且不相同
-    //1.先取出obj和obj2的keys，比较个数
-    const obj1Keys = Object.keys(obj1)
-    const obj2Keys = Object.keys(obj2)
-    if(obj1Keys.length ! == obj2Keys.length){
-        return false
-    }//以obj1为基准，和obj2依次递归比较
-    for(for key in obj1){
-        //比较当前key的value 递归
-        const res = isEqual(obj1[key],obj2[key])
-        if(!res){
-          return false
-        }
-    }
-    //全相等
-    return true
-}
-
-isEqual.js
-
-const obj1={
-    a:100,
-    b:{
-        x:100,
-        y:200
-    }
-}
-
-const obj2={
-    a:100,
-    b:{
-        x:100,
-        y:200
-    }
-}
-
-//console.log(obj1 === obj2)//false
-console.log(isEqual(obj1,obj2)//false
-</code></pre><p>split()和join()的区别</p>
-<pre><code>&apos;1-2-3&apos;.split(&apos;-&apos;)//[1,2,3]
-[1,2,3].join(&apos;-&apos;)//&apos;1-2-3&apos;
-</code></pre><p>数组的pop push unshift shift分别做什么</p>
-<p>功能是什么？<br>返回值是什么？<br>是否会对原数组造成影响</p>
-<p>代码演示</p>
-<p>arry-api.js</p>
-<pre><code>const arr =[10,20,30,40]
-//pop
-const popRes = arr.pop()
-console.log(popRes,arr)//40 [10,20,30]
-// push
-const pushRes = arr.push(50)//追加一个50，返回一个length
-console.log(pushRes,arr)//[10,20,30，40，50]
-
-//unshift
-const unshiftRes = arr.unshift(5)
-console.log(unshiftRes,arr)// [5,10,20,30,40]
-
-//shift
-const shiftRes = arr.shift()//10
-console.log(shiftRes,arr)//10 [20,30,40]
-</code></pre><p>[扩展]数组的API，有哪些是纯函数<br>1.不改变源数组（没有副作用）2返回一个数组<br>        //concat<br>        const arr1 = arr.concat([50,60,70])<br>        // map<br>        const arr2 = arr.map(num=&gt;num*10)<br>        //filter<br>        const arr3 = arr.filter(num=&gt;num&gt;35)<br>        //slice<br>         const arr4 = arr.slice()//类似一个深拷贝</p>
-<p>非纯函数 push pop shift unshift forEach</p>
+        <h1 id="Flex"><a href="#Flex" class="headerlink" title="Flex"></a>Flex</h1><p>常见语法回顾</p>
+<p>flex-direction:默认值row，还可以row-reverse|column|column-reverse|initial|inherit;</p>
+<p>justfiy-content：用于设置元素在主轴或者横轴上的对齐方式 flex-start容器开头|flex-end容器结尾|center居中|space-between各元素直接留有空白|space-around各行之间，前后都有空白|initial默认值|inherit继承父元素;</p>
+<p>align-items：flex的子项在flex容器当前行的侧轴，纵轴上的对齐方式stretch默认值，拉伸以适应容器|center位于容器中心|flex-start位于容器开头|flex-end位于容易结尾|baseline在容器基准线上，如果行内轴和侧轴为同一条，与flex-start一致|initial默认值|inherit父类继承;</p>
+<p>flex-wrap</p>
+<p>align-self</p>
 
       
     </div>
@@ -495,18 +416,14 @@ console.log(shiftRes,arr)//10 [20,30,40]
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/05/12/map/" rel="next" title="map">
-                <i class="fa fa-chevron-left"></i> map
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/05/10/Interview-test1/" rel="prev" title="Interview test1">
-                Interview test1 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/07/13/css-holy-grail/" rel="prev" title="css holy grail">
+                css holy grail <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -647,7 +564,7 @@ console.log(shiftRes,arr)//10 [20,30,40]
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#isEqual"><span class="nav-number">1.</span> <span class="nav-text">isEqual</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Flex"><span class="nav-number">1.</span> <span class="nav-text">Flex</span></a></li></ol></div>
             
 
           </div>

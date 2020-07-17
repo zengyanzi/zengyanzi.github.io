@@ -297,6 +297,130 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/31/chrome-web-worker/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2020/01/31/chrome-web-worker/" itemprop="url">
+                  chrome web worker
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-31T08:25:30+08:00">
+                2020-01-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Chrome-with-Webworker"><a href="#Chrome-with-Webworker" class="headerlink" title="Chrome with Webworker"></a>Chrome with Webworker</h1><p>If I try to use web workers through a JavaScript file, Chrome throws an error -</p>
+<pre><code>Uncaught SecurityError: Failed to create a worker: script at &apos;(path)/worker.js&apos; cannot be accessed from origin &apos;null&apos;.
+</code></pre><p>The solution is to set up a python server in this path.</p>
+<pre><code>python -m http.server 8888
+</code></pre><p>Then it works fine.</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/wordpress-migrate/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1477,131 +1601,6 @@ sub   rsa4096 2017-02-22 [S]
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/19/Set-up-SSL/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2019/09/19/Set-up-SSL/" itemprop="url">
-                  Set up SSL
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-19T09:05:04+08:00">
-                2019-09-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="SET-UP-SSL-FOR-NOPCOMMERCE-AND-WORDPRESS"><a href="#SET-UP-SSL-FOR-NOPCOMMERCE-AND-WORDPRESS" class="headerlink" title="SET UP SSL FOR NOPCOMMERCE AND WORDPRESS"></a>SET UP SSL FOR NOPCOMMERCE AND WORDPRESS</h1><p>In order to update for all these websites, first ,we need to ask the host to update the SSL from the server side.</p>
-<p>Then, for WordPress, it would be much easier.<br><img src="https://s2.ax1x.com/2019/09/19/nbrSot.png" alt=""><br><img src="https://s2.ax1x.com/2019/09/19/nbrZes.png" alt=""></p>
-<p>However, for Nopcommerce, the setting is different as below:<br>Go to the Administration-&gt;Configuration-&gt;Stores-&gt;Edit</p>
-<p>Update the Store URL with HTTPS</p>
-<p>Then enable the SSL</p>
-<p>Finally, go to General And Miscellaneous Settings,under the tab of Security settings, click the Force SSL for all site pages</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1651,7 +1650,7 @@ sub   rsa4096 2017-02-22 [S]
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">153</span>
+                <span class="site-state-item-count">154</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
