@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2020/07/13/css-holy-grail/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
 <meta property="og:description" content="css布局之圣杯布局和双飞翼布局圣杯布局 html布局  &amp;lt;div class=&amp;quot;header&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt;     &amp;lt;div class=&amp;quot;middle&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;     &amp;lt;div class=&amp;quot;left&amp;qu">
-<meta property="og:updated_time" content="2020-07-12T22:48:22.295Z">
+<meta property="og:updated_time" content="2020-07-16T22:57:41.990Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css holy grail">
 <meta name="twitter:description" content="css布局之圣杯布局和双飞翼布局圣杯布局 html布局  &amp;lt;div class=&amp;quot;header&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt;     &amp;lt;div class=&amp;quot;middle&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;     &amp;lt;div class=&amp;quot;left&amp;qu">
@@ -460,6 +460,16 @@
     height:80px;
     margin-left:-100%;
     background:yellow;
+}
+</code></pre><p>双飞翼布局比圣杯布局的复杂性低一点<br>margin-left的负值是把该元素往左拖移，margin-right的负值是把右边相邻元素往左拖移</p>
+<p>关于手写clearfix</p>
+<pre><code>.clearfix:after{
+    content:&quot;&quot;;
+    display:table;
+    clear:both;
+}
+.clearfix:{
+    *zoom:1
 }
 </code></pre>
       
