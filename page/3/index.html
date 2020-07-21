@@ -297,6 +297,157 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/07/throttle/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2020/05/07/throttle/" itemprop="url">
+                  throttle
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-07T12:07:35+08:00">
+                2020-05-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="手写节流throttle"><a href="#手写节流throttle" class="headerlink" title="手写节流throttle"></a>手写节流throttle</h1><p>拖拽一个元素时，要随时拿到该元素被拖拽带的位置</p>
+<p>直接用drag事件，则会频繁触发，很容易导致卡顿</p>
+<p>节流：无论拖拽速度多快，都会每100ms触发一次</p>
+<pre><code>const div1 = document.getElementById(&apos;div1&apos;);
+let timer = null
+div1.addEventListener(&apos;drag&apos;,function(e){
+    if(timer){
+        return
+    }
+    timer =setTimeout(()=&gt;{
+        console.log(e.offsetX,e.offsetY)
+        timer=null
+    },100)
+})
+</code></pre><p>节流</p>
+<pre><code>    function throttle(fn,delay=100){
+    let timer = null;
+
+    return function(){
+        if(timer){
+            return
+        }
+        timer = setTimeout(()=&gt;{
+            fn.apply(this,arguments)
+            timer=null
+        },delay)
+    }
+}
+
+div1.addEventListener(&apos;drag&apos;,throttle(function(e){
+    console.log(e.offsetX,e.offsetY)
+},200))
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/29/debounce/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1510,138 +1661,6 @@ for(let i =0;i&lt;lenght;i++){
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/21/cookies/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2020/04/21/cookies/" itemprop="url">
-                  cookies
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-21T16:28:52+08:00">
-                2020-04-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="cookies"><a href="#cookies" class="headerlink" title="cookies"></a>cookies</h1><p>描述cookies localStorage 和sessionStorage的区别</p>
-<p>cookie<br>localStorage<br>sessionStorage</p>
-<p>本身用于浏览器和server通讯<br>被借用到本地存储来<br>可用document.cookie =’xxx’来修改<br>cookie是追加而不是覆盖<br>可用通过前端对cookie进行赋值，能进行本地存储</p>
-<p>cookie 的缺点</p>
-<ol>
-<li>存储大小，最大4kb</li>
-<li>http请求时需要发送到服务端，增加请求数据量</li>
-<li>只能用document.cookie=’xxx’来修改</li>
-</ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/04/21/cookies/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1691,7 +1710,7 @@ for(let i =0;i&lt;lenght;i++){
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">154</span>
+                <span class="site-state-item-count">155</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

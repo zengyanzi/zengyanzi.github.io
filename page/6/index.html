@@ -297,6 +297,133 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/02/heap-and-stack/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jenny Zeng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bunny's  Code Burrow">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2020/03/02/heap-and-stack/" itemprop="url">
+                  heap and stack
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-02T04:09:11+08:00">
+                2020-03-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Heap-and-Stack"><a href="#Heap-and-Stack" class="headerlink" title="Heap and Stack"></a>Heap and Stack</h1><p>Stack栈 是用来静态分配内存的。<br>Heap堆是动态分配内存的。都是计算机内存中。</p>
+<p>栈的分配是在程序编译的时候完成的，直接存在内存中，接触内存很快。栈是<strong>后进先出</strong>的顺序，最后被申请的快是最先被释放，这样很容易跟踪到栈，释放栈的过程简单到仅仅是移动下指针就能完成。<br>堆的分配是在程序运行时完成，分配速度较为缓慢，但是堆的可用空间非常多大。堆中的元素相互之间没有关联，各自都可以被任何时候随机访问。我们可以任何时候申请和是否一块内存，这样会使得我们很难随时随地跟踪到堆中的某个位置被分配了还是被释放了。</p>
+<p>程序运行的场所是内存，堆和栈是进程的虚拟内存中的两个部分区域。</p>
+<p>当程序被执行时，程序代码，创建的变量，常量都会被压入栈空间里，栈是程序的执行区域。栈的内存地址是连续的且被一一记录，比如int var =1 ，可以通过var这个变量来访问变量的内容。这里的var 存放在栈，地址已经被编译器计算和了。更直观的感受是数组，数组的元素在栈里是连续排放的，相邻的两个元素地址相差1.</p>
+<p>而堆是不同于栈的另一部分区域。系统会给每个程序分配一个部分。<br>堆不属于程序，是独立的，公用的。</p>
+<p>有栈，为什么要用堆？</p>
+<p>栈里面的东西是有生命周期的，变量作用域。<br>而堆里面的东西是独立于程序，会一直存在。</p>
+<p>每一个线程有一个私有资源就是栈，函数调用的时候，把返回地址和参数入栈，被调函数执行时把参数取出来，赋予形参。被调函数执行完之后要把返回地址取出来。栈是自动实现的，不需要程序员干预。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/28/CSS-pattern/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1471,136 +1598,6 @@ for (let i of s){
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/17/interview-css-html/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jenny Zeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/21092607?v=3&s=460">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bunny's  Code Burrow">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2020/02/17/interview-css-html/" itemprop="url">
-                  interview css+html
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-17T05:22:05+08:00">
-                2020-02-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Interview-CSS-HTML"><a href="#Interview-CSS-HTML" class="headerlink" title="Interview CSS HTML"></a>Interview CSS HTML</h1><p>1.CSS盒模型</p>
-<pre><code>box-sizing:conent-box;
-box-sizing:border-box;
-</code></pre><p>2.Html5的新特性</p>
-<ul>
-<li>标签语义化：header,footer,nav,aside,article,去掉了frame 和frameset，新增了表单元素，提交表单的时候验证输入值是否满足email的格式input type=”email” name=”email”；url：提交表单的时候验证输入值是否满足url的格式input type=”url” name=”url”；number：根据你的设置提供选择数字的功能，其中min为最小值，max为最大值，value为默认值，step为点击箭头时数字的变化量，max、min、step、value均可不写，目前某些浏览器还不支持。input type=”number” name=”number” min=2 max=100 step=5 value=”15”</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/02/17/interview-css-html/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1650,7 +1647,7 @@ box-sizing:border-box;
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">154</span>
+                <span class="site-state-item-count">155</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
