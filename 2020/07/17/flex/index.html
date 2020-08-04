@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2020/07/17/flex/index.html">
 <meta property="og:site_name" content="Bunny's  Code Burrow">
 <meta property="og:description" content="Flex常见语法回顾 flex-direction:默认值row，还可以row-reverse|column|column-reverse|initial|inherit; justfiy-content：用于设置元素在主轴或者横轴上的对齐方式 flex-start容器开头|flex-end容器结尾|center居中|space-between各元素直接留有空白|space-around各行之间，">
-<meta property="og:updated_time" content="2020-08-04T02:57:57.202Z">
+<meta property="og:updated_time" content="2020-08-04T03:11:22.156Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="flex">
 <meta name="twitter:description" content="Flex常见语法回顾 flex-direction:默认值row，还可以row-reverse|column|column-reverse|initial|inherit; justfiy-content：用于设置元素在主轴或者横轴上的对齐方式 flex-start容器开头|flex-end容器结尾|center居中|space-between各元素直接留有空白|space-around各行之间，">
@@ -372,9 +372,32 @@
 <p>flex-direction:默认值row，还可以row-reverse|column|column-reverse|initial|inherit;</p>
 <p>justfiy-content：用于设置元素在主轴或者横轴上的对齐方式 flex-start容器开头|flex-end容器结尾|center居中|space-between各元素直接留有空白|space-around各行之间，前后都有空白|initial默认值|inherit继承父元素;</p>
 <p>align-items：flex的子项在flex容器当前行的侧轴，纵轴上的对齐方式stretch默认值，拉伸以适应容器|center位于容器中心|flex-start位于容器开头|flex-end位于容易结尾|baseline在容器基准线上，如果行内轴和侧轴为同一条，与flex-start一致|initial默认值|inherit父类继承;</p>
+<a id="more"></a>
 <p>flex-wrap:nowrap默认设置，不拆行不拆列|wrap规定灵活的项目在必要的时候进行拆行或者拆列|wrap-reverse在必要的时候进行拆行或者拆列但是以相反的顺序|initial|inherit;设置弹性盒子的子元素超出父容器时是否换行</p>
 <p>align-self：auto默认继承，如果没有就为stretch|stretch元素被拉伸以适应容器|center位于容器中心|flex-start位于容器开头|flex-end位于容器结尾|baseline在容器基线上|initial|inherit继承;<br>在弹性子元素上使用，覆盖容器的align-items属性</p>
-
+<pre><code>.box{
+    width:200px;
+    height:200px;
+    border:2px solid #ccc;
+    border-radius:10px;
+    padding:20px;
+    display:flex;
+    justify-content:space;
+}
+.item{
+    display:block;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background-color:#666;
+}
+.item:nth-child(2){
+    align-self:center;
+}
+.item:nth-child(3){
+    align-self:flex-end;
+}
+</code></pre>
       
     </div>
 
